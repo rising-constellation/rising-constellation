@@ -1,0 +1,23 @@
+/* Global size */
+
+$navbar-height: 54px;
+$content-height: calc(100vh - (2 * #{$navbar-height}));
+
+$stellar-system-view-overflow: 100px;
+
+/* Global z-index */
+
+$z-map: 100;
+$z-map-html: 105;
+$z-map-system: 200;
+$z-map-selection: 300;
+$z-production: 310;
+$z-side-panel: 320;
+$z-chat: 330;
+$z-notification-center: 340;
+$z-mini-panel: 400;
+$z-flying-card: 410;
+$z-panel: 500;
+$z-map-overlay: 550;
+$z-navbar: 600;
+$z-splashscreen: 1000;

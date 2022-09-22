@@ -1,0 +1,283 @@
+$node-margin: 10px;
+$node-size: 62px;
+$node-padding: 5px;
+$node-icon-size: $node-size - (2 * $node-padding);
+
+@mixin tree-link {
+  position: absolute;
+  background: rgba(255, 255, 255, .1);
+}
+
+@mixin tree-node {
+  position: absolute;
+  content: '';
+  width: 20px; height: 20px;
+  background: $black;
+  box-shadow: 0 0 0 2px $grey-light;
+  border-radius: 100%;
+}
+
+.tree-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+  padding: 35px 0;
+  left: -100px;
+
+  &:last-child {
+    min-width: 575px;
+    flex-grow: 1;
+  }
+}
+
+.tree-row {
+  width: 350px;
+  height: $node-size + (2 * $node-margin);
+}
+
+.tree-node {
+  display: flex;
+  position: relative;
+  margin: $node-margin;
+  height: $node-size;
+
+  .tree-node-links {
+    .middle {
+      @include tree-link;
+      top: 28px;
+      left: 50px; right: -50px;
+      height: 8px;
+    }
+
+    .top {
+      @include tree-link;
+      top: -54px;
+      left: 102px; right: -50px;
+      height: 8px;
+
+      &:before {
+        @include tree-link;
+        content: '';
+        height: 8px; width: 120px;
+        top: 38px; left: -92px;
+        transform: rotate(-45deg);
+      }
+
+      &:after {
+        @include tree-node;
+        top: -5px; left: -5px;
+      }
+    }
+
+    .bottom {
+      @include tree-link;
+      bottom: -57px;
+      left: 102px; right: -50px;
+      height: 8px;
+
+      &:before {
+        @include tree-link;
+        content: '';
+        height: 8px; width: 120px;
+        top: -38px; left: -92px;
+        transform: rotate(45deg);
+      }
+
+      &:after {
+        @include tree-node;
+        top: -8px; left: -5px;
+      }
+    }
+  }
+
+  .tree-node-effect {
+    position: absolute;
+    top: 0; left: 0;
+    width: $node-size;
+    height: $node-size;
+
+    border-radius: 100%;
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, .5);
+    transition: box-shadow ease-out 1000ms;
+  }
+
+  .tree-node-icon {
+    position: relative;
+    width: $node-size;
+    height: $node-size;
+    padding: $node-padding;
+
+    background: $black;
+    border-radius: 100%;
+
+    transition: box-shadow linear 250ms;
+
+    .main-icon {
+      width: $node-icon-size;
+      height: $node-icon-size;
+      color: $white;
+    }
+
+    .toast-icon {
+      position: absolute;
+      bottom: -6px; left: -6px;
+      width: 30px; height: 30px;
+      padding: 8px;
+
+      background: $white;
+      color: $black;
+      border-radius: 100%;
+    }
+  }
+
+  .tree-node-label {
+    position: relative;
+    align-self: center;
+    padding: 0 10px;
+
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    &.shifted {
+      align-self: start;
+      padding-top: 44px;
+    }
+  }
+
+  &.locked {
+    .tree-node-icon {
+      box-shadow:
+        0 0 0 3px $black,
+        0 0 6px 0 $white,
+        0 0 0 0 rgba(255, 255, 255, 1);
+
+      .main-icon { opacity: .25; }
+    }
+  }
+
+  &.available {
+    .tree-node-icon {
+      box-shadow:
+        0 0 0 3px $black,
+        0 0 10px 0 $white,
+        0 0 0 0 rgba(255, 255, 255, 1);
+
+      &:hover {
+        box-shadow:
+          0 0 0 3px $black,
+          0 0 10px 0 $white,
+          0 0 25px 0 rgba(255, 255, 255, .5);
+      }
+    }
+  }
+
+  &.purchased, &.chosen {
+    .tree-node-effect {
+      box-shadow: 0 0 0 50px rgba(255, 255, 255, 0);
+    }
+
+    .tree-node-label {
+      padding-left: 15px;
+    }
+  }
+}
+
+.tree-node-card {
+  display: none;
+  position: absolute;
+  top: 10px;
+  left: 60px;
+}
+
+@each $class, $color in $themes-list {
+  .mp-container.f-#{$class} {
+    .tree-node {
+      .tree-node-icon {
+        .toast-icon.colored {
+          background: $color;
+          color: $black;
+          box-shadow: inset 0 0 0 2px $grey-darker;
+        }
+      }
+    }
+
+    .tree-node.purchased, .tree-node.chosen {
+      .tree-node-label {
+        color: lighten($color, $color-variant-4);
+      }
+
+      .tree-node-icon {
+        box-shadow:
+          0 0 0 3px $black,
+          0 0 0 6px darken($color, $color-variant-2),
+          0 0 0 8px $black,
+          0 0 20px 8px lighten($color, $color-variant-4);
+      }
+
+      .tree-node-links {
+        .middle {
+          box-shadow:
+            0 -2px 0 1px black,
+            0 -3px 0 1px lighten($color, $color-variant-3);
+          background: linear-gradient(
+            to right,
+            darken($color, $color-variant-3) 0%,
+            lighten($color, $color-variant-3) 100%
+          );
+        }
+
+        .top {
+          box-shadow:
+            0 -2px 0 1px black,
+            0 -3px 0 1px lighten($color, $color-variant-3);
+          background: linear-gradient(
+            to right,
+            darken($color, $color-variant-3) 0%,
+            lighten($color, $color-variant-3) 100%
+          );
+
+          &:before {
+            background: darken($color, $color-variant-3);
+            box-shadow:
+              0 -2px 0 1px black,
+              0 -3px 0 1px lighten($color, $color-variant-3);
+          }
+
+          &:after {
+            background: white;
+            box-shadow:
+              0 0 0 2px $black,
+              0 0 0 4px $color;
+          }
+        }
+
+        .bottom {
+          box-shadow:
+            0 -2px 0 1px black,
+            0 -3px 0 1px lighten($color, $color-variant-3);
+          background: linear-gradient(
+            to right,
+            darken($color, $color-variant-3) 0%,
+            lighten($color, $color-variant-3) 100%
+          );
+
+          &:before {
+            background: darken($color, $color-variant-3);
+            box-shadow:
+              0 -2px 0 1px black,
+              0 -3px 0 1px lighten($color, $color-variant-3);
+          }
+
+          &:after {
+            background: white;
+            box-shadow:
+              0 0 0 2px $black,
+              0 0 0 4px $color;
+          }
+        }
+      }
+    }
+  }
+}

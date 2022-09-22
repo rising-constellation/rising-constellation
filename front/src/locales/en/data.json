@@ -1,0 +1,1800 @@
+{
+  "data": {
+    "bonus_pipeline_in": {
+      "army_invasion": {
+        "name": "Army Invasion"
+      },
+      "army_maintenance": {
+        "name": "Armed Forces Maintenance"
+      },
+      "army_raid": {
+        "name": "Armed Forces Bombing"
+      },
+      "army_repair": {
+        "name": "Armed Forces Repair"
+      },
+      "body_act": {
+        "name": "Appeal Potential"
+      },
+      "body_ind": {
+        "name": "Industrial Potential"
+      },
+      "body_pop": {
+        "name": "Local Population"
+      },
+      "body_tec": {
+        "name": "Scientific Potential"
+      },
+      "direct": {
+        "name": "Direct"
+      },
+      "player_credit": {
+        "name": "Credit"
+      },
+      "player_ideology": {
+        "name": "Ideology"
+      },
+      "player_technology": {
+        "name": "Technology"
+      },
+      "speaker_conversion": {
+        "name": "Siderian Seduction"
+      },
+      "speaker_encourage_hate": {
+        "name": "Siderian Destabilization"
+      },
+      "speaker_make_dominion": {
+        "name": "Siderian Propaganda"
+      },
+      "spy_assassination": {
+        "name": "Erased Removal"
+      },
+      "spy_cover": {
+        "name": "Erased Cover Recovery Speed"
+      },
+      "spy_infiltrate": {
+        "name": "Erased Infiltration"
+      },
+      "spy_sabotage": {
+        "name": "Erased Sabotage"
+      },
+      "sys_credit": {
+        "name": "Credit"
+      },
+      "sys_defense": {
+        "name": "Defense"
+      },
+      "sys_happiness": {
+        "name": "Stability"
+      },
+      "sys_ideology": {
+        "name": "Ideology"
+      },
+      "sys_mobility": {
+        "name": "Mobility"
+      },
+      "sys_pop": {
+        "name": "Population"
+      },
+      "sys_production": {
+        "name": "Production"
+      },
+      "sys_remove_contact": {
+        "name": "Cybersecurity"
+      },
+      "sys_technology": {
+        "name": "Technology"
+      },
+      "sys_visibility": {
+        "name": "Visibility"
+      }
+    },
+    "bonus_pipeline_out": {
+      "army_invasion": {
+        "name": "Armed Forces Invasion"
+      },
+      "army_maintenance": {
+        "name": "Armed Forces Maintenance"
+      },
+      "army_raid": {
+        "name": "Armed Forces Bombing"
+      },
+      "army_repair": {
+        "name": "Armed Forces Repair"
+      },
+      "character_experience": {
+        "name": "Agents' Experience Gain"
+      },
+      "dominion_rate": {
+        "name": "Dominion Tax Rate"
+      },
+      "player_admiral": {
+        "name": "Navarch Limit"
+      },
+      "player_credit": {
+        "name": "Credit"
+      },
+      "player_dominion": {
+        "name": "Dominion Limit"
+      },
+      "player_ideology": {
+        "name": "Ideology"
+      },
+      "player_speaker": {
+        "name": "Siderian Limit"
+      },
+      "player_spy": {
+        "name": "Erased Limit"
+      },
+      "player_system": {
+        "name": "System Limit"
+      },
+      "player_technology": {
+        "name": "Technology"
+      },
+      "speaker_conversion": {
+        "name": "Siderian Seduction"
+      },
+      "speaker_encourage_hate": {
+        "name": "Siderian Destabilization"
+      },
+      "speaker_make_dominion": {
+        "name": "Siderian Propaganda"
+      },
+      "spy_assassination": {
+        "name": "Erased Removal"
+      },
+      "spy_cover": {
+        "name": "Erased Cover Recovery Speed"
+      },
+      "spy_infiltrate": {
+        "name": "Erased Infiltration"
+      },
+      "spy_sabotage": {
+        "name": "Erased Sabotage"
+      },
+      "sys_capital_lvl": {
+        "name": "Capital Ships' Initial XP"
+      },
+      "sys_ci": {
+        "name": "Intelligence"
+      },
+      "sys_corvette_lvl": {
+        "name": "Corvette Ships' Initial XP"
+      },
+      "sys_credit": {
+        "name": "Credit"
+      },
+      "sys_defense": {
+        "name": "Defense"
+      },
+      "sys_fighter_lvl": {
+        "name": "Fighter Ships' Initial XP"
+      },
+      "sys_frigate_lvl": {
+        "name": "Frigate Ships' Initial XP"
+      },
+      "sys_habitation": {
+        "name": "Housing"
+      },
+      "sys_happiness": {
+        "name": "Stability"
+      },
+      "sys_ideology": {
+        "name": "Ideology"
+      },
+      "sys_mobility": {
+        "name": "Mobility"
+      },
+      "sys_production": {
+        "name": "Production"
+      },
+      "sys_radar": {
+        "name": "S.L.S.D. Level"
+      },
+      "sys_remove_contact": {
+        "name": "Cybersecurity"
+      },
+      "sys_technology": {
+        "name": "Technology"
+      }
+    },
+    "building": {
+      "counterintelligence_open": {
+        "description": "—",
+        "name": "Orb-INTEL",
+        "quote": "—"
+      },
+      "defense_global_dome": {
+        "description": "—",
+        "name": "C.N.D.",
+        "quote": "—"
+      },
+      "defense_local_dome": {
+        "description": "—",
+        "name": "Interception Tunnels",
+        "quote": "—"
+      },
+      "defense_local_open": {
+        "description": "—",
+        "name": "Planetary Shield",
+        "quote": "—"
+      },
+      "defense_local_orbital": {
+        "description": "—",
+        "name": "Constellation of Lures",
+        "quote": "—"
+      },
+      "factory_open": {
+        "description": "—",
+        "name": "Industrial Hub",
+        "quote": "An immeasurable amount of companies of all types regroup in this hotbed of activity."
+      },
+      "factory_orbital": {
+        "description": "—",
+        "name": "Refining Ducts",
+        "quote": "Gaping trenches that dump resources from extraction to processing sites."
+      },
+      "finance_open": {
+        "description": "—",
+        "name": "Reflect District",
+        "quote": "A financial hub, the lungs of stelloliberalism."
+      },
+      "finance_orbital": {
+        "description": "—",
+        "name": "Business Arch",
+        "quote": "—"
+      },
+      "hab_dome": {
+        "description": "—",
+        "name": "Capsule Cities",
+        "quote": "A mosaic of pavilions connected by glass walkways."
+      },
+      "hab_open": {
+        "description": "—",
+        "name": "Residential District",
+        "quote": "A quiet housing complex for megapolis workers."
+      },
+      "hab_open_poor": {
+        "description": "—",
+        "name": "Hive Cities",
+        "quote": "Chaotic mass of hopeless proletarians."
+      },
+      "hab_open_rich": {
+        "description": "—",
+        "name": "Residential Archipelago",
+        "quote": "A peaceful haven for a privileged few."
+      },
+      "happy_open": {
+        "description": "—",
+        "name": "Administrative Center",
+        "quote": "—"
+      },
+      "happy_orbital": {
+        "description": "—",
+        "name": "O.P.U.",
+        "quote": "In the vacuum of space, the chances of escape are almost null."
+      },
+      "happy_pot_dome": {
+        "description": "—",
+        "name": "Hyperdrive Circuit",
+        "quote": "—"
+      },
+      "happy_pot_open": {
+        "description": "—",
+        "name": "Preserved Ecosystem",
+        "quote": "An oasis of hope to tell ourselves that not everything is destined to become steel and concrete."
+      },
+      "happy_pot_orbital": {
+        "description": "—",
+        "name": "Zero-G Arena",
+        "quote": "Brawling is even more fun in zero gravity."
+      },
+      "high_factory_dome": {
+        "description": "—",
+        "name": "Metamaterials Factory",
+        "quote": "Where first-rate scientists design artificial composite materials for the high-tech industry."
+      },
+      "hypergate": {
+        "description": "—",
+        "name": "Singularity Ring",
+        "quote": "—"
+      },
+      "ideo_credit_open": {
+        "description": "—",
+        "name": "Network of Artificial Islands",
+        "quote": "A nice place to relax and make some lucrative deals while we're at it."
+      },
+      "ideo_dome": {
+        "description": "—",
+        "name": "Holodome",
+        "quote": "—"
+      },
+      "ideo_open": {
+        "description": "—",
+        "name": "Citadel",
+        "quote": "Symbol of might and resolute authority, its mere presence is enough to convince us that we are on the right side."
+      },
+      "infra_dome": {
+        "description": "—",
+        "name": "Central Hub",
+        "quote": "Humanity's beating heart in a barren environment."
+      },
+      "infra_open": {
+        "description": "—",
+        "name": "Megapolis",
+        "quote": "A city-world, bridge between heaven and earth."
+      },
+      "lift_dome": {
+        "description": "—",
+        "name": "Space Elevator",
+        "quote": "—"
+      },
+      "lift_open": {
+        "description": "—",
+        "name": "Orbital Link",
+        "quote": "—"
+      },
+      "market_dome": {
+        "description": "—",
+        "name": "Omnimarket",
+        "quote": "From hyperdrive motors to decorative holograms, it's all here."
+      },
+      "market_open": {
+        "description": "—",
+        "name": "Commercial Artery",
+        "quote": "A veritable river of goods and capital."
+      },
+      "military_school_dome": {
+        "description": "—",
+        "name": "Aerospace Military Academy",
+        "quote": "—"
+      },
+      "mine_dome": {
+        "description": "—",
+        "name": "Array of Excavators",
+        "quote": "Enormous and indestructible mechanical ploughs that rip up the earth's crust to extract metals."
+      },
+      "mine_orbital": {
+        "description": "—",
+        "name": "Swarm of Self-drilling Machines",
+        "quote": "They pierce the surface with a deafening roar."
+      },
+      "monument_dome": {
+        "description": "—",
+        "name": "Monolith",
+        "quote": "Sculpted planet or chiseled asteroid, it's absolutely grandiose."
+      },
+      "monument_open": {
+        "description": "—",
+        "name": "Floating Gardens",
+        "quote": "A dreamlike place where spirits are calm and ideas are exchanged."
+      },
+      "radar_orbital": {
+        "description": "—",
+        "name": "S.L.S.D. Network",
+        "quote": "—"
+      },
+      "removecontact_dome": {
+        "description": "—",
+        "name": "Integrated Proxy Systems",
+        "quote": "—"
+      },
+      "removecontact_open": {
+        "description": "—",
+        "name": "Convention Center",
+        "quote": "—"
+      },
+      "research_dome": {
+        "description": "—",
+        "name": "Impact Research Center",
+        "quote": "Meteorite strike... or missile testing."
+      },
+      "research_open": {
+        "description": "—",
+        "name": "Accelerator",
+        "quote": "—"
+      },
+      "research_orbital": {
+        "description": "—",
+        "name": "Experiment Station",
+        "quote": "For some, the pride of humanity. For others, its downfall."
+      },
+      "shipyard_1_orbital": {
+        "description": "—",
+        "name": "S-01 Assembly Line",
+        "quote": "—"
+      },
+      "shipyard_2_orbital": {
+        "description": "—",
+        "name": "S-02 Assembly Line",
+        "quote": "—"
+      },
+      "shipyard_3_orbital": {
+        "description": "—",
+        "name": "Space Dock",
+        "quote": "—"
+      },
+      "shipyard_4_orbital": {
+        "description": "—",
+        "name": "Assembly Superstructure",
+        "quote": "—"
+      },
+      "spatioport_dome": {
+        "description": "—",
+        "name": "Industrial Spaceport",
+        "quote": "—"
+      },
+      "spatioport_orbital": {
+        "description": "—",
+        "name": "Orbital Terminus",
+        "quote": "—"
+      },
+      "university_open": {
+        "description": "—",
+        "name": "Delta Polytech",
+        "quote": "Confluence of knowledge, convergence of intelligence, influx of innovation."
+      }
+    },
+    "calendar": {
+      "tetrarch": {
+        "months_name": [
+          "Tetran",
+          "Quartos",
+          "Chatur",
+          "Quadrinople"
+        ],
+        "months_prefix": [
+          "α-",
+          "β-",
+          "γ-",
+          "δ-",
+          "ε-",
+          "ζ-"
+        ]
+      }
+    },
+    "character": {
+      "admiral": {
+        "name": "Navarch | Navarchs",
+        "skills": [
+          {
+            "description": "Improves armed forces repair.",
+            "name": "Leadership"
+          },
+          {
+            "description": "Improves armed forces bombing.",
+            "name": "Strike"
+          },
+          {
+            "description": "Improves armed forces invasion.",
+            "name": "Conquest"
+          },
+          {
+            "description": "Increases the production of the star system.",
+            "name": "Production"
+          },
+          {
+            "description": "Increases the defense of the star system.",
+            "name": "Defense"
+          },
+          {
+            "description": "Increases the experience of ships on the star system.",
+            "name": "Training"
+          }
+        ],
+        "specializations": {
+          "butcher": "Butcher",
+          "conqueror": "Conqueror",
+          "defender": "Sentinel",
+          "instructor": "Instructor",
+          "null": "░░░░░░░░░░░░",
+          "shipowner": "Shipowner",
+          "strategist": "Strategist"
+        }
+      },
+      "speaker": {
+        "name": "Siderian | Siderians",
+        "skills": [
+          {
+            "description": "Increases the chances of taking control of a dominion.",
+            "name": "Propaganda"
+          },
+          {
+            "description": "Increases the impact on the stability of the targeted system.",
+            "name": "Destabilization"
+          },
+          {
+            "description": "Increases the chance of turning an enemy agent.",
+            "name": "Seduction"
+          },
+          {
+            "description": "Increases the stability of the star system.",
+            "name": "Cohesion"
+          },
+          {
+            "description": "Increases the production of technology in the star system.",
+            "name": "Knowledge"
+          },
+          {
+            "description": "Increases the production of ideology in the star system.",
+            "name": "Wisdom"
+          }
+        ],
+        "specializations": {
+          "agitator": "Agitator",
+          "leader": "Leader",
+          "null": "░░░░░░░░░░░░",
+          "philosopher": "Ideologist",
+          "proselyte": "Emissary",
+          "scholar": "Scientist",
+          "seducer": "Seducer"
+        }
+      },
+      "spy": {
+        "name": "Erased | Erased",
+        "skills": [
+          {
+            "description": "Increases the chances of infiltration (gain of visibility level).",
+            "name": "Infiltration"
+          },
+          {
+            "description": "Increases the chances of a successful assassination.",
+            "name": "Removal"
+          },
+          {
+            "description": "Increases the chances of successful sabotage.",
+            "name": "Sabotage"
+          },
+          {
+            "description": "Improves star system intelligence.",
+            "name": "Intelligence"
+          },
+          {
+            "description": "Improves star system cybersecurity.",
+            "name": "Cybersecurity"
+          },
+          {
+            "description": "Increases the production of credits in the star system.",
+            "name": "Finance"
+          }
+        ],
+        "specializations": {
+          "assassin": "Bounty Hunter",
+          "cleaner": "Analyst",
+          "counter_spy": "Cerberus",
+          "informer": "Hacker",
+          "mafioso": "Broker",
+          "null": "░░░░░░░░░░░░",
+          "saboteur": "Saboteur"
+        }
+      }
+    },
+    "character_action_status": {
+      "action": {
+        "name": "On a mission"
+      },
+      "colonization": {
+        "name": "Colonization in progress"
+      },
+      "conquest": {
+        "name": "Conquest in progress"
+      },
+      "conversion": {
+        "name": "Seduction underway"
+      },
+      "docking": {
+        "name": "Stuck in the docking bay"
+      },
+      "encourage_hate": {
+        "name": "Destabilization underway"
+      },
+      "idle": {
+        "name": "Awaiting orders"
+      },
+      "infiltration": {
+        "name": "Infiltration underway"
+      },
+      "loot": {
+        "name": "Pillaging underway"
+      },
+      "make_dominion": {
+        "name": "Control underway"
+      },
+      "moving": {
+        "name": "Currently travelling"
+      },
+      "null": {
+        "name": "░░ ░░░░░░░"
+      },
+      "raid": {
+        "name": "Bombardment underway"
+      }
+    },
+    "character_rank": {
+      "common": {
+        "name": "Common",
+        "star": "★"
+      },
+      "exceptional": {
+        "name": "Exceptional",
+        "star": "★★★"
+      },
+      "remarkable": {
+        "name": "Outstanding",
+        "star": "★★"
+      }
+    },
+    "culture": {
+      "cardanic": {
+        "kind": "Cardanian",
+        "name": "Cardanian"
+      },
+      "myrmeziriannic": {
+        "kind": "Myrmezirian",
+        "name": "Myrmezirian"
+      },
+      "null": {
+        "kind": "░░░░░░░░░░░",
+        "name": "░░░░░░░░░░░"
+      },
+      "stelloliberalism": {
+        "kind": "Stelloliberal",
+        "name": "Stelloliberalist"
+      },
+      "syn": {
+        "kind": "Syn",
+        "name": "Syn"
+      },
+      "tetrarchic": {
+        "kind": "Tetrarchian",
+        "name": "Tetrarchic"
+      }
+    },
+    "doctrine": {
+      "admiral_1": {
+        "description": "+2 Navarchs",
+        "name": "Reaction Force",
+        "quote": "If you want peace, prepare for war."
+      },
+      "admiral_2": {
+        "description": "+4 Navarchs",
+        "name": "Galtacon Orthodoxy",
+        "quote": "War is inevitable!"
+      },
+      "admiral_3": {
+        "description": "+5 Navarchs and +2 Erased",
+        "name": "Military Academy",
+        "quote": "Whether attacking or defending, fight at all costs!"
+      },
+      "admiral_4": {
+        "description": "+5 Navarchs and +2 Siderians",
+        "name": "War Propaganda",
+        "quote": "Spread terror and convert the rebels."
+      },
+      "agent": {
+        "description": "—",
+        "name": "Age of Exploration",
+        "quote": "Got places to see!"
+      },
+      "assassinate": {
+        "description": "—",
+        "name": "Simpler Practices",
+        "quote": "—"
+      },
+      "conversion": {
+        "description": "—",
+        "name": "Siderian Legacy",
+        "quote": "—"
+      },
+      "cover": {
+        "description": "—",
+        "name": "Fixer Network",
+        "quote": "—"
+      },
+      "credit_1": {
+        "description": "—",
+        "name": "Stelloliberal Maze",
+        "quote": "Plant the seed and watch it grow."
+      },
+      "credit_2": {
+        "description": "—",
+        "name": "Confiscatory Policies",
+        "quote": "Money printer go brrrrr"
+      },
+      "credit_3": {
+        "description": "—",
+        "name": "Embezzlement",
+        "quote": "When traditional means no longer suffice."
+      },
+      "credit_perc_1": {
+        "description": "—",
+        "name": "Decentralized Cryptocurrencies",
+        "quote": "—"
+      },
+      "credit_pola_1": {
+        "description": "—",
+        "name": "Financialized Society",
+        "quote": "Trust me!"
+      },
+      "credit_pop": {
+        "description": "—",
+        "name": "Centralization of Power",
+        "quote": "—"
+      },
+      "defense_1": {
+        "description": "—",
+        "name": "War Council",
+        "quote": "—"
+      },
+      "dominion_1": {
+        "description": "Increases the number of dominions you can subdue by 3.",
+        "name": "Exclusive Trade Zone",
+        "quote": "Take control of unclaimed systems."
+      },
+      "dominion_2": {
+        "description": "Increases the number of dominions you can subdue by 4.",
+        "name": "Protectorate",
+        "quote": "Extend your domination."
+      },
+      "dominion_3": {
+        "description": "Increases the number of dominions you can subdue by 7.",
+        "name": "Federation of Protectorates",
+        "quote": "Large empires require large revenues."
+      },
+      "dominion_rate_1": {
+        "description": "—",
+        "name": "Business Integration",
+        "quote": "—"
+      },
+      "dominion_rate_2": {
+        "description": "—",
+        "name": "Incorporation of Protectorates",
+        "quote": "—"
+      },
+      "ideo_1": {
+        "description": "—",
+        "name": "Linguistic Unification",
+        "quote": "There is only one noble language."
+      },
+      "ideo_2": {
+        "description": "—",
+        "name": "Mass Media",
+        "quote": "Fair and benevolent propaganda."
+      },
+      "ideo_3": {
+        "description": "—",
+        "name": "Stelloliberalized Entertainment",
+        "quote": "If you repeat it enough, they will end up believing it!"
+      },
+      "ideo_pola": {
+        "description": "—",
+        "name": "Fake News",
+        "quote": "Shape facts to suit your needs."
+      },
+      "infiltration": {
+        "description": "—",
+        "name": "Information Systems Surveillance",
+        "quote": "—"
+      },
+      "mobility_1": {
+        "description": "—",
+        "name": "Freedom of Movement",
+        "quote": "—"
+      },
+      "mobility_2": {
+        "description": "—",
+        "name": "Trade Secrets",
+        "quote": "—"
+      },
+      "prod_1": {
+        "description": "—",
+        "name": "Relaxed Production Standards",
+        "quote": "No more breaks."
+      },
+      "prod_2": {
+        "description": "—",
+        "name": "Pace of War",
+        "quote": "Your prosperity depends on it!"
+      },
+      "reduce_maintenance_1": {
+        "description": "—",
+        "name": "Simplified Chain of Command",
+        "quote": "—"
+      },
+      "reduce_maintenance_2": {
+        "description": "—",
+        "name": "Component Standardization",
+        "quote": "—"
+      },
+      "sabotage": {
+        "description": "—",
+        "name": "Industrial Espionage",
+        "quote": "—"
+      },
+      "speaker_1": {
+        "description": "—",
+        "name": "First Contacts",
+        "quote": "Spread your culture!"
+      },
+      "speaker_2": {
+        "description": "—",
+        "name": "Public Relations",
+        "quote": "Invite people to join your culture."
+      },
+      "speaker_3": {
+        "description": "—",
+        "name": "Soft Power",
+        "quote": "Influence and control peoples."
+      },
+      "speaker_4": {
+        "description": "—",
+        "name": "Embassy Arsenal",
+        "quote": "—"
+      },
+      "speaker_dominion": {
+        "description": "—",
+        "name": "Cultural Imperialism",
+        "quote": "—"
+      },
+      "spy_1": {
+        "description": "—",
+        "name": "Underground Networks",
+        "quote": "Need a nuisance removed?"
+      },
+      "spy_2": {
+        "description": "—",
+        "name": "Secret Organization",
+        "quote": "The enemy won't see it coming."
+      },
+      "spy_3": {
+        "description": "—",
+        "name": "RNA Camouflage",
+        "quote": "—"
+      },
+      "spy_4": {
+        "description": "—",
+        "name": "Parallel Military Strategy",
+        "quote": "Master information before taking up arms."
+      },
+      "spy_bonus": {
+        "description": "—",
+        "name": "Deep State",
+        "quote": "—"
+      },
+      "spy_def_1": {
+        "description": "—",
+        "name": "Digitalization of Interactions",
+        "quote": "—"
+      },
+      "spy_def_2": {
+        "description": "—",
+        "name": "Total Surveillance",
+        "quote": "—"
+      },
+      "stab_1": {
+        "description": "—",
+        "name": "Synthetic Drugs",
+        "quote": "The people need to unwind."
+      },
+      "stab_2": {
+        "description": "—",
+        "name": "Propaganda",
+        "quote": "Security over liberty."
+      },
+      "sys_dom_1": {
+        "description": "Increases the number of systems you can administer by 1 and the number of dominions you can subdue by 2.",
+        "name": "External Colonies",
+        "quote": "Establish your presence in the four corners of the galaxy."
+      },
+      "sys_dom_2": {
+        "description": "Increases the number of systems you can administer by 2 and the number of dominions you can subdue by 4.",
+        "name": "Empire's Edge",
+        "quote": "Win by dominating."
+      },
+      "system_1": {
+        "description": "Increase the number of systems you can administer by 1.",
+        "name": "Proto-Empire",
+        "quote": "Your empire is expanding!"
+      },
+      "system_2": {
+        "description": "Increases the number of systems you can administer by 1.",
+        "name": "Extended Administration",
+        "quote": "Your empire is consolidating!"
+      },
+      "system_3": {
+        "description": "Increases the number of systems you can administer by 2.",
+        "name": "Decentralized Administration",
+        "quote": "More systems under your aegis for more power."
+      },
+      "system_4": {
+        "description": "Increases the number of systems you can manage by 3.",
+        "name": "Second Core",
+        "quote": "Expand your empire and subdue the weak peoples."
+      },
+      "tech_1": {
+        "description": "—",
+        "name": "Promotion of Science",
+        "quote": "A.R.K. backs your research."
+      },
+      "tech_2": {
+        "description": "—",
+        "name": "Sponsored Chairmanship",
+        "quote": "Scientific influence is reached though exemplary education."
+      },
+      "tech_3": {
+        "description": "—",
+        "name": "Predictive Sciences",
+        "quote": "Let's hope this doesn't blow up in your face."
+      },
+      "tech_pola": {
+        "description": "—",
+        "name": "Technocracy",
+        "quote": "The soul doesn't exist!"
+      },
+      "upgrade_fleet": {
+        "description": "—",
+        "name": "Armed Forces Automation",
+        "quote": "—"
+      },
+      "upgrade_invasion": {
+        "description": "—",
+        "name": "Combat Drugs",
+        "quote": "—"
+      },
+      "upgrade_raid": {
+        "description": "—",
+        "name": "Tactical Scouting",
+        "quote": "—"
+      },
+      "upgrade_repair": {
+        "description": "—",
+        "name": "Modular Construction",
+        "quote": "—"
+      },
+      "upgrade_xp": {
+        "description": "—",
+        "name": "Navarch Tradition",
+        "quote": "—"
+      }
+    },
+    "doctrine_class": {
+      "admiral": {
+        "name": "Navarchs"
+      },
+      "character": {
+        "name": "Characters"
+      },
+      "expansion": {
+        "name": "Expansion"
+      },
+      "root": {
+        "name": "Origin"
+      },
+      "speaker": {
+        "name": "Siderians"
+      },
+      "spy": {
+        "name": "Erased"
+      }
+    },
+    "faction": {
+      "ark": {
+        "description": "Azkos Technologies, Ravecroft, Kovaka. Such is the triad of the galaxy's most powerful companies. Involved in the aerospace, entertainment and terraforming industries, respectively, these sprawling companies have come together to form a superstructure that sits at the same negotiating table as the most powerful states in the galaxy. Capable of arming a veritable war fleet, A.R.K. no longer hides its ambition to exist outside the Tetrarchy and in a world in which its billions of employees will serve as Arkian citizens. Commercially connected to an enormous number of systems, its aspiration for independence is a major problem for all factions.",
+        "name": "A.R.K."
+      },
+      "cardan": {
+        "description": "Cardan is a powerful nation that has existed since the dawn of time. It is a very hierarchical and traditional society in which every gesture is codified by the tenets of the Siderian Order. These laws, which structure Cardanian life in a religious manner, insist on the superiority of man over machine. Myrmezirian abolitionism is thus perceived as an abomination that must be fought at all costs to avoid the apocalypse. This aversion to robots does not make of Cardan a technophobic faction, however. Their battle cruisers are fully operational and their fanatical army has every intention of imposing its worldview on the entire galaxy.",
+        "name": "Cardan"
+      },
+      "myrmezir": {
+        "description": "The Tetrarchate of Tetran is now commonly called \"Myrmezir\", the planet of origin of a popular and revolutionary Tetrarch. This new name comes from the emancipatory will that Myrmezirians have towards the Tetrarchy. This separatism was initially symptomatic of a strong desire for democracy, but today it includes the aspiration to end machine slavery and have them become full-fledged citizens. Due to its rupture with autocracy and its dynamic ideas, Myrmezir is seen by the galaxy's oppressed masses as a beacon of hope and is generally well-regarded by the working-class. Its dignitaries are listened to and venerated but are often the targets of the Erased, assassins hired to suppress them.",
+        "name": "Myrmezir"
+      },
+      "neutral": {
+        "description": "",
+        "name": "Neutral Faction"
+      },
+      "synelle": {
+        "description": "The Syns live in remote areas of the Galaxy, often referred to as the Fringes. They have formed a federation of generally peaceful nations that has always been able to solve its problems through consensus. The many traditions that govern relations among the Syns give this faction a unity that has enabled them to remain strong and proud in the face of external threats. Diametrically opposed to A.R.K.'s world view, which gains ever more influence in Syn territories, the Syns have elected a few strong men, providential heroes, who will restore balance and enable the wise Syn people to maintain their integrity and continue their peaceful existence.",
+        "name": "Synelectic Federation"
+      },
+      "tetrarchy": {
+        "description": "A declining superpower is still a superpower and only a fool would underestimate the Tetrarchy, a faction whose hegemony is merely in dispute for the moment. Historically composed of four capital planets and ruled by four Tetrarchs, the Tetrarchy must not only face up to Myrmezir's sedition, but also other factions' manoeuvrings. To do so, it can count on highly experienced Navarchs, notably Arledge Galtacon, as well as a powerful fleet that remains unparalleled in the galaxy. The Tetrarchy itself is undoubtedly its own worst enemy. This vast heterogeneous ensemble is ripe prey for separatism. Only agressive propaganda and deeply rooted traditions can preserve the unity of this supernation.",
+        "name": "Tetrarchy"
+      }
+    },
+    "patent": {
+      "capital_1": {
+        "description": "—",
+        "name": "Armoring",
+        "quote": "—"
+      },
+      "capital_2": {
+        "description": "—",
+        "name": "Advanced Armoring",
+        "quote": "—"
+      },
+      "capital_3": {
+        "description": "—",
+        "name": "Multifunctional Nodes",
+        "quote": "—"
+      },
+      "citadel": {
+        "description": "—",
+        "name": "Holographic Storage System",
+        "quote": "—"
+      },
+      "corvette_1": {
+        "description": "—",
+        "name": "Light Nodal Fuselage",
+        "quote": "—"
+      },
+      "corvette_2": {
+        "description": "—",
+        "name": "Nodal Fuselage",
+        "quote": "—"
+      },
+      "corvette_3": {
+        "description": "—",
+        "name": "Auto-Aim",
+        "quote": "—"
+      },
+      "dome_academy": {
+        "description": "—",
+        "name": "Neural Derivations",
+        "quote": "—"
+      },
+      "dome_defense_1": {
+        "description": "—",
+        "name": "Autonomous Drills",
+        "quote": "—"
+      },
+      "dome_defense_2": {
+        "description": "—",
+        "name": "Quantum Cryptography",
+        "quote": "—"
+      },
+      "dome_happiness": {
+        "description": "—",
+        "name": "Holograms",
+        "quote": "—"
+      },
+      "dome_ideo": {
+        "description": "—",
+        "name": "Monumental Architecture",
+        "quote": "—"
+      },
+      "dome_industries": {
+        "description": "—",
+        "name": "Advanced Catalysis",
+        "quote": "—"
+      },
+      "dome_mobility": {
+        "description": "—",
+        "name": "Magnetic Cranes",
+        "quote": "—"
+      },
+      "dome_pop": {
+        "description": "—",
+        "name": "Pressurized Cities",
+        "quote": "—"
+      },
+      "fighter_1": {
+        "description": "—",
+        "name": "Advanced Thrusters",
+        "quote": "—"
+      },
+      "fighter_2": {
+        "description": "—",
+        "name": "Light Fuselage",
+        "quote": "—"
+      },
+      "fighter_3": {
+        "description": "—",
+        "name": "Reinforced Fuselage",
+        "quote": "—"
+      },
+      "fighter_4": {
+        "description": "—",
+        "name": "Compact Turrets",
+        "quote": "—"
+      },
+      "frigate_1": {
+        "description": "—",
+        "name": "Modular Fuselage",
+        "quote": "—"
+      },
+      "frigate_2": {
+        "description": "—",
+        "name": "Hypersonic Chargelauncher",
+        "quote": "—"
+      },
+      "frigate_3": {
+        "description": "—",
+        "name": "Military Drones",
+        "quote": "—"
+      },
+      "frigate_4": {
+        "description": "—",
+        "name": "Repair Bay",
+        "quote": "—"
+      },
+      "infra_dome_1": {
+        "description": "—",
+        "name": "Controlled Environment",
+        "quote": "—"
+      },
+      "infra_dome_2": {
+        "description": "—",
+        "name": "Controlled Environment II",
+        "quote": "—"
+      },
+      "infra_dome_3": {
+        "description": "—",
+        "name": "Controlled Environment III",
+        "quote": "—"
+      },
+      "infra_dome_4": {
+        "description": "—",
+        "name": "Controlled Environment IV",
+        "quote": "—"
+      },
+      "infra_dome_5": {
+        "description": "—",
+        "name": "Controlled Environment V",
+        "quote": "—"
+      },
+      "infra_open_1": {
+        "description": "—",
+        "name": "Urbanization",
+        "quote": "—"
+      },
+      "infra_open_2": {
+        "description": "—",
+        "name": "Urbanization II",
+        "quote": "—"
+      },
+      "infra_open_3": {
+        "description": "—",
+        "name": "Urbanization III",
+        "quote": "—"
+      },
+      "infra_open_4": {
+        "description": "—",
+        "name": "Urbanization IV",
+        "quote": "—"
+      },
+      "infra_open_5": {
+        "description": "—",
+        "name": "Urbanization V",
+        "quote": "—"
+      },
+      "infra_orbital_1": {
+        "description": "—",
+        "name": "Pressurized Environment",
+        "quote": "—"
+      },
+      "infra_orbital_2": {
+        "description": "—",
+        "name": "Pressurized Environment II",
+        "quote": "—"
+      },
+      "infra_orbital_3": {
+        "description": "—",
+        "name": "Pressurized Environment III",
+        "quote": "—"
+      },
+      "infra_orbital_4": {
+        "description": "—",
+        "name": "Pressurized Environment IV",
+        "quote": "—"
+      },
+      "infra_orbital_5": {
+        "description": "—",
+        "name": "Pressurized Environment V",
+        "quote": "—"
+      },
+      "merge_corvette_1": {
+        "description": "—",
+        "name": "Corvette Formation I",
+        "quote": "—"
+      },
+      "merge_corvette_2": {
+        "description": "—",
+        "name": "Corvette Formation II",
+        "quote": "—"
+      },
+      "merge_fighter_1": {
+        "description": "—",
+        "name": "Fighter Formation I",
+        "quote": "—"
+      },
+      "merge_fighter_2": {
+        "description": "—",
+        "name": "Fighter Formation II",
+        "quote": "—"
+      },
+      "merge_fighter_3": {
+        "description": "—",
+        "name": "Fighter Formation III",
+        "quote": "—"
+      },
+      "merge_fighter_corvette": {
+        "description": "—",
+        "name": "General Formation I",
+        "quote": "—"
+      },
+      "merge_frigate_1": {
+        "description": "—",
+        "name": "Frigate Formation I",
+        "quote": "—"
+      },
+      "open_credit": {
+        "description": "—",
+        "name": "Publicity Terminals",
+        "quote": "—"
+      },
+      "open_defense": {
+        "description": "—",
+        "name": "Extended Magnetic Generators",
+        "quote": "—"
+      },
+      "open_happiness": {
+        "description": "—",
+        "name": "Climate Control",
+        "quote": "—"
+      },
+      "open_ideo": {
+        "description": "—",
+        "name": "Maglev Architecture",
+        "quote": "—"
+      },
+      "open_industries": {
+        "description": "—",
+        "name": "Cookie-cutter Cities",
+        "quote": "—"
+      },
+      "open_intel": {
+        "description": "—",
+        "name": "Drone Swarms",
+        "quote": "—"
+      },
+      "open_island": {
+        "description": "—",
+        "name": "Floating Cities",
+        "quote": "—"
+      },
+      "open_lift": {
+        "description": "—",
+        "name": "Nanotubes",
+        "quote": "—"
+      },
+      "open_mobility": {
+        "description": "—",
+        "name": "Luxury Architecture",
+        "quote": "—"
+      },
+      "open_research": {
+        "description": "—",
+        "name": "Z-poly Coils",
+        "quote": "—"
+      },
+      "orbital_credit": {
+        "description": "—",
+        "name": "Magnetic Pipelines",
+        "quote": "—"
+      },
+      "orbital_defense": {
+        "description": "—",
+        "name": "Signature Reduction",
+        "quote": "—"
+      },
+      "orbital_happiness": {
+        "description": "—",
+        "name": "Gravity Generator",
+        "quote": "—"
+      },
+      "orbital_hypergate": {
+        "description": "—",
+        "name": "Quantic Electrodynamics",
+        "quote": "—"
+      },
+      "orbital_mobility": {
+        "description": "—",
+        "name": "Secured Habitations",
+        "quote": "—"
+      },
+      "orbital_prod": {
+        "description": "—",
+        "name": "Crystal Shell",
+        "quote": "—"
+      },
+      "orbital_radar": {
+        "description": "—",
+        "name": "S.L.S.D. Captors",
+        "quote": "—"
+      },
+      "orbital_research": {
+        "description": "—",
+        "name": "Exobiology",
+        "quote": "—"
+      },
+      "shipyard_1": {
+        "description": "—",
+        "name": "Assembly Lines",
+        "quote": "—"
+      },
+      "shipyard_2": {
+        "description": "—",
+        "name": "Precision Cranes",
+        "quote": "—"
+      },
+      "shipyard_3": {
+        "description": "—",
+        "name": "Orbital Holds",
+        "quote": "—"
+      },
+      "shipyard_4": {
+        "description": "—",
+        "name": "Space Hyperstructures",
+        "quote": "—"
+      },
+      "transport_1": {
+        "description": "—",
+        "name": "Hypersleep Chamber",
+        "quote": "—"
+      },
+      "transport_2": {
+        "description": "—",
+        "name": "Capsule Quarters",
+        "quote": "—"
+      }
+    },
+    "patent_class": {
+      "dome": {
+        "name": "Sterile Planets"
+      },
+      "economic": {
+        "name": "Economic"
+      },
+      "military": {
+        "name": "Military"
+      },
+      "open": {
+        "name": "Habitable Planets"
+      },
+      "orbital": {
+        "name": "Moons and Asteroids"
+      },
+      "root": {
+        "name": "Origin"
+      },
+      "ship": {
+        "name": "Shipyards and Ships"
+      }
+    },
+    "patent_info": {
+      "infra_dome_2": "Allows for buildings on barren planets to be upgraded to level 2",
+      "infra_dome_3": "Allows for buildings on barren planets to be upgraded to level 3",
+      "infra_dome_4": "Allows for buildings on barren planets to be upgraded to level 4",
+      "infra_dome_5": "Allows for buildings on barren planets to be upgraded to level 5",
+      "infra_open_2": "Allows for buildings on habitable planets to be upgraded to level 2",
+      "infra_open_3": "Allows for buildings on habitable planets to be upgraded to level 3",
+      "infra_open_4": "Allows for buildings on habitable planets to be upgraded to level 4",
+      "infra_open_5": "Allows for buildings on habitable planets to be upgraded to level 5",
+      "infra_orbital_2": "Allows for orbital buildings to be upgraded to level 2",
+      "infra_orbital_3": "Allows for orbital buildings to be upgraded to level 3",
+      "infra_orbital_4": "Allows for orbital buildings to be upgraded to level 4",
+      "infra_orbital_5": "Allows for orbital buildings to be upgraded to level 5",
+      "merge_corvette_1": "Allows for construction or merging of units of 4 Corvettes",
+      "merge_corvette_2": "Allows for construction or merging of units of 8 Corvettes",
+      "merge_fighter_1": "Allows for construction or merging of units of 4 Fighters",
+      "merge_fighter_2": "Allows for construction or merging of units of 8 Fighters",
+      "merge_fighter_3": "Allows for construction or merging of units of 16 Fighters",
+      "merge_fighter_corvette": "Allows for construction or merging of units of 8 Fighters. Allows for construction or merging of units of 4 Corvettes",
+      "merge_frigate_1": "Allows for construction or merging of units of 4 Frigates"
+    },
+    "population_class": {
+      "big": "Minor System",
+      "enormous": "Influential System",
+      "huge": "Major System",
+      "large": "Colony",
+      "major": "Major Colony",
+      "medium": "Minor Colony",
+      "minor": "Outpost",
+      "prodigious": "Nerve Center"
+    },
+    "population_status": {
+      "demonstration": {
+        "desc": "Large protests take place in front of symbols of authority.",
+        "name": "Protests"
+      },
+      "discontent": {
+        "desc": "The population is discontented.",
+        "name": "Discontentment"
+      },
+      "general_uprising": {
+        "desc": "The system is in a state of widespread rebellion.",
+        "name": "Widespread rebellion"
+      },
+      "normal": {
+        "desc": "The population is content.",
+        "name": "Normal"
+      },
+      "null": {
+        "desc": "Population state unknown.",
+        "name": "Unknown"
+      },
+      "uprising": {
+        "desc": "Localized revolts spark in production centers.",
+        "name": "Localized revolts"
+      }
+    },
+    "ship": {
+      "capital_1": {
+        "description": "—",
+        "name": "Destroyer",
+        "trade_name": "—"
+      },
+      "capital_2": {
+        "description": "—",
+        "name": "Cruiser",
+        "trade_name": "—"
+      },
+      "capital_3": {
+        "description": "—",
+        "name": "Coordinator",
+        "trade_name": "—"
+      },
+      "corvette_1": {
+        "description": "—",
+        "name": "2 Light Corvettes",
+        "trade_name": "—"
+      },
+      "corvette_1v2": {
+        "description": "—",
+        "name": "4 Light Corvettes",
+        "trade_name": "—"
+      },
+      "corvette_1v3": {
+        "description": "—",
+        "name": "8 Light Corvettes",
+        "trade_name": "—"
+      },
+      "corvette_2": {
+        "description": "—",
+        "name": "2 Heavy Corvettes",
+        "trade_name": "—"
+      },
+      "corvette_2v2": {
+        "description": "—",
+        "name": "4 Heavy Corvettes",
+        "trade_name": "—"
+      },
+      "corvette_2v3": {
+        "description": "—",
+        "name": "8 Heavy Corvettes",
+        "trade_name": "—"
+      },
+      "corvette_3": {
+        "description": "—",
+        "name": "2 Multi-turret Corvettes",
+        "trade_name": "—"
+      },
+      "corvette_3v2": {
+        "description": "—",
+        "name": "4 Multi-turret Corvettes",
+        "trade_name": "—"
+      },
+      "corvette_3v3": {
+        "description": "—",
+        "name": "8 Multi-turret Corvettes",
+        "trade_name": "—"
+      },
+      "fighter_1": {
+        "description": "—",
+        "name": "2 Scouts",
+        "trade_name": "—"
+      },
+      "fighter_1v2": {
+        "description": "—",
+        "name": "4 Scouts",
+        "trade_name": "—"
+      },
+      "fighter_1v3": {
+        "description": "—",
+        "name": "8 Scouts",
+        "trade_name": "—"
+      },
+      "fighter_1v4": {
+        "description": "—",
+        "name": "16 Scouts",
+        "trade_name": "—"
+      },
+      "fighter_2": {
+        "description": "—",
+        "name": "2 Light Fighters",
+        "trade_name": "—"
+      },
+      "fighter_2v2": {
+        "description": "—",
+        "name": "4 Light Fighters",
+        "trade_name": "—"
+      },
+      "fighter_2v3": {
+        "description": "—",
+        "name": "8 Light Fighters",
+        "trade_name": "—"
+      },
+      "fighter_2v4": {
+        "description": "Incredibly swift, these ships dodge most shots and are hard to take out.",
+        "name": "16 Light Fighters",
+        "trade_name": "—"
+      },
+      "fighter_3": {
+        "description": "—",
+        "name": "2 Fighter-bombers",
+        "trade_name": "—"
+      },
+      "fighter_3v2": {
+        "description": "—",
+        "name": "4 Fighter-bombers",
+        "trade_name": "—"
+      },
+      "fighter_3v3": {
+        "description": "—",
+        "name": "8 Fighter-bombers",
+        "trade_name": "—"
+      },
+      "fighter_3v4": {
+        "description": "—",
+        "name": "16 Fighter-bombers",
+        "trade_name": "—"
+      },
+      "fighter_4": {
+        "description": "—",
+        "name": "2 Interceptors",
+        "trade_name": "—"
+      },
+      "fighter_4v2": {
+        "description": "—",
+        "name": "4 Interceptors",
+        "trade_name": "—"
+      },
+      "fighter_4v3": {
+        "description": "—",
+        "name": "8 Interceptors",
+        "trade_name": "—"
+      },
+      "fighter_4v4": {
+        "description": "—",
+        "name": "16 Interceptors",
+        "trade_name": "—"
+      },
+      "frigate_1": {
+        "description": "—",
+        "name": "2 Assault Frigates",
+        "trade_name": "—"
+      },
+      "frigate_1v2": {
+        "description": "—",
+        "name": "4 Assault Frigates",
+        "trade_name": "—"
+      },
+      "frigate_2": {
+        "description": "—",
+        "name": "2 Gunners",
+        "trade_name": "—"
+      },
+      "frigate_2v2": {
+        "description": "—",
+        "name": "4 Gunners",
+        "trade_name": "—"
+      },
+      "frigate_3": {
+        "description": "—",
+        "name": "2 Drone Carriers",
+        "trade_name": "—"
+      },
+      "frigate_3v2": {
+        "description": "—",
+        "name": "4 Drone Carriers",
+        "trade_name": "—"
+      },
+      "frigate_4": {
+        "description": "—",
+        "name": "2 Repair Platforms",
+        "trade_name": "—"
+      },
+      "frigate_4v2": {
+        "description": "—",
+        "name": "4 Repair Platforms",
+        "trade_name": "—"
+      },
+      "transport_1": {
+        "description": "—",
+        "name": "Colonisation Ship",
+        "trade_name": "—"
+      },
+      "transport_2": {
+        "description": "—",
+        "name": "Carrier",
+        "trade_name": "—"
+      }
+    },
+    "speed": {
+      "fast": {
+        "description": "1-2 hours",
+        "name": "Flash"
+      },
+      "medium": {
+        "description": "4-5 days",
+        "name": "Tactic"
+      },
+      "slow": {
+        "description": "1 month",
+        "name": "Legacy"
+      }
+    },
+    "stellar_body": {
+      "asteroid": {
+        "name": "Asteroid"
+      },
+      "asteroid_belt": {
+        "name": "Asteroid belt"
+      },
+      "gaseous_giant": {
+        "name": "Gas giant"
+      },
+      "habitable_planet": {
+        "name": "Habitable planet"
+      },
+      "moon": {
+        "name": "Moon"
+      },
+      "sterile_planet": {
+        "name": "Barren planet"
+      }
+    },
+    "stellar_system": {
+      "blue_giant": {
+        "name": "Blue giant"
+      },
+      "orange_dwarf": {
+        "name": "Orange dwarf"
+      },
+      "red_dwarf": {
+        "name": "Red dwarf"
+      },
+      "red_giant": {
+        "name": "Red giant"
+      },
+      "white_dwarf": {
+        "name": "White dwarf"
+      },
+      "yellow_dwarf": {
+        "name": "Yellow dwarf"
+      }
+    },
+    "tradition": {
+      "ark_early": {
+        "bonus": "Credits: +50",
+        "description": "A.R.K., the massive consortium it is, has access to almost unlimited funds.",
+        "name": "Multisidereal Consortium"
+      },
+      "ark_late": {
+        "bonus": "Mobility: +15%",
+        "description": "When it comes to doing business, having access to the best luxury ships is imperative.",
+        "name": "Aeronautical Tycoon"
+      },
+      "ark_malus": {
+        "bonus": "Army maintenance: +5%",
+        "description": "A.R.K. uses a lot of mercenaries, and they are expensive.",
+        "name": "Mercenary"
+      },
+      "ark_mid": {
+        "bonus": "Stability: +10",
+        "description": "Cameras are everywhere.",
+        "name": "Surveillance Company"
+      },
+      "cardan_early": {
+        "bonus": "Intelligence : +20",
+        "description": "The Nekesh Foundation, murky and mysterious, is nonetheless known for its excellent Erased.",
+        "name": "Nekesh Circle"
+      },
+      "cardan_late": {
+        "bonus": "Erased Infiltration: +15%",
+        "description": "Siderian's doctrine has spread throughout the galaxy and many, though not openly vocal about it, support Cardan's ideas.",
+        "name": "Network of Believers"
+      },
+      "cardan_malus": {
+        "bonus": "Technology: -5%",
+        "description": "Siderian teaches to handle technology with caution.",
+        "name": "Technology Caution"
+      },
+      "cardan_mid": {
+        "bonus": "Deletion of the Erased: +15%",
+        "description": "Cardan has been practicing RNA selection of Shadow abilities since the dawn of time.",
+        "name": "RNA Selection"
+      },
+      "myrmezir_early": {
+        "bonus": "Ideology: +2",
+        "description": "The revolutionary rhetoric of the Myrmezirian emissaries echoes throughout the galaxy; numerous are the allies of the cause.",
+        "name": "Revolutionary Inspiration"
+      },
+      "myrmezir_late": {
+        "bonus": "Dominion Tax Rate: +10%",
+        "description": "The Ariance Charter regulates the administration of protectorates.",
+        "name": "The Ariance Charter"
+      },
+      "myrmezir_malus": {
+        "bonus": "Stability: -5",
+        "description": "Cultural diversity brings many benefits, but tensions are always present.",
+        "name": "Cultural diversity"
+      },
+      "myrmezir_mid": {
+        "bonus": "Siderian propaganda: +20%",
+        "description": "The founding texts of the Siderians' doctrine are still very much studied.",
+        "name": "Siderean Teachings"
+      },
+      "synelle_early": {
+        "bonus": "Production: +30",
+        "description": "The Syns settled the Fringes; they are used to uncharted territories where everything remains to be done.",
+        "name": "Salt of the Earth"
+      },
+      "synelle_late": {
+        "bonus": "Armed Forces Repair: +20%",
+        "description": "The soldier-mechanics of the Syns' grey militia pride themselves on their ability to fly any ship.",
+        "name": "Grey Militia"
+      },
+      "synelle_malus": {
+        "bonus": "Credit: -5%",
+        "description": "The significant decentralization of Syns fiefdoms results in a net loss to the IRS.",
+        "name": "Decentralization"
+      },
+      "synelle_mid": {
+        "bonus": "Defense: +10%",
+        "description": "Syns live close to the land, and will defend it at all costs.",
+        "name": "Syns strength"
+      },
+      "tetrarchy_early": {
+        "bonus": "Technology: +3",
+        "description": "The famous Aphera Research Centers established on Quadrinople have always been at the cutting edge of technology.",
+        "name": "Aphera Research Centers"
+      },
+      "tetrarchy_late": {
+        "bonus": "Armed Forced Maintenance: -10%",
+        "description": "The Chatur Arsenal, a Tetrarchy stronghold, is a formidable stockpile of weapons and spare parts.",
+        "name": "Chatur Arsenal"
+      },
+      "tetrarchy_malus": {
+        "bonus": "Ideology: -5%",
+        "description": "The great imperial houses refuse all social advances, even the smallest ones.",
+        "name": "Old Houses"
+      },
+      "tetrarchy_mid": {
+        "bonus": "Initial frigate XP: +25%",
+        "description": "Akhena has conquered the galaxy with its versatile and well-trained frigates.",
+        "name": "Heart of the fleet"
+      }
+    },
+    "victory": {
+      "conquest": {
+        "description": "A Path of Conquest victory requires that your faction controls a large amount of sectors. Each sector is worth a certain number of points (visible when fully zoomed out on the map). To claim a sector your faction must possess a majority of the star systems within said sector.",
+        "name": "Path of **Conquest**",
+        "points": "Sector Points required"
+      },
+      "population": {
+        "description": "A Path of Influence victory requires that your faction have the most populous empire. To progress along this path it is necessary that the sum of your faction's star system and dominion points passes a certain threshold.",
+        "name": "Path of **Influence**",
+        "points": "Star System Points"
+      },
+      "visibility": {
+        "description": "A Path of Shadows victory requires that your faction have lots of visibility over your adversaries. To progress along this path it is necessary to infiltrate the networks on most of your adversaries' star systems. This path is hidden and you will not be able to see your adversaries' advancement along it nor will they be able to see yours; take them by surprise!",
+        "name": "Path of **Shadows**",
+        "points": "Visibility Points required"
+      }
+    }
+  }
+}

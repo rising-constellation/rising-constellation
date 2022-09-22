@@ -1,0 +1,87 @@
+.map-options {
+  display: flex;
+  position: absolute;
+  z-index: $z-map-html;
+  bottom: $navbar-height + 10px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.map-options-group {
+  display: flex;
+  margin: 0 2.5px;
+  border-radius: 3px;
+  overflow: hidden;
+  background: $grey-darker;
+  border: solid 1px $grey-light;
+}
+
+.map-options-item {
+  padding: 2px 4px;
+  transition: all linear 200ms;
+
+  .svg-icon {
+    width: 18px;
+    height: 18px;
+    opacity: .75;
+  }
+
+  &.is-active .svg-icon {
+    opacity: 1;
+  }
+}
+
+.map-cross {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 0; height: 0;
+
+  .map-cross-a, .map-cross-b {
+    position: absolute;
+
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      background: $black;
+    }
+
+    &:before { height: 2px; }
+    &:after { width: 2px; }
+  }
+
+  .map-cross-a {
+    &:before { left: -100px; right: 20px; top: -1px; }
+    &:after { top: -50px; bottom: 20px; left: -1px; }
+  }
+
+  .map-cross-b {
+    &:before { right: -100px; left: 20px; top: -1px; }
+    &:after { bottom: -50px; top: 20px; left: -1px; }
+  }
+}
+
+.map-position {
+  position: absolute;
+  left: 50%; bottom: 0;
+
+  .map-position-xy {
+    position: absolute;
+    left: 68px; bottom: 67px;
+    font-weight: bold;
+    opacity: .5;
+  }
+}
+
+.map-overlay {
+  position: absolute;
+  top: $navbar-height + 10px;
+  left: 0;
+}
+
+@each $class, $color in $themes-list {
+  .theme-#{$class} {
+    .map-options-item.is-active .svg-icon {
+      color: lighten($color, $color-variant-4);
+    }
+  }
+}

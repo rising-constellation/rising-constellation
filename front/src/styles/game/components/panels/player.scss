@@ -1,0 +1,39 @@
+.pcb-player {
+  position: relative;
+  display: flex;
+  margin-bottom: 5px;
+
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-weight: bold;
+
+  .squared {
+    width: 40px;
+    padding: 5px;
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  .large {
+    flex-grow: 1;
+    padding: 0 15px;
+    line-height: 40px;
+  }
+}
+
+@each $class, $color in $themes-list {
+  .theme-#{$class} {
+    .pcb-player {
+      background: transparentize($color, 0.9);
+      border: 1px solid transparentize($color, 0.8);
+
+      & > div:not(:last-child) {
+        border-right: 1px solid transparentize($color, 0.8);
+      }
+
+      .squared {
+        color: $color;
+      }
+    }
+  }
+}

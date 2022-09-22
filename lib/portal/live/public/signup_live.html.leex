@@ -1,0 +1,60 @@
+<div class="fixed-container">
+  <div
+    id="info-container"
+    class="home-bloc"
+    style="display: none;">
+    <div
+      class="body"
+      id="info">
+    </div>
+  </div>
+
+  <div class="home-bloc colored">
+    <div class="header">
+      <h1>Create an account</h1>
+    </div>
+
+    <form
+      id="signup-form"
+      method="post"
+      phx-hook="signup">
+      <div class="body">
+        <div class="input-text">
+          <label for="email">Email address</label>
+          <input id="email" type="text" name="email">
+        </div>
+
+        <div class="input-text">
+          <label for="name">Name</label>
+          <input id="name" type="text" name="name">
+        </div>
+
+        <div class="input-text">
+          <label for="password1">Password</label>
+          <input id="password1" type="password" name="password1">
+        </div>
+
+        <div class="input-text">
+          <label for="password2">Confirmation of the password</label>
+          <input id="password2" type="password" name="password2">
+        </div>
+      </div>
+
+      <div class="footer">
+        <button
+          type="submit"
+          class="button"
+          id="button">
+          Create an account
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <div class="home-bloc">
+    <div class="body">
+      Return to the
+      <%= live_redirect "login page.", to: Routes.live_path(@socket, Portal.LoginLive) %>
+    </div>
+  </div>
+</div>

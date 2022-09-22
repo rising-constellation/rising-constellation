@@ -1,0 +1,36 @@
+<div
+  id="validateTokenPassword"
+  class="fixed-container"
+  phx-hook="validateTokenPassword">
+  <div id="info-container" class="home-bloc" style="display: none;">
+    <div class="body" id="info"></div>
+  </div>
+
+  <div class="home-bloc colored">
+    <div class="header">
+      <h1>Choose a password</h1>
+    </div>
+
+    <form id="webBind" method="post" phx-hook="webBind">
+      <div class="body">
+        <div class="input-text">
+          <label for="password">Password</label>
+          <input id="password" type="password" name="password">
+        </div>
+        <div class="input-text">
+          <label for="password">Password confirmation</label>
+          <input id="password-confirmation" type="password" name="password-confirmation">
+        </div>
+      </div>
+
+      <div class="footer">
+        <button
+          type="submit"
+          class="button"
+          id="button">
+          Confirm
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

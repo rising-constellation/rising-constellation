@@ -1,0 +1,39 @@
+/* SELECTION */
+
+*:not([type="text"], textarea)::selection {
+  background: transparent;
+}
+
+body {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+img, a {
+  -webkit-user-drag: none;
+}
+
+/* CURSOR */
+
+html {
+  cursor: $cursor;
+}
+
+/* MISC */
+
+:focus {
+  outline: 0;
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar {
+  position: relative;
+  width: 10px; height: 10px;
+  background: rgba(255, 255, 255, .1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, .1);
+}

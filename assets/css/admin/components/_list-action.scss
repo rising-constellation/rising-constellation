@@ -1,0 +1,17 @@
+.list-action {
+  text-align: left;
+  a {
+    display: block;
+    line-height: 40px;
+    padding: 0 20px;
+    border-bottom: solid 1px #ccc;
+
+    text-decoration: none;
+    color: #4f4f4f;
+
+    &:hover, &:focus {
+      color: black;
+      background: rgba(255, 255, 255, .5);
+    }
+  }
+}

@@ -1,0 +1,1184 @@
+{
+  "card": {
+    "building": {
+      "about": "About",
+      "delete": "Destroy (instantaneous and permanent)",
+      "limited": "Limited",
+      "limited_hint": "Can only build one per celestial body (planet, moon, asteroid).",
+      "mobilized": "Mobilized",
+      "production": {
+        "new": "Under construction",
+        "repair": "Repairs underway",
+        "upgrade": "Upgrading"
+      },
+      "repair": "Repair",
+      "time_left": "~{n} minutes",
+      "unique": "Unique",
+      "unique_hint": "Can only build one per star system.",
+      "upgrade": "Upgrade"
+    },
+    "character": {
+      "about": "About",
+      "admiral_limit_reached": "Navarch limit reached",
+      "agent": "Agent",
+      "deploy": "Deploy",
+      "determination": "Determination",
+      "fire": "Fire (permanent)",
+      "governor": "Governor",
+      "hire": "Hire",
+      "locked_character": "Resting before next duty",
+      "locked_character_date": "Ready on {date}",
+      "on_sold": "Character for sale",
+      "protection": "Protection",
+      "recall": "Recall",
+      "salary": "Salary",
+      "speaker_limit_reached": "Siderian limit reached",
+      "spy_limit_reached": "Erased limit reached"
+    },
+    "closed_system": {
+      "construction_queue": "Construction queue"
+    },
+    "complex_bonus": {
+      "not_implemented": "Not implemented"
+    },
+    "doctrine": {
+      "about": "About",
+      "active": "Active",
+      "buy": "Purchase",
+      "choose_lex": "Activate lex as a policy",
+      "locked": "Locked",
+      "no_lex_slot": "No free policy slots"
+    },
+    "patent": {
+      "about": "About",
+      "buy": "Purchase",
+      "level_hint": "(lvl {lvl})",
+      "locked": "Locked",
+      "purchased": "In your possession",
+      "unlocks_something": "Unlocks <strong>{something}</strong>"
+    },
+    "production_queue": {
+      "level": "level {lvl}",
+      "new_building": "new building"
+    },
+    "profile": {
+      "contact": "Send a message",
+      "dead_player": "This played was defeated",
+      "elo": "Elo points",
+      "ranking": "Rankings"
+    },
+    "sector": {
+      "repartition": "Number of star systems and dominions"
+    },
+    "ship": {
+      "about": "About",
+      "bombing": "Bombing power",
+      "energy_strikes": "Energy Attack",
+      "explosive_strikes": "Explosive Attack",
+      "flak": "FLAK",
+      "hull": "Hull",
+      "hull_status": "Hull: {current}/{max}",
+      "invasion": "Invasion power",
+      "maintenance": "Maintenance costs",
+      "maneuverability": "Maneuverability",
+      "morale": "Morale",
+      "repair": "Repair Power",
+      "scrap_ship": "Scrap this ship",
+      "shields": "Shields",
+      "time_left": "~{n} minutes",
+      "title": "{units} ships",
+      "under_production": "Under construction",
+      "xp": "XP"
+    },
+    "victory": {
+      "sector_points": "<strong>{points}</strong> points",
+      "sectors_owned": "Possessions",
+      "title": "<strong>{factionPoints}</strong> out of <strong>{victoryPoints}</strong> required"
+    }
+  },
+  "character_reaction": {
+    "attack_enemies": "<strong>Aggressive</strong>, attacks any enemy navarch within its range.",
+    "attack_everyone": "<strong>Fury</strong>, attacks any unallied navarch within its range.",
+    "defend": "<strong>Defender</strong>, fights alongside allies and intervenes during colonization attempts, conquests or raids.",
+    "fight_back": "<strong>Prudent</strong>, no reaction unless directly attacked.",
+    "flee": "<strong>Deserter</strong>, tries to flee when attacked."
+  },
+  "event": {
+    "faction": {
+      "new_player": "<strong class=\"is-color-{theme}\">{player}</strong> has joined your faction."
+    },
+    "global": {
+      "sector_update": "<strong class=\"is-color-{old_theme}\">{old_faction}</strong> has lost control of sector <strong>{sector}</strong> to <strong class=\"is-color-{new_theme}\">{new_faction}</strong>.",
+      "sector_update_new": "<strong class=\"is-color-{old_theme}\">{old_faction}</strong> has lost control of sector <strong>{sector}</strong>.",
+      "sector_update_old": "<strong class=\"is-color-{new_theme}\">{new_faction}</strong> has taken over the independent sector <strong>{sector}</strong>."
+    }
+  },
+  "galaxy": {
+    "map": {
+      "blackhole": "Blackhole",
+      "modes": {
+        "character-label": "Agents label",
+        "population": "Systems points",
+        "radar": "S.L.S.D. (this view may cause performance issues on large maps)",
+        "visibility": "Visibility"
+      },
+      "orbit": "Orbit | Orbits",
+      "uninhabitable": "Uninhabitable"
+    },
+    "opened_character": {
+      "army_details": "Army details",
+      "character_faction": "**{faction}** faction",
+      "commanded_by": "Under the command of **{characterName}**",
+      "lvl": "lvl {level}",
+      "no_extra_info": "No additional information",
+      "ship_details_hidden": "Unidentified ship"
+    },
+    "selection": {
+      "view": {
+        "action_center": "Center on agent",
+        "action_disabled": "The agent cannot be recalled as they are not immobile on one of your systems, at rest, or undercover.",
+        "action_recall": "Recall",
+        "actions": "Actions",
+        "army_invasion": "Invasion power",
+        "army_maintenance": "Maintenance",
+        "army_raid": "Bombing power",
+        "army_repair": "Repair power",
+        "cover_gain": "Erased returning under cover",
+        "cover_locked": "Cover not increasing",
+        "cover_timestamp": "Erased be fully under cover on<br>{date}",
+        "discovered": "Detected",
+        "line_short": "L{n}",
+        "max_cover_timestamp": "Maximum cover achieved on<br>{date}",
+        "on_sold": "Agent for sale, no longer responding to orders",
+        "on_strike": "On strike, refuses to obey orders",
+        "ongoing_repair_work": "Repairs underway",
+        "speaker_conversion": "Seduction",
+        "speaker_cooldown": "Resting",
+        "speaker_encourage_hate": "Destabilization",
+        "speaker_make_dominion": "Propaganda",
+        "speaker_ready": "Ready",
+        "speaker_timestamp": "Siderian will be fully operational on<br>{date}",
+        "spy_assassination": "Removal",
+        "spy_discovered": "Unable to move when discovered",
+        "spy_infiltration": "Infiltration",
+        "spy_sabotage": "Sabotage",
+        "state": "**{state}** state",
+        "timestamp": "End of action on<br>{date}",
+        "undercover": "Undercover",
+        "unknown_action_time": "The duration of this action is undetermined.",
+        "unknown_time": "The end date for this action is not yet known due to a previous action's undetermined duration."
+      }
+    },
+    "system": {
+      "actions": {
+        "assassination": "Delete",
+        "colonize": "Colonize",
+        "conquer": "Conquer",
+        "conversion": "Seduce",
+        "deploy": "Deploy an agent",
+        "encourage_hate": "Destabilize",
+        "fail_already_one_colonization": "Colonization already planned.",
+        "fail_hint_assassination": "Removal impossible",
+        "fail_hint_assassination_coeff": "Too weak in removal.",
+        "fail_hint_colonization": "Colonization impossible :",
+        "fail_hint_conquest": "Conquest impossible :",
+        "fail_hint_conversion": "Seduction impossible:",
+        "fail_hint_conversion_admiral": "Navarch limit reached.",
+        "fail_hint_conversion_coeff": "Too weak in seduction.",
+        "fail_hint_conversion_speaker": "Siderian limit reached.",
+        "fail_hint_conversion_spy": "Erased limit reached.",
+        "fail_hint_dominion_limit": "Dominion limit reached.",
+        "fail_hint_encourage_hate": "Destabilization impossible:",
+        "fail_hint_encourage_hate_coef": "Too weak in destabilization.",
+        "fail_hint_invasion_coef": "Not enough invasion power",
+        "fail_hint_loot": "Pillage impossible:",
+        "fail_hint_make_dominion": "Control failed:",
+        "fail_hint_make_dominion_coef": "Too weak in control.",
+        "fail_hint_no_ship": "Combat ships required.",
+        "fail_hint_no_transport": "Transport ships necessary.",
+        "fail_hint_raid": "Bombardment impossible:",
+        "fail_hint_raid_coef": "Not enough bombing power",
+        "fail_hint_sabotage": "Sabotage impossible",
+        "fail_hint_sabotage_coeff": "Too weak in sabotage.",
+        "fail_hint_siege": "The system is under siege.",
+        "fail_hint_speaker_cooldown": "This Siderian is at rest.",
+        "fail_hint_system_limit": "System limit reached.",
+        "fail_hint_untakeable": "The system cannot be taken because it is neither within or adjacent to your faction's territory.",
+        "fight": "Engage in combat",
+        "infiltrate": "Infiltrate the network",
+        "loot": "Pillage",
+        "make_dominion": "Control",
+        "move": "Move",
+        "raid": "Bombard",
+        "sabotage": "Sabotage the fleet"
+      },
+      "details": {
+        "capital_ships_init_xp": "Capital ships' initial experience",
+        "corvettes_init_xp": "Corvettes' initial experience",
+        "counterintelligence": "Intelligence",
+        "experience": "Experience",
+        "fighters_init_xp": "Fighters' initial experience",
+        "fixing": "Cybersecurity",
+        "frigates_init_xp": "Frigates' initial experience",
+        "infrastructure": "Infrastructure",
+        "military": "Armed Forces",
+        "mobility": "Mobility",
+        "radar": "S.L.S.D.",
+        "visibility": "Visibility",
+        "workforce": "Population"
+      },
+      "pop_class": {
+        "info": "The more population a star system has, the more important it is on the map. It will be worth a certain number of points.",
+        "label": "{label} (pop. > {pop})"
+      },
+      "pop_status": {
+        "happiness": "From {max} to {min} stability.",
+        "productivity": "{penalty}% productivity.",
+        "title": "Population productivity"
+      },
+      "population": {
+        "growth_0": "Very High",
+        "growth_1": "High",
+        "growth_2": "Medium",
+        "growth_3": "Low",
+        "growth_4": "Zero",
+        "growth_5": "Negative",
+        "growth_adj": "{adj} Growth",
+        "habitation": "Housing",
+        "happiness": "stability",
+        "unknown_workforce": "Unknown",
+        "workforce": "Population",
+        "workforce_mobilized": "Mobilized",
+        "workforce_total": "Total"
+      },
+      "properties": {
+        "autonomous_system": "Autonomous system",
+        "deploy_governor": "Deploy a governor",
+        "dominion_of": "Dominion belonging to",
+        "not_claimed": "Unclaimed",
+        "system_of": "System belonging to"
+      },
+      "svg": {
+        "no_data": "No data available"
+      }
+    }
+  },
+  "in_game_chat": {
+    "placeholder": "Your message"
+  },
+  "in_game_settings": {
+    "back": "Resume game",
+    "exit": "Quit game",
+    "exit_tutorial": "Quit tutorial (end the game)"
+  },
+  "inactive": "inactive",
+  "minipanel": {
+    "character_deck": {
+      "empty_state_cost": "Agents garrisoned here don't cost you anything.",
+      "empty_state_market": "You may hire agents in the agent market.",
+      "empty_state_title": "No available agents",
+      "title": "Agent deck"
+    },
+    "character_market": {
+      "title": "Agent Market",
+      "turnover": "This agent will be replaced on<br>{date}"
+    },
+    "doctrine": {
+      "active": "Active lexes",
+      "apply_policies": "Apply these new policies",
+      "buy_slot": "+1 slot",
+      "clear_policies": "Remove all lexes",
+      "policies_locked": "Currently impossible to change policies",
+      "policies_title": "Policies",
+      "price_factor": "Cost Increase Factor",
+      "reset_policies": "Cancel the changes",
+      "save": "Apply these new policies",
+      "title": "Lex"
+    },
+    "market": {
+      "allowed_factions": "Show offer to these factions",
+      "allowed_players": "Show offer to these players",
+      "back": "Back",
+      "buy": "Buy",
+      "cancel": "Cancel",
+      "characters_empty_state": "No agents available",
+      "empty_state_buy_desc": "Wait for players to make offers",
+      "empty_state_buy_title": "No offers found",
+      "empty_state_own_desc": "Make new offers",
+      "empty_state_own_title": "No offers found",
+      "fees": "Tax",
+      "final_price": "Final price",
+      "price": "Price",
+      "publish": "Publish offer",
+      "quantity": "Quantity",
+      "sell": "Offer a sale",
+      "tabs": {
+        "buy": "Buy",
+        "own": "Current offer",
+        "sell": "Sell"
+      },
+      "title": "Market",
+      "tooltip": "Initial price : {price}<br>Tax: {fees}",
+      "types": {
+        "board_character": "offer of agent on assignment",
+        "character_deck": "Offer of agent at rest",
+        "ideology": "Ideology points offer",
+        "technology": "Technology points Offer"
+      }
+    },
+    "patent": {
+      "price_factor": "Cost Increase Factor",
+      "title": "Patents"
+    },
+    "production": {
+      "title": "Production on <strong>{systemName}</strong>"
+    },
+    "victory": {
+      "time-limit": "Time limit victory",
+      "title": "Road to Victory"
+    }
+  },
+  "navbar": {
+    "bottombar": {
+      "agents": "Agents",
+      "character_type_limit": "{characterType} limit",
+      "dominions": "Dominions",
+      "dominions_limit": "Dominion limit",
+      "lexes": "Lex",
+      "n_available": "{n} available",
+      "next_system": "Next system",
+      "patents": "Patents",
+      "previous_system": "Previous system",
+      "systems": "Systems",
+      "systems_limit": "System limit"
+    },
+    "topbar": {
+      "bankrupt": "Your empire is bankrupt",
+      "bankrupt_tooltip": "Your empire no longer has the financial means to support your agents. They have gone on strike and no longer obey orders. The Navarchs have also changed their reaction to 'Deserter'.",
+      "character_market_panel": "Agent Market",
+      "defeat": "You were defeated",
+      "market_panel": "Market",
+      "supervisor_paused": "Paused",
+      "victory_of": "Victory by",
+      "victory_panel": "Victories",
+      "you_lost": "You were defeated",
+      "you_won": "You won"
+    }
+  },
+  "notification": {
+    "box": {
+      "assassination": {
+        "description": {
+          "attacker": {
+            "critical_failure": "Brandishing a poorly balanced plasteel blade **{spy}** tracked down and attempted to eliminate **{target_player}**'s agent **{target}** . They failed and were likely detected by **{system}** security forces.",
+            "critical_success": "Hidden under an RNA cloak and proceeding with shadow-like discretion, **{spy}** tracked down and eliminated **{target_player}**'s agent **{target}** on **{system}**.",
+            "normal_failure": "Overwhelmed by the labyrinthian cityscapes, **{spy}** failed to track down and eliminate **{target_player}**'s agent **{target}** on **{system}**.",
+            "normal_success": "Benefitting from their target's momentary carelessness, **{spy}** eliminated **{target_player}**'s agent **{target}** after having studied their movements on **{system}**."
+          },
+          "defender": {
+            "critical_failure": "A bomb was placed in the heart of **{system}**'s citadelle. It exploded during an important conference killing **{target}** and many innocent bystanders.",
+            "critical_success": "**{target}**'s security detail thwarted an assassination attempt on **{system}**. The suspect managed to escape but their identity is known by authorities.",
+            "normal_failure": "While on **{system}** inspecting its largest O.P.U. , **{target}** was assassinated. Medics sent to the scene were unable to resuscitate the victim.",
+            "normal_success": "An assassination attempt took place on **{system}**. It was a close call, but **{target}** walked away with a minor flesh wound."
+          }
+        },
+        "title": "Assassination on {system}"
+      },
+      "attacker": "Attacker",
+      "center_system": "Center on system",
+      "close": "Close",
+      "colonization": {
+        "description": "Congratulations! **{system}** is yours.\n\nUnder the watchful gaze of Navarch **{admiral}**, colonization efforts were successful.\n\nIt's now time to construct the system's first buildings.",
+        "title": "Colonization of {system}"
+      },
+      "conquest": {
+        "description": {
+          "attacker": {
+            "critical_failure": "Navarch **{admiral}**'s troops were stopped in their tracks during their invasion of **{system}** by the strong defensive capabilities of **{system_player}**. Your fleet fell back on a nearby system.",
+            "critical_success": "Thanks to superior tactics, Navarch **{admiral}**'s troops completely decimated **{system_player}**'s defenses on **{system}**.\n\n\n\nThis system is now under your control.",
+            "normal_failure": "After intense space and ground combat, **{system_player}**'s defenses on **{system}** held back Navarch **{admiral}**'s forces and caused them to retreat to a nearby system.",
+            "normal_success": "After difficult battles, Navarch **{admiral}**'s troops finally conquered **{system_player}**'s **{system}**.\n\n\n\nThis system is now under your control."
+          },
+          "defender": {
+            "critical_failure": "**{system}**'s defenses were utterly obliterated by Navarch **{admiral}**'s invasion forces acting under the orders of **{admiral_player}**.\n\n\n\nYou have lost control of this system.",
+            "critical_success": "The defenders of **{system}** merit high praises! They admirable pushed back Navarch **{admiral}**'s invasion forces acting under the orders of **{admiral_player}**.",
+            "normal_failure": "Despite an admirable defense, Navarch **{admiral}**'s troops under the orders of **{admiral_player}** ended up completely invading **{system}**.\n\n\n\nThis system is now lost.",
+            "normal_success": "The defensive lines of **{system}** had their work cut out for them! But intense battles saw them victorious against Navarch **{admiral}**'s troops under the orders of **{admiral_player}**."
+          }
+        },
+        "title": "Conquest of {system}"
+      },
+      "conversion": {
+        "description": {
+          "attacker": {
+            "critical_failure": "You Siderian **{speaker}** failed to seduce **{target_player}**'s agent **{target}** on **{system}**.",
+            "critical_success": "You Siderian **{speaker}** successfully seduced **{target_player}**'s agent **{target}** on **{system}**.",
+            "normal_failure": "You Siderian **{speaker}** failed to seduce **{target_player}**'s agent **{target}** on **{system}**.",
+            "normal_success": "You Siderian **{speaker}** successfully seduced **{target_player}**'s agent **{target}** on **{system}**."
+          },
+          "defender": {
+            "critical_failure": "**{speaker_player}**'s Siderian **{speaker}** successfully seduced **{target}** on **{system}**.",
+            "critical_success": "**{speaker_player}**'s Siderian **{speaker}** attempted to seduce **{target}** on **{system}**. Luckily, they failed.",
+            "normal_failure": "**{speaker_player}**'s Siderian **{speaker}** successfully seduced **{target}** on **{system}**.",
+            "normal_success": "**{speaker_player}**'s Siderian **{speaker}** attempted to seduce **{target}** on **{system}**. Luckily, they failed."
+          }
+        },
+        "title": "Conversion on {system}"
+      },
+      "cover_lost": "**{cover}** cover lost",
+      "defender": "Defender",
+      "encourage_hate": {
+        "description": {
+          "attacker": {
+            "critical_failure": "Your Siderian **{speaker}** led a failed destabilization campaign on **{system_player}**'s **{system}**.",
+            "critical_success": "Your Siderian **{speaker}** led a successful destabilization campaign on **{system_player}**'s **{system}**.",
+            "normal_failure": "Your Siderian **{speaker}** led a failed destabilization campaign on **{system_player}**'s **{system}**.",
+            "normal_success": "Your Siderian **{speaker}** led a successful destabilization campaign on **{system_player}**'s **{system}**."
+          },
+          "defender": {
+            "critical_failure": "**{speaker_player}**'s Siderian **{speaker}** led a successful destabilization campaign on **{system}**.",
+            "critical_success": "**{speaker_player}**'s Siderian **{speaker}** led a failed destabilization campaign on **{system}**.",
+            "normal_failure": "**{speaker_player}**'s Siderian **{speaker}** led a successful destabilization campaign on **{system}**.",
+            "normal_success": "**{speaker_player}**'s Siderian **{speaker}** led a failed destabilization campaign on **{system}**."
+          }
+        },
+        "title": "Destabilization of {system}"
+      },
+      "fight": {
+        "description": "A battle took place between **{admiral_count}** Navarchs and their fleets on the outskirts of **{system}**, property of **{system_player}**.",
+        "left": {
+          "dead": "Unlucky attacker",
+          "fleeing": "Retreating attacker",
+          "victorious": "Victorious attacker"
+        },
+        "outcome": {
+          "defeat": "Defeat",
+          "victory": "Victory"
+        },
+        "report": "See combat report",
+        "right": {
+          "dead": "Unlucky defender",
+          "fleeing": "Retreating defender",
+          "victorious": "Victorious defender"
+        }
+      },
+      "infiltration": {
+        "attacker": {
+          "description": {
+            "critical_failure": "Arriving unnoticed, **{spy}** did not manage to hack the internal surveillance network on **{player}**'s system **{system}**. They left traces that may lead back to them.",
+            "critical_success": "Arriving unnoticed, hidden thanks to a smuggled ontogram, **{spy}** discovered a way to hack the internal surveillance network on **{player}**'s system **{system}**.\n\n\n\nThey installed a **{contact} nouveau malware**.",
+            "normal_failure": "Arriving unnoticed, **{spy}** did not manage to hack the internal surveillance network on **{player}**'s system **{system}**.",
+            "normal_success": "Arriving unnoticed, **{spy}** discovered a way to hack the internal surveillance network on **{player}**'s system **{system}**.\n\n\n\nThey installed **{contact} new malware**."
+          },
+          "title": "{system}'s network infiltrated"
+        }
+      },
+      "level_gained": "Level **{level}** reached",
+      "loot": {
+        "description": {
+          "attacker": {
+            "critical_failure": "Your Navarch **{admiral}** did not successfully pillage **{system_player}**'s **{system}**.",
+            "critical_success": "Your Navarch **{admiral}** successfully pillaged **{system_player}**'s **{system}**.",
+            "normal_failure": "Your Navarch **{admiral}** did not successfully pillage **{system_player}**'s **{system}**.",
+            "normal_success": "Your Navarch **{admiral}** successfully pillaged **{system_player}**'s **{system}**."
+          },
+          "defender": {
+            "critical_failure": "**{admiral_player}**'s Navarch **{admiral}** successfully pillaged **{system}**.",
+            "critical_success": "**{admiral_player}**'s Navarch **{admiral}** did not successfully pillage **{system}**.",
+            "normal_failure": "**{admiral_player}**'s Navarch **{admiral}** successfully pillaged **{system}**.",
+            "normal_success": "**{admiral_player}**'s Navarch **{admiral}** did not successfully pillage **{system}**."
+          }
+        },
+        "title": "Pillaging of {system}"
+      },
+      "make_dominion": {
+        "description": {
+          "attacker": {
+            "critical_failure": "Your Siderian **{speaker}** failed to take control of **{system_player}**'s **{system}**.",
+            "critical_success": "Your Siderian **{speaker}** took control of **{system_player}**'s **{system}**.",
+            "normal_failure": "Your Siderian **{speaker}** failed to take control of **{system_player}**'s **{system}**.",
+            "normal_success": "Your Siderian **{speaker}** took control of **{system_player}**'s **{system}**."
+          },
+          "defender": {
+            "critical_failure": "**{speaker_player}**'s Siderian **{speaker}** took control of **{system}**.",
+            "critical_success": "**{speaker_player}**'s Siderian **{speaker}** failed to take control of **{system}**.",
+            "normal_failure": "**{speaker_player}**'s Siderian **{speaker}** took control of **{system}**.",
+            "normal_success": "**{speaker_player}**'s Siderian **{speaker}** failed to take control of **{system}**."
+          }
+        },
+        "title": "Control taken of {system}"
+      },
+      "outcome": {
+        "attacker": {
+          "critical_failure": "Critical failure",
+          "critical_success": "Perfect success",
+          "normal_failure": "Failure",
+          "normal_success": "Success"
+        },
+        "defender": {
+          "critical_failure": "Critically failed defense",
+          "critical_success": "Perfect defense",
+          "normal_failure": "Failed defense",
+          "normal_success": "Successful defense"
+        }
+      },
+      "penalty": "**— {penalty}** stability (temporary)",
+      "raid": {
+        "description": {
+          "attacker": {
+            "critical_failure": "Your Navarch **{admiral}** did not successfully bomb **{system_player}**'s **{system}**.",
+            "critical_success": "Your Navarch **{admiral}** successfully bombed **{system_player}**'s **{system}**.",
+            "normal_failure": "Your Navarch **{admiral}** did not successfully bomb **{system_player}**'s **{system}**.",
+            "normal_success": "Your Navarch **{admiral}** successfully bombed **{system_player}**'s **{system}**."
+          },
+          "defender": {
+            "critical_failure": "**{admiral_player}**'s Navarch **{admiral}** successfully bombed **{system}**.",
+            "critical_success": "**{admiral_player}**'s Navarch **{admiral}** did not successfully bomb **{system}**.",
+            "normal_failure": "**{admiral_player}**'s Navarch **{admiral}** successfully bombed **{system}**.",
+            "normal_success": "**{admiral_player}**'s Navarch **{admiral}** did not successfully bomb **{system}**."
+          }
+        },
+        "title": "Bombing of {system}"
+      },
+      "sabotage": {
+        "description": {
+          "attacker": {
+            "critical_failure": "Your Erased **{spy}** did not succeed in sabotaging **{target_player}**'s agent **{target}**'s fleet on **{system}**.",
+            "critical_success": "Your Erased **{spy}** successfully sabotaged **{target_player}**'s agent **{target}**'s fleet on **{system}**.",
+            "normal_failure": "Your Erased **{spy}** did not succeed in sabotaging **{target_player}**'s agent **{target}**'s fleet on **{system}**.",
+            "normal_success": "Your Erased **{spy}** successfully sabotaged **{target_player}**'s agent **{target}**'s fleet on **{system}**."
+          },
+          "defender": {
+            "critical_failure": "**{spy_player}**'s Erased **{spy}** successfully sabotaged **{target}**'s fleet on **{system}**.",
+            "critical_success": "**{spy_player}**'s Erased **{spy}** attempted to sabotage **{target}**'s fleet on **{system}**. They failed miserably.",
+            "normal_failure": "**{spy_player}**'s Erased **{spy}** successfully sabotaged **{target}**'s fleet on **{system}**.",
+            "normal_success": "**{spy_player}**'s Erased **{spy}** attempted to sabotage **{target}**'s fleet on **{system}**. Luckily, they failed."
+          }
+        },
+        "title": "Sabotage on {system}"
+      },
+      "siege_logs": "**Damage on this the system:**\n\n**{damaged_building}** buildings destroyed.\n\n**{population_lost} milliard** civilians killed.",
+      "siege_loot": "**Resources stolen:**\n\n**{credit}** credits.\n\n**{technology}** technology.\n\n**{ideology}** ideology.",
+      "target": "Target"
+    },
+    "short_box": {
+      "assassination": "Assassination on **{system}**",
+      "colonization": "Colonization of **{system}**",
+      "conquest": "Conquest of **{system}**",
+      "conversion": "Conversion on **{system}**",
+      "encourage_hate": "Destabilization of **{system}**",
+      "fight": "Fight on **{system}**",
+      "infiltration": "**{system}**'s network infiltrated",
+      "loot": "Pillaging of **{system}**",
+      "make_dominion": "Control taken of **{system}**",
+      "raid": "Bombing of **{system}**",
+      "sabotage": "Sabotage on **{system}**"
+    },
+    "text": {
+      "character_lvlup": "**{character}** has reached level **{level}**",
+      "colonization_cancelled": "**{speaker}** cancels colonization of **{system}**",
+      "colonization_started": "**{speaker}** commences colonization of **{system}**",
+      "conquest_cancelled": "**{admiral}** cancels conquest of **{system}**",
+      "conquest_started": "**{admiral}** commences conquest of **{system}**",
+      "encourage_hate_cancelled": "**{speaker}** cancels destabilization of **{system}**",
+      "encourage_hate_started": "**{speaker}** commences destabilization of **{system}**",
+      "foreign_agent_passed": "**{player}**'s agent passed through **{system}**",
+      "foreign_agent_stopped": "**{player}**'s agent stopped on **{system}**",
+      "foreign_spy_discovered": "Erased **{spy}** was discovered on **{system}**",
+      "infiltration_cancelled": "**{spy}** cancels infiltration on **{system}**",
+      "infiltration_started": "**{spy}** commences infiltration on **{system}**",
+      "interception_and_flight": "**{admiral}** retreats after being intercepted on **{system}**",
+      "loot_cancelled": "**{admiral}** cancels pillaging of **{system}**",
+      "loot_started": "**{admiral}** commences pillaging of **{system}**",
+      "make_dominion_cancelled": "**{speaker}** cancels control taking of **{system}**",
+      "make_dominion_started": "**{speaker}** commences control taking of **{system}**",
+      "offer_sold": "**{buyer}** has purchased the offer {offer_id}",
+      "raid_cancelled": "**{admiral}** cancels bombing on **{system}**",
+      "raid_started": "**{admiral}** has commenced bombing of **{system}**",
+      "receive_resources": "Ressources received from **{player}**",
+      "start_uprising": "Uprisings take root on **{system}**",
+      "system_under_siege": "**{system}** under siege"
+    }
+  },
+  "panel": {
+    "empire": {
+      "active_radar": "S.L.S.D. active",
+      "credit_income": "Gain in credits",
+      "dominion": "Dominion",
+      "dominion_count": "Number of dominions",
+      "dominion_rate": "Dominions tax rate",
+      "empty_queue": "Queue empty",
+      "ideology_income": "Gain in ideology points",
+      "inactive_radar": "S.L.S.D. inactive",
+      "items_in_queue": "<strong>{number}</strong> queued",
+      "lex_count": "Purchased Lexes",
+      "overall": "Preview",
+      "overall_title": "Overview",
+      "patent_count": "Purchased Patents",
+      "policy_count": "Active lexes",
+      "possessions": "Possessions",
+      "stability": "Stability",
+      "system_count": "Number of star systems",
+      "systems": "{number} system | {number} systems",
+      "technology_income": "Gain in technology points"
+    },
+    "event": {
+      "title": "Latest events"
+    },
+    "faction": {
+      "about": "About",
+      "market": "Market",
+      "market_amount": "Total",
+      "market_cost": "Cost",
+      "market_recipient": "Recipient",
+      "market_send": "Send",
+      "market_send_button": "Send",
+      "market_taxes": "{value}% tax",
+      "online": "Online",
+      "online_players": "Online Teammates",
+      "overall": "Preview",
+      "overall_title": "Overview",
+      "player": "Factionmates",
+      "player_count": "Number of players",
+      "resources_sent": "Sending done!"
+    },
+    "messenger": {
+      "add_to_group": "Add to group",
+      "admin": "Administrator",
+      "contact_player": "Contact {player}",
+      "conversation": "Conversation",
+      "faction_group": "Faction group",
+      "group_name": "Group name",
+      "loading": "Loading…",
+      "messenger": "Messages",
+      "new": {
+        "conversation": "New conversation",
+        "group": "New group"
+      },
+      "remove_from_group": "Remove from group",
+      "return": "Back",
+      "send": "Send",
+      "send_a_message": "Send a message",
+      "your_message": "Your message"
+    },
+    "operations": {
+      "characters": "Agents",
+      "delete": "Delete",
+      "fight_and": "And",
+      "fight_arrival": "arrive on the battlefield.",
+      "fight_attacks": "attack {attack_count} times",
+      "fight_course": "Course of the fight",
+      "fight_destroyed": " are destroyed.",
+      "fight_fly": "no longer respond to orders and flee.",
+      "fight_leave": "are no longer on the battlefield.",
+      "fight_lvl": "(lvl {lvl})",
+      "fight_side_attackers": "Attackers",
+      "fight_side_defenders": "Defenders",
+      "fight_strike": "for a total of **{damages} damages** ({hit_count} successful shots, {missed_count} missed shots, {crashed_count} destroyed units).",
+      "fight_under_owner": "under the command of",
+      "governors": "Governor",
+      "governors_subtitle": "Protectors of your systems",
+      "level": "lvl {level}",
+      "no_governors": "No governor",
+      "no_onboard": "No active agent",
+      "onboard": "Active agents",
+      "onboard_subtitle": "Your eyes, ears, and arms",
+      "reports": "Reports",
+      "return": "Back",
+      "select_report": "Select a report"
+    },
+    "ranking": {
+      "best_yield": "Best yield on a system",
+      "billion_population": "{value} <span class=\"small\">billion</span>",
+      "credit": "Credit",
+      "credit_title": "Financial center rankings",
+      "credits": "Credits",
+      "empire": "Empire",
+      "general_ranking": "Overall rankings",
+      "global_yield": "Global yield",
+      "ideology": "Ideology",
+      "ideology_title": "Knowledge center rankings",
+      "overall": "Leaderboard",
+      "overall_title": "Leaderboard",
+      "player": "Player",
+      "points": "Points",
+      "population": "Population",
+      "possession_count": "{value} <span class=\"small\">systems</span>",
+      "prod": "Production",
+      "production_title": "Industrial systems ranking",
+      "systems": "Systems",
+      "technology": "Technology",
+      "technology_title": "Scientific centers rankings",
+      "workforce": "Population",
+      "workforce_title": "Ranking of the largest systems"
+    }
+  },
+  "production": {
+    "build_on": "Construct on",
+    "building_needed": "Building required: <br />{buildingName}",
+    "hide_all_ships": "Hide all ship upgrades",
+    "order_for": "Order for",
+    "patent_needed": "Patent required:<br />{patentName}",
+    "shows_all_ships": "Show all ship upgrades",
+    "unique_building": "This building has already been constructed on this body.",
+    "unique_system": "This building has already been constructed in this star system."
+  },
+  "quotes": [
+    {
+      "author": "Arbuckle of Mogdora",
+      "content": "When I saw Granis' palladium ornament at the Council of Tetrarchs, I got chills and I told myself: \"That also is governing\".",
+      "reference": "Memoirs of a Dynast from Mogdora"
+    },
+    {
+      "author": "Wylja Tantastr",
+      "content": "How to annex the Bellegéroi, the Pulsians and the Quasastry in one hour? By offering freedom to all their inhabitants, whether biologic or not.",
+      "reference": "The Peaceful Conquest"
+    },
+    {
+      "author": "Rialna Firmagrand",
+      "content": "Zart picked me up and comforted me like no one had before.<br>So I decided to name my son after him.<br>To me, Zart was as good as any man, if not better.",
+      "reference": "Eclosion"
+    },
+    {
+      "author": "Lulielle Gloriastre",
+      "content": "I don't know a single android that deserves its Meditech card less than you do.",
+      "reference": "Wilkyshow #4567"
+    },
+    {
+      "author": "Ethiril of Belmezyr",
+      "content": "A promise to the new generations ?<br><br> Well... it's more freedom than the Tetrarchy has ever given so far; and I'm not only talking about the biological generations.",
+      "reference": "Speeches"
+    },
+    {
+      "author": "Endo of Arliport",
+      "content": "Is this essential? If we don't ask ourselves this question, we will inevitably miss our target.",
+      "reference": "Apocatastasis"
+    },
+    {
+      "author": "Alnadi Tahar",
+      "content": "It is not a GEN-6 Omnifer, it is Soli Tionhan, owner of an H-Box on the 116th floor and my legitimate heir. He can leave at any time if he so wishes.",
+      "reference": "Soli's song"
+    },
+    {
+      "author": "Lazr Ranmala",
+      "content": "Whatever happens on Dor Alya or Lum Hen is not important as long as the traditions of each are respected.",
+      "reference": "Ethics of the Fringes"
+    },
+    {
+      "author": "Beryn Emerstone",
+      "content": "For a while, I considered the wills of our androids to be a new market. But in the end we were running a deficit.",
+      "reference": "Market extrapolation"
+    },
+    {
+      "author": "Cardanian proverb",
+      "content": "Living is a gift, dying is a duty.",
+      "reference": "-"
+    },
+    {
+      "author": "Ardeshir Kishon",
+      "content": "The Others will return and only Cardan will be spared, because she tamed the machine without ever associating herself to it.",
+      "reference": "The Way of Siderian"
+    },
+    {
+      "author": "Peznoj Weldo",
+      "content": "We screwed up everything on Bacha and in the end we didn't find a fraction of the ore we were looking for. The probes were defective.",
+      "reference": "Autobiography"
+    },
+    {
+      "author": "Eleane of Dismagy",
+      "content": "Myrmezir is a planet, a system, a foundation and today, even a tetrarchate.",
+      "reference": "My homeland, Myrmezir"
+    },
+    {
+      "author": "Colborn Galtacon",
+      "content": "They are nobody, nothing. They are not part of any census and only exist through their crimes.",
+      "reference": "The Erased Enemy"
+    },
+    {
+      "author": "Erlidge &amp; Orman",
+      "content": "According to legend, Siderian was a brilliant rhetorician of the past, today we call “siderian” a person who made speech his profession.",
+      "reference": "Dictionary of proper names that became common"
+    },
+    {
+      "author": "Corliss Demelza",
+      "content": "You, a Navark! You don't possess one iota of the intelligence the Admirals of Akhena do!",
+      "reference": "Wilkyshow #2587"
+    },
+    {
+      "author": "Arledge Galtacon",
+      "content": "They fear the coming of the Others who are mere superstition. However, they will not fear your destroyers, real as they may be.",
+      "reference": "Fighting Cardan"
+    },
+    {
+      "author": "Alba Valseciel",
+      "content": "The Tetrarchs always thought that the Tetrarchy would last at least 4000 years. I believe that today they are overcome by doubt.",
+      "reference": "Chronicles"
+    },
+    {
+      "author": "Baikin Shendo",
+      "content": "Because of the A.R.K., peace has a heavier price than war in the Fringes.",
+      "reference": "Speech on Koramo II"
+    },
+    {
+      "author": "Maiki Ongh",
+      "content": "This planet had lush and beautiful vegetation. It was a sacred place to us.",
+      "reference": "Wilkyshow #3001"
+    },
+    {
+      "author": "Alba Valseciel",
+      "content": "Thanks to the lictors of the Tetrarchic High Court, I had to sentence an Erased.<br><br>I was one of the few judges to have had this opportunity.",
+      "reference": "Chronicles"
+    },
+    {
+      "author": "Colleen Fridsky",
+      "content": "On Tetrane exists a palace...<br>Tetrane is a palace!",
+      "reference": "Wilkyshow #1675"
+    },
+    {
+      "author": "Azazine Uklahar",
+      "content": "Preserved from everything, Al-Agabra<br>Far from everything, Al-Agabra<br>Offers us everything, Al-Agabra<br>Most beautiful of all, Al-Agabra",
+      "reference": "Sumptuous Jewels"
+    },
+    {
+      "author": "Syn proverb",
+      "content": "Far away from wars, life takes root.",
+      "reference": "-"
+    }
+  ],
+  "report": {
+    "attacker": "Attacker",
+    "dead": "Critical defeat",
+    "defender": "Defender",
+    "fight_scale_big": "Battle of {name}",
+    "fight_scale_medium": "Small battle of {name}",
+    "fight_scale_small": "Skirmish of {name}",
+    "fight_scale_xbig": "Big battle of {name}",
+    "fight_scale_xsmall": "Encounter at {name}",
+    "fight_scale_xxbig": "Huge battle of {name}",
+    "fleeing": "Defeat with retreat",
+    "result": "Result",
+    "victorious": "Victory"
+  },
+  "resource-description": {
+    "counter_intelligence": "Intelligence renders more difficult the actions of Erased and agents present on this system.",
+    "credit": "Credits are used to construct buildings and ships, pay your agents' salaries, and maintain your fleets.",
+    "defense": "Defense protects this star system against pillagings, bombardments and conquests.",
+    "habitation": "Housing allows population to increase. Each housing building accommodates 1 billion people.",
+    "happiness": "Stability regulates your population's growth rate. Negative stability generates penalties on the star system.",
+    "ideology": "Ideology is used to purchase and apply lexes.",
+    "mobility": "Mobility represents how mobile your population is throughout the star system and increases the credits that your population earns you.",
+    "production": "Production increases the construction rate of your buildings and ships.",
+    "radar": "The S.L.S.D. increases the zone on the map in which neutral or enemy fleets are detected.",
+    "remove_contact": "Cybersecurity inspects and removes enemy malware placed on this star system (malware provides additional visibility)",
+    "technology": "Technology allows you to unlock patents and construct ships.",
+    "workforce": "Each billion inhabitants gives one population point. The population points make it possible to build new buildings, the population will then be mobilized."
+  },
+  "resource-detail": {
+    "happiness_penalties": {
+      "encourage_hate": "Destabilization"
+    },
+    "minimum": {
+      "agent_on_system": "Agent in the system",
+      "min": "min. {0}",
+      "own_faction": "Belongs to your faction",
+      "title": "Modifier"
+    },
+    "misc": {
+      "discovered": "Detected",
+      "initial": "Initial value",
+      "initial_system": "Initial system",
+      "population": "Population",
+      "population_mobility": "Mobility bonus",
+      "population_taxes": "Taxes",
+      "under_siege_penalties": "Besieged",
+      "uprising_penalties": "Insufficient stability",
+      "workforce_penalties": "Insufficient population"
+    },
+    "type": {
+      "agent": "Agents",
+      "building": "Buildings",
+      "character_wages": "Agents' salaries",
+      "doctrine": "Lex",
+      "dominion": "Dominions",
+      "explorer": "Explorer",
+      "fleet_maintenance": "Fleet maintenance",
+      "happiness_penalties": "Temporary penalties",
+      "informer": "Malware",
+      "misc": "Miscellaneous",
+      "ship": "Ships",
+      "system": "Systems",
+      "tradition": "Traditions"
+    },
+    "unknown_detail": "Details unknown"
+  },
+  "system": {
+    "abandon_dominion": "Abandon this dominion",
+    "abandon_system": "Abandon this system",
+    "dominion": "Dominion | Dominions",
+    "empty_system": {
+      "content": "Nothing left to do but hide.",
+      "label": "Vacant system"
+    },
+    "hidden_system": {
+      "content": "Send an agent to scout to find out more.",
+      "label": "No data available"
+    },
+    "status": {
+      "inhabited_dominion": "This system is a **dominion of {player}**. It develops itself independently and earns its owner resources. It can be **pillaged**, **bombarded** or **conquered** by a Navarch, and **subjugated** by a Siderian.",
+      "inhabited_neutral": "This **autonomous system** develops itself independently and does not have an owner. It can be **pillaged**, **bombarded** or **conquered** by a Navarch, and **subjugated** by a Siderian.",
+      "inhabited_player": "This system belongs to **{player}**. It can **pillaged**, **bombarded** or **conquered** by a Navarch.",
+      "own_inhabited_dominion": "This system is your dominion. It develops itself independently and earns you resources",
+      "own_inhabited_player": "This system belongs to you.",
+      "uninhabitable": "This system is **uninhabitable**. It cannot be colonized.",
+      "uninhabited": "This system is *uninhabited**. It can be **colonized** by a Navarch with a colonization ship."
+    },
+    "system": "System | Systems",
+    "system_owner_title": "System claim",
+    "system_state_title": "Administrative Operations",
+    "transform_to_dominion": "Liberate (turn into a dominion)",
+    "transform_to_system": "Administer (turn into a system)"
+  },
+  "tutorial": {
+    "close_tooltip": "Hide tutorial",
+    "end_tutorial": "Quit tutorial",
+    "next_step": "Next",
+    "next_step_tooltip": "Achieve the mission objectives to pass to the next step",
+    "prev_step_tooltip": "Back to the previous step",
+    "step0": {
+      "content": "Welcome to the Djarreh sector! Your faction has elevated you to the rank of dynast and believes in your abilities. There is no better academy than the Koshak Court for you to become one of the leading figures in the galaxy. The entire world sends its rising stars here to toughen them up and give them a sense of responsibility.<br><br>Myrmezir boasts of having liberated several systems from the grips of a conservative Syn clan. In truth, they have simply annexed a few strategic locations. Take back these strongholds in the name of the Synelectic Federation and prove your worth!",
+      "title": "Tutorial"
+    },
+    "step1": {
+      "content": "You can move around the map by simply clicking and dragging. You can also zoom in and out using your mouse's scroll wheel.",
+      "title": "Moving around on the map"
+    },
+    "step10": {
+      "content": "Well done! You are now producing <strong>ideology points</strong>. Ideology points, one of the game's three main resources, allow you to purchase and apply lexes and are required for recruiting certain agents.",
+      "title": "Ideology"
+    },
+    "step11": {
+      "content": "Open the lex panel and purchase the first available lex, <strong>Age of Exploration</strong>.",
+      "title": "Lex"
+    },
+    "step12": {
+      "content": "Lexes give <strong>powerful bonuses</strong> to your empire, but are sometimes accompanied by penalties.",
+      "title": "Lex"
+    },
+    "step13": {
+      "content": "Unlike with patents, simply purchasing a lex does nothing. To take advantage of a lex's bonus, you will need to activate by applying it as a part of policy. A policy is a set of lexes activated at the same time that define the direction of your empire.<br><br>Activate the lex you just purchased. Click on the lex and then click the <strong>Policy Validation</strong> button.",
+      "title": "Policies"
+    },
+    "step14": {
+      "content": "Agents are essential in your expansion. There are 3 types of agents: navarchs, erased and siderians. To deploy agents you need to unlock <strong>agent slots</strong>. These slots are unlocked through lexes like the one you just applied.<br><br>Now deploy a navarch by clicking on <strong>deploy agent</strong>.",
+      "title": "Agents"
+    },
+    "step15": {
+      "content": "To exit the system view, use your scroll wheel and zoom out.<br><br>Your agent is now selected you can make them go to other systems by right clicking on them.<br><br><strong>Send your agent exploring</strong>. This will allow you to scout out your surroundings and gain information on the systems around you.",
+      "title": "Exploration"
+    },
+    "step16": {
+      "content": "Well done! It's time to expand your system. Build <strong>2 more Hive Cities</strong>.",
+      "title": "Development"
+    },
+    "step17": {
+      "content": "Be careful! Your stability is very low. Indeed, Hive Cities increase housing but lower the stability of your system. For a system to develop, you need <strong>vacant housing and positive stability</strong>. Some buildings and lexes bring stability penalties. In addition, each point of population in your system brings a point of negative stability.",
+      "title": "Stability"
+    },
+    "step18": {
+      "content": "Purchase the <strong>Urbanization</strong> patent that provides access to useful new buildings and build the <strong>Central Hub</strong> in the free tile indicated by the arrow. This infrastructure building provides stability.",
+      "title": "Stability"
+    },
+    "step19": {
+      "content": "Star systems are composed of several celestial bodies that orbit the star at the center of your system. There are three types of celestial bodies: <strong>habitable planets</strong>, <strong>barren planets</strong> and <strong>orbital bodies (moons or asteroids)</strong>. Each celestial body type allows for the construction of different buildings.<br><br>Habitable and barren planets require the construction of an <strong>infrastructure building</strong> before other buildings can be constructed there.",
+      "title": "Orbits and Celestial Bodies"
+    },
+    "step2": {
+      "content": "This is your first system. It's your starting point and you will have to develop it to become stronger. If you lose it the game is over.<br><br><strong>Click on the system</strong> to open it.",
+      "title": "Star system"
+    },
+    "step20": {
+      "content": "Now build <strong>2 Refining Ducts</strong> on the moon designated by the arrow. The Refining Ducts will increase the credit output of your system.<br><br>Each body has 3 potentials (industrial, scientific and appeal) that act as multipliers of the production bonuses brought forth by buildings. For example, building Refining Ducts on a body with <strong>high industrial potential</strong> will multiply their credit production, thus making them more efficient.",
+      "title": "Potentials"
+    },
+    "step21": {
+      "content": "Now build <strong>3 Arrays of Excavators</strong> on the open barren planet. These will increase the <strong>production</strong> of your system.<br><br>Production denotes a system's construction capabilities. The more production you have on a system, the faster buildings and ships will be constructed.",
+      "title": "Production"
+    },
+    "step22": {
+      "content": "Great! Now we need to ramp up. Make sure you have an overall output of <strong>200 credits</strong>, <strong>50 technology points</strong> and <strong>50 ideology points</strong>.<br><br>You'll need to buy new patents, build the right buildings in the right places and apply lexes to get there.",
+      "title": "Expand your empire"
+    },
+    "step23": {
+      "content": "It's time to get your fleets ready and pillage nearby systems.<br><br>Pillaging and bombing are, along with conquering, navarch actions. Bombing will inflict heavy casualties among civilians and will damage a number of enemy buildings. Pillaging, on the other hand, will slightly damage the system but will allow you to gain many resources.",
+      "title": "01 Pillaging"
+    },
+    "step24": {
+      "content": "First, bring your navarch back to your system. You'll need to arm them so that they can complete their mission.",
+      "title": "01 Pillaging"
+    },
+    "step25": {
+      "content": "Now purchase the <strong>Assembly Lines</strong> patent. This will allow you to open a production line of small vessel.",
+      "title": "01 Pillaging"
+    },
+    "step26": {
+      "content": "Construct the <strong>S-01 Assembly Line</strong> on a moon or asteroid with an open tile.",
+      "title": "01 Pillaging"
+    },
+    "step27": {
+      "content": "Also purchase the <strong>Reinforced Fuselage</strong> patent. This patent will allow you to build fighter-bombers, very useful for pillaging or... bombing.",
+      "title": "01 Pillaging"
+    },
+    "step28": {
+      "content": "You can finally command <strong>12 squadrons of 2 fighter-bombers</strong>.<br><br>First select your navarch (click on their name at the bottom right of the screen). You can assign a <strong>maximum of 18 squadrons</strong> to a navarch. These are organized in lines (l1 to l6) of 3 tiles. The first lines engage in combat before the subsequent ones.<br><br>Fill the first 4 lines with fighter-bombers. Your navarch will be stuck in the docking bay until construction is completed.",
+      "title": "01 Pillaging"
+    },
+    "step29": {
+      "content": "You are now ready! This is your target. This system is an <strong>autonomous system</strong>, it develops on its own and is not player driven. Send your navarch there!",
+      "title": "01 Pillaging"
+    },
+    "step3": {
+      "content": "Now construct your first building. Click on an empty tile and choose the <strong>Hive Cities</strong> building. It will take a few seconds to be constructed.",
+      "title": "Buildings"
+    },
+    "step30": {
+      "content": "Enter the system and click on the <strong>pillage</strong> action. Pillaging takes some time. You will be notified when it is completed. The success or failure of an action is always determined by the balance of power between the attacker and the defender. In the case of Pillaging, the attacker's <strong>bombing power</strong> is compared to the targeted system's <strong>defense</strong>.",
+      "title": "01 Pillaging"
+    },
+    "step31": {
+      "content": "It's time to expand your empire, dynast! You must launch a colonization mission.",
+      "title": "02 Colonization"
+    },
+    "step32": {
+      "content": "First, bring your navarch back to your system. They will serve as an escort for your colonization ship.",
+      "title": "02 Colonization"
+    },
+    "step33": {
+      "content": "Now purchase the <strong>Hypersleep Chamber</strong> patent.",
+      "title": "02 Colonization"
+    },
+    "step34": {
+      "content": "You can place a <strong>colonization ship</strong> on one of your navarch's empty tile's, preferably in the back lines. This ship does not require a shipyard in order to be constructed.",
+      "title": "02 Colonization"
+    },
+    "step35": {
+      "content": "In the same way as for your agents, you will need to apply a lex to be allowed to administer an additional system. <strong>Purchase a policy slot</strong> and apply the <strong>Proto-Empire</strong> lex.",
+      "title": "02 Colonization"
+    },
+    "step36": {
+      "content": "This is your target. This system is an empty system. It can be colonized but remains uninhabited for the moment.",
+      "title": "02 Colonization"
+    },
+    "step37": {
+      "content": "Enter the system and click on the <strong>colonize</strong> action. Colonization takes some time and will consume your colonization ship. This action cannot fail.",
+      "title": "02 Colonization"
+    },
+    "step38": {
+      "content": "Congratulations! Now you can manage your brand new system, build buildings and develop it.",
+      "title": "02 Colonization"
+    },
+    "step39": {
+      "content": "Knowing your enemy is the key to victory. Your next mission will be to gather information about an important target. For that you will enlist the services of an <strong>erased agent<strong>.",
+      "title": "03 Infiltration"
+    },
+    "step4": {
+      "content": "Good! Your population is growing. Population will flow into your system as long as you have housing available.<br><br>Most buildings require a certain number of population points (labor) to be used. You can find all this information in the population panel.",
+      "title": "Population"
+    },
+    "step40": {
+      "content": "You can buy agents in the <strong>Agent Market</strong>, located at the top right of your screen. All players have access to the same market and when someone buys an agent, it will no longer be available to other players in the same game. Choose wisely and, most importantly, be quick!",
+      "title": "03 Infiltration"
+    },
+    "step41": {
+      "content": "Now hire an erased one with <strong>at least one skill point in infiltration</strong>. If you can't find one, you can wait a while until one shows up in the market. New agents cycle in and out quite frequently.",
+      "title": "03 Infiltration"
+    },
+    "step42": {
+      "content": "<strong>deploy your freshly recruited agent</strong> in your main system.",
+      "title": "03 Infiltration"
+    },
+    "step43": {
+      "content": "This time we're going into enemy ranks! This Myrmezirian dominion will do just fine, <strong>send your erased agent</strong> there.",
+      "title": "03 Infiltration"
+    },
+    "step44": {
+      "content": "You can now instruct your erased to <strong>infiltrate the network</strong> of the standalone system. Stealthy as a shadow, the erased agent will attempt to place malware, a covert wiretapping software.",
+      "title": "03 Infiltration"
+    },
+    "step45": {
+      "content": "You've <strong>lost cover</strong>! An under cover erased agent is completely invisible to others. On the other hand, a detected erased agent is an easy target and will be unable to act. By waiting a while, the erased will slowly regain cover.",
+      "title": "03 Infiltration"
+    },
+    "step46": {
+      "content": "<strong>Malware allows you to increase the visibility you have on another system</strong>. At maximum visibility (out of 5 points), you will be able to see everything your enemy is planning on that system and they will b e non the wiser! <br><br>That said, depending on your targeted system's cybersecurity skill level, your malware could be discovered and removed.",
+      "title": "03 Infiltration"
+    },
+    "step47": {
+      "content": "Repeatedly infiltrate this system's network now and increase visibility to 5!",
+      "title": "03 Infiltration"
+    },
+    "step48": {
+      "content": "You will now attempt to topple this system's government and take control of it. <br><br>You can conquer systems through military force but you can also make <strong>dominions</strong>. Dominions are systems that you do not directly control but that relinquish to you a part of their resource income. You will need to enlist the services of a siderian agent to have a dominions.",
+      "title": "04 Taking Control"
+    },
+    "step49": {
+      "content": "To go ahead with this operation you will need to hire multiple siderian agents. You will therefore need to activate a new lex that will allow your empire to employ more than one siderian agent. Purchase, apply and activate the <strong>Public Relations</strong> lex.",
+      "title": "04 Taking Control"
+    },
+    "step5": {
+      "content": "Now construct the<strong>Delta Polytec</strong>, the center for sciences. Click on an empty tile and select the proper building.",
+      "title": "Technologies"
+    },
+    "step50": {
+      "content": "Now find in the Agent Market a siderian agent with <strong>2 to 3 destabilization skill points</strong>.",
+      "title": "04 Taking Control"
+    },
+    "step51": {
+      "content": "Now find a second siderian agent with <strong>2 to 3 propaganda skill points</strong>.",
+      "title": "04 Taking Control"
+    },
+    "step52": {
+      "content": "We will intervene on this autonomous system. The visibility gained before will come in handy. <strong>Send your siderian agents</strong> there now.",
+      "title": "04 Taking Control"
+    },
+    "step53": {
+      "content": "Use your siderian skilled in destabilization to launch a <strong>destabilization</strong> action on the system.",
+      "title": "04 Taking Control"
+    },
+    "step54": {
+      "content": "This will temporarily lower the stability of the system. <strong>Stability is how a system defends itself against siderian actions</strong> so it is important to erode said stability in order to make it easier to take control.",
+      "title": "04 Taking Control"
+    },
+    "step55": {
+      "content": "After any action, whether successful or unsuccessful, a siderian agents is going to have to take a <strong>rest</strong>.",
+      "title": "04 Taking Control"
+    },
+    "step56": {
+      "content": "Just like with your systems, you will need to apply a lex to be allowed to own dominions. <strong>Buy a policy slot</strong> and apply the <strong>Exclusive Trade Zone</strong> lex.",
+      "title": "04 Taking Control"
+    },
+    "step57": {
+      "content": "You can now, with your second siderian, <strong>take control</strong> of the autonomous system.",
+      "title": "04 Taking Control"
+    },
+    "step58": {
+      "content": "You've done it! You can now dive into your first team game.<br><br>Rising Constellation is a highly cooperative game, so you'll have to find ways to work with your teammates in order to achieve the best result! Try a <strong>slower-paced, drawn out Legacy match</strong> to ease into the game or set fire to your keyboard by jumping straight into a <strong>quick-paced and frantic flash match</strong>.",
+      "title": "End of tutorial"
+    },
+    "step6": {
+      "content": "Well done! You are now producing <strong>technology points</strong>. Technology points, one of the three main resources in the game, allow you to buy patents and are needed to build certain ships and recruit certain agents.",
+      "title": "Technologies"
+    },
+    "step7": {
+      "content": "Open the patents panel and purchase the first available patent, the <strong>Holographic Storage System</strong>.",
+      "title": "Patents"
+    },
+    "step8": {
+      "content": "Patents unlock new buildings and ships. Each patent purchased increases the cost of all future patents, so choose wisely!",
+      "title": "Patents"
+    },
+    "step9": {
+      "content": "You can now build the <strong>Citadel</strong>, center for the arts and of thinkers! Click on an empty tile and select the proper building.",
+      "title": "Ideology"
+    }
+  }
+}

@@ -1,0 +1,78 @@
+.main-header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 65px;
+
+  color: white;
+  background: #262626;
+  border-bottom: solid 1px #4F4F4F;
+  border-top: solid 5px $red-1;
+  overflow: hidden;
+
+  z-index: 1000;
+
+  &.maintenance {
+    background: #ee5f39;
+  }
+
+  button {
+    border: none;
+    font-size: 22px;
+    color: #CCC;
+    z-index: 1100;
+
+    &:hover {
+      color: white;
+    }
+  }
+
+  .navicon {
+    position: absolute;
+    top: 0; bottom: 0; left: 0;
+    width: 60px;
+    background: rgba(255, 255, 255, .1);
+    border-right: solid 1px rgba(255, 255, 255, .1);
+
+    &:hover, &:focus {
+      background: rgba(255, 255, 255, .2);
+    }
+  }
+
+  .exit {
+    position: absolute;
+    top: 0; bottom: 0; right: 0;
+    width: 60px;
+    color: white;
+    background: $red-3;
+    border-left: solid 1px $red-2;
+    box-shadow: 0 0 25px black;
+
+    &:hover, &:focus {
+      background: $red-1;
+    }
+  }
+
+  h1 {
+    margin: 0 0 0 60px;
+    line-height: 60px;
+    font-size: 20px;
+    padding: 0 30px;
+    display: inline-block;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      opacity: .8;
+
+      &:focus, &:hover {
+        opacity: 1;
+      }
+    }
+
+    i {
+      display: inline-block;
+      margin: 0 15px;
+      opacity: .6;
+    }
+  }
+}

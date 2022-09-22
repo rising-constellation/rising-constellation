@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <%= csrf_meta_tag() %>
+    <%= live_title_tag assigns[:page_title] || "Home", suffix: " · Rising Constellation" %>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="<%= Routes.static_path(@conn, "/apple-icon-180x180.png") %>"">
+    <link rel="icon" type="image/png" sizes="32x32" href="<%= Routes.static_path(@conn, "/favicon-32x32.png") %>"">
+    <link rel="icon" type="image/png" sizes="16x16" href="<%= Routes.static_path(@conn, "/favicon-16x16.png") %>"">
+    <link rel="manifest" href="<%= Routes.static_path(@conn, "/site.webmanifest") %>"">
+
+    <link phx-track-static rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>
+
+    <script defer phx-track-static type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
+    <script src="https://kit.fontawesome.com/7fc80120df.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <div class="main-container">
+      <div class="navbar top">
+        <section>
+          <%= live_redirect class: "nav-item logo", to: Routes.live_path(@conn, Portal.LandingLive) do %>
+            <img src="<%= Routes.static_path(@conn, "/img/logo-icon-white.png") %>">
+          <% end %>
+          <a
+            class="nav-item"
+            target="_blank"
+            href="https://risingconstellation.wordpress.com">
+            Blog
+          </a>
+          <%= live_redirect class: "nav-item", to: Routes.live_path(@conn, Portal.PressKitLive) do %>
+            Press kit
+          <% end %>
+        </section>
+
+        <section>
+          <%= live_redirect class: "nav-item", to: Routes.live_path(@conn, Portal.LoginLive) do %>
+            Log in
+          <% end %>
+          <%= live_redirect class: "nav-item", to: Routes.live_path(@conn, Portal.SignupLive) do %>
+            Sign up
+          <% end %>
+        </section>
+      </div>
+
+      <div class="content">
+        <%= @inner_content %>
+      </div>
+
+      <div class="navbar bottom">
+        <section>
+          <div class="nav-item small">
+            © Blackflag Games 2021
+          </div>
+        </section>
+        <section>
+          <a
+            class="nav-item"
+            target="_blank"
+            href="https://discord.gg/Y2p6Pem">
+            <i class="fab fa-discord"></i>
+          </a>
+          <a
+            class="nav-item"
+            target="_blank"
+            href="https://www.facebook.com/risingconstellation">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a
+            class="nav-item"
+            target="_blank"
+            href="https://twitter.com/rising_const">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a
+            class="nav-item"
+            target="_blank"
+            href="https://www.instagram.com/rising_constellation_">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,84 @@
+<div class="content medium">
+  <div class="header-box">
+    <h2>
+      <strong><%= @total_entries %></strong>
+      clés steam
+    </h2>
+
+    <div class="tools">
+      <a href="#" phx-click="show_available">
+        Libres
+      </a>
+      <a href="#" phx-click="show_unavailable">
+        Activées
+      </a>
+    </div>
+
+    <div class="pagination">
+      <%= if @page_number == 1 do %>
+        <span class="disabled">
+          <i class="fa fa-angle-left"></i>
+        </span>
+      <% else %>
+        <%= live_redirect to: Routes.live_path(@socket, Portal.KeysLive, page: @page_number - 1) do %>
+          <i class="fas fa-angle-left"></i>
+        <% end %>
+      <% end %>
+      <span class="active">
+        <%= @page_number %>
+      </span>
+      <%= if @page_number == @total_pages do %>
+        <span class="disabled">
+          <i class="fas fa-angle-right"></i>
+        </span>
+      <% else %>
+        <%= live_redirect to: Routes.live_path(@socket, Portal.KeysLive, page: @page_number + 1) do %>
+          <i class="fas fa-angle-right"></i>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="header-box">
+    <%= f = form_for :keys, "#", phx_submit: :add_keys, class: "form", style: "margin-bottom: 20px;" %>
+      <section>
+        <fieldset>
+          <label><%= textarea f, :keys, style: "height: 100px;" %></label>
+        </fieldset>
+      </section>
+
+      <footer>
+        <%= submit "Ajouter les clés" %>
+      </footer>
+    </form>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th class="square"></th>
+        <th>Clé</th>
+        <th>Etat</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= for key <- @keys do %>
+        <tr>
+          <td class="square">
+            <%= key.id %>
+          </td>
+          <td>
+            <%= key.item %>
+          </td>
+          <td>
+            <%= if key.available_units > 0 do %>
+              <span class="toast is-blue-1">Libre</span>
+            <% else %>
+              <span class="toast is-red-1">Activée</span>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

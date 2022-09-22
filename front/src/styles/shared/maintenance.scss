@@ -1,0 +1,50 @@
+.maintenance {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  background: rgba(0, 0, 0, .5);
+  backdrop-filter: blur(4px);
+
+  z-index: $z-maintenance;
+}
+
+.maintenance-content {
+  position: relative;
+  line-height: 40px;
+  padding: 2px 15px 0 15px;
+  margin-bottom: 10px;
+
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  background: $primary;
+  border: solid 1px lighten($primary, $color-variant-3);
+  box-shadow: 0 0 0 5px $black;
+
+  &:not(.static):first-child:before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    height: 2px;
+    background: lighten($primary, $color-variant-2);
+    animation:
+      maintenance-left 2s infinite,
+      maintenance-right 2s infinite;
+  }
+}
+
+@keyframes maintenance-left {
+  0% { left: 20%; }
+  30% { left: 20%; }
+  100% { left: 80%; }
+}
+
+@keyframes maintenance-right {
+  0% { right: 80%; }
+  70% { right: 20%; }
+  100% { right: 20%; }
+}

@@ -1,0 +1,111 @@
+.faction-market {
+  width: 400px;
+  padding: 2px;
+  margin: 95px;
+  border: solid 1px $grey-default;
+  box-shadow: 0 0 0 8px rgba(0, 0, 0, .1);
+  background: $grey-light;
+}
+
+.faction-market-header {
+  background: $grey-default;
+
+  .label {
+    padding: 40px 0 10px 0;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .faction-market-resources {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 40px;
+
+    .svg-icon {
+      width: 50px;
+      height: 50px;
+      margin: 0 10px;
+      border-radius: 100%;
+      box-shadow:
+        0 0 0 3px transparent,
+        0 0 0 6px transparent;
+
+      transition: box-shadow linear 100ms;
+
+      &:hover {
+        box-shadow:
+          0 0 0 3px $grey-default,
+          0 0 0 6px $grey-lighter;
+      }
+
+      &.active {
+        box-shadow:
+          0 0 0 3px $grey-default,
+          0 0 0 6px $white;
+      }
+    }
+  }
+}
+
+.faction-market-body {
+  .input-box {
+    margin: 20px;
+  }
+
+  .input {
+    display: flex;
+    align-items: center;
+    border: solid 2px $grey-lighter;
+    background: $grey-light;
+  }
+
+  label {
+    width: 30%;
+    text-align: right;
+    padding: 0 10px;
+
+    text-transform: uppercase;
+    font-size: 1.4rem;
+  }
+
+  input, select {
+    width: 70%;
+    height: 40px;
+    border: none;
+    padding: 0 10px;
+    background: $grey-default;
+
+    color: $white;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    &:disabled {
+      color: rgba(255, 255, 255, .4);
+    }
+  }
+
+  .info {
+    display: inline-block;
+    margin-left: 25px;
+    padding: 4px 8px 2px 8px;
+    border-radius: 0 0 3px 3px;
+
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    background: $grey-lighter;
+  }
+}
+
+.faction-market-footer {
+  padding: 40px 0;
+  text-align: center;
+  background: $grey-default;
+
+  .button {
+    width: 70%;
+    margin: 0 auto;
+    @include default-button;
+  }
+}

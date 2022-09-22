@@ -1,0 +1,338 @@
+.default-button {
+  display: inline-block;
+  padding: 0 15px;
+  line-height: 34px;
+
+  border: solid 1px darken($primary, $color-variant-1);
+  background: $grey-dark;
+  border-radius: 0;
+  color: $primary;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, .2);
+  font-size: 1.4rem;
+
+  transition: all linear 100ms;
+
+  &:hover {
+    color: lighten($primary, $color-variant-3);
+    box-shadow:
+      0 0 0 3px rgba(0, 0, 0, .2),
+      0 0 10px 0 rgba(0, 0, 0, .4);
+  }
+
+  &:disabled, &.disabled {
+    opacity: .5;
+    box-shadow: none;
+    color: rgba(255, 255, 255, .3);
+    border-color: rgba(255, 255, 255, .3);
+
+    &:hover {
+      color: rgba(255, 255, 255, .3);
+      box-shadow: none;
+    }
+  }
+
+  &.squared {
+    width: 38px;
+    padding: 0 5px;
+    text-align: center;
+  }
+
+  &.fullsized {
+    width: 100%;
+  }
+}
+
+.default-input {
+  position: relative;
+  border: solid 1px rgba(0, 0, 0, .2);
+  background: rgba(0, 0, 0, .1);
+  border-radius: 3px;
+  margin-bottom: 25px;
+
+  .has-color-indicator {
+    position: relative;
+    padding-left: 30px;
+  
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 19px; height: 19px;
+      background: white;
+      border-radius: 3px;
+    }
+  }
+
+  .has-color-indicator {
+    @each $class, $color in $themes-list {
+      &.theme-#{$class}:after {
+        background: $color;
+      }
+    }
+  }
+
+  .label, label {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10px;
+
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    line-height: 20px;
+    color: $white-alt-1;
+
+    transition: all linear 250ms;
+
+    &.has-small-margin {
+      margin-bottom: 10px;
+    }
+  }
+
+  input, textarea, select {
+    display: block;
+    width: 100%;
+    padding: 10px;
+
+    border: none;
+    border-top: solid 1px rgba(0, 0, 0, .2);
+    background: rgba(0, 0, 0, .1);
+
+    &:disabled {
+      color: $white-alt-2;
+    }
+
+    &::placeholder {
+      color: $white-alt-3;
+    }
+  }
+
+  select {
+    color: $white;
+  }
+
+  option {
+    color: $black;
+  }
+
+  .input-slider {
+    background: green;
+    padding: 12px 20px 16px 20px;
+    border-top: solid 1px rgba(0, 0, 0, .2);
+    background: rgba(0, 0, 0, .1);
+  }
+
+  textarea {
+    max-width: 100%;
+    min-width: 100%;
+    height: 200px;
+  }
+
+  &:hover {
+    label {
+      color: $white;
+    }
+  }
+
+  &.has-error {
+    &:before {
+      content: '!';
+      position: absolute;
+      top: 5px; right: 5px;
+      width: 20px; height: 20px;
+      line-height: 20px;
+      text-align: center;
+      font-weight: bold;
+      border-radius: 100%;
+      background: darken($primary, 10%);
+    }
+
+    input, textarea {
+      color: lighten($primary, 10%);
+    }
+  }
+
+  .action {
+    position: absolute;
+    right: 8px; bottom: 8px;
+    width: 28px; height: 28px;
+    line-height: 28px;
+    padding: 0;
+  }
+}
+
+.checkbox-input {
+  position: relative;
+  border: solid 1px rgba(0, 0, 0, .2);
+  background: rgba(0, 0, 0, .1);
+  border-radius: 3px;
+  margin-bottom: 25px;
+
+  &.has-small-bm {
+    margin-bottom: 10px;
+  }
+
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0; width: 0;
+  }
+
+  label {
+    display: block;
+    padding: 7px 10px 5px 40px;
+
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    line-height: 20px;
+    color: $white-alt-1;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; bottom: 0;
+      width: 30px;
+      border-right: solid 1px rgba(0, 0, 0, .2);
+      background: rgba(0, 0, 0, .1);
+    }
+
+    &:after {
+      display: none;
+      content: '';
+      position: absolute;
+      top: 5px; left: 5px; bottom: 5px;
+      width: 20px;
+      border-radius: 3px;
+      background: $primary;
+      box-shadow: 0 0 0 1px lighten($primary, $color-variant-4);
+    }
+  }
+
+
+  &:hover label:before {
+    background: rgba(0, 0, 0, .2);
+  }
+
+  input:checked ~ label:after {
+    display: block;
+  }
+}
+
+.radio-input {
+  border: solid 1px rgba(0, 0, 0, .2);
+  background: rgba(0, 0, 0, .1);
+  border-radius: 3px;
+  margin-bottom: 25px;
+
+  .label {
+    display: block;
+    padding: 5px 10px;
+
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    line-height: 20px;
+    color: $white-alt-1;
+
+    transition: all linear 250ms;
+  }
+
+  .content {
+    display: flex;
+
+    width: 100%;
+    padding: 10px;
+
+    border: none;
+    border-top: solid 1px rgba(0, 0, 0, .2);
+    background: rgba(0, 0, 0, .1);
+
+    input[type="radio"] {
+      position: absolute;
+      opacity: 0.011;
+    }
+
+    label {
+      display: block;
+      line-height: 29px;
+      padding: 1px 8px 0 8px;
+
+      border: 1px solid darken($primary, $color-variant-4);
+      border-right: none;
+      background: $black;
+      text-transform: uppercase;
+      font-size: 1.4rem;
+      color: $primary;
+    }
+
+    *:last-child > label {
+      border-right: 1px solid darken($primary, $color-variant-4);
+    }
+
+    label:hover {
+      background: lighten($black, 10%);
+    }
+
+    input[type="radio"]:disabled + label {
+      background: $black;
+    }
+
+    input[type="radio"]:checked + label {
+      background: $primary;
+      color: $black;
+      box-shadow: inset 0 0 0 1px $black;
+    }
+  }
+
+  &.is-horizontal {
+    .content {
+      flex-direction: column;
+
+      label {
+        border: 1px solid darken($primary, $color-variant-4);
+        border-bottom: none;
+      }
+
+      *:last-child > label {
+        border-bottom: 1px solid darken($primary, $color-variant-4);
+      }
+    }
+  }
+
+  &.is-image {
+    .content {
+      flex-direction: column;
+
+      label {
+        position: relative;
+        border: 1px solid $grey-lighter;
+        border-bottom: none;
+
+        padding: 0;
+
+        img {
+          display: block;
+        }
+      }
+
+      input[type="radio"]:checked + label:before {
+        position: absolute;
+        content: '';
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: $primary;
+        opacity: .15;
+      }
+
+      *:last-child > label {
+        border: 1px solid $grey-lighter;
+      }
+    }
+  }
+
+  &:hover {
+    .label {
+      color: $white;
+    }
+  }
+}

@@ -1,0 +1,121 @@
+.tile {
+  display: flex;
+  position: relative;
+  width: 40px;
+  height: 40px;
+
+  font-size: 2rem;
+  text-align: center;
+  line-height: 40px;
+
+  box-shadow: inset 0 0 0 2px $grey-dark;
+  background: $grey-default;
+  transition: box-shadow linear 100ms;
+  color: $grey-lighter;
+
+  &.is-transparent {
+    opacity: .1;
+  }
+
+  &.is-destroyed {
+    opacity: .25;
+  }
+
+  &.is-fadded {
+    opacity: .5;
+  }
+
+  &.is-important {
+    background: lighten($grey-default, 3%);
+    box-shadow: inset 0 0 0 2px lighten($grey-dark, 3%);
+  }
+
+  &.has-dashed-background {
+    background-image: repeating-linear-gradient(-45deg,
+      transparent,
+      transparent 4px,
+      $grey-lighter 4px,
+      $grey-lighter 6px
+    );
+  }
+
+  .tile-icon {
+    margin: 2px;
+    width: 36px;
+    height: 36px;
+    color: $white;
+
+    &.is-small {
+      margin: 12px;
+      width: 16px;
+      height: 16px;
+    }
+
+    &.is-transparent {
+      opacity: .25;
+    }
+
+    &.is-rotated {
+      transform: rotate(-90deg);
+    }
+  }
+
+  .tile-toast {
+    position: absolute;
+    width: 16px; height: 16px;
+    padding: 2px;
+    background: $grey-lighter;
+    border-radius: 3px;
+    color: $white;
+
+    .svg-icon {
+      display: block;
+      width: 12px; height: 12px;
+      color: $white;
+    }
+
+    &.is-hidden {
+      display: none;
+    }
+
+    &.top { top: -2px; }
+    &.bottom { bottom: -2px; }
+    &.left { left: -2px; }
+    &.right { right: -2px; }
+  }
+
+  .tile-level {
+    font-size: 1rem;
+    font-weight: bold;
+    position: absolute;
+    top: 0; right: 0;
+    line-height: 14px;
+    width: 14px;
+    text-align: center;
+    border-radius: 0 0 0 14px;
+    background: rgba(0, 0, 0, .75);
+    color: $white;
+  }
+
+  &:hover > .tile-toast.is-hidden {
+    display: block;
+  }
+}
+
+@each $class, $color in $themes-list {
+  .f-#{$class} {
+    .tile.is-hoverable:hover {
+      box-shadow: inset 0 0 0 1px $color;
+    }
+
+    .tile.is-active {
+      box-shadow: inset 0 0 0 2px $color;
+      background: darken($color, $color-variant-4);
+    }
+
+    .tile .tile-toast.is-active {
+      background: lighten($color, $color-variant-2);
+      .svg-icon { color: $black; }
+    }
+  }
+}

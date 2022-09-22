@@ -1,0 +1,94 @@
+.stellar-system-view {
+  position: absolute;
+  top: $navbar-height;
+  bottom: $navbar-height;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  z-index: $z-map-system;
+}
+
+.system-content {
+  position: absolute;
+  top: $navbar-height;
+  bottom: $navbar-height;
+  width: calc(#{$content-height} + #{$stellar-system-view-overflow});
+  left: calc(50% - (#{$content-height} / 2) - (#{$stellar-system-view-overflow} / 2));
+  z-index: $z-map-system + 1;
+}
+
+.system-info {
+  position: absolute;
+  bottom: $navbar-height;
+  left: 0;
+  z-index: $z-map-system + 2;
+}
+
+.box-line {
+  display: flex;
+  justify-content: space-between;
+
+  &.header {
+    line-height: 20px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    padding-bottom: 4px;
+
+    strong {
+      font-weight: bold;
+      font-size: 1.4rem;
+    }
+  }
+}
+
+.yield-box {
+  position: relative;
+  min-width: 65px;
+  text-align: right;
+  line-height: 28px;
+  padding: 0 30px 0 4px;
+
+  font-size: 1.2rem;
+  font-weight: bold;
+
+  background: $grey-darker;
+  box-shadow: inset 0 0 0 1px $grey-light;
+
+  .population-yield-box {
+    display: inline-block;
+    width: 140px;
+    margin-right: 5px;
+    padding-right: 5px;
+    border-right: solid 1px $grey-light;
+
+    .growth-symbol {
+      display: inline-block;
+      padding: 0 5px 0 8px;
+      transform: scale(1.2);
+    }
+  }
+
+  &.highlighted {
+    color: $light-grey;
+    box-shadow: inset 0 0 0 1px darken($light-grey, $color-variant-4);
+
+    .svg-icon {
+      color: $white;
+    }
+  }
+
+  .svg-icon {
+    position: absolute;
+    top: 0px; right: -5px;
+    width: 28px; height: 28px;
+  }
+}
+
+@each $class, $color in $themes-list {
+  .f-#{$class} {
+    .yield-box.highlighted {
+      color: $color;
+      box-shadow: inset 0 0 0 1px darken($color, $color-variant-4);
+    }
+  }
+}

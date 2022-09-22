@@ -1,0 +1,512 @@
+// TODO: do that differently
+// ex. catch click outside and send signal to close mini-panel
+// Take all the screen, used to close the panel
+.mini-panels-container {
+  display: none;
+  position: absolute;
+  left: 0; right: 0;
+  height: 100vh;
+
+  z-index: $z-mini-panel;
+}
+
+.mp-container {
+  position: relative;
+  width: 100%;
+  align-self: flex-end;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, .4);
+    backdrop-filter: blur(4px);
+    will-change: transform;
+  }
+}
+
+.mp-header {
+  position: absolute;
+  top: -55px; left: 0; right: 0;
+  height: 56px;
+
+  border: solid 1px rgba(255, 255, 255, .1);
+  border-left: none;
+  border-right: none;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: -1px; left: 0;
+    right: 0; bottom: -1px;
+    background: rgba(0, 0, 0, .1);
+    backdrop-filter: blur(5px);
+    will-change: transform;
+    z-index: -1;
+  }
+}
+
+.mph-title {
+  line-height: 34px;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 10px 20px;
+  color: $black;
+  box-shadow: 0 0 20px $black;
+  background: $white;
+
+  .small {
+    font-size: 1.4rem;
+    opacity: .75;
+  }
+}
+
+.mph-nav {
+  display: flex;
+  padding: 10px 20px;
+  border-right: solid 1px rgba(255, 255, 255, .05);
+
+  .mph-nav-item {
+    line-height: 30px;
+    padding: 0 10px;
+
+    margin-right: 5px;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: bold;
+
+    background: rgba(0, 0, 0, .25);
+    border: solid 1px rgba(255, 255, 255, .1);
+    color: $white;
+    transition: all linear 100ms;
+
+    &:hover {
+      background: rgba(0, 0, 0, .5);
+      border-color: rgba(255, 255, 255, .2);
+    }
+  }
+}
+
+.mph-filter {
+  display: flex;
+  padding: 10px 20px;
+  border-right: solid 1px rgba(255, 255, 255, .05);
+
+  .mph-filter-item {
+    line-height: 30px;
+    padding: 0 10px;
+
+    margin-right: 5px;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: bold;
+
+    border: solid 1px transparent;
+    color: rgba(255, 255, 255, .75);
+    transition: all linear 100ms;
+
+    &:hover {
+      color: rgba(255, 255, 255, 1);
+    }
+  }
+}
+
+.mph-close-button {
+  position: absolute;
+  top: 0; right: 0;
+  width: 56px; height: 56px;
+  border-left: solid 1px rgba(255, 255, 255, .05);
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 10px; right: 10px; left: 10px;
+    height: 2px;
+    background: rgba(255, 255, 255, .25);
+    transition: background linear 100ms;
+  }
+
+  &:hover:before {
+    background: rgba(255, 255, 255, .75);
+  }
+}
+
+.mp-scrollbar {
+  position: relative;
+}
+
+.mp-content, .mp-content-wrapper {
+  display: flex;
+}
+
+.mpc-header {
+  text-align: right;
+  width: 300px;
+  height: 100%;
+
+  h2 {
+    padding: 0 20px;
+    text-transform: uppercase;
+  }
+
+  &.is-sparse-x {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .info {
+    padding: 20px 20px 20px 70px;
+    width: 300px;
+
+    line-height: 20px;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+
+    strong {
+      display: block;
+      font-size: 2rem;
+      line-height: 26px;
+    }
+  }
+}
+
+.mpc-tree {
+  display: flex;
+  flex-grow: 1;
+
+  .tree-row:hover {
+    .tree-node-card {
+      display: flex;
+    }
+  }
+}
+
+.mpc-splashscreen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+
+  .tree-node {
+    &:hover {
+      .tree-node-card {
+        display: flex;
+        top: -200px;
+      }
+    }
+  }
+}
+
+.mpc-empty-state {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+
+  h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+}
+
+.mpc-card-list {
+  display: flex;
+  padding: 10px 0 10px 10px;
+
+  .card-container {
+    margin-right: 10px;
+  }
+}
+
+.mpc-stack-list {
+  display: flex;
+  padding: 10px 0 10px 10px;
+}
+
+.mpc-offers-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 310px);
+  grid-template-rows: repeat(3, 132px);
+  grid-auto-flow: column dense;
+  grid-gap: 10px;
+}
+
+.mpc-offer-item {
+  background: rgba(255, 255, 255, .1);
+  width: 310px;
+  padding: 5px;
+  border: solid 1px rgba(255, 255, 255, .05);
+
+  &.is-header {
+    padding: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+
+    &:hover {
+      background: rgba(255, 255, 255, .2);
+      border: solid 1px rgba(255, 255, 255, .1);
+    }
+  }
+
+  .default-button {
+    @include default-button;
+    margin: 5px 5px 0 5px;
+    width: calc(100% - 10px);
+    text-align: left;
+  }
+
+  .has-no-background {
+    background: none !important;
+    color: white !important;
+  }
+
+  .flying {
+    display: none;
+    position: absolute;
+    top: 25px;
+    width: 610px;
+    z-index: 10;
+  }
+
+  .fl-content {
+    position: absolute;
+    top: 0; right: 0;
+    width: 300px;
+    height: 418px;
+  }
+
+  .fl-side-content {
+    position: absolute;
+    top: 0;
+    padding: 12px;
+    left: 306px;
+    width: 364px;
+    background: $grey-light;
+    border: solid 1px $grey-lighter;
+  }
+
+  &:hover .flying {
+    display: block;
+  }
+}
+
+.mpc-characters-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+  grid-template-rows: repeat(7, 50px);
+  grid-auto-flow: column dense;
+  grid-gap: 10px;
+}
+
+.mpc-oi-header {
+  line-height: 25px;
+  display: flex;
+  justify-content: space-between;
+
+  &:first-child {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  &:last-child {
+    opacity: .75;
+  }
+}
+
+.mpc-oi-name {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.mpc-oi-date {
+  opacity: .5;
+}
+
+.mpc-form {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.mpc-form-bloc {
+  hr {
+    margin: 20px 0 12px 0;
+    padding: 0;
+    border: none;
+    border-top: solid 1px $grey-lighter;
+  }
+}
+
+.mpc-h-input {
+  height: 40px;
+  margin-bottom: 10px;
+  padding: 5px;
+  border: solid 1px $grey-light;
+  background: rgba(255, 255, 255, .1);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  label {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    padding-left: 5px;
+  }
+
+  .mpc-h-input-i {
+    position: relative;
+    width: 50%;
+
+    .svg-icon {
+      position: absolute;
+      top: 6px; right: 6px;
+    }
+  }
+
+  input {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 32px 0 10px;
+    text-align: right;
+    border: none;
+    font-weight: bold;
+    background: black;
+
+    &:disabled {
+      opacity: .5;
+      background: none;
+    }
+  }
+}
+
+.mpc-v-input {
+  .custom-select {
+    margin: 5px 0;
+  }
+
+  .custom-select-label {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    line-height: 20px;
+  }
+}
+
+.mpc-character-input {
+  margin-bottom: 5px;
+}
+
+.mpc-button {
+  @include default-button;
+  margin: 5px 5px 0 5px;
+  width: calc(100% - 10px);
+  text-align: left;
+}
+
+@each $class, $color in $themes-list {
+  .mpc-offer-item.theme-#{$class} {
+    background: transparentize(lighten($color, 20%), 0.8);
+    border-color: transparentize($color, 0.7);
+  }
+}
+
+.character-stack {
+  position: relative;
+  margin-right: 10px;
+  padding: 5px 5px 5px 30px;
+  background: $grey-default;
+
+  .character-stack-label {
+    position: absolute;
+    top: 60px; left: -62px;
+    width: 140px;
+    line-height: 25px;
+    padding: 0 5px 0 10px;
+    transform: rotate(-90deg);
+
+    display: flex;
+    justify-content: space-between;
+
+    background: $grey-light;
+    border: solid 1px $grey-dark;
+
+    .nth {
+      font-size: 1.4rem;
+      font-weight: bold;
+      opacity: .6;
+    }
+
+    .stars {
+      font-size: 2.4rem;
+    }
+  }
+
+  .character-stack-cooldown {
+    position: absolute;
+    top: 302px; left: -142px;
+    width: 316px;
+    transform: rotate(-90deg);
+  }
+}
+
+.mpc-long-text {
+  display: table;
+  height: 100%;
+  width: 1000px;
+  padding: 100px;
+
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  color: $grey-dark;
+
+  p {
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+
+.mp-container.inverted {
+  align-self: flex-start;
+
+  .mp-header {
+    top: auto; bottom: -55px; left: 0; right: 0;
+  }
+}
+
+@each $class, $color in $themes-list {
+  .mp-container.f-#{$class} {
+    .mp-header:before {
+      background: transparentize(lighten($color, 20%), 0.9);
+    }
+
+    .mph-nav-item.active {
+      background: rgba(0, 0, 0, .75);
+      border-color: $color;
+      color: $color;
+    }
+
+    .mph-filter-item.active {
+      border: solid 1px rgba(255, 255, 255, .1);
+      background: rgba(0, 0, 0, .25);
+    }
+
+    .mph-filter-item.inactive {
+      border: solid 1px rgba(0, 0, 0, .1);
+      background-image: repeating-linear-gradient(-45deg,
+        transparent,
+        transparent 5px,
+        rgba(0, 0, 0, .6) 5px,
+        rgba(0, 0, 0, .6) 7px);
+    }
+  }
+}

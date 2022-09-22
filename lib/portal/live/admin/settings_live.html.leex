@@ -1,0 +1,44 @@
+<div class="content medium">
+  <div class="header-box">
+    <h2>
+      <strong>Configuration</strong>
+    </h2>
+  </div>
+
+  <h3>Inscription</h3>
+
+  <div class="tools" style="margin-bottom: 10px;">
+    <%= for mode <- @signup_modes do %>
+      <%= if mode == @signup_mode do %>
+        <span class="active"><%= mode %></span>
+      <% else %>
+        <%= link to: "#", "phx-click": "update", "phx-value-mode": mode, "phx-value-type": :signup do %>
+          <%= mode %>
+        <% end %>
+      <% end %>
+    <% end %>
+  </div>
+
+  <h3>Connexion</h3>
+
+  <div class="tools" style="margin-bottom: 10px;">
+    <%= for mode <- @login_modes do %>
+      <%= if mode == @login_mode do %>
+        <span class="active"><%= mode %></span>
+      <% else %>
+        <%= link to: "#", "phx-click": "update", "phx-value-mode": mode, "phx-value-type": :login do %>
+          <%= mode %>
+        <% end %>
+      <% end %>
+    <% end %>
+  </div>
+
+  <h3>Version client minimum</h3>
+
+  <div class="tools" style="margin-bottom: 10px;">
+    <%= f = form_for @maintenance_log, "#", [phx_submit: :update_version] %>
+      <%= text_input f, :min_client_version %>
+      <%= submit "Save" %>
+    </form>
+  </div>
+</div>

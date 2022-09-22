@@ -1,0 +1,35 @@
+$container-width: 100%;
+$default-margin: 20px;
+$topbar-height: 60px;
+$footer-height: 60px;
+
+$mobile-breakpoint: 1200px;
+
+$z-home-foreground: 100;
+$z-home-content: 110;
+$z-home-navbar: 120;
+$z-modal: 200;
+
+$primary: #00b89a;
+
+$primary-light: lighten($primary, 10%);
+$primary-default: $primary;
+$primary-dark: darken($primary, 10%);
+
+$white: #e6e6e6;
+$white-alt: darken($white, 20%);
+$black: #000000;
+$light-grey: #bababa;
+$grey: #282c34;
+
+$grey-lighter: lighten($grey, 4%);
+$grey-light: darken($grey, 0);
+$grey-default-alt: darken($grey, 2%);
+$grey-default: darken($grey, 6%);
+$grey-dark: darken($grey, 10%);
+$grey-darker: darken($grey, 14%);
+
+$grey-light: darken($grey, 0);
+$grey-default: darken($grey, 6%);
+$grey-dark: darken($grey, 10%);
+$grey-darker: darken($grey, 14%);

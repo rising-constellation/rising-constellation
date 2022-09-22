@@ -1,0 +1,83 @@
+.spy-header {
+  position: absolute;
+  top: 10px; right: 10px;
+  display: flex;
+  justify-content: flex-end;
+
+  .v-popover {
+    display: inline-block;
+  }
+
+  .def-list-prop {
+    display: inline-block;
+    margin: 2px 2px 10px 2px;
+    padding: 2px 5px;
+
+    background: $grey-lighter;
+    box-shadow: 0 0 2px $grey-dark;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+}
+
+.spy-cover {
+  display: flex;
+
+  .spy-cover-icon {
+    padding-right: 10px;
+
+    .svg-icon {
+      padding: 2px;
+      width: 65px;
+      height: 65px;
+      border: solid 1px $grey-lighter;
+      background: $grey-default;
+      border-radius: 100%;
+
+      &.is-active {
+        animation: cover-glow 2s infinite;
+      }
+    }
+  }
+
+  .spy-cover-content {
+    flex-grow: 1;
+    align-self: flex-end;
+    text-align: right;
+  }
+
+  .spy-cover-title {
+    display: inline-block;
+    margin-bottom: 5px;
+    padding: 0 5px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $white;
+    background: $black;
+  }
+}
+
+@each $class, $color in $themes-list {
+  .f-#{$class} {
+    .spy-cover-title.is-active {
+      background: $color;
+      color: $black;
+    }
+
+    .spy-cover-icon .svg-icon.is-active {
+      border-color: $color;
+    }
+  }
+}
+
+@keyframes cover-glow {
+  0%   { opacity: 1; }
+  50%  { opacity: .5; }
+  100% { opacity: 1; }
+}

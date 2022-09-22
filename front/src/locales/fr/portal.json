@@ -1,0 +1,420 @@
+{
+  "acount": {
+    "role": {
+      "admin": "Administrateur",
+      "user": "Utilisateur"
+    },
+    "status": {
+      "active": "Actif",
+      "banned": "Banni",
+      "deleted": "Supprimé",
+      "inactive": "Inactif",
+      "registered": "Non validé"
+    }
+  },
+  "instance": {
+    "registration_state": {
+      "can_play": "Jouer",
+      "can_registrate": "Rejoindre la partie",
+      "has_registration": "La partie va démarrer",
+      "instance_full": "Partie pleine",
+      "no_free_profile": "Aucun personnage libre",
+      "no_registration": "Aucune inscription"
+    },
+    "state": {
+      "created": {
+        "name": "non publiée",
+        "toast": "Non publiée"
+      },
+      "ended": {
+        "name": "terminée",
+        "toast": "Partie terminée"
+      },
+      "maintenance": {
+        "name": "en maintenance",
+        "toast": "Partie en maintenance"
+      },
+      "not_running": {
+        "name": "arrêtée",
+        "toast": "Partie arrêtée"
+      },
+      "open": {
+        "name": "ouverte",
+        "toast": "En attente de joueur"
+      },
+      "paused": {
+        "name": "en pause",
+        "toast": "Partie en pause"
+      },
+      "running": {
+        "name": "en cours",
+        "toast": "Partie en cours"
+      }
+    }
+  },
+  "layout": {
+    "default": {
+      "forge": "Forge",
+      "messenger": "Messagerie",
+      "not_yet_available": "Indisponible pour le moment",
+      "online": "En ligne",
+      "play": "Jouer",
+      "settings": "Réglages",
+      "standings": "Classements",
+      "upgrade": "Mettez votre compte à niveau"
+    }
+  },
+  "link": {
+    "discord_invite": "Y2p6Pem"
+  },
+  "loading_messages": {
+    "connectivity_check": "Connexion à Internet",
+    "maintenance_check": "Connexion au serveur",
+    "ongoing_maintenance": "Maintenance en cours…",
+    "outdated_client": "Veuillez mettre à jour votre jeu",
+    "signin": "Connexion du joueur",
+    "version_check": "Vérification de la version du jeu"
+  },
+  "log_action": {
+    "account_validation": "Validation de compte",
+    "create_account": "Création de compte",
+    "login": "Connexion",
+    "reset_password": "Réinitialisation du mot de passe",
+    "update": "Mise à jour",
+    "update_restricted": "Mise à jour"
+  },
+  "map": {
+    "size": {
+      "80": {
+        "description": "< 10 joueurs",
+        "label": "Minuscule",
+        "toast": "Carte minuscule"
+      },
+      "120": {
+        "description": "< 20 joueurs",
+        "label": "Très petite",
+        "toast": "Carte très petite"
+      },
+      "200": {
+        "description": "< 30 joueurs",
+        "label": "Petite",
+        "toast": "Petite carte"
+      },
+      "360": {
+        "description": "< 50 joueurs",
+        "label": "Moyenne",
+        "toast": "Carte moyenne"
+      },
+      "500": {
+        "description": "< 100 joueurs",
+        "label": "Grande",
+        "toast": "Grande carte"
+      },
+      "750": {
+        "description": "< 250 joueurs",
+        "label": "Très grande",
+        "toast": "Très grande carte"
+      }
+    }
+  },
+  "page": {
+    "account": {
+      "bind_web": "Lier son compte à une adresse email",
+      "info": "Général",
+      "logs": "Dernières actions",
+      "money": "Quadrils",
+      "password": "Mot de passe",
+      "type_free": "Compte gratuit",
+      "type_paid": "Compte payant"
+    },
+    "account_bind_web": {
+      "email": "Adresse email valide",
+      "header": "**Lier** son compte",
+      "help": "## Information\n\nLier son compte à une adresse email permet de se connecter avec ce compte sur la version web de Rising Constellation.\n\nNous vous enverrons un email de confirmation pour continuer le processus.",
+      "send": "Envoyer",
+      "send_success": "Email envoyé"
+    },
+    "account_info": {
+      "field_email": "Email",
+      "field_id": "ID",
+      "field_name": "Nom",
+      "field_steam_id": "Steam ID",
+      "field_type": "Type de compte",
+      "header": "**Informations** du compte",
+      "save": "Sauvegarder",
+      "update_success": "Modifications enregistrées"
+    },
+    "account_money": {
+      "field_money": "Quadrils",
+      "header": "Vos **Quadrils**"
+    },
+    "account_password": {
+      "header": "Changer de **mot de passe**",
+      "modify": "Modifier",
+      "password": "Mot de passe",
+      "password_confirmation": "Confirmation du mot de passe",
+      "update_success": "Mot de passe changé"
+    },
+    "create": {
+      "maps": "Cartes",
+      "scenarios": "Scénarios"
+    },
+    "fight_simulator": {
+      "attacker": "Attaquant",
+      "defender": "Défenseur",
+      "empty": "Vide",
+      "initial_xp": "Expérience initiale des vaisseaux",
+      "launch": "Lancer la simulation",
+      "player": "Joueur {number}",
+      "position": "Ligne {line}, case {box}",
+      "title": "Simulateur de combat"
+    },
+    "instance": {
+      "action_progress": "Action en cours",
+      "admin_warning": "Note: vous n'êtes pas propriétaire de cette instance. Vous voyez ceci car vous êtes administrateur.",
+      "already_registered": "Déjà inscrit dans une autre faction",
+      "back": "Retour",
+      "choose_faction": "Choisissez une faction",
+      "clipboard_copy": "Copier",
+      "description": "Description",
+      "discord_link": "Lien d'invitation au serveur discord",
+      "ea_note": "Rising Constellation est en accès anticipé. Le nombre de joueur peut être relativement faible à certaines heures. Pour trouver des adversaires rapidement n'hésitez pas à venir sur le Discord du jeu.",
+      "find_players": "Trouvez des joueurs",
+      "free_spot": "Place libre",
+      "game_already_running": "La partie a déjà commencé",
+      "hide_members": "Masquer les membres de cette faction",
+      "initial_character": "Agent de départ",
+      "join_money_amount": "{amount} quadrils",
+      "join_money_info": "Pour les comptes gratuits, les parties Legacy coûtent des quadrils. L'achat de quadrils n'est pas encore disponible mais le sera bientôt.",
+      "manage": "Gestion de la partie",
+      "no_empty_seats": "Plus de places libres",
+      "overview": "Vue d'ensemble",
+      "owner_warning": "Vous voyez ceci car vous êtes l'auteur de cette partie.",
+      "pause": "Mettre en pause",
+      "play": "Jouer",
+      "publish": "Publier",
+      "register": "Joindre",
+      "registration_closed": "Inscriptions fermées",
+      "restart": "Remettre en marche",
+      "resume": "Continuer",
+      "seed": "Graine",
+      "show_members": "Afficher les membres de cette faction",
+      "start": "Démarrer",
+      "start_steps": {
+        "step_0": "3… 2… 1…",
+        "step_1": "Un arbre est né",
+        "step_10": "Les étoiles s'alignent",
+        "step_11": "Chacun à sa place",
+        "step_12": "C'est parti !",
+        "step_2": "On le surveille",
+        "step_3": "L'espace s'étale",
+        "step_4": "Une carte se dessine",
+        "step_5": "Des systèmes apparaissent",
+        "step_6": "Des équipes se forment",
+        "step_7": "Une galaxie nait",
+        "step_8": "Des agents s'échauffent",
+        "step_9": "Les joueurs arrivent"
+      },
+      "status_is": "La partie est actuellement",
+      "stop": "Arrêter",
+      "tradition": "Traditions de la faction",
+      "unregister": "Se désinscrire",
+      "wait": "Veuillez patienter"
+    },
+    "menu": {
+      "create_profile": "Créez votre personnage",
+      "create_profile_text": "Démarrez l'aventure Rising Constellation !",
+      "ea_p1": "Rising Constellation est en accès anticipé, nous vous conseillons donc de nous rejoindre sur Discord pour trouver des joueurs.",
+      "ea_p2": "Une grande partie des éléments du jeu sont traduits en anglais, mais n'hésitez pas à poser vos questions directement en jeu ou sur le Discord si certaines choses ne sont pas claires.",
+      "ea_p3": "Tous les lundis en fin de journée, nous mettons en ligne une nouvelle version du jeu avec de nouvelles fonctionnalités et des correctifs. Les informations détaillées sur ces mises à jour sont disponibles sur Discord.",
+      "ea_title": "Accès anticipé",
+      "epic_p1": "Tous les mardis soirs à 20.45 UTC+1 une partie flash officielle avec des récompenses est lancée.",
+      "epic_p2": "Les parties FLASH ne sont accessibles qu'aux joueurs possédant le jeu complet.",
+      "epic_title": "EPIC Tuesday",
+      "exit": "Quitter",
+      "legacy_p1": "Une partie Legacy (environ 30 jours) commencera le mercredi 14 juillet 2021, à 20 heures CEST. Nous sommes toujours en train d'améliorer ce mode et ce test a pour but d'améliorer l'équilibre et la calibration des éléments du jeu.",
+      "legacy_title": "LEGACY Test",
+      "start": "Jouer",
+      "tactical_p1": "Tous les mercredis soirs à 20.00 UTC+1 une partie officielle TACTIC est lancée pour une durée de 5 jours.",
+      "tactical_title": "TACTIC Weekly",
+      "web_p1": "Jouez à Constellation montante sur votre navigateur web en accédant à \"Paramètres\" (en haut à droite de l'écran une fois que vous avez cliqué sur \"Jouer\") et indiquez votre adresse e-mail qui vous permettra de vous connecter à notre portail web.",
+      "web_p2": "Veuillez noter que pour l'instant, Chrome (et les navigateurs basés sur Chrome) est le seul navigateur entièrement pris en charge.",
+      "web_title": "Jouez depuis votre navigateur"
+    },
+    "messenger": {
+      "add_from_group": "Ajouter au groupe",
+      "add_profile": "Ajoutez un profil",
+      "add_profiles": "Ajoutez des profils",
+      "admin": "Administrateur",
+      "answer": "Répondez",
+      "create": "Créer",
+      "empty_state": "Aucune conversation ouverte",
+      "first_message": "Premier message",
+      "group_name": "Nom du groupe",
+      "messenger": "Messagerie",
+      "new_conversation": "Nouvelle conversation",
+      "new_group": "Nouveau groupe",
+      "remove_from_group": "Retirer du groupe",
+      "send": "Envoyer"
+    },
+    "newplayer": {
+      "earlyaccess": "## A propos de l'accès anticipé\n\nRising Constellation est en cours de développement. Toutes les fonctionnalités ne sont pas encore développées.\n\nN'hésitez pas à demander de l'aide à la communauté sur notre page Steam ou notre serveur discord.",
+      "welcome": "## Bienvenue sur Rising Constellation\n\n**Créez votre personnage !** Les personnages sont les chefs d'empire que vous dirigez dans Rising Constellation.\n\n* * *\n\nPas d'inquiétude, vous pourrez le modifier plus tard."
+    },
+    "play": {
+      "ea_disclaimer": "## Rising Constellation est en accès anticipé.\n\nIl peut donc être difficile de trouver des joueurs rapidement pour des petites parties flash. Nous vous conseillons de nous rejoindre sur notre Discord afin de trouver des joueurs plus facilement.\n\nVous pouvez utiliser les parties Flash comme bac à sable pour vous familiariser avec le jeu. Pour ce faire, créez une nouvelle partie directement et essayez les mécaniques de base.",
+      "fast": {
+        "description": "Des petites équipes et une lutte sans merci. Parfait pour se défouler !",
+        "header": "Parties **Flash**",
+        "subtitle": "1-2 heures",
+        "title": "Flash"
+      },
+      "free_locked_content": "Les parties Flash ne sont pas disponibles pour les comptes gratuits. Pour jouer gratuitement (sans devoir payer de quadrils) à tout les types de parties, vous pouvez acheter le jeu sur Steam.",
+      "free_locked_link": "Acheter le jeu sur Steam et jouer gratuitement",
+      "free_locked_title": "Non disponible",
+      "games": "Parties",
+      "medium": {
+        "description": "Un jeu d'équipe stratégique et intense sur une grosse journée !",
+        "header": "Parties **Tactic**",
+        "subtitle": "8-12 heures",
+        "title": "Tactic"
+      },
+      "new": {
+        "button_seed": "Utiliser la graine du scénario",
+        "field_description": "Description",
+        "field_factions": "Joueurs par faction",
+        "field_mode": "Mode",
+        "field_name": "Nom",
+        "field_opening": "Ouverture",
+        "field_opening_date": "Date d'ouverture",
+        "field_registrations": "Inscriptions",
+        "field_seed": "Graine",
+        "game_mode_types": {
+          "casual": "Amateur",
+          "ranked": "Classé"
+        },
+        "header": "Options de la partie",
+        "registration_types": {
+          "late_registration": "À n'importe quel moment",
+          "pre_registration": "Avant le début"
+        },
+        "save": "Valider",
+        "scenario_not_found": "Scénario non trouvé",
+        "start_settings": {
+          "auto": "À la date prévue",
+          "manual": "Lancement manuel",
+          "when_full": "Dès que toutes les places sont occupées"
+        }
+      },
+      "new_game": "Nouvelle partie",
+      "no_game_found": "Aucune partie trouvée",
+      "scenarios": {
+        "choose": "Choisir",
+        "header": "Sélection du **scénario**",
+        "info": "{factions} factions, vitesse {speed}",
+        "no_scenario_found": "Aucun scénario trouvé"
+      },
+      "slow": {
+        "description": "Du roleplay et de la diplomatie dans une partie de longue haleine.",
+        "header": "Parties **Legacy**",
+        "subtitle": "30-40 jours",
+        "title": "Legacy"
+      },
+      "speeds": {
+        "fast": "rapide",
+        "medium": "moyenne",
+        "slow": "lente"
+      },
+      "status_filters": {
+        "closed": "Terminées",
+        "open": "Disponibles"
+      },
+      "tutorial": {
+        "description": "Expérimentez et apprenez à jouer à Rising Constellation.",
+        "title": "Académie des Koshak"
+      }
+    },
+    "profile": {
+      "description": "## Personnages\n\nLes personnages sont les chefs d'empire que vous dirigez dans Rising Constellation.",
+      "title": "Personnages"
+    },
+    "profile_detail": {
+      "begin": "Débuter l'aventure…",
+      "create": "Créer",
+      "delete": "supprimer",
+      "field_age": "Âge",
+      "field_description": "Maxime",
+      "field_full_name": "Nom complet",
+      "field_long_description": "À propos",
+      "field_name": "Nom",
+      "header": "Votre **personnage**",
+      "profile_picture": "Image du personnage",
+      "save": "Enregistrer"
+    },
+    "profile_list": {
+      "header": "**{profileCount}/{maxProfiles}** Personnages",
+      "profile_is_free": "Personnage libre"
+    },
+    "settings": {
+      "language_choice": "Langue de l'interface",
+      "master_volume": "Volume général",
+      "music_volume": "Volume de la musique",
+      "resolution": "Échelle de l'interface",
+      "sound_volume": "Volume des effets sonores",
+      "title": "Paramètres",
+      "voice_volume": "Volume des voix (pas encore implémenté)",
+      "windowed": "Mode fenêtré"
+    },
+    "standings": {
+      "description": "## À propos\n\nLes classements sont mis à jour à la fin de chaque partie classée.\n\nLes éléments de la liste des classements sont des profils.",
+      "title": "Classements"
+    },
+    "tutorial": {
+      "description_1": "L'Académie des Koshak, située au coeur des contrées Syns mais renommée bien au-delà, forme les futures dirigeants, les dynastes, aux arts de la politique et des intrigues.",
+      "description_2": "Cette partie n'est accessible qu'a vous. Vous serez seul et pourrez prendre vos marques sur le jeu. Un tutoriel interactif vous permet de vous familiariser avec les concepts de Rising Constellation.",
+      "fight_simulator": "Simulateur de combat",
+      "fight_simulator_access": "Accéder au simulateur",
+      "find_help": "Trouver de l'aide",
+      "join_discord": "Rejoindre le serveur discord",
+      "learn_more": "En apprendre plus",
+      "play": "Lancer le tutoriel",
+      "title": "**Académie**\n\ndes **Koshak**",
+      "to_the_wiki": "Vers le wiki communautaire (fr)",
+      "waiting": "La partie se prépare",
+      "wiki_link": "Lien du wiki communautaire (fr)"
+    },
+    "upgrade": {
+      "currency": "Devise",
+      "free_info": "## Version gratuite\n\nVous ne pouvez jouer que aux parties Legacy.\n\nLes parties Legacy coûtent 500 quadrils.",
+      "header": "**Mettre à niveau** son compte",
+      "next": "Etape suivante",
+      "steam_id": "ID Steam",
+      "steam_id_info": "## Aide\n\nRécuperer votre ID Steam nous permettra de lier votre compte avec la version Steam. Vous recevrez, à la fin de la mise à niveau, une clé Steam qui vous permettra d'activer votre produit et de jouer, avec le même compte, à la version naviguateur et à la version Steam.\n\nPour trouver votre ID Steam, rendez vous sur cette adresse internet [store.steampowered.com/account](https://store.steampowered.com/account/) puis connectez vous. Votre ID Steam se trouve dans le haut de la page, en dessous de votre nom de compte, comme indiqué sur l'image ci-dessous. Ne mettez que le numéro dans le champ.\n\n![steam help](media/steam-id-help.png)",
+      "steam_id_input": "Indiquez votre ID Steam (suivez les instructions ci-dessous)",
+      "steam_key_input": "Votre clé Steam (conservez la précieusement)",
+      "step1": "1. Récupérer votre ID Steam",
+      "step2": "2. Choisissez votre devise",
+      "step3": "3. Renseignez vos informations de paiement",
+      "step4": "4. Récuperez votre clé Steam",
+      "title": "Mise à niveau du compte & clé du produit Steam",
+      "upgrade_info": "## Jeu complet\n\nVous pouvez rejoindre tous les types de parties disponible.\n\nRejoindre une partie est gratuit.\n\nVous pouvez créer des parties Flash personnalisées."
+    }
+  },
+  "portal_components": {
+    "instance_map": {
+      "point_count": "{count} points",
+      "size": "Taille",
+      "speed": "Vitesse",
+      "system_count": "{count} systèmes",
+      "systems": "Systèmes",
+      "victory": "Victoire"
+    },
+    "instance_row": {
+      "capacity": "{registeredCount}/{maxPlayers} joueurs",
+      "registered": "Vous êtes dans cette partie"
+    },
+    "loading": {
+      "loading": "Chargement"
+    }
+  }
+}

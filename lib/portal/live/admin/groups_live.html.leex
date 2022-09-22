@@ -1,0 +1,81 @@
+<div class="content large">
+  <div class="header-box">
+    <h2>
+      <strong><%= @total_entries %></strong>
+      groupes
+    </h2>
+
+    <div class="tools">
+      <%= f = form_for :group, "#", [phx_submit: "new"] %>
+        <%= text_input f, :name, placeholder: "Nom du groupe" %><!--
+        --><%= submit do %>
+          <i class="fa fa-plus-square"></i>
+            Créer le groupe
+        <% end %>
+      </form>
+    </div>
+
+    <div class="pagination">
+      <%= if @page_number == 1 do %>
+        <span class="disabled">
+          <i class="fa fa-angle-left"></i>
+        </span>
+      <% else %>
+        <%= live_redirect to: Routes.live_path(@socket, Portal.GroupsLive, page: @page_number - 1) do %>
+          <i class="fas fa-angle-left"></i>
+        <% end %>
+      <% end %>
+      <span class="active">
+        <%= @page_number %>
+      </span>
+      <%= if @page_number == @total_pages do %>
+        <span class="disabled">
+          <i class="fas fa-angle-right"></i>
+        </span>
+      <% else %>
+        <%= live_redirect to: Routes.live_path(@socket, Portal.GroupsLive, page: @page_number + 1) do %>
+          <i class="fas fa-angle-right"></i>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th class="square"></th>
+        <th>Nom</th>
+        <th>Date de création</th>
+        <th># comptes</th>
+        <th># instances</th>
+        <th class="square"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= for group <- @groups do %>
+        <tr>
+          <td class="square">
+            <%= group.id %>
+          </td>
+          <td>
+            <strong><%= group.name %></strong>
+          </td>
+          <td>
+            <%= Portal.Date.format(group.inserted_at, :date) %>
+          </td>
+          <td>
+            <%= length(group.accounts) %>
+          </td>
+          <td>
+            <%= length(group.instances) %>
+          </td>
+          <td class="square action red">
+            <%= link to: "#", "phx-click": "delete", "phx-value-gid": group.id do %>
+              <i class="fa fa-times"></i>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

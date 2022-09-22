@@ -1,0 +1,420 @@
+{
+  "acount": {
+    "role": {
+      "admin": "Administrator",
+      "user": "User"
+    },
+    "status": {
+      "active": "Active",
+      "banned": "Banned",
+      "deleted": "Deleted",
+      "inactive": "Inactive",
+      "registered": "Unconfirmed"
+    }
+  },
+  "instance": {
+    "registration_state": {
+      "can_play": "Play",
+      "can_registrate": "Join game",
+      "has_registration": "Game is about to start",
+      "instance_full": "Game full",
+      "no_free_profile": "All profiles already in use",
+      "no_registration": "No registration"
+    },
+    "state": {
+      "created": {
+        "name": "unpublished",
+        "toast": "Unpublished"
+      },
+      "ended": {
+        "name": "over",
+        "toast": "Game over"
+      },
+      "maintenance": {
+        "name": "down for maintenance",
+        "toast": "Maintenance break"
+      },
+      "not_running": {
+        "name": "stopped",
+        "toast": "Stopped game"
+      },
+      "open": {
+        "name": "open",
+        "toast": "Waiting for players"
+      },
+      "paused": {
+        "name": "paused",
+        "toast": "Game paused"
+      },
+      "running": {
+        "name": "ongoing",
+        "toast": "Ongoing game"
+      }
+    }
+  },
+  "layout": {
+    "default": {
+      "forge": "Forge",
+      "messenger": "Messenger",
+      "not_yet_available": "Not yet available",
+      "online": "Online",
+      "play": "Play",
+      "settings": "Settings",
+      "standings": "Rankings",
+      "upgrade": "Update your account"
+    }
+  },
+  "link": {
+    "discord_invite": "WkTEQfDjh2"
+  },
+  "loading_messages": {
+    "connectivity_check": "Checking internet connection",
+    "maintenance_check": "Checking server status",
+    "ongoing_maintenance": "Maintenance break…",
+    "outdated_client": "Please update your Steam game",
+    "signin": "Signing in",
+    "version_check": "Checking game version"
+  },
+  "log_action": {
+    "account_validation": "Account confirmed",
+    "create_account": "Account created",
+    "login": "Signed in",
+    "reset_password": "Password reset",
+    "update": "Update",
+    "update_restricted": "Updated"
+  },
+  "map": {
+    "size": {
+      "80": {
+        "description": "< 10 players",
+        "label": "Tiny",
+        "toast": "Tiny map"
+      },
+      "120": {
+        "description": "< 20 players",
+        "label": "Very small",
+        "toast": "Very small map"
+      },
+      "200": {
+        "description": "< 30 players",
+        "label": "Small",
+        "toast": "Small map"
+      },
+      "360": {
+        "description": "< 50 players",
+        "label": "Medium",
+        "toast": "Medium-sized map"
+      },
+      "500": {
+        "description": "< 100 players",
+        "label": "Big",
+        "toast": "Big map"
+      },
+      "750": {
+        "description": "< 250 players",
+        "label": "Huge",
+        "toast": "Huge map"
+      }
+    }
+  },
+  "page": {
+    "account": {
+      "bind_web": "Link your account to an e-mail address",
+      "info": "Basic Info",
+      "logs": "Latest actions",
+      "money": "Quadrils",
+      "password": "Password",
+      "type_free": "Free account",
+      "type_paid": "Paid account"
+    },
+    "account_bind_web": {
+      "email": "Valid e-mail adresse",
+      "header": "**Link** your account",
+      "help": "## Information\n\nLinking your account to an e-mail address allows you to play the browser version of Rising Constellation using this account.\n\nWe will send you a confirmation e-mail with next steps.",
+      "send": "Send",
+      "send_success": "E-mail sent"
+    },
+    "account_info": {
+      "field_email": "Email",
+      "field_id": "ID",
+      "field_name": "Name",
+      "field_steam_id": "Steam ID",
+      "field_type": "Account type",
+      "header": "Account **information**",
+      "save": "Save",
+      "update_success": "Modifications saved"
+    },
+    "account_money": {
+      "field_money": "Quadrils",
+      "header": "You **Quadrils**"
+    },
+    "account_password": {
+      "header": "Update **password**",
+      "modify": "Update",
+      "password": "Password",
+      "password_confirmation": "Password confirmation",
+      "update_success": "Password changed"
+    },
+    "create": {
+      "maps": "Maps",
+      "scenarios": "Scenarios"
+    },
+    "fight_simulator": {
+      "attacker": "Attacker",
+      "defender": "Defender",
+      "empty": "Empty",
+      "initial_xp": "Ships' Initial XP",
+      "launch": "Start the simulation",
+      "player": "Player {number}",
+      "position": "Line {line}, box {box}",
+      "title": "Battle simulator"
+    },
+    "instance": {
+      "action_progress": "Action in progress",
+      "admin_warning": "Note: you are not the owner of this instance. You only see this because you are an administrator.",
+      "already_registered": "Already registered in another faction",
+      "back": "Back",
+      "choose_faction": "Choose your faction",
+      "clipboard_copy": "Copy",
+      "description": "Description",
+      "discord_link": "Discord invite link",
+      "ea_note": "Rising Constellation is in early access. The number of players may be relatively small at certain times. To find opponents quickly don't hesitate to come to the game's Discord.",
+      "find_players": "Find players",
+      "free_spot": "Available spot",
+      "game_already_running": "The game has already started",
+      "hide_members": "Hide the members of this faction",
+      "initial_character": "Starting character",
+      "join_money_amount": "{amount} quadrils",
+      "join_money_info": "For free accounts, Legacy matches cost quadrils. Purchasing quadrils isn't yet possible, but it will be soon.",
+      "manage": "Manage game",
+      "no_empty_seats": "No more free seats",
+      "overview": "Overview",
+      "owner_warning": "You see this because you are the owner of this game.",
+      "pause": "Pause",
+      "play": "Play",
+      "publish": "Publish",
+      "register": "Join",
+      "registration_closed": "Registrations closed",
+      "restart": "Restart",
+      "resume": "Resume",
+      "seed": "Seed",
+      "show_members": "Show members of this faction",
+      "start": "Start",
+      "start_steps": {
+        "step_0": "Instance found, creating…",
+        "step_1": "Supervisor started",
+        "step_10": "Creating star systems",
+        "step_11": "Spawning players",
+        "step_12": "Done!",
+        "step_2": "Manager started",
+        "step_3": "Spatial started",
+        "step_4": "Preparing the map",
+        "step_5": "Preparing star systems",
+        "step_6": "Preparing factions and players",
+        "step_7": "Spawning galaxy",
+        "step_8": "Warming up characters",
+        "step_9": "Creating players"
+      },
+      "status_is": "The game is currently",
+      "stop": "Stop",
+      "tradition": "Faction traditions",
+      "unregister": "Unjoin",
+      "wait": "Please wait"
+    },
+    "menu": {
+      "create_profile": "Create your character",
+      "create_profile_text": "Begin the Rising Constellation adventure!",
+      "ea_p1": "Rising Constellation is in early access, joining us on Discord is the best way of finding players.",
+      "ea_p2": "A good portion of the game is translated into English, but don't hesitate to ask questions directly in game or on Discord if some things are not clear.",
+      "ea_p3": "Every Monday, end of the day, we release a new version of the game with new features and patches. Detailed information about these updates is available on Discord.",
+      "ea_title": "Early Access",
+      "epic_p1": "Every Tuesday evening at 8:45pm UTC+1 there is an official Flash game with rewards.",
+      "epic_p2": "Flash matches are only available to players who own the full version of the game.",
+      "epic_title": "EPIC Tuesday",
+      "exit": "Exit",
+      "legacy_p1": "A Legacy game (about 30 days) will start Wednesday 14th of July 2021, 8pm CEST. We’re still improving this mode and this test is intended to improve game elements balance and calibration.",
+      "legacy_title": "LEGACY Test",
+      "start": "Play",
+      "tactical_p1": "Every Wednesday evening at 8pm UTC+1 an official TACTIC game is launched for a duration of 5 days.",
+      "tactical_title": "TACTIC Weekly",
+      "web_p1": "Play Rising Constellation in your browser by getting to the “Settings” (top right of the screen once you’ve clicked on “Play”) and link your email address, you will then be able to connect to our web portal.",
+      "web_p2": "Please note that for now Chrome (and Chrome-based browsers) is the only fully supported browser.",
+      "web_title": "Play from your browser"
+    },
+    "messenger": {
+      "add_from_group": "Add to group",
+      "add_profile": "Add profile",
+      "add_profiles": "Add profiles",
+      "admin": "Administrator",
+      "answer": "Answer",
+      "create": "Create",
+      "empty_state": "No open conversations",
+      "first_message": "First message",
+      "group_name": "Group name",
+      "messenger": "Messenger",
+      "new_conversation": "New conversation",
+      "new_group": "New group",
+      "remove_from_group": "Remove from group",
+      "send": "Send"
+    },
+    "newplayer": {
+      "earlyaccess": "## About Early Access\n\nRising Constellation is still under development. Not all features are available yet.\n\nFeel free to ask the community for help on our Steam page or on our Discord.",
+      "welcome": "## Welcome to Rising Constellation\n\n**Create your character!** Characters are the empire leaders you will be playing as.\n\n* * *\n\nDon't worry, you can change it later."
+    },
+    "play": {
+      "ea_disclaimer": "## Rising Constellation is in Early Access.\n\nIt can therefore be difficult to quickly find players for a short flash game. We recommend that you join us on our Discord to find players more easily.\n\nDon't hesitate to start your own Flash game and use it as a sandbox to familiarize yourself with the game. To do so, create a new game directly and try out the basic game mechanics.",
+      "fast": {
+        "description": "Small teams and a merciless struggle. Perfect to blow off some steam!",
+        "header": "**Flash** Games",
+        "subtitle": "1-2 hours",
+        "title": "Flash"
+      },
+      "free_locked_content": "Flash matches are not available to those with free accounts. In order to play all match types (without having to pay in quadrils), you can purchase the game on Steam.",
+      "free_locked_link": "Purchase the game on Steam and play for free",
+      "free_locked_title": "Not available",
+      "games": "Games",
+      "medium": {
+        "description": "A strategic and intense team game lasting a long day!",
+        "header": "**Tactic** Games",
+        "subtitle": "8-12 hours",
+        "title": "Tactic"
+      },
+      "new": {
+        "button_seed": "Use the same seed as the scenario",
+        "field_description": "Description",
+        "field_factions": "Players by factions",
+        "field_mode": "Mode",
+        "field_name": "Name",
+        "field_opening": "Opening",
+        "field_opening_date": "Opening Date",
+        "field_registrations": "Registrations",
+        "field_seed": "Seed",
+        "game_mode_types": {
+          "casual": "Casual",
+          "ranked": "Ranked"
+        },
+        "header": "Game Settings",
+        "registration_types": {
+          "late_registration": "Anytime",
+          "pre_registration": "Before the game starts"
+        },
+        "save": "Save",
+        "scenario_not_found": "Scenario not found",
+        "start_settings": {
+          "auto": "At the specified date",
+          "manual": "Manually",
+          "when_full": "As soon as all spots are filled"
+        }
+      },
+      "new_game": "New game",
+      "no_game_found": "No game found",
+      "scenarios": {
+        "choose": "Choose",
+        "header": "**Scenario** selection",
+        "info": "{factions} factions, {speed} speed",
+        "no_scenario_found": "No scenario found"
+      },
+      "slow": {
+        "description": "Roleplay and diplomacy in a lengthy game.",
+        "header": "**Legacy** Games",
+        "subtitle": "30-40 days",
+        "title": "Legacy"
+      },
+      "speeds": {
+        "fast": "fast",
+        "medium": "medium",
+        "slow": "slow"
+      },
+      "status_filters": {
+        "closed": "Ended",
+        "open": "Open / Running"
+      },
+      "tutorial": {
+        "description": "Try and learn how to play Rising Constellation.",
+        "title": "Koshaks Academy"
+      }
+    },
+    "profile": {
+      "description": "## Characters\n\nCharacters are the empire leaders you play as in Rising Constellation.",
+      "title": "Characters"
+    },
+    "profile_detail": {
+      "begin": "Begin the adventure…",
+      "create": "Create",
+      "delete": "delete",
+      "field_age": "Age",
+      "field_description": "Maxim",
+      "field_full_name": "Full name",
+      "field_long_description": "About",
+      "field_name": "Name",
+      "header": "Your **profile**",
+      "profile_picture": "Profile picture",
+      "save": "Save"
+    },
+    "profile_list": {
+      "header": "**{profileCount}/{maxProfiles}** Profiles",
+      "profile_is_free": "Free profile"
+    },
+    "settings": {
+      "language_choice": "Language choice",
+      "master_volume": "Master Volume",
+      "music_volume": "Music Volume",
+      "resolution": "User interface size",
+      "sound_volume": "Sound Effects Volume",
+      "title": "Settings",
+      "voice_volume": "Voices Volume (coming soon)",
+      "windowed": "Windowed mode"
+    },
+    "standings": {
+      "description": "## About\n\nThe rankings are updated after each ranked game.\n\nThe elements of the rankings list are profiles.",
+      "title": "Rankings"
+    },
+    "tutorial": {
+      "description_1": "The Koshaks Academy - situated at the heart of Syn territories but whose reputation spreads well beyond - trains future rulers, dynasts, in the arts of politics and intrigue.",
+      "description_2": "This sector is only accessible to you. You will be alone and will be able to familiarize yourself with the game. An interactive tutorial will guide you through Rising Constellation's gameplay mechanisms.",
+      "fight_simulator": "Battle simulator",
+      "fight_simulator_access": "Access the simulator",
+      "find_help": "Find help",
+      "join_discord": "Join our Discord server",
+      "learn_more": "Find out more",
+      "play": "Launch the tutorial",
+      "title": "**Koshaks**\n\n**Academy**",
+      "to_the_wiki": "Towards the wiki (fr)",
+      "waiting": "Match preparations under way",
+      "wiki_link": "Wiki link (fr)"
+    },
+    "upgrade": {
+      "currency": "Currency",
+      "free_info": "## Free version\n\nYou can only play Legacy matches.\n\nLegacy matches cost 500 quadrils.",
+      "header": "**Upgrade** your account",
+      "next": "Next step",
+      "steam_id": "Steam ID",
+      "steam_id_info": "## Help\n\nGetting your Steam ID will allow us to link your account with the Steam version of the game. Once the upgrade completed, you will receive a Steam key that will allow you to activate your product and play both the browser and Steam versions with the same account.\n\nTo find your Steam ID, go to this web address [store.steampowered.com/account](https://store.steampowered.com/account/) and log in. Your Steam ID is located at the top of the page, below your account name, as shown in the image below. Put only the number in the text field.\n\n![steam help](media/steam-id-help.png)",
+      "steam_id_input": "Enter your Steam ID (follow the instructions below)",
+      "steam_key_input": "Your Steam key (keep it safe)",
+      "step1": "1. Get your Steam ID",
+      "step2": "2. Choose your currency",
+      "step3": "3. Enter your payment information",
+      "step4": "4. Retrieve your Steam key",
+      "title": "Account upgrade and Steam product key",
+      "upgrade_info": "## Full game\n\nYou can join all available match types.\n\nJoining a match is free.\n\nYou can create custom Flash matches."
+    }
+  },
+  "portal_components": {
+    "instance_map": {
+      "point_count": "{count} points",
+      "size": "Size",
+      "speed": "Speed",
+      "system_count": "{count} systems",
+      "systems": "Systems",
+      "victory": "Victory"
+    },
+    "instance_row": {
+      "capacity": "{registeredCount}/{maxPlayers} players",
+      "registered": "You joined this game"
+    },
+    "loading": {
+      "loading": "Loading"
+    }
+  }
+}

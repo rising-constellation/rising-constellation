@@ -1,0 +1,145 @@
+.container {
+  margin-top: 65px;
+  padding: 25px;
+}
+
+.grid-container {
+  display: flex;
+  flex-direction: wrap;
+  flex-wrap: wrap;
+
+  margin-left: -25px;
+}
+
+.grid-item {
+  flex: 0 0 auto;
+  width: calc(20% - 25px);
+  margin: 0 0 25px 25px;
+  padding: 0;
+
+  .button {
+    display: block;
+    margin: 0 0 15px 0;
+    padding: 0 20px 0 0;
+    height: 60px;
+    line-height: 60px;
+
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    background: #f7f7f7;
+    border: solid 1px #ccc;
+    overflow: hidden;
+
+    color: $red-3;
+
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+
+
+    .icon {
+      display: inline-block;
+      width: 60px; height: 60px;
+      margin-right: 20px;
+      text-align: center;
+
+      background: $red-2;
+      color: white;
+    }
+
+    &:hover, &:focus {
+      background: #efefef;
+      border-color: $red-1;
+    }
+  }
+
+  .tool-box {
+    position: absolute;
+    top: 10px; right: 10px;
+    line-height: 28px;
+    padding: 0;
+    background: #efefef;
+    box-shadow: 0 0 5px 5px #efefef;
+
+    a {
+      display: inline-block;
+      width: 28px;
+      text-align: center;
+      margin-left: 5px;
+
+      border: solid 1px #ccc;
+      border-radius: 3px;
+
+      &:hover, &:focus {
+        border-color: $red-1;
+      }
+    }
+  }
+
+  .head-box {
+    position: relative;
+    padding: 0 20px; height: 60px;
+    background: #efefef;
+    border: solid 1px #ccc;
+
+    h2 {
+      margin: 0; padding: 0;
+
+      line-height: 60px;
+      font-size: 20px;
+      font-weight: bold;
+
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+  }
+
+  .item-box {
+    position: relative;
+    padding: 5px 20px;
+
+    background: #f7f7f7;
+    border: solid 1px #efefef;
+    border-top: none;
+
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+
+    .line {
+      line-height: 24px;
+
+      &.strong {
+        font-weight: bold;
+      }
+    }
+
+    .tool-box {
+      background: #f7f7f7;
+      box-shadow: 0 0 5px 5px #f7f7f7;
+    }
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .container .grid-container > * {
+    width: calc(25% - 25px);
+  }
+}
+@media screen and (max-width: 1200px) {
+  .container .grid-container > * {
+    width: calc(33.33% - 25px);
+  }
+}
+@media screen and (max-width:  900px) {
+  .container .grid-container > * {
+    width: calc(50% - 25px);
+  }
+}
+@media screen and (max-width:  600px) {
+  .container .grid-container > * {
+    width: calc(100% - 25px);
+  }
+}

@@ -1,0 +1,61 @@
+name: Phoenix CI
+
+on:
+  push:
+    branches: [ '*' ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    services:
+      db:
+        image: postgres:12
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: postgres
+        ports: ['5432:5432']
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 3s
+          --health-timeout 3s
+          --health-retries 10
+
+    steps:
+      - name: Checkout game repo
+        uses: actions/checkout@v2
+      - uses: erlef/setup-elixir@v1
+        with:
+          otp-version: 24.0
+          elixir-version: 1.12.0
+      - name: Cache mix deps
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-mix-deps
+        with:
+          # mix deps are stored in `./deps`
+          path: ./deps
+          key: ${{ runner.os }}-deps-${{ env.cache-name }}-${{ hashFiles('./mix.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-deps-${{ env.cache-name }}-
+            ${{ runner.os }}-deps-
+            ${{ runner.os }}-
+      - name: Cache build
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-build
+        with:
+          # build artifacts are stored in `./_build`
+          path: |
+            ./_build
+            !./_build/test/lib/rc
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('./mix.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+      - run: mix deps.get
+      - run: mix format --check-formatted
+      # only 'normal' tests
+      - run: mix test

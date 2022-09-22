@@ -1,0 +1,187 @@
+.system-properties {
+  position: absolute;
+  top: 50px; left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+
+  z-index: 1;
+
+  .box-line {
+    position: relative;
+    padding: 5px;
+    margin: 0 auto 5px auto;
+
+    font-weight: bold;
+    text-transform: uppercase;
+
+    background: $grey-default;
+    box-shadow:
+      inset 0 0 0 1px $grey-lighter,
+      0 0 6px 0 $grey-darker;
+
+    &.info {
+      width: 500px;
+      padding: 5px 10px;
+    }
+
+    &.yields {
+      width: 300px;
+    }
+
+    .yield-box {
+      min-width: 90px;
+    }
+  }
+
+  .header {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 50px;
+  }
+
+  .marker {
+    position: absolute;
+    top: 10px; left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+
+    border-style: solid;
+    border-width: 15px;
+    border-color:
+      darken($light-grey, $color-variant-2)
+      darken($light-grey, $color-variant-4)
+      darken($light-grey, $color-variant-1)
+      $light-grey;
+
+    box-shadow:
+      0 0 3px 1px $grey-darker,
+      0 0 0 6px $grey-light,
+      0 0 0 7px $grey-dark,
+      0 0 20px 5px $grey-darker;
+  }
+
+  .marker-label {
+    position: absolute;
+    top: 10px; left: 50%;
+    transform: translateX(-50%);
+    width: 30px; height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 1.8rem;
+    color: white;
+    text-shadow: 0 0 2px $black;
+  }
+
+  .label {
+    font-size: 1rem;
+    line-height: 18px;
+  }
+
+  .value {
+    line-height: 20px;
+  }
+
+  .owner, .star {
+    display: flex;
+  }
+
+  .star {
+    text-align: right;
+
+    .marker {
+      float: right;
+      margin-left: 10px;
+    }
+  }
+
+  .box-aside {
+    position: absolute;
+    top: 0;
+    width: 50px; height: 50px;
+    padding: 6px 0;
+    text-align: center;
+
+    line-height: 1.8rem;
+
+    .svg-icon {
+      margin: auto;
+      display: block;
+      width: 22px; height: 22px;
+    }
+
+    &.left { left: -55px; }
+    &.right { right: -55px; }
+  }
+}
+
+.governor-box {
+  position: absolute;
+  left: 418px; top: 113px;
+
+  .round-icon {
+    position: relative;
+  }
+
+  .toolbox-actions {
+    position: absolute;
+    top: -1px;
+    height: 50px;
+    left: 35px;
+  }
+}
+
+.production-box {
+  position: absolute;
+  right: 448px; top: 125px;
+  width: 120px;
+  padding-right: 100px;
+
+  background: $grey-default;
+  box-shadow:
+    inset 0 0 0 1px $grey-lighter,
+    0 0 6px 0 $grey-darker;
+
+  .yield-box {
+    min-width: 90px;
+  }
+
+  .round-icon {
+    position: absolute;
+    top: -10px; right: -30px;
+  }
+}
+
+.production-counter {
+  position: absolute;
+  bottom: -22px;
+  right: 20px;
+  padding: 2px 5px;
+  font-variant-numeric: tabular-nums;
+  font-weight: bold;
+  font-size: 1.2rem;
+  background: rgba($black, 0.2);
+}
+
+
+@each $class, $color in $themes-list {
+  .f-#{$class} {
+    .system-properties {
+      .marker {
+        border-color:
+          darken($color, $color-variant-2)
+          darken($color, $color-variant-4)
+          darken($color, $color-variant-1)
+          $color;
+      }
+
+      .marker.is-half {
+        border-color:
+          darken($color, $color-variant-2)
+          darken($color, $color-variant-4)
+          darken($white, $color-variant-1)
+          $white;
+      }
+    }
+  }
+}

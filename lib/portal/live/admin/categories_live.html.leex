@@ -1,0 +1,77 @@
+<div class="content large">
+  <div class="header-box">
+    <h2>
+      <strong><%= @total_entries %></strong>
+      catégories du blog
+    </h2>
+
+    <div class="tools">
+      <%= f = form_for :category, "#", [phx_submit: "new"] %>
+        <%= text_input f, :name, placeholder: "Nom de la catégorie" %><!--
+        --><%= submit do %>
+          <i class="fa fa-plus-square"></i>
+            Créer la catégorie
+        <% end %>
+      </form>
+    </div>
+
+    <div class="pagination">
+      <%= if @page_number == 1 do %>
+        <span class="disabled">
+          <i class="fa fa-angle-left"></i>
+        </span>
+      <% else %>
+        <%= live_redirect to: Routes.live_path(@socket, Portal.CategoriesLive, page: @page_number - 1) do %>
+          <i class="fas fa-angle-left"></i>
+        <% end %>
+      <% end %>
+      <span class="active">
+        <%= @page_number %>
+      </span>
+      <%= if @page_number == @total_pages do %>
+        <span class="disabled">
+          <i class="fas fa-angle-right"></i>
+        </span>
+      <% else %>
+        <%= live_redirect to: Routes.live_path(@socket, Portal.CategoriesLive, page: @page_number + 1) do %>
+          <i class="fas fa-angle-right"></i>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th class="square"></th>
+        <th>Nom</th>
+        <th>Slug</th>
+        <th>Langue</th>
+        <th class="square"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= for category <- @categories do %>
+        <tr>
+          <td class="square">
+            <%= category.id %>
+          </td>
+          <td>
+            <strong><%= category.name %></strong>
+          </td>
+          <td>
+            <%= category.slug %>
+          </td>
+          <td>
+            <%= category.language %>
+          </td>
+          <td class="square action red">
+            <%= link to: "#", "phx-click": "delete", "phx-value-cid": category.id do %>
+              <i class="fa fa-times"></i>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,19 @@
+{
+  "description": "test",
+  "factions": [
+    {
+      "key": "tetrarchy",
+      "sector_number": 1
+    },
+    {
+      "key": "myrmezir",
+      "sector_number": 1
+    }
+  ],
+  "mode": "prod",
+  "name": "test",
+  "sector_number": 2,
+  "size": 120,
+  "speed": "fast",
+  "system_number": 270
+}

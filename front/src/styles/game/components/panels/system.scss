@@ -1,0 +1,110 @@
+.pcb-system {
+  position: relative;
+  display: flex;
+  margin-bottom: 5px;
+
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-weight: bold;
+
+  transition: background linear 250ms;
+
+  .icon {
+    padding: 10px;
+
+    .svg-icon {
+      width: 40px; height: 40px;
+    }
+  }
+
+  .name {
+    flex-grow: 1;
+    padding: 0 20px;
+    line-height: 62px;
+    font-size: 2rem;
+
+    .svg-icon {
+      margin-left: 10px;
+      width: 32px; height: 32px;
+    }
+
+    .is-small {
+      font-size: 1.4rem;
+    }
+  }
+
+  .resource-toast {
+    width: 180px;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .header {
+      padding: 0 10px;
+      font-size: 1.4rem;
+      line-height: 30px;
+      border-bottom: solid 1px rgba(0, 0, 0, .05);
+      border-right: solid 1px rgba(0, 0, 0, .05);
+
+      .svg-icon {
+        position: relative;
+        top: -2px;
+        width: 16px; height: 16px;
+      }
+    }
+
+    .toast {
+      line-height: 21px;
+      padding: 0 5px;
+      margin: 5px;
+      font-size: 1.2rem;
+      background: rgba(0, 0, 0, .5);
+    }
+  }
+
+  .resource {
+    width: 100px;
+    padding: 0 15px;
+    font-size: 1.6rem;
+    line-height: 62px;
+    text-align: right;
+
+    .svg-icon {
+      width: 20px; height: 20px;
+    }
+  }
+}
+
+@each $class, $color in $themes-list {
+  .theme-#{$class} {
+    .pcb-system {
+      background: transparentize($color, 0.9);
+      border: 1px solid transparentize($color, 0.8);
+
+      & > div:not(:last-child) {
+        border-right: 1px solid transparentize($color, 0.8);
+      }
+
+      &:hover {
+        background: transparentize($color, 0.8);
+      }
+
+      .icon .svg-icon {
+        color: lighten($color, $color-variant-3);
+      }
+
+      .resource-toast {
+        .header {
+          border-bottom: solid 1px transparentize($color, 0.8);
+          border-right: solid 1px transparentize($color, 0.8);
+        }
+
+        .toast.active {
+          background: $color;
+          color: $black;
+        }
+      }
+    }
+  }
+}

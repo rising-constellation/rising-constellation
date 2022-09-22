@@ -1,0 +1,62 @@
+<div class="content large">
+  <div class="header-box">
+    <h2>
+      <strong><%= @profile.name %></strong>
+    </h2>
+  </div>
+
+  <div class="label-box">
+    <i class="fa fa-user"></i>
+    <span class="label">ID</span>
+    <span class="value"><%= @profile.id %></span>
+  </div><!--
+  --><div class="label-box">
+    <i class="fa fa-user"></i>
+    <span class="label">Nom</span>
+    <span class="value"><%= @profile.name %></span>
+  </div>
+
+  <hr>
+
+  <div class="label-box">
+    <i class="fa fa-clock"></i>
+    <span class="label">Création</span>
+    <span class="value"><%= Portal.Date.format(@profile.inserted_at, :datetime) %></span>
+  </div><!--
+  --><div class="label-box">
+    <i class="fa fa-clock"></i>
+    <span class="label">Dernière modification</span>
+    <span class="value"><%= Portal.Date.format(@profile.updated_at, :datetime) %></span>
+  </div>
+
+  <hr>
+
+  <div class="label-box">
+    <i class="fa fa-user"></i>
+    <span class="label">Elo</span>
+    <span class="value"><%= round(@profile.elo) %></span>
+  </div>
+
+  <hr>
+
+  <div class="label-box">
+    <i class="fa fa-user"></i>
+    <span class="label">Nom complet</span>
+    <span class="value"><%= @profile.full_name %></span>
+  </div><!--
+  --><div class="label-box">
+    <i class="fa fa-user"></i>
+    <span class="label">Âge</span>
+    <span class="value"><%= @profile.age %></span>
+  </div><!--
+  --><div class="label-box">
+    <i class="fa fa-user"></i>
+    <span class="label">Devise</span>
+    <span class="value"><%= @profile.description %></span>
+  </div><!--
+  --><div class="label-box">
+    <i class="fa fa-user"></i>
+    <span class="label">Description</span>
+    <span class="value"><%= @profile.long_description %></span>
+  </div>
+</div>

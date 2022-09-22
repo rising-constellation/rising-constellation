@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <%= csrf_meta_tag() %>
+    <%= live_title_tag assigns[:page_title] || "Admin", suffix: " · Rising Constellation" %>
+
+    <link phx-track-static rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/admin.css") %>"/>
+    <link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet">
+
+    <script defer phx-track-static type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
+    <script defer phx-track-static type="text/javascript" src="<%= Routes.static_path(@conn, "/js/admin.js") %>"></script>
+  </head>
+
+  <body>
+    <header id="admin-header" class="main-header">
+      <h1>
+        <%= live_redirect to: Routes.live_path(@conn, Portal.AdminLive) do %>
+          Rising Constellation
+        <% end %>
+      </h1>
+
+      <span class="info">
+        <%= Node.self() %> / <%= Application.get_env(:rc, :revision) %>
+      </span>
+
+      <button class="navicon" id="nav-toggle">
+        <i class="fa fa-bars"></i>
+      </button>
+    </header>
+
+    <nav
+      class="navbar"
+      id="navbar">
+      <div class="navbar-content">
+        <ul>
+          <li>
+            <%= live_redirect to: Routes.live_path(@conn, Portal.AdminLive) do %>
+              <i class="fa fa-bookmark"></i> Aperçu général
+            <% end %>
+          </li>
+        </ul>
+
+        <ul>
+          <li>
+            <%= live_redirect to: Routes.live_path(@conn, Portal.AccountsLive) do %>
+              <i class="fa fa-users"></i> Comptes
+            <% end %>
+          </li>
+          <li>
+            <%= live_redirect to: Routes.live_path(@conn, Portal.ProfilesLive) do %>
+              <i class="fa fa-user"></i> Profils
+            <% end %>
+          </li>
+          <li>
+            <%= live_redirect to: Routes.live_path(@conn, Portal.GroupsLive) do %>
+              <i class="fa fa-square"></i> Groupes
+            <% end %>
+          </li>
+          <li>
+            <%= live_redirect to: Routes.live_path(@conn, Portal.LogsLive) do %>
+              <i class="fa fa-archive"></i> Logs
+            <% end %>
+          </li>
+        </ul>
+
+        <ul>
+          <li>
+            <%= live_redirect to: Routes.live_path(@conn, Portal.InstancesLive) do %>
+              <i class="fa fa-th"></i> Instances
+            <% end %>
+          </li>
+        </ul>
+
+        <ul>
+          <li>
+            <%= live_redirect to: Routes.live_path(@conn, Portal.KeysLive) do %>
+              <i class="fa fa-key"></i> Clés Steam
+            <% end %>
+          </li>
+        </ul>
+
+        <ul>
+          <li>
+            <%= live_redirect to: Routes.live_path(@conn, Portal.MapsLive) do %>
+              <i class="fa fa-map"></i> Cartes
+            <% end %>
+          </li>
+          <li>
+            <%= live_redirect to: Routes.live_path(@conn, Portal.ScenariosLive) do %>
+              <i class="fa fa-gamepad"></i> Scénarios
+            <% end %>
+          </li>
+        </ul>
+
+        <ul>
+          <li>
+            <%= live_redirect to: Routes.live_path(@conn, Portal.MaintenanceLive) do %>
+              <i class="fa fa-comment"></i> Maintenance
+            <% end %>
+          </li>
+          <li>
+            <%= live_redirect to: Routes.live_path(@conn, Portal.SettingsLive) do %>
+              <i class="fa fa-comment"></i> Configuration
+            <% end %>
+          </li>
+          <li>
+            <%= live_redirect to: Routes.live_path(@conn, Portal.NodesLive) do %>
+              <i class="fa fa-comment"></i> Nodes
+            <% end %>
+          </li>
+        </ul>
+
+        <%= if function_exported?(Routes, :live_dashboard_path, 2) do %>
+          <ul>
+            <li>
+              <%= link to: Routes.live_dashboard_path(@conn, :home) do %>
+                <i class="fa fa-external-link-alt"></i> LiveDashboard
+              <% end %>
+            </li>
+          </ul>
+        <% end %>
+      </div>
+    </nav>
+
+    <div class="container">
+      <%= @inner_content %>
+    </div>
+
+    <script type="text/javascript">
+      const button = document.getElementById('nav-toggle');
+      const navbar = document.getElementById('navbar');
+
+      button.addEventListener('click', () => { navbar.classList.toggle('open'); });
+      navbar.addEventListener('click', () => { navbar.classList.remove('open'); });
+    </script>
+  </body>
+</html>

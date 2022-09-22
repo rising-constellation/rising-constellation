@@ -1,0 +1,75 @@
+.pcb-character {
+  position: relative;
+  display: flex;
+  margin-bottom: 5px;
+
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-weight: bold;
+
+  transition: background linear 250ms;
+
+  .icon {
+    padding: 10px;
+
+    .svg-icon {
+      width: 40px; height: 40px;
+    }
+  }
+
+  .name {
+    flex-grow: 1;
+    padding: 8px 20px;
+    font-size: 1.2rem;
+
+    strong {
+      display: block;
+      font-size: 2rem;
+    }
+  }
+
+  .level {
+    width: 80px;
+    text-align: right;
+    line-height: 60px;
+    padding: 0 10px;
+
+    strong {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+.pcb-character-empty {
+  position: relative;
+  line-height: 60px;
+  text-align: center;
+
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  background: rgba($color: $white, $alpha: 0.08);
+  border: solid 1px rgba($color: $white, $alpha: 0.1);
+  color: rgba($color: $white, $alpha: 0.5);
+}
+
+@each $class, $color in $themes-list {
+  .theme-#{$class} {
+    .pcb-character {
+      background: transparentize($color, 0.9);
+      border: 1px solid transparentize($color, 0.8);
+
+      & > div:not(:last-child) {
+        border-right: 1px solid transparentize($color, 0.8);
+      }
+
+      &:hover {
+        background: transparentize($color, 0.8);
+      }
+
+      .icon .svg-icon {
+        color: lighten($color, $color-variant-3);
+      }
+    }
+  }
+}

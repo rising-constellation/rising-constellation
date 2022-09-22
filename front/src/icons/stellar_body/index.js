@@ -1,0 +1,12 @@
+/* eslint-disable */
+require('./activity_factor')
+require('./asteroid_belt')
+require('./asteroid')
+require('./defense')
+require('./gaseous_giant')
+require('./habitable_planet')
+require('./industrial_factor')
+require('./moon')
+require('./population')
+require('./sterile_planet')
+require('./technological_factor')

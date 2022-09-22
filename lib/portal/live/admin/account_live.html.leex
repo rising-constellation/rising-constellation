@@ -1,0 +1,193 @@
+<div class="content large">
+  <div class="header-box">
+    <h2>
+      <strong><%= @account.name %></strong>
+    </h2>
+
+    <div class="tools">
+      <%= for role <- AccountRole.__enum_map__() do %>
+        <%= if role == @account.role do %>
+          <span class="active"><%= RC.Accounts.Account.role_name(role) %></span>
+        <% else %>
+          <%= link to: "#", "phx-click": "update", "phx-value-role": role do %>
+            <%= RC.Accounts.Account.role_name(role) %>
+          <% end %>
+        <% end %>
+      <% end %>
+    </div>
+
+    <div class="tools">
+      <%= for status <- AccountStatus.__enum_map__() do %>
+        <%= if status == @account.status do %>
+          <span class="active"><%= RC.Accounts.Account.status_name(status) %></span>
+        <% else %>
+          <%= link to: "#", "phx-click": "update", "phx-value-status": status do %>
+            <%= RC.Accounts.Account.status_name(status) %>
+          <% end %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="label-box">
+    <i class="fa fa-user"></i>
+    <span class="label">ID</span>
+    <span class="value"><%= @account.id %></span>
+  </div><!--
+  --><div class="label-box">
+    <i class="fa fa-envelope"></i>
+    <span class="label">Email</span>
+    <span class="value"><%= @account.email %></span>
+  </div><!--
+  --><div class="label-box">
+    <i class="fa fa-clock"></i>
+    <span class="label">Création</span>
+    <span class="value"><%= Portal.Date.format(@account.inserted_at, :datetime) %></span>
+  </div><!--
+  --><div class="label-box">
+    <i class="fa fa-clock"></i>
+    <span class="label">Dernière modification</span>
+    <span class="value"><%= Portal.Date.format(@account.updated_at, :datetime) %></span>
+  </div><!--
+  --><div class="label-box">
+    <i class="fa fa-dollar-sign"></i>
+    <span class="label">Type de compte</span>
+    <span class="value">
+      <%= if @account.is_free do %>
+        Compte gratuit
+      <% else %>
+        Compte payant
+      <% end %>
+    </span>
+  </div><!--
+  --><div class="label-box">
+    <i class="fa fa-user"></i>
+    <span class="label">Steam ID</span>
+    <span class="value">
+      <%= if @account.steam_id do %>
+        <%= @account.steam_id %>
+      <% else %>
+        —
+      <% end %>
+    </span>
+  </div>
+
+  <h3>Quadrils</h3>
+
+  <div class="label-box" style="display: block; margin-bottom: 10px;">
+    <i class="fa fa-dollar-sign"></i>
+    <span class="label">Quadrils</span>
+    <span class="value"><%= @account.money %></span>
+  </div>
+
+  <div class="tools" style="margin-bottom: 10px;">
+    <%= f = form_for :money, "#", phx_submit: "add_money", class: "form one-input-form" %>
+      <%= text_input f, :amount, placeholder: "Quantité" %><!--
+      --><%= submit do %>
+        Ajouter
+      <% end %>
+    </form>
+  </div>
+
+  <%= if length(@account.money_transactions) > 0 do %>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Titre</th>
+          <th>Delta</th>
+          <th>Total</th>
+          <th>Effectuée le</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= for money <- Enum.slice(Enum.reverse(@account.money_transactions), 0..9) do %>
+          <tr>
+            <td>
+              <%= money.id %>
+            </td>
+            <td>
+              <%= money.reason %>
+            </td>
+            <td>
+              <strong><%= if(money.amount > 0, do: "+#{money.amount}", else: money.amount) %></strong>
+            </td>
+            <td>
+              <strong><%= money.money %></strong>
+            </td>
+            <td>
+              <%= Portal.Date.format(money.inserted_at, :datetime) %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  <% end %>
+
+  <h3>Groupes</h3>
+
+  <div class="tools" style="margin-bottom: 10px;">
+    <%= f = form_for :group, "#", phx_submit: "bind_group", class: "form one-input-form" %>
+      <%= text_input f, :id, placeholder: "Group ID" %><!--
+      --><%= submit do %>
+        Lier le groupe
+      <% end %>
+    </form>
+  </div>
+
+  <%= if length(@account.groups) > 0 do %>
+    <table>
+      <thead>
+        <tr>
+          <th>Nom</th>
+          <th>Ajouté le</th>
+          <th class="square"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= for group <- @account.groups do %>
+          <tr>
+            <td>
+              <strong><%= group.name %></strong>
+            </td>
+            <td>
+              <%= Portal.Date.format(group.inserted_at, :date) %>
+            </td>
+            <td class="square action red">
+              <%= link to: "#", "phx-click": "unbind_group", "phx-value-gid": group.id do %>
+                <i class="fa fa-times"></i>
+              <% end %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  <% end %>
+
+  <h3>Personnages</h3>
+
+  <table>
+    <thead>
+      <tr>
+        <th class="square"></th>
+        <th>Nom</th>
+        <th>Création</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= for profile <- @account.profiles do %>
+        <tr>
+          <td class="square">
+            <%= profile.id %>
+          </td>
+          <td>
+            <strong><%= profile.name %></strong>
+          </td>
+          <td>
+            <%= Portal.Date.format(profile.inserted_at, :date) %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

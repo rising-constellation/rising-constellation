@@ -1,0 +1,107 @@
+<div class="content">
+  <div class="header-box">
+
+    <div class="toggle">
+      <label for="toggle" phx-click="maintenance_toggle" phx-value-maintenance_flag="<%= not @maintenance_flag%>" data-on="<%= @maintenance_flag %>">
+        <div class="toggle-wrapper">
+          <span class="selector"></span>
+        </div>
+        <p class="notification">Maintenance is <span class="selected"></span></p>
+      </label>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <h2>
+      <%= if @state == :restore do %>
+        <%= length(@instances) %>
+        instances to restore
+      <% else %>
+        <%= length(@instances) %>
+        instances to save and restore
+      <% end %>
+    </h2>
+
+    <%= if @working do %>
+      <span class="toast is-red-1">
+        Working…
+      </span>
+    <% end %>
+
+    <%= if not @working and not @done do %>
+      <%= if @state == :restore do %>
+        <%= link to: "#", "phx-click": "restore", class: "toast is-red-2" do %>
+          Restore all instances
+        <% end %>
+      <% else %>
+        <%= link to: "#", "phx-click": "save", class: "toast is-red-2" do %>
+          Save instances for maintenance
+        <% end %>
+      <% end %>
+    <% end %>
+
+    <%= if @done do %>
+      <span class="toast is-green">
+        Done!
+      </span>
+
+      <%= link to: "#", "phx-click": "refresh" do %>
+        Refresh
+      <% end %>
+    <% end %>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th class="square"></th>
+        <th>Nom</th>
+        <th>Node</th>
+        <th>Action</th>
+        <th>Etat Superviseur</th>
+        <th>Etat Instance</th>
+        <th># systèmes</th>
+        <th>Création</th>
+        <th class="square"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= for instance <- @instances do %>
+        <tr>
+          <td class="square">
+            <%= instance.id %>
+          </td>
+          <td>
+            <%= live_redirect to: Routes.live_path(@socket, Portal.InstanceLive, instance.id) do %>
+              <strong><%= instance.name %></strong>
+            <% end %>
+          </td>
+          <td>
+            <code><%= instance.node %></code>
+          </td>
+          <td>
+            <code><%= Map.get(@actions, instance.id) %></code>
+          </td>
+          <td>
+            <span class="toast">
+              <%= instance.supervisor_status %>
+            </span>
+          </td>
+          <td>
+            <span class="toast <%= RC.Instances.Instance.state_color(instance.state) %>">
+              <%= RC.Instances.Instance.state_name(instance.state) %>
+            </span>
+          </td>
+          <td>
+            <%= instance.game_metadata["system_number"] %>
+          </td>
+          <td>
+            <%= Portal.Date.format(instance.inserted_at, :datetime) %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

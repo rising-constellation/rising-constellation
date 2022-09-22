@@ -1,0 +1,109 @@
+{
+  "acount": {
+    "role": {
+      "admin": "Administrator",
+      "user": "Benutzer"
+    },
+    "status": {
+      "active": "Aktiv",
+      "banned": "Gebannt",
+      "deleted": "Gelöscht",
+      "inactive": "Inaktiv",
+      "registered": "Ungültig"
+    }
+  },
+  "instance": {
+    "registration_state": {
+      "can_play": "Spielen",
+      "can_registrate": "Spiel beitreten",
+      "has_registration": "Das Spiel startet bald",
+      "instance_full": "Spiel voll",
+      "no_free_profile": "Alle Profile bereits in Benutzung",
+      "no_registration": "Nicht registriert"
+    },
+    "state": {
+      "created": {
+        "name": "nicht veröffentlicht"
+      },
+      "maintenance": {
+        "toast": "Wartungpause"
+      },
+      "not_running": {
+        "name": "gestoppt",
+        "toast": "Das Spiel wurde gestoppt"
+      },
+      "open": {
+        "name": "offen",
+        "toast": "Warte auf weitere Spieler"
+      },
+      "paused": {
+        "name": "pausiert"
+      },
+      "running": {
+        "toast": "Laufendes Spiel"
+      }
+    }
+  },
+  "layout": {
+    "default": {
+      "forge": "Schmiede",
+      "not_yet_available": "Noch nicht verfügbar",
+      "online": "Online",
+      "play": "Spielen",
+      "settings": "Einstellungen"
+    }
+  },
+  "link": {
+    "discord_invite": "WkTEQfDjh2"
+  },
+  "loading_messages": {
+    "connectivity_check": "Überprüfe Internetverbindung"
+  },
+  "map": {
+    "size": {
+      "360": {
+        "label": "Mittel"
+      }
+    }
+  },
+  "page": {
+    "account_info": {
+      "field_email": "Email",
+      "field_name": "Name"
+    },
+    "instance": {
+      "description": "Beschreibung",
+      "ea_note": "Rising Constellation befindet sich im \"Early Access\". Die Anzah der Spieler kann zu bestimmten Zeiten gering sein. Um zügig Spieler zu finden, besuche den Rising Constellation Kanal auf Discord.",
+      "play": "Spielen",
+      "restart": "Neustarten"
+    },
+    "menu": {
+      "start": "Spielen"
+    },
+    "messenger": {
+      "admin": "Administrator"
+    },
+    "play": {
+      "new": {
+        "field_description": "Beschreibung",
+        "field_name": "Name",
+        "field_opening": "Opening"
+      },
+      "scenarios": {
+        "choose": "Wähle"
+      }
+    },
+    "profile_detail": {
+      "field_age": "Alter",
+      "field_description": "Maxime",
+      "field_full_name": "Vollständiger Name",
+      "field_long_description": "Über",
+      "field_name": "Name"
+    }
+  },
+  "portal_components": {
+    "instance_map": {
+      "systems": "Systeme"
+    }
+  }
+}

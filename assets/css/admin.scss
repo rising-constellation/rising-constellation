@@ -1,0 +1,20 @@
+@import "../node_modules/nprogress/nprogress.css";
+
+@import "phx";
+
+@import 'admin/variables';
+@import 'admin/font';
+@import 'admin/generic';
+
+// components
+@import 'admin/components/_alert.scss';
+@import 'admin/components/_common.scss';
+@import 'admin/components/_form.scss';
+@import 'admin/components/_front-component.scss';
+@import 'admin/components/_header.scss';
+@import 'admin/components/_navbar.scss';
+@import 'admin/components/_table.scss';
+@import 'admin/components/_toggle.scss';
+@import 'admin/components/_grid.scss';
+@import 'admin/components/_label-box.scss';
+@import 'admin/components/_list-action.scss';

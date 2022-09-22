@@ -1,0 +1,120 @@
+<div class="content">
+  <div class="header-box">
+    <h2>
+      <strong><%= @total_entries %></strong>
+      cartes
+    </h2>
+
+    <div class="tools">
+      <%= link to: "#", "phx-click": "toggle_filters" do %>
+        <%= if @show_filters do %>
+          Cacher les filtres
+        <% else %>
+          Montrer les filtres
+        <% end %>
+      <% end %>
+    </div>
+
+    <div class="pagination">
+      <%= if @page_number == 1 do %>
+        <span class="disabled">
+          <i class="fa fa-angle-left"></i>
+        </span>
+      <% else %>
+        <%= live_redirect to: Routes.live_path(@socket, Portal.MapsLive, page: @page_number - 1) do %>
+          <i class="fas fa-angle-left"></i>
+        <% end %>
+      <% end %>
+      <span class="active">
+        <%= @page_number %>
+      </span>
+      <%= if @page_number == @total_pages do %>
+        <span class="disabled">
+          <i class="fas fa-angle-right"></i>
+        </span>
+      <% else %>
+        <%= live_redirect to: Routes.live_path(@socket, Portal.MapsLive, page: @page_number + 1) do %>
+          <i class="fas fa-angle-right"></i>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+
+  <%= if @show_filters do %>
+    <div class="header-box">
+      <%= f = form_for @filters, "#", phx_submit: :filter, class: "form", style: "width: 500px; margin-bottom: 20px;" %>
+        <section>
+          <fieldset>
+            <label>
+              ID
+              <%= number_input f, :id %>
+            </label>
+          </fieldset>
+
+          <fieldset>
+            <label>
+              Nom exact
+              <%= text_input f, :name %>
+            </label>
+          </fieldset>
+
+          <fieldset>
+            <label>
+              Type de carte
+              <%= select f, :is_official, [nil, true, false] %>
+            </label>
+          </fieldset>
+        </section>
+
+        <footer>
+          <%= submit "Filtrer" %>
+        </footer>
+      </form>
+    </div>
+  <% end %>
+
+  <table>
+    <thead>
+      <tr>
+        <th class="square"></th>
+        <th>Nom</th>
+        <th>Taille</th>
+        <th># Systèmes</th>
+        <th>Officielle</th>
+        <th class="square"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= for map <- @maps do %>
+        <tr>
+          <td class="square">
+             <%= live_redirect to: Routes.live_path(@socket, Portal.MapLive, map.id) do %>
+              <strong><%= map.id %></strong>
+            <% end %>
+          </td>
+          <td>
+          <%= live_redirect to: Routes.live_path(@socket, Portal.MapLive, map.id) do %>
+              <strong><%= map.game_metadata["name"] %></strong>
+            <% end %>
+          </td>
+          <td>
+           <%= map.game_metadata["size"] %>
+          </td>
+          <td>
+           <%= map.game_metadata["system_number"] %>
+          </td>
+          <td>
+            <span class="toast is-blue-1">
+              <%= map.is_official %>
+            </span>
+          </td>
+          <td class="square action">
+            <%= live_redirect to: Routes.live_path(@socket, Portal.MapLive, map.id) do %>
+              <i class="fa fa-pencil-alt"></i>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

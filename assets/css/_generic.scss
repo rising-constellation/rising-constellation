@@ -1,0 +1,56 @@
+/* BOX SIZING */
+
+* {
+	box-sizing: border-box;
+}
+
+/* BASE */
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0; padding: 0;
+
+  font-family: 'Nunito', sans-serif;
+  color: $white;
+  background: $grey-dark;
+}
+
+body, input, textarea {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.6rem;
+}
+
+a {
+  color: $white;
+  text-decoration: none;
+}
+
+.toast {
+  display: inline-block;
+
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  margin-right: 10px;
+  background: $primary-dark;
+  border-radius: 3px;
+}
+
+.loader {
+  margin: 0;
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-style: 100px;
+  color: rgba(255, 255, 255, .5);
+}
+
+.default-button {
+  @include default-button;
+}

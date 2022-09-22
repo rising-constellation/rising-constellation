@@ -1,0 +1,90 @@
+<div class="content">
+  <div class="header-box">
+    <h2>
+      <strong><%= @total_entries %></strong>
+      articles
+    </h2>
+
+    <div class="tools">
+      <%= live_redirect to: Routes.live_path(@socket, Portal.CreateArticleLive) do %>
+        <i class="fa fa-plus-square"></i>
+          Créer un article
+      <% end %>
+    </div>
+
+    <div class="pagination">
+      <%= if @page_number == 1 do %>
+        <span class="disabled">
+          <i class="fa fa-angle-left"></i>
+        </span>
+      <% else %>
+        <%= live_redirect to: Routes.live_path(@socket, Portal.ArticlesLive, page: @page_number - 1) do %>
+          <i class="fas fa-angle-left"></i>
+        <% end %>
+      <% end %>
+      <span class="active">
+        <%= @page_number %>
+      </span>
+      <%= if @page_number == @total_pages do %>
+        <span class="disabled">
+          <i class="fas fa-angle-right"></i>
+        </span>
+      <% else %>
+        <%= live_redirect to: Routes.live_path(@socket, Portal.ArticlesLive, page: @page_number + 1) do %>
+          <i class="fas fa-angle-right"></i>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th class="square"></th>
+        <th>Titre</th>
+        <th>Auteur</th>
+        <th>Langue</th>
+        <th>Catégorie</th>
+        <th>Date de création</th>
+        <th>Dernière modification</th>
+        <th class="square"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= for post <- @posts do %>
+        <tr>
+          <td class="square">
+            <%= post.id %>
+          </td>
+          <td>
+            <%= live_redirect to: Routes.live_path(@socket, Portal.EditArticleLive, post.id) do %>
+              <strong><%= post.title %></strong>
+            <% end %>
+          </td>
+          <td>
+            <%= live_redirect to: Routes.live_path(@socket, Portal.AccountLive, post.account.id) do %>
+              <%= post.account.name %>
+            <% end %>
+          </td>
+          <td>
+            <%= post.language %>
+          </td>
+          <td>
+            <%= post.category.name %>
+          </td>
+          <td>
+            <%= Portal.Date.format(post.inserted_at, :datetime) %>
+          </td>
+          <td>
+            <%= Portal.Date.format(post.updated_at, :datetime) %>
+          </td>
+          <td class="square action">
+            <%= live_redirect to: Routes.live_path(@socket, Portal.EditArticleLive, post.id) do %>
+              <i class="fa fa-pencil-alt"></i>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

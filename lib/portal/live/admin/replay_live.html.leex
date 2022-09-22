@@ -1,0 +1,42 @@
+<div class="content large">
+  <div class="header-box">
+    <h2>
+      <strong>
+        <%= live_patch "Replay ##{@iid}", to: Routes.live_path(@socket, Portal.ReplayLive, @iid) %>
+      </strong>
+    </h2>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Temps</th>
+        <th>Profil</th>
+        <th>Action</th>
+        <th>Params</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= for action <- @replay do %>
+        <tr>
+          <td>
+            <strong><%= action.id %></strong>
+          </td>
+          <td>
+            <%= action.timestamp %>
+          </td>
+          <td>
+            <%= live_patch action.profile.name, to: Routes.live_path(@socket, Portal.ReplayLive, @iid, action.profile.id) %>
+          </td>
+          <td>
+            <%= action.msg %>
+          </td>
+          <td>
+            <pre><code><%= inspect(action.params, pretty: true) %></code></pre>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

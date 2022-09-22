@@ -1,0 +1,282 @@
+.system-content-container {
+  position: relative;
+  width: 560px;
+
+  background: $grey-default;
+  border-right: solid 1px $grey-light;
+  border-top: solid 1px $grey-light;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+}
+
+.system-content-menu {
+  position: absolute;
+  top: -1px;
+  right: -26px;
+
+  .system-tab-item {
+    width: 20px;
+    height: 20px;
+    margin-bottom: 5px;
+
+    background: $grey-default;
+    border: solid 1px $grey-light;
+    box-shadow:
+      inset 0 0 0 2px $grey-default,
+      0 0 10px rgba(0, 0, 0, .5);
+
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+
+    transition: background linear 200ms;
+
+    &:hover {
+      background: $grey-light;
+    }
+
+    &.active {
+      background: $white;
+    }
+  }
+}
+
+.system-content-scrollbar {
+  min-height: 525px;
+  max-height: calc(100vh - (2 * #{$navbar-height}) - 200px);
+  overflow: auto;
+}
+
+.system-content-orphan {
+  padding: 10px;
+  min-height: 100px;
+}
+
+.system-content-group {
+  position: relative;
+  padding: 10px;
+  border-bottom: solid 1px $grey-light;
+  transition: background linear 200ms;
+
+  &:hover, &.hovered {
+    background: rgba(255, 255, 255, .05);
+  }
+
+  &.active:before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; bottom: 0;
+    width: 3px;
+    background: $light-grey;
+  }
+
+  .button {
+    @include default-button;
+    margin: 15px 5px;
+
+    &:last-child {
+      margin: 15px 5px 5px 5px;
+    }
+  }
+}
+
+.system-content-group-header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  line-height: 20px;
+
+  .main {
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    .small {
+      font-size: 1.2rem;
+      font-weight: normal;
+      opacity: .5;
+    }
+  }
+
+  .secondary {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .tutorial-pointer {
+    left: 180px;
+    top: 31px;
+  }
+}
+
+.system-content-group-item {
+  margin-top: 5px;
+  padding: 4px;
+
+  background: $grey-light;
+  box-shadow:
+    inset 0 0 0 1px $grey-darker,
+    0 0 5px $grey-dark;
+
+  display: flex;
+
+  .body-icon {
+    width: 40px;
+    height: 40px;
+
+    .svg-icon {
+      width: 32px;
+      height: 32px;
+      margin: 4px;
+    }
+  }
+
+  .body-info {
+    width: 155px;
+    padding: 0 5px;
+    line-height: 20px;
+
+    .body-info-type {
+      font-size: 1.2rem;
+      text-transform: uppercase;
+    }
+
+    .body-info-potentials {
+      display: flex;
+      font-size: 1.2rem;
+    }
+  }
+
+  .body-tiles {
+    display: flex;
+
+    .tile {
+      margin-left: 2px;
+
+      .main-icon {
+        display: block;
+      }
+    }
+  }
+
+  .details-label {
+    flex-grow: 1;
+    padding: 4px 6px;
+    line-height: 20px;
+
+    font-size: 1.2rem;
+    text-transform: uppercase;
+
+    .info {
+      display: inline-block;
+      margin-right: 6px;
+      width: 20px;
+
+      border-radius: 100%;
+      background: $grey-dark;
+      text-align: center;
+      font-weight: bold;
+    }
+  }
+
+  .details-value {
+    .yield-box {
+      width: 90px;
+
+      &.large {
+        width: 150px;
+      }
+    }
+  }
+}
+
+.system-content-group-pop-state {
+  margin-top: 10px;
+
+  .pop-state-item {
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+    text-transform: uppercase;
+    text-align: center;
+
+    &:not(:last-child)::before {
+     content: '';
+     position: absolute;
+     top: 0; bottom: -13px;
+     right: 0; width: 1px;
+     background: rgba(255, 255, 255, .2);
+    }
+
+    &.is-active {
+      font-weight: bold;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0; bottom: -13px;
+        right: 0; left: 0;
+        background: rgba(255, 255, 255, .1);
+       }
+    }
+  }
+}
+
+.system-building-card {
+  position: absolute;
+  width: 300px;
+  bottom: 0;
+  right: -310px;
+
+  &.has-margin-bottom {
+    bottom: 44px;
+  }
+}
+
+.potential-item {
+  display: inline-block;
+  margin-right: 5px;
+  padding: 0 5px;
+  background: rgba(0, 0, 0, .2);
+  border-radius: 3px;
+  line-height: 20px;
+
+  span {
+    display: inline-block;
+    margin: 0 2px;
+  }
+
+  .svg-icon {
+    position: relative;
+    top: -1px;
+    width: 16px;
+    height: 16px;
+  }
+
+  &.f-1 span, &.f-1 .svg-icon { opacity: .5; }
+  &.f-2 span, &.f-2 .svg-icon { opacity: .8; }
+  &.f-4 span { font-weight: bold; }
+  &.f-5 {
+    font-weight: bold;
+    color: $black;
+    background: $white;
+  }
+}
+
+@each $class, $color in $themes-list {
+  .f-#{$class} {
+    .system-content-menu .system-tab-item.active {
+      background: $color;
+    }
+
+    .system-content-group.active:before {
+      background: $color;
+    }
+
+    .potential-item.f-5 {
+      color: $black;
+      background: darken($color, $color-variant-3);
+    }
+  }
+}

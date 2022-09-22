@@ -1,0 +1,208 @@
+$editor-color-list: (
+  editor-color-1: #e6194B,
+  editor-color-2: #bfef45,
+  editor-color-3: #911eb4,
+  editor-color-4: #ffe119,
+  editor-color-5: #3cb44b,
+  editor-color-6: #f58231,
+  editor-color-7: #42d4f4,
+  editor-color-8: #f032e6,
+  editor-color-9: #4363d8
+);
+
+.map-container, .scenario-container {
+  background: rgba(0, 0, 0, .2);
+}
+
+.map-grid {
+  stroke-width: .1;
+  stroke: rgba(255, 255, 255, .5);
+}
+
+.map-circle-cursor {
+  fill: transparent;
+  stroke-width: 1;
+  stroke: rgba(255, 255, 255, 0.6);
+  stroke-dasharray: 30 10;
+}
+
+.map-circle-delete {
+  stroke-width: 1;
+  fill: rgba(255, 255, 255, 0.25);
+  stroke: rgba(255, 255, 255, 0.4);
+}
+
+.map-circle-blackhole {
+  stroke-width: 1;
+  fill: rgba(255, 255, 255, 0.25);
+  stroke: rgba(255, 255, 255, 0.4);
+}
+
+.map-voronoi-triangle {
+  stroke: rgba(255, 255, 255, .1);
+  fill: transparent;
+  opacity: .7;
+  transition: opacity linear 150ms;
+
+  @each $class, $color in $editor-color-list {
+    &.#{$class} { fill: $color; }
+  }
+
+  &:hover {
+    opacity: .85;
+  }
+}
+
+.map-sector {
+  fill: transparentize($white, 0.95);
+  stroke: transparentize($white, 0.75);
+
+  @each $class, $color in $editor-color-list {
+    &.#{$class} {
+      stroke: $color;
+      fill: transparentize($color, 0.99);
+    }
+  }
+
+  @each $class, $color in $themes-list {
+    &.theme-#{$class} {
+      stroke: $color;
+      fill: transparentize($color, 0.9);
+    }
+  }
+}
+
+.map-sector-name {
+  font-size: 2rem;
+  font-weight: bold;
+  fill: $white;
+}
+
+.map-system {
+  fill: white;
+  r: 1.25;
+
+  &.white_dwarf { fill: #d4f4ff; }
+  &.red_dwarf { fill: #fa8064; }
+  &.orange_dwarf { fill: #ffd1a3; }
+  &.yellow_dwarf { fill: #ffe880; }
+
+  &.red_giant {
+    r: 2.5;
+    fill: #f2183c;
+  }
+
+  &.blue_giant {
+    r: 2.5;
+    fill: #1fa8ed;
+  }
+}
+
+.map-blackhole {
+  stroke-width: 1;
+  fill: rgba(0, 0, 0, .2);
+  stroke: rgba(0, 0, 0, 0.4);
+}
+
+.map-edges {
+  stroke-width: 0.5;
+  stroke: rgba(255, 255, 255, .2);
+}
+
+.selectable-item {
+  position: relative;
+  padding: 10px 10px 10px 38px;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  background: rgba(0, 0, 0, .5);
+
+  @each $class, $color in $editor-color-list {
+    &.#{$class} {
+      background: $color;
+      input { color: $black; }
+    }
+  }
+
+  @each $class, $color in $themes-list {
+    &.theme-#{$class} {
+      background: $color;
+      input { color: $black; }
+    }
+  }
+
+  &:hover {
+    .selectable-item-remove {
+      display: block;
+      z-index: 1;
+    }
+  }
+
+  &.active {
+    box-shadow:
+      0 0 0 2px $black,
+      0 0 0 3px $white;
+
+    .selectable-item-select {
+      background: black;
+      color: $white;
+    }
+  }
+
+  .default-input {
+    margin-bottom: 0;
+  }
+
+  input {
+    color: $white;
+  }
+}
+
+.selectable-item-remove {
+  display: none;
+  position: absolute;
+  top: 20px; right: -8px;
+  width: 26px; height: 26px;
+  line-height: 26px;
+  text-align: center;
+  font-weight: bold;
+
+  border-radius: 100%;
+  background: $white;
+  color: $black;
+  box-shadow: 0 0 4px 0 $black;
+}
+
+.selectable-item-select {
+  position: absolute;
+  top: 10px; left: 5px;
+  width: 26px; height: 26px;
+  line-height: 26px;
+  text-align: center;
+  font-weight: bold;
+
+  border-radius: 100%;
+  background: $white;
+  color: $black;
+  box-shadow: 0 0 4px 0 $black;
+}
+
+.selectable-item-faction {
+  background: rgba(0, 0, 0, .1);
+  padding: 5px;
+  border-radius: 3px;
+
+  strong {
+    display: block;
+    text-transform: uppercase;
+  }
+
+  em {
+    font-style: normal;
+  }
+}
+
+.sectors-points {
+  .default-input {
+    margin-bottom: 5px;
+  }
+}

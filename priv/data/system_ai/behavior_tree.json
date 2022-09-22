@@ -1,0 +1,1423 @@
+{
+  "version": "0.3.0",
+  "scope": "project",
+  "selectedTree": "eaff913e-347f-4b16-82ff-aea5070e2a36",
+  "trees": [
+    {
+      "version": "0.3.0",
+      "scope": "tree",
+      "id": "992a80d1-b6f0-4bfc-8a1e-2bfaadf13a59",
+      "title": "My tree",
+      "description": "The root of this tree.  The title of this node sets the title of the tree.  You must have one tree called \"Root\".  You can set tree-wide properties on this node and reference them in other places with the following template syntax: `{{key_name}}`.",
+      "root": null,
+      "properties": {},
+      "nodes": {},
+      "display": {
+        "camera_x": 960,
+        "camera_y": 492,
+        "camera_z": 1,
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "version": "0.3.0",
+      "scope": "tree",
+      "id": "eaff913e-347f-4b16-82ff-aea5070e2a36",
+      "title": "Dominion",
+      "description": "The root of this tree.  The title of this node sets the title of the tree.  You must have one tree called \"Root\".  You can set tree-wide properties on this node and reference them in other places with the following template syntax: `{{key_name}}`.",
+      "root": "cd3f99fc-ba83-4265-9f2e-451f33fbe250",
+      "properties": {},
+      "nodes": {
+        "3b4b86f7-5dd8-40b7-bfe3-708bf990d516": {
+          "id": "3b4b86f7-5dd8-40b7-bfe3-708bf990d516",
+          "name": "4a8fea61-640e-4b63-8467-606793ed576d",
+          "title": "Workforce",
+          "description": "An instance of the tree.  You can add properties to this node and they will be available in action nodes in this tree (using syntax like `{{key}}`).  Properties defined on this node will overwrite the same property defined on the tree's root node.",
+          "properties": {},
+          "display": {
+            "x": -24,
+            "y": 24
+          }
+        },
+        "5104f776-5f9b-4ea5-8343-ba0e43fa27b9": {
+          "id": "5104f776-5f9b-4ea5-8343-ba0e43fa27b9",
+          "name": "sequence",
+          "title": "Sequence",
+          "description": "Takes multiple children and runs them from top to bottom (or left to right).  If any fail, this node fails, if all succeed, this node succeeds.",
+          "properties": {},
+          "display": {
+            "x": -24,
+            "y": -108
+          },
+          "children": [
+            "2a577e1d-a436-46ab-8007-45f6dbfe97ca",
+            "9c447bfd-b992-43b2-8c3f-72b2ae4525cb"
+          ]
+        },
+        "2a577e1d-a436-46ab-8007-45f6dbfe97ca": {
+          "id": "2a577e1d-a436-46ab-8007-45f6dbfe97ca",
+          "name": "SystemAI.Actions.get_main_body()",
+          "title": "SystemAI.Actions.get_main_body()",
+          "description": "Returns the uid of a random body or the main body.\nIt returns the main body if the dominion built on strictly less than 4 tiles.\nOtherwise, it returns a random body.\n",
+          "properties": {},
+          "display": {
+            "x": 192,
+            "y": -156
+          }
+        },
+        "9c447bfd-b992-43b2-8c3f-72b2ae4525cb": {
+          "id": "9c447bfd-b992-43b2-8c3f-72b2ae4525cb",
+          "name": "c960aa23-9c97-4448-b4ba-698c94ac4855",
+          "title": "Starter",
+          "description": "An instance of the tree.  You can add properties to this node and they will be available in action nodes in this tree (using syntax like `{{key}}`).  Properties defined on this node will overwrite the same property defined on the tree's root node.",
+          "properties": {},
+          "display": {
+            "x": 192,
+            "y": -72
+          }
+        },
+        "926f6f17-7ddc-417a-896f-0645a4240679": {
+          "id": "926f6f17-7ddc-417a-896f-0645a4240679",
+          "name": "ccc9c25e-fc75-4eff-adb4-42cb036cc44d",
+          "title": "Happiness",
+          "description": "An instance of the tree.  You can add properties to this node and they will be available in action nodes in this tree (using syntax like `{{key}}`).  Properties defined on this node will overwrite the same property defined on the tree's root node.",
+          "properties": {},
+          "display": {
+            "x": -24,
+            "y": 108
+          }
+        },
+        "13fbcff8-e2ff-4a5f-8a3a-6295d5ac097b": {
+          "id": "13fbcff8-e2ff-4a5f-8a3a-6295d5ac097b",
+          "name": "sequence",
+          "title": "Sequence",
+          "description": "Takes multiple children and runs them from top to bottom (or left to right).  If any fail, this node fails, if all succeed, this node succeeds.",
+          "properties": {},
+          "display": {
+            "x": -24,
+            "y": 348
+          },
+          "children": [
+            "c776e7bd-2bef-45bd-8d0a-8f99c31aa13d",
+            "e2d829c0-a446-453c-8af4-531271685ff1"
+          ]
+        },
+        "c776e7bd-2bef-45bd-8d0a-8f99c31aa13d": {
+          "id": "c776e7bd-2bef-45bd-8d0a-8f99c31aa13d",
+          "name": "SystemAI.Actions.get_random_body()",
+          "title": "SystemAI.Actions.get_random_body()",
+          "description": "Returns a random body within the system.\n",
+          "properties": {},
+          "display": {
+            "x": 192,
+            "y": 192
+          }
+        },
+        "e2d829c0-a446-453c-8af4-531271685ff1": {
+          "id": "e2d829c0-a446-453c-8af4-531271685ff1",
+          "name": "select",
+          "title": "Select",
+          "description": "Takes multiple children and runs them from top to bottom (or left to right), succeeding when any one succeeds.  Fails if all fail.",
+          "properties": {},
+          "display": {
+            "x": 192,
+            "y": 504
+          },
+          "children": [
+            "42afd1f6-04e4-4c4a-bae1-d487753a2356",
+            "dfd86179-9c41-4beb-a22f-b20c1b17609e",
+            "12e44222-95fe-43d9-8d64-a499f8df3024"
+          ]
+        },
+        "42afd1f6-04e4-4c4a-bae1-d487753a2356": {
+          "id": "42afd1f6-04e4-4c4a-bae1-d487753a2356",
+          "name": "sequence",
+          "title": "Sequence",
+          "description": "Takes multiple children and runs them from top to bottom (or left to right).  If any fail, this node fails, if all succeed, this node succeeds.",
+          "properties": {},
+          "display": {
+            "x": 396,
+            "y": 324
+          },
+          "children": [
+            "f0669fb0-a116-49b9-b438-6c7ec3e5bb9f",
+            "313c9096-40db-4af5-b969-7abbacd55cca"
+          ]
+        },
+        "dfd86179-9c41-4beb-a22f-b20c1b17609e": {
+          "id": "dfd86179-9c41-4beb-a22f-b20c1b17609e",
+          "name": "sequence",
+          "title": "Sequence",
+          "description": "Takes multiple children and runs them from top to bottom (or left to right).  If any fail, this node fails, if all succeed, this node succeeds.",
+          "properties": {},
+          "display": {
+            "x": 396,
+            "y": 504
+          },
+          "children": [
+            "d453602a-2ad4-4d00-bc8f-2240e59f40dc",
+            "38b8f047-77ab-4bc1-8b5a-97cca0008bb9"
+          ]
+        },
+        "12e44222-95fe-43d9-8d64-a499f8df3024": {
+          "id": "12e44222-95fe-43d9-8d64-a499f8df3024",
+          "name": "sequence",
+          "title": "Sequence",
+          "description": "Takes multiple children and runs them from top to bottom (or left to right).  If any fail, this node fails, if all succeed, this node succeeds.",
+          "properties": {},
+          "display": {
+            "x": 396,
+            "y": 684
+          },
+          "children": [
+            "e1110d5d-91e9-43a4-9c90-14d6c3a6a74e",
+            "fc457923-2e3f-4e9d-8d88-94a602c18dbe"
+          ]
+        },
+        "f0669fb0-a116-49b9-b438-6c7ec3e5bb9f": {
+          "id": "f0669fb0-a116-49b9-b438-6c7ec3e5bb9f",
+          "name": "SystemAI.Actions.body_belongs_to_biome?(biome_key)",
+          "title": "SystemAI.Actions.body_belongs_to_biome?(:dome)",
+          "description": "Check if the body's biome in the context is equal to `biome_key`\n",
+          "properties": {},
+          "display": {
+            "x": 600,
+            "y": 288
+          }
+        },
+        "d453602a-2ad4-4d00-bc8f-2240e59f40dc": {
+          "id": "d453602a-2ad4-4d00-bc8f-2240e59f40dc",
+          "name": "SystemAI.Actions.body_belongs_to_biome?(biome_key)",
+          "title": "SystemAI.Actions.body_belongs_to_biome?(:open)",
+          "description": "Check if the body's biome in the context is equal to `biome_key`\n",
+          "properties": {},
+          "display": {
+            "x": 600,
+            "y": 456
+          }
+        },
+        "e1110d5d-91e9-43a4-9c90-14d6c3a6a74e": {
+          "id": "e1110d5d-91e9-43a4-9c90-14d6c3a6a74e",
+          "name": "SystemAI.Actions.body_belongs_to_biome?(biome_key)",
+          "title": "SystemAI.Actions.body_belongs_to_biome?(:orbital)",
+          "description": "Check if the body's biome in the context is equal to `biome_key`\n",
+          "properties": {},
+          "display": {
+            "x": 600,
+            "y": 636
+          }
+        },
+        "313c9096-40db-4af5-b969-7abbacd55cca": {
+          "id": "313c9096-40db-4af5-b969-7abbacd55cca",
+          "name": "a4c52efd-5982-40b8-ae92-717853f5b649",
+          "title": "Dome",
+          "description": "An instance of the tree.  You can add properties to this node and they will be available in action nodes in this tree (using syntax like `{{key}}`).  Properties defined on this node will overwrite the same property defined on the tree's root node.",
+          "properties": {},
+          "display": {
+            "x": 600,
+            "y": 372
+          }
+        },
+        "38b8f047-77ab-4bc1-8b5a-97cca0008bb9": {
+          "id": "38b8f047-77ab-4bc1-8b5a-97cca0008bb9",
+          "name": "bf511417-a835-401f-8201-f2ff955f81f2",
+          "title": "Open",
+          "description": "An instance of the tree.  You can add properties to this node and they will be available in action nodes in this tree (using syntax like `{{key}}`).  Properties defined on this node will overwrite the same property defined on the tree's root node.",
+          "properties": {},
+          "display": {
+            "x": 600,
+            "y": 552
+          }
+        },
+        "fc457923-2e3f-4e9d-8d88-94a602c18dbe": {
+          "id": "fc457923-2e3f-4e9d-8d88-94a602c18dbe",
+          "name": "c037e208-b125-4149-8385-f1c08efab920",
+          "title": "My tree",
+          "description": "An instance of the tree.  You can add properties to this node and they will be available in action nodes in this tree (using syntax like `{{key}}`).  Properties defined on this node will overwrite the same property defined on the tree's root node.",
+          "properties": {},
+          "display": {
+            "x": 600,
+            "y": 720
+          }
+        },
+        "f478322b-d99a-4382-b8e1-bdb69e4048f1": {
+          "id": "f478322b-d99a-4382-b8e1-bdb69e4048f1",
+          "name": "SystemAI.Actions.wait_if_queue_is_busy()",
+          "title": "SystemAI.Actions.wait_if_queue_is_busy()",
+          "description": "Succeed if the dominion has an element in its production queue.\n",
+          "properties": {},
+          "display": {
+            "x": -24,
+            "y": -420
+          }
+        },
+        "36a8ab88-ddce-4305-a4d9-b4656f0ba9bf": {
+          "id": "36a8ab88-ddce-4305-a4d9-b4656f0ba9bf",
+          "name": "SystemAI.Actions.wait_for_population_growth(workforce_threshold)",
+          "title": "SystemAI.Actions.wait_for_population_growth(4)",
+          "description": "Succeed if the dominion has a correct growth and not yet available workforce slots.\n",
+          "properties": {},
+          "display": {
+            "x": -24,
+            "y": -336
+          }
+        },
+        "cd3f99fc-ba83-4265-9f2e-451f33fbe250": {
+          "id": "cd3f99fc-ba83-4265-9f2e-451f33fbe250",
+          "name": "select",
+          "title": "Select",
+          "description": "Takes multiple children and runs them from top to bottom (or left to right), succeeding when any one succeeds.  Fails if all fail.",
+          "properties": {},
+          "display": {
+            "x": -228,
+            "y": -84
+          },
+          "children": [
+            "f478322b-d99a-4382-b8e1-bdb69e4048f1",
+            "36a8ab88-ddce-4305-a4d9-b4656f0ba9bf",
+            "ee9e2d3b-df81-403d-9947-31259ca33521",
+            "5104f776-5f9b-4ea5-8343-ba0e43fa27b9",
+            "3b4b86f7-5dd8-40b7-bfe3-708bf990d516",
+            "926f6f17-7ddc-417a-896f-0645a4240679",
+            "13fbcff8-e2ff-4a5f-8a3a-6295d5ac097b"
+          ]
+        },
+        "ee9e2d3b-df81-403d-9947-31259ca33521": {
+          "id": "ee9e2d3b-df81-403d-9947-31259ca33521",
+          "name": "SystemAI.Actions.repair_if_needed()",
+          "title": "SystemAI.Actions.repair_if_needed()",
+          "description": "Succeed if one building was repaired.\n",
+          "properties": {},
+          "display": {
+            "x": -24,
+            "y": -240
+          }
+        }
+      },
+      "display": {
+        "camera_x": 783,
+        "camera_y": 553,
+        "camera_z": 1,
+        "x": -432,
+        "y": -84
+      }
+    },
+    {
+      "version": "0.3.0",
+      "scope": "tree",
+      "id": "c960aa23-9c97-4448-b4ba-698c94ac4855",
+      "title": "Starter Open",
+      "description": "The root of this tree.  The title of this node sets the title of the tree.  You must have one tree called \"Root\".  You can set tree-wide properties on this node and reference them in other places with the following template syntax: `{{key_name}}`.",
+      "root": "74ad23ec-3a05-46f9-8449-72c4282af1d5",
+      "properties": {},
+      "nodes": {
+        "a80ce89e-b2bf-41a8-956c-e7050dd8effc": {
+          "id": "a80ce89e-b2bf-41a8-956c-e7050dd8effc",
+          "name": "select",
+          "title": "Select",
+          "description": "Takes multiple children and runs them from top to bottom (or left to right), succeeding when any one succeeds.  Fails if all fail.",
+          "properties": {},
+          "display": {
+            "x": 216,
+            "y": -168
+          },
+          "children": [
+            "755b811d-fac1-4361-8b97-c0dafc077743",
+            "87d2f277-9d75-45f2-addb-b19cdb3b7c74",
+            "50728848-0977-4d1c-860e-c8d263707e39"
+          ]
+        },
+        "755b811d-fac1-4361-8b97-c0dafc077743": {
+          "id": "755b811d-fac1-4361-8b97-c0dafc077743",
+          "name": "sequence",
+          "title": "Sequence",
+          "description": "Takes multiple children and runs them from top to bottom (or left to right).  If any fail, this node fails, if all succeed, this node succeeds.",
+          "properties": {},
+          "display": {
+            "x": 420,
+            "y": -348
+          },
+          "children": [
+            "64b6722b-96b2-41c7-b322-fa2e717f653f",
+            "c5ef74e2-3614-45c4-8e33-ae7d95691451"
+          ]
+        },
+        "87d2f277-9d75-45f2-addb-b19cdb3b7c74": {
+          "id": "87d2f277-9d75-45f2-addb-b19cdb3b7c74",
+          "name": "sequence",
+          "title": "Sequence",
+          "description": "Takes multiple children and runs them from top to bottom (or left to right).  If any fail, this node fails, if all succeed, this node succeeds.",
+          "properties": {},
+          "display": {
+            "x": 420,
+            "y": -168
+          },
+          "children": [
+            "dba75906-5a07-4fb8-8cbf-365d94824308",
+            "e034e837-8c61-4832-a84a-095ec8679c54"
+          ]
+        },
+        "50728848-0977-4d1c-860e-c8d263707e39": {
+          "id": "50728848-0977-4d1c-860e-c8d263707e39",
+          "name": "sequence",
+          "title": "Sequence",
+          "description": "Takes multiple children and runs them from top to bottom (or left to right).  If any fail, this node fails, if all succeed, this node succeeds.",
+          "properties": {},
+          "display": {
+            "x": 420,
+            "y": 0
+          },
+          "children": [
+            "9e5bfacc-30b4-4738-8069-ca179acaca13",
+            "8606f596-64fe-4969-a6d2-3b5699857ee5"
+          ]
+        },
+        "64b6722b-96b2-41c7-b322-fa2e717f653f": {
+          "id": "64b6722b-96b2-41c7-b322-fa2e717f653f",
+          "name": "SystemAI.Actions.has_not_building?(building_atom)",
+          "title": "SystemAI.Actions.has_not_building?(:infra_open)",
+          "description": "Check if building not built in current body in tree context.\n",
+          "properties": {},
+          "display": {
+            "x": 624,
+            "y": -396
+          }
+        },
+        "c5ef74e2-3614-45c4-8e33-ae7d95691451": {
+          "id": "c5ef74e2-3614-45c4-8e33-ae7d95691451",
+          "name": "SystemAI.Actions.build(building_atom, tile_id)",
+          "title": "SystemAI.Actions.build(:infra_open, 1)",
+          "description": "Build a building on the first tile.\n\nUsed for the `:infrastructure` buildings\n",
+          "properties": {},
+          "display": {
+            "x": 624,
+            "y": -300
+          }
+        },
+        "dba75906-5a07-4fb8-8cbf-365d94824308": {
+          "id": "dba75906-5a07-4fb8-8cbf-365d94824308",
+          "name": "SystemAI.Actions.has_not_n_building?(building_atom, n)",
+          "title": "SystemAI.Actions.has_not_n_building?(:hab_open_poor, 2)",
+          "description": "Check if building not built n times in current body in tree context.\n",
+          "properties": {},
+          "display": {
+            "x": 624,
+            "y": -216
+          }
+        },
+        "e034e837-8c61-4832-a84a-095ec8679c54": {
+          "id": "e034e837-8c61-4832-a84a-095ec8679c54",
+          "name": "SystemAI.Actions.build(building_atom)",
+          "title": "SystemAI.Actions.build(:hab_open_poor)",
+          "description": "Builds a building on a random tile\n",
+          "properties": {},
+          "display": {
+            "x": 624,
+            "y": -132
+          }
+        },
+        "9e5bfacc-30b4-4738-8069-ca179acaca13": {
+          "id": "9e5bfacc-30b4-4738-8069-ca179acaca13",
+          "name": "SystemAI.Actions.has_not_building?(building_atom)",
+          "title": "SystemAI.Actions.has_not_building?(:university_open)",
+          "description": "Check if building not built in current body in tree context.\n",
+          "properties": {},
+          "display": {
+            "x": 624,
+            "y": -36
+          }
+        },
+        "8606f596-64fe-4969-a6d2-3b5699857ee5": {
+          "id": "8606f596-64fe-4969-a6d2-3b5699857ee5",
+          "name": "SystemAI.Actions.build(building_atom)",
+          "title": "SystemAI.Actions.build(:university_open)",
+          "description": "Builds a building on a random tile\n",
+          "properties": {},
+          "display": {
+            "x": 624,
+            "y": 48
+          }
+        },
+        "e243daf1-c967-4d40-bb88-bf74593d5de2": {
+          "id": "e243daf1-c967-4d40-bb88-bf74593d5de2",
+          "name": "sequence",
+          "title": "Sequence",
+          "description": "Takes multiple children and runs them from top to bottom (or left to right).  If any fail, this node fails, if all succeed, this node succeeds.",
+          "properties": {},
+          "display": {
+            "x": 0,
+            "y": -324
+          },
+          "children": [
+            "5a76f538-3d85-4141-82b9-4df6f7b6cd97",
+            "a80ce89e-b2bf-41a8-956c-e7050dd8effc"
+          ]
+        },
+        "5a76f538-3d85-4141-82b9-4df6f7b6cd97": {
+          "id": "5a76f538-3d85-4141-82b9-4df6f7b6cd97",
+          "name": "SystemAI.Actions.get_main_body()",
+          "title": "SystemAI.Actions.get_main_body()",
+          "description": "Returns the uid of a random body or the main body.\nIt returns the main body if the dominion built on strictly less than 4 tiles.\nOtherwise, it returns a random body.\n",
+          "properties": {},
+          "display": {
+            "x": 216,
+            "y": -480
+          }
+        },
+        "74ad23ec-3a05-46f9-8449-72c4282af1d5": {
+          "id": "74ad23ec-3a05-46f9-8449-72c4282af1d5",
+          "name": "select",
+          "title": "Select",
+          "description": "Takes multiple children and runs them from top to bottom (or left to right), succeeding when any one succeeds.  Fails if all fail.",
+          "properties": {},
+          "display": {
+            "x": -204,
+            "y": -36
+          },
+          "children": [
+            "e243daf1-c967-4d40-bb88-bf74593d5de2",
+            "692a2729-fd52-4681-810d-85827a764622"
+          ]
+        },
+        "dc9e8c3d-e38c-4468-8bdc-237cdb67f53e": {
+          "id": "dc9e8c3d-e38c-4468-8bdc-237cdb67f53e",
+          "name": "SystemAI.Actions.get_main_body()",
+          "title": "SystemAI.Actions.get_main_body(:dome)",
+          "description": "Returns the uid of a random body or the main body.\nIt returns the main body if the dominion built on strictly less than 4 tiles.\nOtherwise, it returns a random body.\n",
+          "properties": {},
+          "display": {
+            "x": 216,
+            "y": 132
+          }
+        },
+        "692a2729-fd52-4681-810d-85827a764622": {
+          "id": "692a2729-fd52-4681-810d-85827a764622",
+          "name": "sequence",
+          "title": "Sequence",
+          "description": "Takes multiple children and runs them from top to bottom (or left to right).  If any fail, this node fails, if all succeed, this node succeeds.",
+          "properties": {},
+          "display": {
+            "x": 0,
+            "y": 240
+          },
+          "children": [
+            "dc9e8c3d-e38c-4468-8bdc-237cdb67f53e",
+            "44ab7c91-dc18-49f5-886b-06e31703ea78"
+          ]
+        },
+        "44ab7c91-dc18-49f5-886b-06e31703ea78": {
+          "id": "44ab7c91-dc18-49f5-886b-06e31703ea78",
+          "name": "select",
+          "title": "Select",
+          "description": "Takes multiple children and runs them from top to bottom (or left to right), succeeding when any one succeeds.  Fails if all fail.",
+          "properties": {},
+          "display": {
+            "x": 216,
+            "y": 360
+          },
+          "children": [
+            "5fe5f716-3edd-43dc-849a-9db3e6c3eaf4",
+            "53389783-3dac-4c65-a136-9f5c3fca3ee0"
+          ]
+        },
+        "5fe5f716-3edd-43dc-849a-9db3e6c3eaf4": {
+          "id": "5fe5f716-3edd-43dc-849a-9db3e6c3eaf4",
+          "name": "sequence",
+          "title": "Sequence",
+          "description": "Takes multiple children and runs them from top to bottom (or left to right).  If any fail, this node fails, if all succeed, this node succeeds.",
+          "properties": {},
+          "display": {
+            "x": 420,
+            "y": 264
+          },
+          "children": [
+            "2c93fb20-15d5-46bd-8ef4-3cd8b2f3b308",
+            "32c5ca91-47b5-4a45-8960-28a552802562"
+          ]
+        },
+        "2c93fb20-15d5-46bd-8ef4-3cd8b2f3b308": {
+          "id": "2c93fb20-15d5-46bd-8ef4-3cd8b2f3b308",
+          "name": "SystemAI.Actions.has_not_n_building?(building_atom, n)",
+          "title": "SystemAI.Actions.has_not_n_building?(:hab_dome, 2)",
+          "description": "Check if building not built n times in current body in tree context.\n",
+          "properties": {},
+          "display": {
+            "x": 624,
+            "y": 228
+          }
+        },
+        "32c5ca91-47b5-4a45-8960-28a552802562": {
+          "id": "32c5ca91-47b5-4a45-8960-28a552802562",
+          "name": "SystemAI.Actions.build(building_atom)",
+          "title": "SystemAI.Actions.build(:hab_dome)",
+          "description": "Builds a building on a random tile\n",
+          "properties": {},
+          "display": {
+            "x": 624,
+            "y": 312
+          }
+        },
+        "53389783-3dac-4c65-a136-9f5c3fca3ee0": {
+          "id": "53389783-3dac-4c65-a136-9f5c3fca3ee0",
+          "name": "sequence",
+          "title": "Sequence",
+          "description": "Takes multiple children and runs them from top to bottom (or left to right).  If any fail, this node fails, if all succeed, this node succeeds.",
+          "properties": {},
+          "display": {
+            "x": 420,
+            "y": 444
+          },
+          "children": [
+            "79191cc9-344d-4ef6-acc3-4a010ad8714a",
+            "9f8dee2e-64bc-4428-ad2c-b4d85c7f93e9"
+          ]
+        },
+        "79191cc9-344d-4ef6-acc3-4a010ad8714a": {
+          "id": "79191cc9-344d-4ef6-acc3-4a010ad8714a",
+          "name": "SystemAI.Actions.has_not_building?(building_atom)",
+          "title": "SystemAI.Actions.has_not_building?(:mine_dome)",
+          "description": "Check if building not built in current body in tree context.\n",
+          "properties": {},
+          "display": {
+            "x": 624,
+            "y": 396
+          }
+        },
+        "9f8dee2e-64bc-4428-ad2c-b4d85c7f93e9": {
+          "id": "9f8dee2e-64bc-4428-ad2c-b4d85c7f93e9",
+          "name": "SystemAI.Actions.build(building_atom)",
+          "title": "SystemAI.Actions.build(:mine_dome)",
+          "description": "Builds a building on a random tile\n",
+          "properties": {},
+          "display": {
+            "x": 624,
+            "y": 492
+          }
+        }
+      },
+      "display": {
+        "camera_x": 690,
+        "camera_y": 606,
+        "camera_z": 1,
+        "x": -408,
+        "y": -36
+      }
+    },
+    {
+      "version": "0.3.0",
+      "scope": "tree",
+      "id": "aefa6738-fdbb-44d1-8000-9733385d1171",
+      "title": "Upgrade",
+      "description": "The root of this tree.  The title of this node sets the title of the tree.  You must have one tree called \"Root\".  You can set tree-wide properties on this node and reference them in other places with the following template syntax: `{{key_name}}`.",
+      "root": "e8488460-22b2-40b4-89ea-6c3d5076152c",
+      "properties": {},
+      "nodes": {
+        "e8488460-22b2-40b4-89ea-6c3d5076152c": {
+          "id": "e8488460-22b2-40b4-89ea-6c3d5076152c",
+          "name": "sequence",
+          "title": "Sequence",
+          "description": "Takes multiple children and runs them from top to bottom (or left to right).  If any fail, this node fails, if all succeed, this node succeeds.",
+          "properties": {},
+          "display": {
+            "x": 156,
+            "y": -48
+          },
+          "children": [
+            "63d8bb01-bab0-416a-a68a-96b4ac434430",
+            "0416ce11-2d02-4773-b282-23abad32ef9c"
+          ]
+        },
+        "0416ce11-2d02-4773-b282-23abad32ef9c": {
+          "id": "0416ce11-2d02-4773-b282-23abad32ef9c",
+          "name": "SystemAI.Actions.upgrade_random()",
+          "title": "SystemAI.Actions.upgrade_random()",
+          "description": "Build or upgrade a random building within a category.\nIt does not consider the body in the context.\n",
+          "properties": {},
+          "display": {
+            "x": 360,
+            "y": -12
+          }
+        },
+        "63d8bb01-bab0-416a-a68a-96b4ac434430": {
+          "id": "63d8bb01-bab0-416a-a68a-96b4ac434430",
+          "name": "SystemAI.Actions.succeed_upgrade?(p, min_value)",
+          "title": "SystemAI.Actions.succeed_upgrade?(0.5, 10)",
+          "description": "Randomly returns `:succeed` with probability p if the dominion value is greater than `min_value`.\n",
+          "properties": {},
+          "display": {
+            "x": 360,
+            "y": -96
+          }
+        }
+      },
+      "display": {
+        "camera_x": 1280,
+        "camera_y": 683,
+        "camera_z": 1,
+        "x": -48,
+        "y": -48
+      }
+    },
+    {
+      "version": "0.3.0",
+      "scope": "tree",
+      "id": "4a8fea61-640e-4b63-8467-606793ed576d",
+      "title": "Workforce",
+      "description": "The root of this tree.  The title of this node sets the title of the tree.  You must have one tree called \"Root\".  You can set tree-wide properties on this node and reference them in other places with the following template syntax: `{{key_name}}`.",
+      "root": "2a77786d-15d5-4089-856e-7ae788529fe2",
+      "properties": {},
+      "nodes": {
+        "2a77786d-15d5-4089-856e-7ae788529fe2": {
+          "id": "2a77786d-15d5-4089-856e-7ae788529fe2",
+          "name": "sequence",
+          "title": "Sequence",
+          "description": "Takes multiple children and runs them from top to bottom (or left to right).  If any fail, this node fails, if all succeed, this node succeeds.",
+          "properties": {},
+          "display": {
+            "x": 204,
+            "y": 0
+          },
+          "children": [
+            "8e6e0896-0cef-4c95-9f38-b3f1d93f0d82",
+            "72822e32-9b95-4528-b5eb-5b3d101a4d13"
+          ]
+        },
+        "8e6e0896-0cef-4c95-9f38-b3f1d93f0d82": {
+          "id": "8e6e0896-0cef-4c95-9f38-b3f1d93f0d82",
+          "name": "SystemAI.Actions.workforce_needed?(workforce_threshold)",
+          "title": "SystemAI.Actions.workforce_needed?(3)",
+          "description": "Succeed if the system potential workforce is lower than `workforce_threshold`\n\nTODO: consider growth ?\n",
+          "properties": {},
+          "display": {
+            "x": 408,
+            "y": -72
+          }
+        },
+        "72822e32-9b95-4528-b5eb-5b3d101a4d13": {
+          "id": "72822e32-9b95-4528-b5eb-5b3d101a4d13",
+          "name": "select",
+          "title": "Select",
+          "description": "Takes multiple children and runs them from top to bottom (or left to right), succeeding when any one succeeds.  Fails if all fail.",
+          "properties": {},
+          "display": {
+            "x": 408,
+            "y": 60
+          },
+          "children": [
+            "71dde074-5803-47ae-8948-5709c329dafc",
+            "f660753d-9746-462b-8112-526e4bf1f672"
+          ]
+        },
+        "71dde074-5803-47ae-8948-5709c329dafc": {
+          "id": "71dde074-5803-47ae-8948-5709c329dafc",
+          "name": "SystemAI.Actions.build_random_infra()",
+          "title": "SystemAI.Actions.build_random_infra()",
+          "description": "Succeed if the dominion built an :infra on a open or dome biome\n",
+          "properties": {},
+          "display": {
+            "x": 624,
+            "y": 12
+          }
+        },
+        "f660753d-9746-462b-8112-526e4bf1f672": {
+          "id": "f660753d-9746-462b-8112-526e4bf1f672",
+          "name": "SystemAI.Actions.build_workforce()",
+          "title": "SystemAI.Actions.build_workforce()",
+          "description": "Succeed if the dominion built a workforce building\n",
+          "properties": {},
+          "display": {
+            "x": 624,
+            "y": 108
+          }
+        }
+      },
+      "display": {
+        "camera_x": 1280,
+        "camera_y": 683,
+        "camera_z": 1,
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "version": "0.3.0",
+      "scope": "tree",
+      "id": "ccc9c25e-fc75-4eff-adb4-42cb036cc44d",
+      "title": "Happiness",
+      "description": "The root of this tree.  The title of this node sets the title of the tree.  You must have one tree called \"Root\".  You can set tree-wide properties on this node and reference them in other places with the following template syntax: `{{key_name}}`.",
+      "root": "66b1fe5a-a4d4-475a-951c-cce5e0f5ff4b",
+      "properties": {},
+      "nodes": {
+        "66b1fe5a-a4d4-475a-951c-cce5e0f5ff4b": {
+          "id": "66b1fe5a-a4d4-475a-951c-cce5e0f5ff4b",
+          "name": "sequence",
+          "title": "Sequence",
+          "description": "Takes multiple children and runs them from top to bottom (or left to right).  If any fail, this node fails, if all succeed, this node succeeds.",
+          "properties": {},
+          "display": {
+            "x": 204,
+            "y": 0
+          },
+          "children": [
+            "63d7e0f1-4ca0-4944-9571-268747501ebf",
+            "538b0afa-2d4e-4622-806c-69d04820c157"
+          ]
+        },
+        "63d7e0f1-4ca0-4944-9571-268747501ebf": {
+          "id": "63d7e0f1-4ca0-4944-9571-268747501ebf",
+          "name": "SystemAI.Actions.happiness_needed?(happiness_threshold)",
+          "title": "SystemAI.Actions.happiness_needed?(10)",
+          "description": "Succeed if the system happiness is lower than `happiness_threshold`\n",
+          "properties": {},
+          "display": {
+            "x": 408,
+            "y": -72
+          }
+        },
+        "538b0afa-2d4e-4622-806c-69d04820c157": {
+          "id": "538b0afa-2d4e-4622-806c-69d04820c157",
+          "name": "select",
+          "title": "Select",
+          "description": "Takes multiple children and runs them from top to bottom (or left to right), succeeding when any one succeeds.  Fails if all fail.",
+          "properties": {},
+          "display": {
+            "x": 408,
+            "y": 60
+          },
+          "children": [
+            "1b452de9-60fb-44a4-8cb5-bbc9718df93f",
+            "038b4d31-8fcf-49ae-a29a-c0741a98cee2"
+          ]
+        },
+        "1b452de9-60fb-44a4-8cb5-bbc9718df93f": {
+          "id": "1b452de9-60fb-44a4-8cb5-bbc9718df93f",
+          "name": "SystemAI.Actions.build_random_infra()",
+          "title": "SystemAI.Actions.build_random_infra()",
+          "description": "Succeed if the dominion built an :infra on a open or dome biome\n",
+          "properties": {},
+          "display": {
+            "x": 624,
+            "y": 12
+          }
+        },
+        "038b4d31-8fcf-49ae-a29a-c0741a98cee2": {
+          "id": "038b4d31-8fcf-49ae-a29a-c0741a98cee2",
+          "name": "SystemAI.Actions.build_happiness()",
+          "title": "SystemAI.Actions.build_happiness()",
+          "description": "Succeed if the dominion built a happinness building.\n",
+          "properties": {},
+          "display": {
+            "x": 624,
+            "y": 108
+          }
+        }
+      },
+      "display": {
+        "camera_x": 1280,
+        "camera_y": 683,
+        "camera_z": 1,
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "version": "0.3.0",
+      "scope": "tree",
+      "id": "a4c52efd-5982-40b8-ae92-717853f5b649",
+      "title": "Dome",
+      "description": "The root of this tree.  The title of this node sets the title of the tree.  You must have one tree called \"Root\".  You can set tree-wide properties on this node and reference them in other places with the following template syntax: `{{key_name}}`.",
+      "root": "9e509ca8-2d7f-43fc-9bd7-73ff26c10518",
+      "properties": {},
+      "nodes": {
+        "9e509ca8-2d7f-43fc-9bd7-73ff26c10518": {
+          "id": "9e509ca8-2d7f-43fc-9bd7-73ff26c10518",
+          "name": "select",
+          "title": "Select",
+          "description": "Takes multiple children and runs them from top to bottom (or left to right), succeeding when any one succeeds.  Fails if all fail.",
+          "properties": {},
+          "display": {
+            "x": 204,
+            "y": 0
+          },
+          "children": [
+            "b111fb26-ba0d-4141-9603-0eed40470d35",
+            "d92eb389-adc2-407a-8a73-bb3e0354a153",
+            "7ac4adc8-33dd-4c62-a06c-cacb71348cf3"
+          ]
+        },
+        "b111fb26-ba0d-4141-9603-0eed40470d35": {
+          "id": "b111fb26-ba0d-4141-9603-0eed40470d35",
+          "name": "sequence",
+          "title": "Sequence",
+          "description": "Takes multiple children and runs them from top to bottom (or left to right).  If any fail, this node fails, if all succeed, this node succeeds.",
+          "properties": {},
+          "display": {
+            "x": 408,
+            "y": -192
+          },
+          "children": [
+            "00405570-4001-49de-8012-47704c933acd",
+            "0766bef3-a5db-428b-9d4c-563ac664d2aa"
+          ]
+        },
+        "d92eb389-adc2-407a-8a73-bb3e0354a153": {
+          "id": "d92eb389-adc2-407a-8a73-bb3e0354a153",
+          "name": "sequence",
+          "title": "Sequence",
+          "description": "Takes multiple children and runs them from top to bottom (or left to right).  If any fail, this node fails, if all succeed, this node succeeds.",
+          "properties": {},
+          "display": {
+            "x": 408,
+            "y": -12
+          },
+          "children": [
+            "cee4d1b1-d9ca-4bb7-8dfc-157bcb7a40ee",
+            "5f3abd14-8a87-4962-88e9-8d66276aae2c"
+          ]
+        },
+        "7ac4adc8-33dd-4c62-a06c-cacb71348cf3": {
+          "id": "7ac4adc8-33dd-4c62-a06c-cacb71348cf3",
+          "name": "sequence",
+          "title": "Sequence",
+          "description": "Takes multiple children and runs them from top to bottom (or left to right).  If any fail, this node fails, if all succeed, this node succeeds.",
+          "properties": {},
+          "display": {
+            "x": 408,
+            "y": 180
+          },
+          "children": [
+            "f7d4833e-184f-4ac2-bc24-f4fb7568b972",
+            "0482fbe3-3959-4181-b523-990ce987d242"
+          ]
+        },
+        "00405570-4001-49de-8012-47704c933acd": {
+          "id": "00405570-4001-49de-8012-47704c933acd",
+          "name": "SystemAI.Actions.has_not_building?(building_atom)",
+          "title": "SystemAI.Actions.has_not_building?(:infra_dome)",
+          "description": "Check if building not built in current body in tree context.\n",
+          "properties": {},
+          "display": {
+            "x": 624,
+            "y": -228
+          }
+        },
+        "0766bef3-a5db-428b-9d4c-563ac664d2aa": {
+          "id": "0766bef3-a5db-428b-9d4c-563ac664d2aa",
+          "name": "SystemAI.Actions.build(building_atom, tile_id)",
+          "title": "SystemAI.Actions.build(:infra_dome, 1)",
+          "description": "Build a building on the first tile.\n\nUsed for the `:infrastructure` buildings\n",
+          "properties": {},
+          "display": {
+            "x": 624,
+            "y": -144
+          }
+        },
+        "cee4d1b1-d9ca-4bb7-8dfc-157bcb7a40ee": {
+          "id": "cee4d1b1-d9ca-4bb7-8dfc-157bcb7a40ee",
+          "name": "SystemAI.Actions.has_not_building?(building_atom)",
+          "title": "SystemAI.Actions.has_not_building?(:hab_dome)",
+          "description": "Check if building not built in current body in tree context.\n",
+          "properties": {},
+          "display": {
+            "x": 624,
+            "y": -60
+          }
+        },
+        "5f3abd14-8a87-4962-88e9-8d66276aae2c": {
+          "id": "5f3abd14-8a87-4962-88e9-8d66276aae2c",
+          "name": "SystemAI.Actions.build(building_atom)",
+          "title": "SystemAI.Actions.build(:hab_dome)",
+          "description": "Builds a building on a random tile\n",
+          "properties": {},
+          "display": {
+            "x": 624,
+            "y": 36
+          }
+        },
+        "f7d4833e-184f-4ac2-bc24-f4fb7568b972": {
+          "id": "f7d4833e-184f-4ac2-bc24-f4fb7568b972",
+          "name": "SystemAI.Actions.choose_category(biome_key)",
+          "title": "SystemAI.Actions.choose_category(:dome)",
+          "description": "Choose a random category of building to produce\n",
+          "properties": {},
+          "display": {
+            "x": 624,
+            "y": 120
+          }
+        },
+        "0482fbe3-3959-4181-b523-990ce987d242": {
+          "id": "0482fbe3-3959-4181-b523-990ce987d242",
+          "name": "select",
+          "title": "Select",
+          "description": "Takes multiple children and runs them from top to bottom (or left to right), succeeding when any one succeeds.  Fails if all fail.",
+          "properties": {},
+          "display": {
+            "x": 624,
+            "y": 252
+          },
+          "children": [
+            "ac218fc3-d054-4a8e-8c06-4ab34d8b70ff",
+            "4ba94ccc-7278-4eb3-8ad7-daa84db5719d"
+          ]
+        },
+        "ac218fc3-d054-4a8e-8c06-4ab34d8b70ff": {
+          "id": "ac218fc3-d054-4a8e-8c06-4ab34d8b70ff",
+          "name": "aefa6738-fdbb-44d1-8000-9733385d1171",
+          "title": "Upgrade",
+          "description": "An instance of the tree.  You can add properties to this node and they will be available in action nodes in this tree (using syntax like `{{key}}`).  Properties defined on this node will overwrite the same property defined on the tree's root node.",
+          "properties": {},
+          "display": {
+            "x": 828,
+            "y": 204
+          }
+        },
+        "4ba94ccc-7278-4eb3-8ad7-daa84db5719d": {
+          "id": "4ba94ccc-7278-4eb3-8ad7-daa84db5719d",
+          "name": "SystemAI.Actions.build_random(biome_key)",
+          "title": "SystemAI.Actions.build_random(:dome)",
+          "description": "Build a random building within a category\n",
+          "properties": {},
+          "display": {
+            "x": 828,
+            "y": 300
+          }
+        }
+      },
+      "display": {
+        "camera_x": 1280,
+        "camera_y": 683,
+        "camera_z": 1,
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "version": "0.3.0",
+      "scope": "tree",
+      "id": "bf511417-a835-401f-8201-f2ff955f81f2",
+      "title": "Open",
+      "description": "The root of this tree.  The title of this node sets the title of the tree.  You must have one tree called \"Root\".  You can set tree-wide properties on this node and reference them in other places with the following template syntax: `{{key_name}}`.",
+      "root": "b225d039-fb23-4f9a-9eed-0f141cfc4352",
+      "properties": {},
+      "nodes": {
+        "b225d039-fb23-4f9a-9eed-0f141cfc4352": {
+          "id": "b225d039-fb23-4f9a-9eed-0f141cfc4352",
+          "name": "select",
+          "title": "Select",
+          "description": "Takes multiple children and runs them from top to bottom (or left to right), succeeding when any one succeeds.  Fails if all fail.",
+          "properties": {},
+          "display": {
+            "x": 204,
+            "y": 36
+          },
+          "children": [
+            "996398a9-1b69-4875-ba27-9b40cc763b93",
+            "6c6b7d14-e16f-4489-809a-da81e7ea1fda"
+          ]
+        },
+        "996398a9-1b69-4875-ba27-9b40cc763b93": {
+          "id": "996398a9-1b69-4875-ba27-9b40cc763b93",
+          "name": "c960aa23-9c97-4448-b4ba-698c94ac4855",
+          "title": "Starter",
+          "description": "An instance of the tree.  You can add properties to this node and they will be available in action nodes in this tree (using syntax like `{{key}}`).  Properties defined on this node will overwrite the same property defined on the tree's root node.",
+          "properties": {},
+          "display": {
+            "x": 408,
+            "y": -60
+          }
+        },
+        "6c6b7d14-e16f-4489-809a-da81e7ea1fda": {
+          "id": "6c6b7d14-e16f-4489-809a-da81e7ea1fda",
+          "name": "sequence",
+          "title": "Sequence",
+          "description": "Takes multiple children and runs them from top to bottom (or left to right).  If any fail, this node fails, if all succeed, this node succeeds.",
+          "properties": {},
+          "display": {
+            "x": 408,
+            "y": 120
+          },
+          "children": [
+            "3b78e080-7525-40af-b28b-4284fb8ef452",
+            "03ea24da-8abf-4163-9993-f3554267a601",
+            "b7c9ed2c-44c2-4427-8e81-0dbe611be4af"
+          ]
+        },
+        "3b78e080-7525-40af-b28b-4284fb8ef452": {
+          "id": "3b78e080-7525-40af-b28b-4284fb8ef452",
+          "name": "SystemAI.Actions.body_belongs_to_biome?(biome_key)",
+          "title": "SystemAI.Actions.body_belongs_to_biome?(:open)",
+          "description": "Check if the body's biome in the context is equal to `biome_key`\n",
+          "properties": {},
+          "display": {
+            "x": 624,
+            "y": 24
+          }
+        },
+        "03ea24da-8abf-4163-9993-f3554267a601": {
+          "id": "03ea24da-8abf-4163-9993-f3554267a601",
+          "name": "SystemAI.Actions.choose_category(biome_key)",
+          "title": "SystemAI.Actions.choose_category(:open)",
+          "description": "Choose a random category of building to produce\n",
+          "properties": {},
+          "display": {
+            "x": 624,
+            "y": 108
+          }
+        },
+        "b7c9ed2c-44c2-4427-8e81-0dbe611be4af": {
+          "id": "b7c9ed2c-44c2-4427-8e81-0dbe611be4af",
+          "name": "select",
+          "title": "Select",
+          "description": "Takes multiple children and runs them from top to bottom (or left to right), succeeding when any one succeeds.  Fails if all fail.",
+          "properties": {},
+          "display": {
+            "x": 624,
+            "y": 240
+          },
+          "children": [
+            "2558bcb2-10aa-45d2-85b0-62b690633e8c",
+            "cedd92ad-d9bd-48f5-9b1a-fa2b072d4714"
+          ]
+        },
+        "2558bcb2-10aa-45d2-85b0-62b690633e8c": {
+          "id": "2558bcb2-10aa-45d2-85b0-62b690633e8c",
+          "name": "aefa6738-fdbb-44d1-8000-9733385d1171",
+          "title": "Upgrade",
+          "description": "An instance of the tree.  You can add properties to this node and they will be available in action nodes in this tree (using syntax like `{{key}}`).  Properties defined on this node will overwrite the same property defined on the tree's root node.",
+          "properties": {},
+          "display": {
+            "x": 816,
+            "y": 204
+          }
+        },
+        "cedd92ad-d9bd-48f5-9b1a-fa2b072d4714": {
+          "id": "cedd92ad-d9bd-48f5-9b1a-fa2b072d4714",
+          "name": "SystemAI.Actions.build_random(biome_key)",
+          "title": "SystemAI.Actions.build_random(:open)",
+          "description": "Build a random building within a category\n",
+          "properties": {},
+          "display": {
+            "x": 828,
+            "y": 288
+          }
+        }
+      },
+      "display": {
+        "camera_x": 1280,
+        "camera_y": 683,
+        "camera_z": 1,
+        "x": 0,
+        "y": 36
+      }
+    },
+    {
+      "version": "0.3.0",
+      "scope": "tree",
+      "id": "c037e208-b125-4149-8385-f1c08efab920",
+      "title": "Orbital",
+      "description": "The root of this tree.  The title of this node sets the title of the tree.  You must have one tree called \"Root\".  You can set tree-wide properties on this node and reference them in other places with the following template syntax: `{{key_name}}`.",
+      "root": "b7b8c414-178d-435a-8cf4-927ce2cd3962",
+      "properties": {},
+      "nodes": {
+        "b7b8c414-178d-435a-8cf4-927ce2cd3962": {
+          "id": "b7b8c414-178d-435a-8cf4-927ce2cd3962",
+          "name": "sequence",
+          "title": "Sequence",
+          "description": "Takes multiple children and runs them from top to bottom (or left to right).  If any fail, this node fails, if all succeed, this node succeeds.",
+          "properties": {},
+          "display": {
+            "x": 204,
+            "y": 0
+          },
+          "children": [
+            "65efd86a-c514-458f-8c66-315bf9eafc77",
+            "8d913269-3a1d-4bbf-8dfd-0e17a783b70d"
+          ]
+        },
+        "65efd86a-c514-458f-8c66-315bf9eafc77": {
+          "id": "65efd86a-c514-458f-8c66-315bf9eafc77",
+          "name": "SystemAI.Actions.choose_category(biome_key)",
+          "title": "SystemAI.Actions.choose_category(:orbital)",
+          "description": "Choose a random category of building to produce\n",
+          "properties": {},
+          "display": {
+            "x": 408,
+            "y": -72
+          }
+        },
+        "8d913269-3a1d-4bbf-8dfd-0e17a783b70d": {
+          "id": "8d913269-3a1d-4bbf-8dfd-0e17a783b70d",
+          "name": "select",
+          "title": "Select",
+          "description": "Takes multiple children and runs them from top to bottom (or left to right), succeeding when any one succeeds.  Fails if all fail.",
+          "properties": {},
+          "display": {
+            "x": 408,
+            "y": 60
+          },
+          "children": [
+            "338e2aaf-83ad-439e-863c-932f91e5cc29",
+            "ade9426b-ae92-4ddb-afab-ca80362fa553"
+          ]
+        },
+        "338e2aaf-83ad-439e-863c-932f91e5cc29": {
+          "id": "338e2aaf-83ad-439e-863c-932f91e5cc29",
+          "name": "aefa6738-fdbb-44d1-8000-9733385d1171",
+          "title": "Upgrade",
+          "description": "An instance of the tree.  You can add properties to this node and they will be available in action nodes in this tree (using syntax like `{{key}}`).  Properties defined on this node will overwrite the same property defined on the tree's root node.",
+          "properties": {},
+          "display": {
+            "x": 624,
+            "y": 12
+          }
+        },
+        "ade9426b-ae92-4ddb-afab-ca80362fa553": {
+          "id": "ade9426b-ae92-4ddb-afab-ca80362fa553",
+          "name": "SystemAI.Actions.build_random(biome_key)",
+          "title": "SystemAI.Actions.build_random(:orbital)",
+          "description": "Build a random building within a category\n",
+          "properties": {},
+          "display": {
+            "x": 624,
+            "y": 108
+          }
+        }
+      },
+      "display": {
+        "camera_x": 1280,
+        "camera_y": 683,
+        "camera_z": 1,
+        "x": 0,
+        "y": 0
+      }
+    }
+  ],
+  "custom_nodes": [
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "SystemAI.Actions.action(fun, args \\\\ [])",
+      "category": "action",
+      "title": "SystemAI.Actions.action(fun, args \\\\ [])",
+      "description": "A semantic helper to define actions in the behavior tree.\n\n    Node.sequence([\n      ...\n      action(SystemAI.Actions, :wait, [5]),\n      ...\n      action(SystemAI.Actions, :done)\n    ])\n",
+      "properties": {}
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "SystemAI.Actions.body_belongs_to_biome?(biome_key)",
+      "category": "action",
+      "title": "SystemAI.Actions.body_belongs_to_biome?(biome_key)",
+      "description": "Check if the body's biome in the context is equal to `biome_key`\n",
+      "properties": {}
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "SystemAI.Actions.build(building_atom)",
+      "category": "action",
+      "title": "SystemAI.Actions.build(building_atom)",
+      "description": "Builds a building on a random tile\n",
+      "properties": {}
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "SystemAI.Actions.build(building_atom, tile_id)",
+      "category": "action",
+      "title": "SystemAI.Actions.build(building_atom, tile_id)",
+      "description": "Build a building on the first tile.\n\nUsed for the `:infrastructure` buildings\n",
+      "properties": {}
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "SystemAI.Actions.build_happiness()",
+      "category": "action",
+      "title": "SystemAI.Actions.build_happiness()",
+      "description": "Succeed if the dominion built a happinness building.\n",
+      "properties": {}
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "SystemAI.Actions.build_random(biome_key)",
+      "category": "action",
+      "title": "SystemAI.Actions.build_random(biome_key)",
+      "description": "Build a random building within a category\n",
+      "properties": {}
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "SystemAI.Actions.build_random_infra()",
+      "category": "action",
+      "title": "SystemAI.Actions.build_random_infra()",
+      "description": "Succeed if the dominion built an :infra on a open or dome biome\n",
+      "properties": {}
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "SystemAI.Actions.build_workforce()",
+      "category": "action",
+      "title": "SystemAI.Actions.build_workforce()",
+      "description": "Succeed if the dominion built a workforce building\n",
+      "properties": {}
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "SystemAI.Actions.choose_category(biome_key)",
+      "category": "action",
+      "title": "SystemAI.Actions.choose_category(biome_key)",
+      "description": "Choose a random category of building to produce\n",
+      "properties": {}
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "SystemAI.Actions.done()",
+      "category": "action",
+      "title": "SystemAI.Actions.done()",
+      "description": "Stop the bot from running\n",
+      "properties": {}
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "SystemAI.Actions.error(reason)",
+      "category": "action",
+      "title": "SystemAI.Actions.error(reason)",
+      "description": "Signal that this bot has errored, causing the bot's process to die with the given\nreason.\n",
+      "properties": {}
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "SystemAI.Actions.get_main_body()",
+      "category": "action",
+      "title": "SystemAI.Actions.get_main_body()",
+      "description": "Returns the uid of a random body or the main body.\nIt returns the main body if the dominion built on strictly less than 4 tiles.\nOtherwise, it returns a random body.\n",
+      "properties": {}
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "SystemAI.Actions.get_random_body()",
+      "category": "action",
+      "title": "SystemAI.Actions.get_random_body()",
+      "description": "Returns a random body within the system.\n",
+      "properties": {}
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "SystemAI.Actions.happiness_needed?(happiness_threshold)",
+      "category": "action",
+      "title": "SystemAI.Actions.happiness_needed?(happiness_threshold)",
+      "description": "Succeed if the system happiness is lower than `happiness_threshold`\n",
+      "properties": {}
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "SystemAI.Actions.has_not_building?(building_atom)",
+      "category": "action",
+      "title": "SystemAI.Actions.has_not_building?(building_atom)",
+      "description": "Check if building not built in current body in tree context.\n",
+      "properties": {}
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "SystemAI.Actions.has_not_n_building?(building_atom, n)",
+      "category": "action",
+      "title": "SystemAI.Actions.has_not_n_building?(building_atom, n)",
+      "description": "Check if building not built n times in current body in tree context.\n",
+      "properties": {}
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "SystemAI.Actions.log(message)",
+      "category": "action",
+      "title": "SystemAI.Actions.log(message)",
+      "description": "Logs a message in the console\n",
+      "properties": {}
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "SystemAI.Actions.succeed_rate(succeed_rate)",
+      "category": "action",
+      "title": "SystemAI.Actions.succeed_rate(succeed_rate)",
+      "description": "Succeed with probability `succeed_rate`\n\n",
+      "properties": {}
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "SystemAI.Actions.succeed_upgrade?(p, min_value)",
+      "category": "action",
+      "title": "SystemAI.Actions.succeed_upgrade?(p, min_value)",
+      "description": "Randomly returns `:succeed` with probability p if the dominion value is greater than `min_value`.\n",
+      "properties": {}
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "SystemAI.Actions.upgrade_random()",
+      "category": "action",
+      "title": "SystemAI.Actions.upgrade_random()",
+      "description": "Build or upgrade a random building within a category.\nIt does not consider the body in the context.\n",
+      "properties": {}
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "SystemAI.Actions.workforce_needed?(workforce_threshold)",
+      "category": "action",
+      "title": "SystemAI.Actions.workforce_needed?(workforce_threshold)",
+      "description": "Succeed if the system potential workforce is lower than `workforce_threshold`\n\nTODO: consider growth ?\n",
+      "properties": {}
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "SystemAI.Actions.get_main_body(type \\\\ :open)",
+      "category": "action",
+      "title": "SystemAI.Actions.get_main_body(type \\\\ :open)",
+      "description": "Returns the uid of a random body or the main body.\nIt returns the main body if the dominion built on strictly less than 4 tiles.\nOtherwise, it returns a random body.\n",
+      "properties": {}
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "SystemAI.Actions.wait_for_population_growth(workforce_threshold)",
+      "category": "action",
+      "title": "SystemAI.Actions.wait_for_population_growth(workforce_threshold)",
+      "description": "Succeed if the dominion has a correct growth and not yet available workforce slots.\n",
+      "properties": {}
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "SystemAI.Actions.wait_if_queue_is_busy()",
+      "category": "action",
+      "title": "SystemAI.Actions.wait_if_queue_is_busy()",
+      "description": "Succeed if the dominion has an element in its production queue.\n",
+      "properties": {}
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "SystemAI.Actions.repair_if_needed()",
+      "category": "action",
+      "title": "SystemAI.Actions.repair_if_needed()",
+      "description": "Succeed if one building was repaired.\n",
+      "properties": {}
+    }
+  ]
+}

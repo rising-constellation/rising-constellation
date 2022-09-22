@@ -1,0 +1,96 @@
+.exit-button {
+  position: absolute;
+  bottom: 0;
+  width: 160px;
+  line-height: 30px;
+  background: $black;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: rgba(255, 255, 255, .5);
+  transition: all linear 200ms;
+
+  &:hover {
+    color: $white;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, .2));
+  }
+
+  &::before, &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 0; height: 0;
+    border-style: solid;
+    border-width: 15px 5px;
+  }
+
+  &::before {
+    left: -10px;
+    border-color: transparent $black $black transparent;
+  }
+
+  &::after {
+    right: -10px;
+    border-color: transparent transparent $black $black;
+  }
+}
+
+.app-loading {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+
+  background: url('~public/css/background/menu.jpg') center center;
+  background-size: cover;
+  box-shadow: inset 0 0 200px black;
+
+  .exit-button {
+    left: 110px;
+  }
+}
+
+.app-loading-content {
+  position: absolute;
+  top: 0; left: 0; bottom: 0;
+  width: 400px;
+  padding: 50px;
+
+  background: rgba(0, 0, 0, .1);
+  border-right: solid 1px rgba(255, 255, 255, .1);
+  backdrop-filter: blur(3px);
+}
+
+.app-loading-item {
+  position: relative;
+  padding: 20px 0 20px 30px;
+  border-bottom: solid 1px rgba(255, 255, 255, .075);
+
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.4rem;
+
+  transition: color linear 500ms;
+
+  &:first-child {
+    border-top: solid 1px rgba(255, 255, 255, .075);
+  }
+
+  &:before {
+    content: '▣';
+    position: absolute;
+    left: 0;
+  }
+
+  &.pending {
+    animation: loading 2s infinite;
+    &:before { content: '▢'; }
+  }
+
+  &.failed { color: $theme-red; }
+  &.success { color: $theme-green; }
+
+  .info {
+    font-weight: normal;
+    color: $white;
+  }
+}

@@ -1,0 +1,89 @@
+.victory-banner {
+  position: absolute;
+  left: 50%;
+  top: -600px;
+
+  transition: top ease-in 400ms;
+
+  &.open { top: $navbar-height; }
+}
+
+.victory-banner-background {
+  position: absolute;
+  top: 0; width: 250px;
+  left: -125px;
+  height: 425px;
+  background: $grey-lighter;
+
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: -120px;
+    left: 0;
+
+    border-width: 60px 125px;
+    border-style: solid;
+    border-color: $grey-lighter transparent transparent transparent;
+  }
+}
+
+.victory-banner-content {
+  position: absolute;
+  top: 0; width: 240px;
+  left: -120px;
+  height: 420px;
+  background: $grey-darker;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: -120px;
+    left: 0;
+
+    border-width: 60px 120px;
+    border-style: solid;
+    border-color: $grey-darker transparent transparent transparent;
+  }
+
+  .icon {
+    width: 200px;
+    height: 200px;
+  }
+
+  .name {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  .action {
+    position: relative;
+    left: -10%;
+    width: 120%;
+    margin: 20px 0;
+    padding: 20px 10px;
+
+    border: solid 1px $grey-default;
+    font-size: 2rem;
+    background: $grey-dark;
+    box-shadow: 0 0 10px $black;
+  }
+
+  .info {
+    font-size: 1.2rem;
+  }
+}
+
+@each $class, $color in $themes-list {
+  .f-#{$class} {
+    .victory-banner-background {
+      background: $color;
+
+      &:before {
+        border-color: $color transparent transparent transparent;
+      }
+    }
+  }
+}

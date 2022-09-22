@@ -1,0 +1,329 @@
+.layout-topbar {
+  background: $white-noise $grey-default;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, .5);
+  border-bottom: solid 1px rgba(255, 255, 255, .1);
+
+  .navbar-left {
+    position: absolute;
+    left: 0; top: 0;
+    display: flex;
+  }
+
+  .navbar-center {
+    position: absolute;
+    left: 50%;
+
+    .navbar-center-container {
+      position: relative;
+      left: -50%;
+    }
+  }
+
+  .navbar-right {
+    position: absolute;
+    right: 0; top: 0;
+    display: flex;
+  }
+
+  .navbar-button-upgrade {
+    display: inline-block;
+    margin: 10px;
+    padding: 8px 16px;
+    line-height: 18px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.2rem;
+    background: $theme-red;
+    box-shadow: 0 0 0 3px transparentize($theme-red, .5);
+    opacity: .75;
+    transition: all linear 100ms;
+
+    &:hover, &:focus {
+      opacity: 1;
+    }
+  }
+
+  .navbar-group-buttons {
+    position: relative;
+    display: flex;
+    height: 45px;
+    margin-bottom: 8px;
+
+    border-bottom: solid 1px $grey-lighter;
+    background: darken($grey-light, $color-variant-1);
+
+    &:before {
+      position: absolute;
+      content: '';
+      width: 10px;
+      top: 0; bottom: 0;
+
+      background: darken($grey-light, $color-variant-1);
+      transition: all linear 200ms;
+    }
+
+    &.left {
+      padding-left: 10px;
+
+      &:before {
+        right: -5px;
+        transform: rotate(10deg);
+        border-right: solid 1px $grey-lighter;
+      }
+    }
+
+    &.right {
+      padding-right: 10px;
+
+      &:before {
+        left: -5px;
+        transform: rotate(-10deg);
+        border-left: solid 1px $grey-lighter;
+      }
+    }
+
+    .navbar-button-icon {
+      position: relative;
+      height: 44px;
+      width: 44px;
+      padding: 12px;
+      border-left: solid 1px rgba(255, 255, 255, .1);
+      color: $white-alt-2;
+
+      .icon {
+        width: 20px;
+        height: 20px;
+      }
+
+      .info {
+        display: block;
+        position: absolute;
+        bottom: -2px; right: -2px;
+        width: 20px; height: 20px;
+        line-height: 20px;
+        text-align: center;
+
+        background: $primary;
+        color: darken($primary, 25%);
+        border: solid 1px lighten($primary, 10%);
+        font-size: 1.2rem;
+        font-weight: bold;
+        border-radius: 100%;
+      }
+
+      &:hover, &:focus, &.router-link-active {
+        color: $white;
+      }
+    }
+
+    .navbar-button-account {
+      padding: 0 20px;
+      text-transform: uppercase;
+      text-align: right;
+
+      .name {
+        font-size: 1.6rem;
+        font-weight: bold;
+        line-height: 20px;
+        padding-top: 6px;
+      }
+
+      .info {
+        font-size: 1rem;
+        line-height: 12px;
+
+        .icon {
+          position: relative;
+          top: -1px;
+          width: 10px;
+          height: 10px;
+        }
+      }
+    }
+  }
+
+  .navbar-main-button {
+    position: relative;
+    height: $navbar-height + 12px;
+    width: $navbar-height + 38px;
+
+    box-shadow: 0 0 18px $grey-darker;
+    background: lighten($grey-default, $color-variant-2);
+    transition: all linear 200ms;
+    z-index: $z-navbar;
+
+    .navbar-main-button-image {
+      position: absolute;
+      top: 0; right: -30px;
+      z-index: $z-navbar + 1;
+
+      img {
+        width: 160px;
+        clip-path: polygon(20% 0, 82% 0, 82% 92%, 24% 81%);
+        transition: filter 200ms linear;
+      }
+    }
+
+    .navbar-main-button-icon {
+      position: relative;
+      padding:
+        (($navbar-height + 12px - 60px) / 2)
+        (($navbar-height + 38px - 60px) / 2);
+
+      .icon {
+        width: 60px;
+        height: 60px;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        opacity: 0;
+        transition: opacity linear 200ms;
+      }
+
+      &:hover {
+        &:before {
+          opacity: .4;
+        }
+      }
+    }
+
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      background: lighten($grey-default, $color-variant-2);
+
+      transition: all linear 200ms;
+    }
+
+    &:hover {
+      background: lighten($grey-default, $color-variant-3);
+      box-shadow: 0 0 25px $grey-darker;
+
+      &:before, &:after {
+        background: lighten($grey-default, $color-variant-3);
+      }
+
+      .navbar-main-button-image img {
+        filter: brightness(120%);
+      }
+    }
+  }
+
+  .navbar.top {
+    .navbar-left {
+      .navbar-main-button {
+        .navbar-main-button-icon:before {
+          top: 0; left: 0;
+          background: radial-gradient(
+          at top left,
+          $primary 0%,
+          transparent 75%,
+          transparent
+          );
+        }
+
+        &:before {
+          bottom: -3px;
+          left: -2px; right: 0;
+          height: 8px;
+          transform: rotate(-5deg);
+          border-bottom: solid 1px $grey-lighter;
+        }
+
+        &:after {
+          right: -4px;
+          top: -2px; bottom: 0;
+          width: 8px;
+          transform: rotate(5deg);
+          border-right: solid 1px $grey-lighter;
+        }
+      }
+    }
+
+    .navbar-right {
+      .navbar-main-button {
+        .navbar-main-button-icon:before {
+          top: 0; right: 0;
+          background: radial-gradient(
+          at top right,
+          $primary 0%,
+          transparent 75%,
+          transparent
+          );
+        }
+
+        &:before {
+          bottom: -3px;
+          left: -2px; right: 0;
+          height: 8px;
+          transform: rotate(5deg);
+          border-bottom: solid 1px $grey-lighter;
+        }
+
+        &:after {
+          left: -4px;
+          top: -2px; bottom: 0;
+          width: 8px;
+          transform: rotate(-5deg);
+          border-left: solid 1px $grey-lighter;
+        }
+      }
+    }
+  }
+
+  .navbar-button-title {
+    position: relative;
+    display: inline-block;
+    padding: 0 15px;
+    height: $navbar-height - 1px;
+    line-height: $navbar-height - 2px;
+    padding-top: 1px;
+
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: $white-alt-2;
+
+    cursor: $cursor-active;
+    transition: color linear 200ms;
+
+    .icon {
+      width: 32px;
+      height: 32px;
+      margin-right: 5px;
+    }
+
+    &:hover, &:focus, &.router-link-active {
+      color: $white;
+    }
+  }
+
+  .navbar-left {
+    .navbar-button-title {
+      border-right: solid 1px rgba(255, 255, 255, .1);
+      &:last-child { border-right: none; }
+    }
+  }
+
+  .navbar-right {
+    .navbar-button-title {
+      border-left: solid 1px rgba(255, 255, 255, .1);
+      &:first-child { border-left: none; }
+    }
+  }
+
+  .navbar.top {
+    .navbar-center {
+      top: 0;
+    }
+  }
+
+  .disabled {
+    opacity: .4;
+  }
+}

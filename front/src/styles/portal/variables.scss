@@ -1,0 +1,12 @@
+/* Global size */
+
+$navbar-height: 54px;
+$content-height: calc(100vh - #{$navbar-height});
+$layout-padding: 20px;
+
+/* Global z-index */
+
+$z-layout: 100;
+$z-navbar: 110;
+$z-menu: 200;
+

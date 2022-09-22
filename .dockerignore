@@ -1,0 +1,16 @@
+_build/
+priv/_storage/
+.elixir_ls/
+.git/
+.github/
+.vscode/
+build/
+assets/node_modules
+cover/
+deps/
+doc/
+front/node_modules
+pgdata/
+replays/
+Dockerfile
+Makefile

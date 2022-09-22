@@ -1,0 +1,46 @@
+.fight-report {
+  .round {
+    display: flex;
+    margin-bottom: 5px;
+  }
+
+  .round-title {
+    position: relative;
+    width: 100px;
+    padding: 8px;
+
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    font-weight: bold;
+
+    border-left: solid 1px rgba($color: $white, $alpha: 0.1);
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 20px; height: 2px;
+      background: rgba($color: $white, $alpha: 0.1);
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 20px; height: 2px;
+      background: rgba($color: $white, $alpha: 0.1);
+    }
+  }
+
+  .round-content {
+    strong {
+      font-weight: bold;
+    }
+
+    @each $class, $color in $themes-list {
+      .theme-#{$class} {
+        color: $color;
+      }
+    }
+  }
+}

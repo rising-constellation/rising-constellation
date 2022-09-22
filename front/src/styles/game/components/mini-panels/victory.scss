@@ -1,0 +1,189 @@
+.victory-tracks {
+  width: 100%;
+  margin-top: 25px;
+}
+
+.victory-tracks-lines {
+  display: flex;
+  padding: 0 100px;
+  border-bottom: 1px solid rgba(255, 255, 255, .1);
+
+  &:first-child {
+    border-top: 1px solid rgba(255, 255, 255, .1);
+  }
+}
+
+.victory-tracks-header {
+  width: 180px;
+  vertical-align: middle;
+  text-align: right;
+  padding: 10px 20px;
+  font-size: 2rem;
+  text-transform: uppercase;
+
+  strong {
+    display: block;
+  }
+}
+
+.victory-tracks-rows {
+  position: relative;
+  transition: background linear 250ms;
+
+  &:hover {
+    background: rgba(255, 255, 255, .125);
+  }
+
+  .content {
+    width: calc((100vw - 200px - 180px) / 4);
+    height: 69px;
+  }
+
+  .track {
+    position: absolute;
+    top: 35px; left: 1px; right: 1px; height: 5px;
+    background: $grey-lighter;
+  }
+
+  .points {
+    position: absolute;
+    top: 5px; left: 2px;
+
+    span {
+      display: inline-block;
+      width: 22px; height: 27px;
+      line-height: 27px;
+      font-size: 2rem;
+      opacity: .5;
+    }
+
+    &.is-active span {
+      opacity: 1;
+      text-shadow: 0 0 10px $black;
+      font-size: 2.6rem;
+    }
+  }
+
+  .factions {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    top: 12.5px; right: 10px;
+  }
+
+  .faction-item {
+    width: 50px; height: 50px;
+    padding: 8px;
+    border-radius: 100%;
+    margin-left: 2px;
+    background: $grey-lighter;
+    box-shadow:
+      inset 0 0 0 4px rgba(0, 0, 0, .25),
+      0 0 5px 0 $black;
+
+    .svg-icon {
+      width: 34px; height: 34px;
+    }
+  }
+
+  &.is-0 .track { border-radius: 3px 0 0 3px; }
+  &.is-3 .track { border-radius: 0 3px 3px 0; }
+}
+
+.victory-factions {
+  display: flex;
+  padding: 40px;
+}
+
+.victory-factions-item {
+  width: 294px;
+  height: 100px;
+  margin-right: 20px;
+  background: rgba(255, 255, 255, .08);
+  border: solid 1px rgba(255, 255, 255, .15);
+  box-shadow: 0 0 5px 0 $black;
+
+  .header {
+    padding: 10px 15px;
+    display: flex;
+    background: rgba(255, 255, 255, .05);
+    border-bottom: 1px solid #000;
+
+    .rank {
+      font-weight: bold;
+      margin-right: 15px;
+    }
+
+    .title {
+      text-transform: uppercase;
+      font-weight: bold;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  }
+
+  .body {
+    height: 56px;
+    padding: 8px 6px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+
+    span {
+      width: 37px;
+      height: 20px;
+      line-height: 20px;
+      text-align: center;
+      font-size: 2rem;
+      opacity: .5;
+
+      &:nth-child(even) {
+        position: relative;
+        left: 20px;
+      }
+
+      &.is-active {
+        opacity: 1;
+        text-shadow: 0 0 10px $black;
+        font-size: 2.6rem;
+      }
+    }
+  }
+}
+
+.victory-time-limit {
+  text-align: right;
+  flex-grow: 1;
+  text-transform: uppercase;
+
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+@each $class, $color in $themes-list {
+  .f-#{$class} {
+    .victory-tracks-rows .track.is-active {
+      background: $color;
+    }
+  }
+
+  .f-#{$class}.faction-item {
+    background: $color;
+  }
+
+  .f-#{$class}.victory-factions-item {
+    border-color: rgba(lighten($color, $color-variant-3), .25);
+    background: rgba($color, $alpha: 0.25);
+
+    .header {
+      border-color: rgba(lighten($color, $color-variant-3), .25);
+    }
+
+    .rank {
+      color: $color;
+    }
+  }
+}

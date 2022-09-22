@@ -1,0 +1,52 @@
+// resource detail
+.resource-detail {
+  width: 220px;
+  padding: 5px;
+
+  .info {
+    display: inline-block;
+    height: 16px; width: 16px;
+    text-align: center;
+    border-radius: 100%;
+    margin-right: 3px;
+
+    background: $grey-lighter;
+  }
+
+  .label-value-subtitle {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    opacity: .8;
+    padding-top: 5px;
+  }
+
+  .label-value {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-transform: none;
+
+    font-size: 1.2rem;
+
+    &.active {
+      font-weight: bold;
+    }
+
+    &.main {
+      font-weight: 700;
+      margin-bottom: 2px;
+      padding-bottom: 2px;
+      border-bottom: solid 1px $grey-light;
+      text-transform: uppercase;
+    }
+  }
+
+  hr {
+    display: block;
+    width: 100%;
+    border: none;
+    background: none;
+    border-top: solid 1px $grey-light;
+  }
+}

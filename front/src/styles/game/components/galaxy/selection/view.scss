@@ -1,0 +1,162 @@
+.selection-view-container {
+  position: absolute;
+  bottom: $navbar-height;
+  right: 0;
+  z-index: $z-map-selection;
+}
+
+.selection-view-character {
+  position: absolute;
+  bottom: -4px; right: 2px;
+}
+
+.selection-close {
+  position: absolute;
+  right: 672px;
+  bottom: 5px;
+
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+
+  text-align: center;
+  font-size: 3rem;
+  background: $grey-light;
+  opacity: .5;
+
+  transition: opacity linear 100ms;
+
+  &:hover, &:focus {
+    opacity: 1;
+  }
+}
+
+.selection-view-content {
+  width: 665px;
+  padding: 0 300px 0 0;
+
+  background: $grey-default;
+  border-left: solid 1px $grey-light;
+  border-top: solid 1px $grey-light;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+
+  .selection-status {
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+
+    background: $grey-light;
+    box-shadow:
+      inset 0 0 0 1px $grey-darker,
+      0 0 5px $grey-dark;
+
+    .selection-status-info {
+      padding: 5px 10px;
+
+      font-size: 1rem;
+      text-transform: uppercase;
+
+      strong {
+        display: block;
+        font-weight: bold;
+        font-size: 1.4rem;
+      }
+    }
+
+    .selection-status-actions {
+      .svg-icon {
+        width: 43px;
+        height: 43px;
+        padding: 11px 6px;
+
+        &.disabled {
+          opacity: .5;
+        }
+      }
+    }
+  }
+
+  .selection-actions {
+    margin: 10px;
+    padding: 0 4px;
+
+    .header {
+      font-size: 1rem;
+      text-transform: uppercase;
+      padding-bottom: 2px;
+    }
+
+    .action-item {
+      position: relative;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      margin-right: 2px;
+      line-height: 20px;
+      text-align: center;
+
+      background: rgba(255, 255, 255, .05);
+      font-weight: bold;
+      text-transform: uppercase;
+
+      &:first-child {
+        margin-right: 12px;
+      }
+
+      &.clickable:hover, &.faded {
+        opacity: .5;
+      }
+
+      .svg-icon {
+        width: 20px; height: 20px;
+      }
+
+      .generic-circle-progress-container {
+        position: absolute;
+        top: -2px; left: -3px;
+      }
+
+      .action-caret {
+        position: absolute;
+        top: 4px;
+        width: 12px; height: 12px;
+        opacity: .5;
+      }
+    }
+
+    .action-toast {
+      display: inline-block;
+      padding: 0 5px;
+      height: 20px;
+      line-height: 20px;
+      text-align: center;
+
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: $black;
+    }
+  }
+
+  .selection-data {
+    position: relative;
+    margin: 10px 0 0 0;
+    padding: 10px 14px;
+
+    background: $grey-light;
+    border-top: solid 1px $grey-dark;
+    box-shadow: 0 0 5px $grey-dark;
+  }
+}
+
+.action-detail {
+  padding: 5px;
+}
+
+@each $class, $color in $themes-list {
+  .f-#{$class} {
+    .selection-view-content .selection-actions .action-toast {
+      background: lighten($color, $color-variant-2);
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.panel-header {
+  display: flex;
+  padding: 25px;
+  background: rgba(0, 0, 0, .1);
+  border-bottom: solid 1px $grey-default;
+
+  h1 {
+    flex-grow: 1;
+    line-height: 36px;
+
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: normal;
+  }
+
+  &.is-hover {
+    position: absolute;
+    width: 100%;
+
+    background: rgba(0, 0, 0, .1);
+    border-bottom: solid 1px rgba(255, 255, 255, .05);
+    backdrop-filter: blur(4px);
+
+    z-index: 1;
+  }
+}

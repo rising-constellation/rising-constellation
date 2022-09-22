@@ -1,0 +1,62 @@
+/* Fonts */
+
+$default-font: 'Nunito', sans-serif;
+$title-font: 'Montserrat', sans-serif;
+
+/* Cursor */
+
+$cursor: url('~public/css/cursor.png'), auto;
+$cursor-active: url('~public/css/cursor.png'), auto;
+
+/* White noise general background */
+
+$white-noise: url('~public/css/white-noise.75.png') top left repeat;
+
+/* General z-index */
+
+$z-maintenance: 2000;
+
+/* Desaturate color */
+
+$white: #e6e6e6;
+$white-alt-1: darken($white, 20%);
+$white-alt-2: darken($white, 40%);
+$white-alt-3: darken($white, 60%);
+$black: #000000;
+$light-grey: #bababa;
+$grey: #282c34;
+
+$grey-lighter: lighten($grey, 4%);
+$grey-light: darken($grey, 0);
+$grey-default-alt: darken($grey, 2%);
+$grey-default: darken($grey, 6%);
+$grey-dark: darken($grey, 10%);
+$grey-darker: darken($grey, 14%);
+
+/* Theme color */
+
+$color-variant-1: 2%;
+$color-variant-2: 4%;
+$color-variant-3: 8%;
+$color-variant-4: 16%;
+
+$theme-red: #bc2433;
+$theme-dark-blue: #3f66df;
+$theme-purple: #8e60bf;
+$theme-pink: #df7584;
+$theme-yellow: #c9a115;
+$theme-light-blue: #31bec4;
+$theme-orange: #ff832e;
+$theme-green: #a2cd44;
+
+$themes-list: (
+  dark-blue: $theme-dark-blue,
+  red: $theme-red,
+  purple: $theme-purple,
+  green: $theme-green,
+  yellow: $theme-yellow
+);
+
+/* Portal theme color */
+
+$primary: #00b89a;

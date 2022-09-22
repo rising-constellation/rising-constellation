@@ -1,0 +1,478 @@
+{
+  "card": {
+    "building": {
+      "about": "Über",
+      "delete": "Zerstören (sofort und dauerhaft)",
+      "limited": "Begrenzt",
+      "limited_hint": "Kann nur einmal auf demselben Körper (Planet, Mond oder Asteroid) gebaut werden.",
+      "mobilized": "Mobilisiert",
+      "production": {
+        "new": "Im Aufbau",
+        "repair": "Reparatur läuft",
+        "upgrade": "Verbesserung im Gange"
+      },
+      "repair": "Reparieren",
+      "time_left": "~{n} Minuten",
+      "unique": "Einzigartig",
+      "unique_hint": "Kann nur einmal im Sternensystem gebaut werden.",
+      "upgrade": "Verbesserung"
+    },
+    "character": {
+      "about": "Über",
+      "admiral_limit_reached": "Navarch-Grenze erreicht",
+      "agent": "Agent",
+      "deploy": "Einsetzen",
+      "determination": "Entschlossenheit",
+      "fire": "Entlassung (endgültig)",
+      "governor": "Gouverneur",
+      "hire": "Einstellen",
+      "protection": "Schutz",
+      "recall": "Zurückrufen",
+      "salary": "Gehalt",
+      "speaker_limit_reached": "Siderian Grenze erreicht",
+      "spy_limit_reached": "Erased Grenze erreicht"
+    },
+    "closed_system": {
+      "construction_queue": "Konstruktionsliste"
+    },
+    "complex_bonus": {
+      "not_implemented": "Nicht implementiert"
+    },
+    "doctrine": {
+      "about": "Über",
+      "active": "Aktiv",
+      "buy": "Kaufen",
+      "choose_lex": "Führe Lex als Politik ein",
+      "locked": "Gesperrt",
+      "no_lex_slot": "Keine freien Politik-Slots frei"
+    },
+    "patent": {
+      "about": "Über",
+      "buy": "Kaufen",
+      "level_hint": "(lvl {lvl})",
+      "locked": "Gesperrt",
+      "purchased": "In deinem Besitz",
+      "unlocks_something": "Freischalten <strong>{something}</strong>"
+    },
+    "production_queue": {
+      "level": "Stufe {lvl}",
+      "new_building": "Neues Gebäude"
+    },
+    "profile": {
+      "contact": "Eine Nachricht senden",
+      "dead_player": "Dieser Spieler wurde besiegt",
+      "elo": "Elo Punkte",
+      "ranking": "Ranglisten"
+    },
+    "ship": {
+      "about": "Über",
+      "bombing": "Bombardierungsstärke",
+      "energy_strikes": "Energie Feuerkraft",
+      "explosive_strikes": "Explosiver Angriff",
+      "flak": "FLAK",
+      "hull": "Hülle",
+      "invasion": "Invasionsstärke",
+      "maintenance": "Instandhaltungskosten",
+      "maneuverability": "Wendigkeit",
+      "morale": "Moral",
+      "repair": "Reparturstärke",
+      "scrap_ship": "Schiff verschrotten",
+      "shields": "Schilde",
+      "time_left": "~{n} Minuten",
+      "title": "{units} Schiffe",
+      "under_production": "Bau im Gange",
+      "xp": "XP"
+    },
+    "victory": {
+      "sector_points": "<strong>{points}</strong> Punkte",
+      "sectors_owned": "Besitztümer",
+      "title": "<strong>{factionPoints}</strong> out of <strong>{victoryPoints}</strong> benötigt"
+    }
+  },
+  "character_reaction": {
+    "attack_enemies": "<strong> Aggressiv</strong>, greift jeden feindlichen Navarch in Reichweite an.",
+    "attack_everyone": "<strong>Wütend</strong>, greift jeden nicht verbündeten Navarch in Reichweite an.",
+    "defend": "<strong>Verteidiger</strong>, nimmt an den Schlachten seiner Verbündeten teil und greift während einer Kolonialisierung, einer Eroberung oder eines Überfalls ein.",
+    "fight_back": "<strong>Umsichtig</strong>, handelt nur im Falle eines expliziten Angriffs.",
+    "flee": "<strong>Flucht</strong>, versucht zu fliehen, sobald er angegriffen wird."
+  },
+  "galaxy": {
+    "opened_character": {
+      "army_details": "Flottendetails",
+      "character_faction": "**{faction}** Fraktion",
+      "commanded_by": "Unter dem Befehl von **{characterName}**",
+      "lvl": "Stufe {level}",
+      "no_extra_info": "Keine zusätzlichen Informationen",
+      "ship_details_hidden": "Unidentifiziertes Schiff"
+    },
+    "selection": {
+      "view": {
+        "action_center": "Auf Agent zentrieren",
+        "action_disabled": "Der Agent kann nicht zurückgerufen werden, da er sich nicht in einem Ihrer Systeme befindet.",
+        "action_recall": "Zurückrufen",
+        "actions": "Aktionen",
+        "army_invasion": "Invasionsstärke",
+        "army_maintenance": "Instandhaltung",
+        "army_raid": "Bombardierungsstärke",
+        "army_repair": "Reparaturstärke",
+        "discovered": "Entdeckt",
+        "line_short": "L{n}",
+        "on_strike": "Im Streik, reagiert nicht mehr auf Befehle",
+        "ongoing_repair_work": "Laufende Reparaturen",
+        "spy_assassination": "Entschlossenheit",
+        "spy_infiltration": "Infiltrationsstärke",
+        "spy_sabotage": "Sabotagestärke",
+        "state": "**{state}** Zustand",
+        "undercover": "Undercover"
+      }
+    },
+    "system": {
+      "actions": {
+        "assassination": "Löschen",
+        "colonize": "Kolonisieren",
+        "conquer": "Erobern",
+        "deploy": "Einen Agenten bereitstellen",
+        "fail_hint_assassination": "Ermordung unmöglich",
+        "fail_hint_assassination_coeff": "Attentatssstärke zu niedrig.",
+        "fail_hint_colonization": "Kolonisation unmöglich :",
+        "fail_hint_conquest": "Eroberung unmöglich :",
+        "fail_hint_invasion_coef": "Invasionsstärke unzureichend",
+        "fail_hint_loot": "Plünderung unmöglich :",
+        "fail_hint_no_transport": "Transportschiffe notwedig.",
+        "fail_hint_raid": "Bombardment unmöglich :",
+        "fail_hint_raid_coef": "Nicht genügend Bombardierungsstärke",
+        "fail_hint_sabotage": "Sabotage unmöglich",
+        "fail_hint_sabotage_coeff": "Unzureichende Sabotagestärke.",
+        "fail_hint_siege": "Das System wird derzeit belagert.",
+        "fail_hint_system_limit": "Systemlimit erreicht.",
+        "fight": "Den Kampf beginnen",
+        "infiltrate": "Einen Informanten rekrutieren",
+        "loot": "Plünderung",
+        "move": "Bewegen",
+        "raid": "Bombardieren",
+        "sabotage": "Die Flotte sabottieren"
+      },
+      "details": {
+        "capital_ships_init_xp": "Großkampfschiffe Starterfahrung",
+        "corvettes_init_xp": "Korvetten Starterfahrung",
+        "counterintelligence": "Geheimdienst",
+        "experience": "Erfahrung",
+        "fighters_init_xp": "Jäger Starterfahrung",
+        "fixing": "Spionageabwehr",
+        "frigates_init_xp": "Fregatten Starterfahrung",
+        "infrastructure": "Infrastruktur",
+        "military": "Streitkräfte",
+        "mobility": "Mobilität",
+        "radar": "S.L.S.D.",
+        "visibility": "Sichtbarkeit",
+        "workforce": "Bevölkerung"
+      },
+      "population": {
+        "growth_0": "Sehr hoch",
+        "growth_1": "Hoch",
+        "growth_2": "Mittel",
+        "growth_3": "Niedrig",
+        "growth_4": "Null",
+        "growth_5": "Negativ",
+        "growth_adj": "{adj} Wachstum",
+        "habitation": "Habitate",
+        "happiness": "Stabilität",
+        "unknown_workforce": "Unbekannt",
+        "workforce": "Bevölkerung",
+        "workforce_mobilized": "Mobilisiert",
+        "workforce_total": "Gesamt"
+      },
+      "properties": {
+        "autonomous_system": "Autonomes System",
+        "deploy_governor": "Einen Gouverneur einsetzen",
+        "not_claimed": "Nicht beansprucht"
+      },
+      "svg": {
+        "no_data": "Keine Daten verfügbar"
+      }
+    }
+  },
+  "in_game_chat": {
+    "placeholder": "Ihre Nachricht"
+  },
+  "in_game_settings": {
+    "back": "Kehre zum Spiel zurück",
+    "exit": "Spiel beenden"
+  },
+  "minipanel": {
+    "character_deck": {
+      "empty_state_cost": "Die hier garnisonierten Agenten kosten Sie nichts.",
+      "empty_state_market": "Sie können Agenten auf dem Agentenmarkt kaufen.",
+      "empty_state_title": "Kein Agent verfügbar",
+      "title": "Agenten Deck"
+    },
+    "character_market": {
+      "title": "Agenten Markt"
+    },
+    "doctrine": {
+      "active": "Aktive Lex Politik",
+      "apply_policies": "Diese Politik einführen",
+      "buy_slot": "+1 Platz",
+      "clear_policies": "Alle Lex Politiken entfernen",
+      "policies_locked": "Aktuell ist es nicht möglich die Politik zu ändern",
+      "policies_title": "Politiken",
+      "price_factor": "Preiserhöhungsfaktor",
+      "reset_policies": "Veränderungen rückgängig machen",
+      "save": "Wenden Sie die neuen Gesetze an",
+      "title": "Lex"
+    },
+    "patent": {
+      "price_factor": "Preiserhöhungsfaktor",
+      "title": "Patente"
+    },
+    "production": {
+      "title": "Produktion in <strong>{systemName}</strong>"
+    },
+    "victory": {
+      "title": "Der Weg zum Sieg"
+    }
+  },
+  "navbar": {
+    "bottombar": {
+      "agents": "Agenten",
+      "character_type_limit": "{characterType} Limit",
+      "dominions": "Dominions",
+      "dominions_limit": "Dominion Grenze",
+      "lexes": "Lex",
+      "n_available": "{n} verfügbar",
+      "next_system": "Nächstes System",
+      "patents": "Patente",
+      "previous_system": "Letztes System",
+      "systems": "Systeme",
+      "systems_limit": "System Grenze"
+    },
+    "topbar": {
+      "bankrupt": "Ihr Imperium ist bankrott",
+      "bankrupt_tooltip": "Ihr Imperium verfügt nicht mehr über die finanziellen Mittel, um Ihre Agenten zu unterstützen. Sie sind in den Streik getreten und gehorchen nicht mehr den Anweisungen. Die Navarchs haben auch ihre Reaktion auf \"Flucht\" geändert.",
+      "character_market_panel": "Agentenmarkt",
+      "defeat": "Sie wurden besiegt",
+      "supervisor_paused": "Pausiert",
+      "victory_of": "Sieg von",
+      "victory_panel": "Siege",
+      "you_lost": "Sie wurden besiegt",
+      "you_won": "Sie haben gewonnen"
+    }
+  },
+  "panel": {
+    "empire": {
+      "active_radar": "S.L.S.D. aktiv",
+      "empty_queue": "Leere Bauliste",
+      "inactive_radar": "S.L.S.D. inaktiv",
+      "items_in_queue": "<strong>{number}</strong> eingereiht",
+      "policy_count": "Aktive Lex Politik",
+      "possessions": "Besitztümer",
+      "stability": "Stabilität",
+      "systems": "{number} System | {number} Systeme"
+    },
+    "faction": {
+      "about": "Über",
+      "market": "Markt",
+      "market_amount": "Gesamt",
+      "market_cost": "Kosten",
+      "market_recipient": "Empfänger",
+      "market_send": "Senden",
+      "market_send_button": "Senden",
+      "market_taxes": "{value}% Steuer",
+      "online": "Online",
+      "online_players": "Teammitglieder Online"
+    },
+    "messenger": {
+      "loading": "Initialisiere…",
+      "messenger": "Mitteilungen",
+      "send": "Senden",
+      "send_a_message": "Sende eine Mitteilung",
+      "your_message": "Ihre Nachricht"
+    },
+    "operations": {
+      "characters": "Agenten",
+      "delete": "Löschen",
+      "fight_lvl": "(lvl {lvl})",
+      "governors": "Gouverneur",
+      "governors_subtitle": "Beschützer Ihrer Systeme",
+      "level": "Stufe {level}",
+      "no_governors": "Kein Gouverneur",
+      "no_onboard": "Kein aktiver Agent",
+      "onboard": "Aktiver Agent",
+      "onboard_subtitle": "Ihre Augen und Ohren"
+    },
+    "ranking": {
+      "systems": "Systeme",
+      "workforce": "Bevölkerung"
+    }
+  },
+  "quotes": [
+    {
+      "author": "Arbuckle of Mogdora",
+      "content": "",
+      "reference": ""
+    },
+    {
+      "author": "",
+      "content": "",
+      "reference": ""
+    },
+    {
+      "author": "",
+      "content": "",
+      "reference": ""
+    },
+    {
+      "author": "",
+      "content": "",
+      "reference": ""
+    },
+    {
+      "author": "",
+      "content": "",
+      "reference": ""
+    },
+    {
+      "author": "",
+      "content": "",
+      "reference": ""
+    },
+    {
+      "author": "",
+      "content": "",
+      "reference": ""
+    },
+    {
+      "author": "",
+      "content": "",
+      "reference": ""
+    },
+    {
+      "author": "",
+      "content": "",
+      "reference": ""
+    },
+    {
+      "author": "",
+      "content": "",
+      "reference": ""
+    },
+    {
+      "author": "",
+      "content": "",
+      "reference": ""
+    },
+    {
+      "author": "",
+      "content": "",
+      "reference": ""
+    },
+    {
+      "author": "",
+      "content": "",
+      "reference": ""
+    },
+    {
+      "author": "",
+      "content": "",
+      "reference": ""
+    },
+    {
+      "author": "",
+      "content": "",
+      "reference": ""
+    },
+    {
+      "author": "",
+      "content": "",
+      "reference": ""
+    },
+    {
+      "author": "",
+      "content": "",
+      "reference": ""
+    },
+    {
+      "author": "",
+      "content": "",
+      "reference": ""
+    },
+    {
+      "author": "",
+      "content": "",
+      "reference": ""
+    },
+    {
+      "author": "",
+      "content": "",
+      "reference": ""
+    },
+    {
+      "author": "",
+      "content": "",
+      "reference": ""
+    },
+    {
+      "author": "",
+      "content": "",
+      "reference": ""
+    },
+    {
+      "author": "",
+      "content": "",
+      "reference": ""
+    },
+    {
+      "author": "",
+      "content": "",
+      "reference": ""
+    }
+  ],
+  "resource-description": {
+    "counter_intelligence": "TODO",
+    "defense": "TODO",
+    "radar": "TODO",
+    "remove_contact": "TODO"
+  },
+  "resource-detail": {
+    "misc": {
+      "discovered": "Entdeckt",
+      "initial_system": "Anfängliches System",
+      "population": "Bevölkerung"
+    },
+    "type": {
+      "agent": "Agenten",
+      "doctrine": "Lex",
+      "dominion": "Dominions",
+      "system": "Systeme"
+    }
+  },
+  "tutorial": {
+    "step11": {
+      "title": "Lex"
+    },
+    "step12": {
+      "title": "Lex"
+    },
+    "step13": {
+      "title": "Politiken"
+    },
+    "step14": {
+      "title": "Agenten"
+    },
+    "step17": {
+      "title": "Stabilität"
+    },
+    "step18": {
+      "title": "Stabilität"
+    },
+    "step4": {
+      "title": "Bevölkerung"
+    },
+    "step7": {
+      "title": "Patente"
+    },
+    "step8": {
+      "title": "Patente"
+    }
+  }
+}

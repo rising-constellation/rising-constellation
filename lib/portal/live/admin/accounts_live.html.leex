@@ -1,0 +1,102 @@
+<div class="content">
+  <div class="header-box">
+    <h2>
+      <strong><%= @total_entries %></strong>
+      utilisateurs
+    </h2>
+
+    <div class="tools" style="margin-bottom: 20px;">
+      <%= f = form_for :search, "#", phx_submit: "search_account", class: "form one-input-form" %>
+        <%= text_input f, :search, value: @search %><!--
+        --><%= submit do %>
+          Rechercher
+        <% end %>
+      </form>
+    </div>
+
+    <div class="pagination">
+      <%= if @page_number == 1 do %>
+        <span class="disabled">
+          <i class="fa fa-angle-left"></i>
+        </span>
+      <% else %>
+        <%= live_redirect to: Routes.live_path(@socket, Portal.AccountsLive, page: @page_number - 1) do %>
+          <i class="fas fa-angle-left"></i>
+        <% end %>
+      <% end %>
+      <span class="active">
+        <%= @page_number %>
+      </span>
+      <%= if @page_number == @total_pages do %>
+        <span class="disabled">
+          <i class="fas fa-angle-right"></i>
+        </span>
+      <% else %>
+        <%= live_redirect to: Routes.live_path(@socket, Portal.AccountsLive, page: @page_number + 1) do %>
+          <i class="fas fa-angle-right"></i>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th class="square"></th>
+        <th>Nom</th>
+        <th>Email</th>
+        <th>Date d'arrivée</th>
+        <th>Mautic ID</th>
+        <th>Type</th>
+        <th>Rôle</th>
+        <th>Status</th>
+        <th class="square"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= for user <- @users do %>
+        <tr>
+          <td class="square">
+            <%= user.id %>
+          </td>
+          <td>
+            <%= live_redirect to: Routes.live_path(@socket, Portal.AccountLive, user.id) do %>
+              <strong><%= user.name %></strong>
+            <% end %>
+          </td>
+          <td>
+            <%= user.email %>
+          </td>
+          <td>
+            <%= Portal.Date.format(user.inserted_at, :datetime) %>
+          </td>
+          <td>
+            <%= user.mautic_contact_id %>
+          </td>
+          <td>
+            <%= if user.is_free do %>
+              <span class="toast is-grey">Gratuit</span>
+            <% else %>
+              <span class="toast is-blue-1">Payant</span>
+            <% end %>
+          </td>
+          <td>
+            <span class="toast <%= RC.Accounts.Account.role_color(user.role) %>">
+              <%= RC.Accounts.Account.role_name(user.role) %>
+            </span>
+          </td>
+          <td>
+            <span class="toast <%= RC.Accounts.Account.status_color(user.status) %>">
+              <%= RC.Accounts.Account.status_name(user.status) %>
+            </span>
+          </td>
+          <td class="square action">
+            <%= live_redirect to: Routes.live_path(@socket, Portal.AccountLive, user.id) do %>
+              <i class="fa fa-pencil-alt"></i>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

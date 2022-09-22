@@ -1,0 +1,71 @@
+.opened-character-container {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+
+  background: rgba(0, 0, 0, .2);
+  z-index: $z-map-overlay;
+}
+
+.opened-character {
+  display: flex;
+  justify-content: center;
+  margin: calc(#{$navbar-height} + 54px) 0;
+}
+
+.opened-character-owner {
+  align-self: start;
+  margin: 180px 10px 0 0;
+  padding: 10px;
+  width: 300px;
+
+  background: $grey-light;
+  border-bottom: solid 1px $grey-darker;
+
+  text-transform: uppercase;
+  font-size: 1.2rem;
+
+  strong {
+    display: block;
+    font-size: 1.6rem;
+  }
+
+  hr {
+    margin: 10px 0;
+    border: none;
+    border-top: solid 1px $grey-default;
+  }
+}
+
+.opened-character-card {
+  align-self: start;
+}
+
+.opened-character-aside {
+  position: relative;
+  align-self: start;
+  margin: 40px 0 0 10px;
+  padding: 10px;
+  width: 356px;
+
+  background: $grey-light;
+  border-bottom: solid 1px $grey-darker;
+
+  text-transform: uppercase;
+  font-size: 1.2rem;
+
+  strong {
+    font-size: 1.6rem;
+  }
+}
+
+@each $class, $color in $themes-list {
+  .f-#{$class} {
+    .opened-character-owner strong {
+      color: $color;
+    }
+
+    .opened-character-aside strong {
+      color: $color;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+<div class="content medium">
+  <div class="header-box">
+    <h2>
+      <strong><%= length(@nodes) %></strong>
+      nodes
+    </h2>
+  </div>
+
+  <hr>
+
+  <table>
+    <thead>
+      <tr>
+        <th class="square"></th>
+        <th>Nom</th>
+        <th>Revision</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= for node <- @nodes do %>
+        <tr>
+          <td class="square">
+            <%= node.id %>
+          </td>
+          <td>
+            <%= node.name %>
+          </td>
+          <td>
+            <%= node.revision %>
+          </td>
+          <td>
+            <%= link to: "#", "phx-click": "garbage-collect", "phx-value-name": node.name, class: "toast is-green-1" do %>
+              GC
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

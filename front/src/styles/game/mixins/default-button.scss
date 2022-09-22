@@ -1,0 +1,132 @@
+@mixin default-button {
+  position: relative;
+  display: inline-block;
+  border: none;
+  height: 30px;
+  line-height: 30px;
+  padding: 0;
+
+  cursor: $cursor;
+  transition: all linear 200ms;
+
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 700;
+
+  color: black;
+  background: $white;
+  box-shadow:
+    0 0 0 2px black,
+    0 0 0 4px $white;
+
+  display: flex;
+  justify-content: space-between;
+
+  &:hover, &:focus {
+    cursor: $cursor-active;
+    box-shadow:
+      0 0 0 1px black,
+      0 0 0 5px $white;
+  }
+
+  &.squared {
+    width: 30px;
+
+    div {
+      padding: 0;
+      text-align: center;
+    }
+  }
+
+  &.disabled {
+    cursor: $cursor;
+
+    background: $light-grey;
+    box-shadow:
+      0 0 0 2px black,
+      0 0 0 4px $light-grey;
+
+    &:hover, &:focus {
+      box-shadow:
+        0 0 0 2px black,
+        0 0 0 4px $light-grey;
+    }
+  }
+
+  &.transparent {
+    opacity: .3;
+  }
+
+  &.active {
+    cursor: $cursor;
+
+    color: $white;
+    background: $grey-dark;
+    box-shadow: 0 0 0 2px $white;
+
+    height: 34px;
+    line-height: 34px;
+
+    &:hover, &:focus {
+      box-shadow: 0 0 0 4px $white;
+    }
+  }
+
+  div {
+    padding: 0 15px;
+
+    &.dashed {
+      text-shadow: 0 0 5px $light-grey;
+      background-image: repeating-linear-gradient(-45deg,
+        transparent,
+        transparent 5px,
+        rgba(0, 0, 0, .4) 5px,
+        rgba(0, 0, 0, .4) 7px);
+    }
+  }
+
+  &.reversed {
+    background: none;
+    color: white;
+
+    div.dashed {
+      background-image: repeating-linear-gradient(-45deg,
+        transparent,
+        transparent 5px,
+        rgba(255, 255, 255, .4) 5px,
+        rgba(255, 255, 255, .4) 7px);
+    }
+  }
+
+  div:first-child {
+    flex-grow: 1;
+  }
+
+  .icon-value {
+    font-size: 1.4rem;
+    border-left: solid 1px black;
+    padding: 0 10px;
+
+    svg {
+      position: relative;
+      top: -1px;
+      width: 22px;
+      height: 22px;
+    }
+  }
+
+  @each $class, $color in $themes-list {
+    &.f-#{$class}.active {
+      box-shadow: 0 0 0 2px $color;
+
+      &:hover, &:focus {
+        box-shadow: 0 0 0 4px $color;
+      }
+    }
+  }
+}
+
+// override button style on shared component card
+.card-container .card-action .card-action-button .button {
+  @include default-button;
+}

@@ -1,0 +1,36 @@
+.navbar-calendar {
+  .date {
+    font-size: 1.4rem;
+    line-height: 20px;
+    padding: 10px 10px;
+    text-align: right;
+
+    .day {
+      display: inline-block;
+      padding-right: 10px;
+      font-weight: bold;
+    }
+
+    .month {
+      display: inline-block;
+      white-space: nowrap;
+    }
+
+    .year {
+      position: relative;
+      margin: 0 4px;
+      font-size: 2rem;
+      font-weight: bold;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 11px; left: 0;
+        right: 60px;
+        height: 2px;
+        background: $white;
+        opacity: .2;
+      }
+    }
+  }
+}

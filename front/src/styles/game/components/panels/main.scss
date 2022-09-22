@@ -1,0 +1,201 @@
+.panels-container {
+  position: absolute;
+  top: $navbar-height;
+  bottom: $navbar-height;
+  left: -100vh;
+  height: $content-height;
+  z-index: $z-panel;
+}
+
+.panel-container {
+  display: flex;
+  align-items: stretch;
+  height: 100%; width: 100vw;
+  background: transparent;
+
+  &.is-left {
+    justify-content: flex-start;
+
+    .panel-navbar, .panel-content {
+      border-right: solid 1px rgba(255, 255, 255, .1);
+    }
+
+    .panel-content:before {
+      left: -80px;
+    }
+  }
+
+  &.is-right {
+    justify-content: flex-end;
+
+    .panel-navbar, .panel-content {
+      border-left: solid 1px rgba(255, 255, 255, .1);
+    }
+
+    .panel-content:before {
+      right: -80px;
+    }
+  }
+}
+
+.panel-navbar {
+  position: relative;
+  width: 80px;
+  padding: 10px 0;
+
+  button {
+    position: relative;
+    display: block;
+    width: 80px; height: 80px;
+    background: transparent;
+    border: none;
+    border-bottom: solid 1px rgba(255, 255, 255, .1);
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 30px; left: 30px;
+      width: 20px; height: 20px;
+      background: $grey-lighter;
+      box-shadow:
+        0 0 0 5px $black,
+        0 0 0 6px $grey-light;
+      transition: background linear 200ms;
+    }
+
+    &:hover, &:focus {
+      background: rgba(255, 255, 255, .05);
+
+      &:before {
+        background: $white;
+        box-shadow:
+          0 0 0 5px $black,
+          0 0 0 6px $grey-lighter;
+      }
+    }
+
+    &.is-active {
+      background: rgba(255, 255, 255, .075);
+    }
+  }
+}
+
+.panel-content {
+  position: relative;
+
+  &.is-small { width: 600px; }
+  &.is-medium { width: 900px; }
+  &.is-large { width: 1200px; }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, .4);
+    backdrop-filter: blur(4px);
+    will-change: transform;
+    z-index: -1;
+  }
+
+  .has-padding {
+    padding: 20px;
+  }
+
+  .ps-container {
+    position: relative;
+    height: 100%;
+  }
+}
+
+.panel-default-title {
+  position: relative;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  font-size: 2rem;
+
+  span {
+    font-size: 1.4rem;
+    line-height: 16px;
+    display: block;
+  }
+
+  .button {
+    @include default-button;
+    position: absolute;
+    top: -2px; right: 2px;
+  }
+
+  .group-button {
+    position: absolute;
+    top: -2px; right: 2px;
+    display: flex;
+
+    .button {
+      position: static;
+      top: 0; right: 0;
+      margin-left: 20px;
+    }
+  }
+}
+
+.panel-default-hr {
+  border: none;
+  background: none;
+  border-top: solid 1px rgba(255, 255, 255, .15);
+  margin-bottom: 30px;
+}
+
+.panel-content-number-bloc {
+  display: inline-block;
+  margin-bottom: 20px;
+  width: 50%;
+
+  .label {
+    text-transform: uppercase;
+  }
+
+  .value {
+    font-size: 2.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
+
+.panel-content-text-bloc {
+  margin-bottom: 20px;
+  padding: 15px;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+
+    strong {
+      text-transform: uppercase;
+    }
+  }
+}
+
+@each $class, $color in $themes-list {
+  .theme-#{$class} {
+    .panel-navbar {
+      background: transparentize(lighten($color, 20%), 0.9);
+    }
+
+    .panel-navbar button.is-active:before {
+      background: $color;
+      box-shadow:
+        0 0 0 5px $black,
+        0 0 0 6px lighten($color, 10%);
+    }
+
+    .panel-content-text-bloc {
+      background: transparentize($color, 0.9);
+      border: 1px solid transparentize($color, 0.8);
+    }
+
+    .panel-content-number-bloc .value {
+      color: lighten($color, 10%);
+    }
+  }
+}

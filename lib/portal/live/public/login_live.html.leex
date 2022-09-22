@@ -1,0 +1,59 @@
+<div
+  class="fixed-container"
+  phx-hook="login"
+  id="login-form"
+  data-validated="<%= @validated %>"
+  data-email="<%= @email %>"
+  data-password="<%= @password %>">
+  <div
+    id="info-container"
+    class="home-bloc"
+    style="display: none;">
+    <div
+      class="body"
+      id="info">
+    </div>
+  </div>
+
+  <div class="home-bloc colored">
+    <div class="header">
+      <h1>Log in</h1>
+    </div>
+
+    <%= f = form_for :account, "#", phx_submit: "login" %>
+      <div class="body">
+        <div class="input-text">
+          <%= label f, :email %>
+          <%= email_input f, :email, autofocus: true, required: true, "phx-debounce": "500" %>
+          <%= error_tag f, :email %>
+        </div>
+
+        <div class="input-text">
+          <%= label f, :password %>
+          <%= password_input f, :password, required: true %>
+          <%= error_tag f, :password %>
+        </div>
+      </div>
+
+      <div class="footer">
+        <%= submit "Log in", class: "button" %>
+      </div>
+    </form>
+  </div>
+
+  <div class="home-bloc">
+    <div class="body">
+      Forgot your password?
+      <%= live_redirect "Change it", to: Routes.live_path(@socket, Portal.ForgottenPasswordLive) %>
+      now.
+    </div>
+  </div>
+
+  <div class="home-bloc">
+    <div class="body">
+      Not registered yet?
+      <%= live_redirect "Do it", to: Routes.live_path(@socket, Portal.SignupLive) %>
+      now.
+    </div>
+  </div>
+</div>

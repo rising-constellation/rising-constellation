@@ -1,0 +1,16 @@
+.navbar-panel-header {
+  background: $grey-dark;
+  color: $white;
+  padding: 4px 10px;
+  margin: 5px 0 2px 0;
+
+  h1 {
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 18px;
+  }
+}

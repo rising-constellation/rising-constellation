@@ -1,0 +1,45 @@
+.input-profile-select {
+  //  Global Component Variables
+  $vs-component-line-height: 2;
+  $vs-component-placeholder-color: $black;
+
+  //  Active State
+  $vs-state-active-bg: rgba(255, 255, 255, .05);
+  $vs-state-active-color: $white;
+
+  //  Borders
+  $vs-border-width: 0;
+  $vs-border-radius: 0;
+  $vs-border-color: rgba(0, 0, 0, .2);
+
+  //  Component Controls: Clear, Open Indicator
+  $vs-controls-color: $white;
+  $vs-controls-size: 0.8;
+
+  //  Selected
+  $vs-selected-bg: rgba(0, 0, 0, .2);
+  $vs-selected-border-width: 0;
+
+  //  Dropdown
+  $vs-dropdown-bg: rgba(0, 0, 0, .5);
+
+  @import 'vue-select/src/scss/vue-select.scss';
+
+  background: rgba(0, 0, 0, .1);
+  border-top: solid 1px rgba(0, 0, 0, .2);
+
+  .vs__selected {
+    padding: 0 10px;
+    color: $white;
+  }
+
+  .vs__dropdown-option {
+    line-height: 2;
+    color: $white;
+    cursor: $cursor-active;
+  }
+
+  .vs__actions button, .vs__clear {
+    cursor: $cursor-active !important;
+  }
+}

@@ -1,0 +1,97 @@
+.menu-component {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: $z-menu;
+}
+
+.menu-enter-active { transition: opacity ease-out 2000ms; }
+.menu-enter { opacity: 0; }
+
+.menu-leave-active { transition: all ease-in 500ms; }
+.menu-leave-to {
+  opacity: 0;
+  transform: scale(2);
+}
+
+.layout {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: $z-layout;
+  background: url('~public/css/background/default.jpg') center center;
+  background-size: cover;
+
+  .layout-topbar {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: $navbar-height;
+  }
+
+  .layout-content {
+    position: absolute;
+    top: $navbar-height;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    padding: $layout-padding;
+  }
+
+  &.no-navbar {
+    .layout-content {
+      top: 0;
+    }
+  }
+}
+
+.default-enter-active, .default-leave-active {
+  transition: none;
+}
+
+@keyframes loading {
+  0%   { opacity: 1; }
+  50%  { opacity: .5; }
+  100% { opacity: 1; }
+}
+
+.loading-mask {
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  animation: loading 2s infinite;
+}
+
+.cards-container {
+  .card-container {
+    margin: 30px 40px 30px 30px;
+  }
+
+  &.is-centered {
+    text-align: center;
+    padding-top: 30px;
+
+    .card-container {
+      text-align: left;
+    }
+  }
+}
+
+.has-m10 {
+  margin: 10px;
+}
+
+#card-element {
+  background: $white;
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 3px;
+}
+
+#stripe-error {
+  color: $theme-red;
+  font-weight: bold;
+}

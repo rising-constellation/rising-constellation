@@ -1,0 +1,93 @@
+@import 'shared/font';
+@import 'shared/variables';
+@import 'shared/base';
+@import 'shared/selection';
+@import 'shared/cards';
+@import 'shared/maintenance';
+@import 'shared/app-loading';
+
+@import 'shared/plugins/svg-icons';
+@import 'shared/plugins/v-scrollbar';
+@import 'shared/plugins/v-tooltip';
+@import 'shared/plugins/v-slider';
+@import 'shared/plugins/v-toasted';
+@import 'shared/plugins/v-popover';
+
+@import 'shared/fight-report';
+
+// portal
+.portal-context {
+  @import 'portal/variables';
+  @import 'portal/general';
+  @import 'portal/profile-select';
+
+  @import 'portal/menu/main';
+
+  @import 'portal/navbar/topbar';
+
+  @import 'portal/panel/fluid';
+  @import 'portal/panel/header';
+  @import 'portal/panel/aside';
+  @import 'portal/panel/form';
+  @import 'portal/panel/editor';
+  @import 'portal/panel/instance';
+  @import 'portal/panel/misc';
+
+  @import 'portal/table/default';
+}
+
+// game
+.game-context {
+  @import 'game/variables';
+  @import 'game/general';
+  @import 'game/splashscreen';
+
+  @import 'game/mixins/default-button';
+
+  @import 'game/components/main';
+  @import 'game/components/notification-center';
+  @import 'game/components/victory-banner';
+  @import 'game/components/tile';
+  @import 'game/components/chat';
+  @import 'game/components/profile-select';
+
+  @import 'game/components/navbar/main';
+  @import 'game/components/navbar/calendar';
+  @import 'game/components/navbar/player';
+  @import 'game/components/navbar/navbar-dynamic-value';
+  @import 'game/components/navbar/navbar-maxed-value';
+  @import 'game/components/navbar/navbar-panel-block';
+  @import 'game/components/navbar/navbar-panel-empty';
+
+  @import 'game/components/overlays/opened-character';
+
+  @import 'game/components/galaxy/map/main';
+
+  @import 'game/components/galaxy/system/main';
+  @import 'game/components/galaxy/system/svg';
+  @import 'game/components/galaxy/system/content';
+  @import 'game/components/galaxy/system/population';
+  @import 'game/components/galaxy/system/properties';
+  @import 'game/components/galaxy/system/actions';
+  @import 'game/components/galaxy/system/production';
+
+  @import 'game/components/galaxy/selection/view';
+  @import 'game/components/galaxy/selection/army';
+  @import 'game/components/galaxy/selection/spy';
+  @import 'game/components/galaxy/selection/speaker';
+
+  @import 'game/components/panels/main';
+  @import 'game/components/panels/table';
+  @import 'game/components/panels/system';
+  @import 'game/components/panels/player';
+  @import 'game/components/panels/character';
+  @import 'game/components/panels/report';
+  @import 'game/components/panels/faction-market';
+  @import 'game/components/panels/messenger';
+  @import 'game/components/panels/event';
+
+  @import 'game/components/mini-panels/main';
+  @import 'game/components/mini-panels/policy';
+  @import 'game/components/mini-panels/tree-node';
+  @import 'game/components/mini-panels/victory';
+}

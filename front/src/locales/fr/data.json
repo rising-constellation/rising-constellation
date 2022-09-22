@@ -1,0 +1,1800 @@
+{
+  "data": {
+    "bonus_pipeline_in": {
+      "army_invasion": {
+        "name": "Invasion des armées"
+      },
+      "army_maintenance": {
+        "name": "Maintenance des armées"
+      },
+      "army_raid": {
+        "name": "Bombardement des armées"
+      },
+      "army_repair": {
+        "name": "Réparation des armées"
+      },
+      "body_act": {
+        "name": "Potentiel d'activité"
+      },
+      "body_ind": {
+        "name": "Potentiel industriel"
+      },
+      "body_pop": {
+        "name": "Population locale"
+      },
+      "body_tec": {
+        "name": "Potentiel scientifique"
+      },
+      "direct": {
+        "name": "Direct"
+      },
+      "player_credit": {
+        "name": "Crédit"
+      },
+      "player_ideology": {
+        "name": "Idéologie"
+      },
+      "player_technology": {
+        "name": "Technologie"
+      },
+      "speaker_conversion": {
+        "name": "Séduction des Sidérians"
+      },
+      "speaker_encourage_hate": {
+        "name": "Déstabilisation des Sidérians"
+      },
+      "speaker_make_dominion": {
+        "name": "Propagande des Sidérians"
+      },
+      "spy_assassination": {
+        "name": "Suppression des Effacés"
+      },
+      "spy_cover": {
+        "name": "Vitesse d'augmentation de la couverture des Effacés"
+      },
+      "spy_infiltrate": {
+        "name": "Infiltration des Effacés"
+      },
+      "spy_sabotage": {
+        "name": "Sabotage des Effacés"
+      },
+      "sys_credit": {
+        "name": "Crédit"
+      },
+      "sys_defense": {
+        "name": "Défense"
+      },
+      "sys_happiness": {
+        "name": "Stabilité"
+      },
+      "sys_ideology": {
+        "name": "Idéologie"
+      },
+      "sys_mobility": {
+        "name": "Mobilité"
+      },
+      "sys_pop": {
+        "name": "Population"
+      },
+      "sys_production": {
+        "name": "Production"
+      },
+      "sys_remove_contact": {
+        "name": "Cybersécurité"
+      },
+      "sys_technology": {
+        "name": "Technologie"
+      },
+      "sys_visibility": {
+        "name": "Visibilité"
+      }
+    },
+    "bonus_pipeline_out": {
+      "army_invasion": {
+        "name": "Invasion des armées"
+      },
+      "army_maintenance": {
+        "name": "Maintenance des armées"
+      },
+      "army_raid": {
+        "name": "Bombardement des armées"
+      },
+      "army_repair": {
+        "name": "Réparation des armées"
+      },
+      "character_experience": {
+        "name": "Gain d'expérience des agents"
+      },
+      "dominion_rate": {
+        "name": "Taux d'imposition des dominions"
+      },
+      "player_admiral": {
+        "name": "Limite de Navarques"
+      },
+      "player_credit": {
+        "name": "Crédit"
+      },
+      "player_dominion": {
+        "name": "Limite de Dominions"
+      },
+      "player_ideology": {
+        "name": "Idéologie"
+      },
+      "player_speaker": {
+        "name": "Limite de Sidérians"
+      },
+      "player_spy": {
+        "name": "Limite d'Effacés"
+      },
+      "player_system": {
+        "name": "Limite de système"
+      },
+      "player_technology": {
+        "name": "Technologie"
+      },
+      "speaker_conversion": {
+        "name": "Séduction des Sidérians"
+      },
+      "speaker_encourage_hate": {
+        "name": "Déstabilisation des Sidérians"
+      },
+      "speaker_make_dominion": {
+        "name": "Propagande des Sidérians"
+      },
+      "spy_assassination": {
+        "name": "Suppression des Effacés"
+      },
+      "spy_cover": {
+        "name": "Vitesse d'augmentation de la couverture des Effacés"
+      },
+      "spy_infiltrate": {
+        "name": "Infiltration des Effacés"
+      },
+      "spy_sabotage": {
+        "name": "Sabotage des Effacés"
+      },
+      "sys_capital_lvl": {
+        "name": "XP initiale des vaisseaux capitaux"
+      },
+      "sys_ci": {
+        "name": "Renseignement"
+      },
+      "sys_corvette_lvl": {
+        "name": "XP initiale des corvettes"
+      },
+      "sys_credit": {
+        "name": "Crédit"
+      },
+      "sys_defense": {
+        "name": "Défense"
+      },
+      "sys_fighter_lvl": {
+        "name": "XP initiale des chasseurs"
+      },
+      "sys_frigate_lvl": {
+        "name": "XP initiale des frégates"
+      },
+      "sys_habitation": {
+        "name": "Habitations"
+      },
+      "sys_happiness": {
+        "name": "Stabilité"
+      },
+      "sys_ideology": {
+        "name": "Idéologie"
+      },
+      "sys_mobility": {
+        "name": "Mobilité"
+      },
+      "sys_production": {
+        "name": "Production"
+      },
+      "sys_radar": {
+        "name": "Niveau D.S.S.L."
+      },
+      "sys_remove_contact": {
+        "name": "Cybersécurité"
+      },
+      "sys_technology": {
+        "name": "Technologie"
+      }
+    },
+    "building": {
+      "counterintelligence_open": {
+        "description": "—",
+        "name": "Orbe-INTEL",
+        "quote": "—"
+      },
+      "defense_global_dome": {
+        "description": "—",
+        "name": "R.C.D.",
+        "quote": "—"
+      },
+      "defense_local_dome": {
+        "description": "—",
+        "name": "Galeries d'interception",
+        "quote": "—"
+      },
+      "defense_local_open": {
+        "description": "—",
+        "name": "Bouclier planétaire",
+        "quote": "—"
+      },
+      "defense_local_orbital": {
+        "description": "—",
+        "name": "Constellation de leurres",
+        "quote": "—"
+      },
+      "factory_open": {
+        "description": "—",
+        "name": "Nœud industriel",
+        "quote": "Un nombre incommensurable de firmes en tout genre se regroupent en ce point névralgique."
+      },
+      "factory_orbital": {
+        "description": "—",
+        "name": "Canaux de raffinage",
+        "quote": "Tranchées béantes déversant leurs ressources des sites d'extraction aux sites de transformation."
+      },
+      "finance_open": {
+        "description": "—",
+        "name": "District REFLET",
+        "quote": "Un pôle financier, poumon du stellolibéralisme."
+      },
+      "finance_orbital": {
+        "description": "—",
+        "name": "Arc des affaires",
+        "quote": "—"
+      },
+      "hab_dome": {
+        "description": "—",
+        "name": "Cités-capsules",
+        "quote": "Une mosaïque de pavillons sous cloche reliés les uns aux autres par des boyaux de verres."
+      },
+      "hab_open": {
+        "description": "—",
+        "name": "District résidentiel",
+        "quote": "Un quartier d'habitation tranquille pour les travailleurs de la mégapole."
+      },
+      "hab_open_poor": {
+        "description": "—",
+        "name": "Cités-ruches",
+        "quote": "Aggrégat chaotique de prolétaires sans avenir."
+      },
+      "hab_open_rich": {
+        "description": "—",
+        "name": "Archipel résidentiel",
+        "quote": "Un havre de paix pour quelques privilégiés."
+      },
+      "happy_open": {
+        "description": "—",
+        "name": "Coeur administratif",
+        "quote": "—"
+      },
+      "happy_orbital": {
+        "description": "—",
+        "name": "U.P.O.",
+        "quote": "Dans le vide spatial, les chances d'évasion son quasi nulles."
+      },
+      "happy_pot_dome": {
+        "description": "—",
+        "name": "Circuit d'hyperdrive",
+        "quote": "—"
+      },
+      "happy_pot_open": {
+        "description": "—",
+        "name": "Ecosystème préservé",
+        "quote": "Une oasis, un espoir pour se dire que tout n'est pas destiné à l'acier et au béton."
+      },
+      "happy_pot_orbital": {
+        "description": "—",
+        "name": "Arène zéro-g",
+        "quote": "La baston est beaucoup plus fun en apesanteur."
+      },
+      "high_factory_dome": {
+        "description": "—",
+        "name": "Usine de métamatériaux",
+        "quote": "Les meilleurs savants y conçoivent des matériaux composites artificiels pour l'industrie de pointe."
+      },
+      "hypergate": {
+        "description": "—",
+        "name": "Anneau de singularité",
+        "quote": "—"
+      },
+      "ideo_credit_open": {
+        "description": "—",
+        "name": "Réseau d'îles artificielles",
+        "quote": "Un bel endroit pour se détendre et dans le même temps serrer quelques lucratives poignées de mains."
+      },
+      "ideo_dome": {
+        "description": "—",
+        "name": "Holo-dôme",
+        "quote": "—"
+      },
+      "ideo_open": {
+        "description": "—",
+        "name": "Citadelle",
+        "quote": "Symbole d'un pouvoir fort et déterminé, sa seule présence suffit à convaincre qu'on est du bon côté."
+      },
+      "infra_dome": {
+        "description": "—",
+        "name": "Hub central",
+        "quote": "Le centre névralgique et vivant d'une humanité en milieu stérile."
+      },
+      "infra_open": {
+        "description": "—",
+        "name": "Mégapole",
+        "quote": "Une ville-monde, pont entre la terre et le ciel."
+      },
+      "lift_dome": {
+        "description": "—",
+        "name": "Ascenseur spatial",
+        "quote": "—"
+      },
+      "lift_open": {
+        "description": "—",
+        "name": "Liaison orbitale",
+        "quote": "—"
+      },
+      "market_dome": {
+        "description": "—",
+        "name": "Omnimarket",
+        "quote": "Du moteur d'hyperdrive aux hologrammes décoratifs : tout y est."
+      },
+      "market_open": {
+        "description": "—",
+        "name": "Artère marchande",
+        "quote": "Un véritable fleuve de marchandises et de capitaux."
+      },
+      "military_school_dome": {
+        "description": "—",
+        "name": "Académie Militaire Aérospatiale",
+        "quote": "—"
+      },
+      "mine_dome": {
+        "description": "—",
+        "name": "Batterie de Ligneuses",
+        "quote": "Laboureuses infatigables, elles arrachent la croûte terrestre pour amasser les métaux."
+      },
+      "mine_orbital": {
+        "description": "—",
+        "name": "Essaim d'autoforeuses",
+        "quote": "Dans un vrombissement assourdissant, elles percent la surface."
+      },
+      "monument_dome": {
+        "description": "—",
+        "name": "Monolithe",
+        "quote": "Planète sculptée ou astéroïde ciselé, on est sur de l'absolument grandiose."
+      },
+      "monument_open": {
+        "description": "—",
+        "name": "Jardins flottants",
+        "quote": "Un lieu onirique où les esprits s'appaisent et où les idées s'échangent."
+      },
+      "radar_orbital": {
+        "description": "—",
+        "name": "Réseau D.S.S.L.",
+        "quote": "—"
+      },
+      "removecontact_dome": {
+        "description": "—",
+        "name": "Systèmes de proxy intégré",
+        "quote": "—"
+      },
+      "removecontact_open": {
+        "description": "—",
+        "name": "Centre des congrès",
+        "quote": "—"
+      },
+      "research_dome": {
+        "description": "—",
+        "name": "Centre d'étude d'impact",
+        "quote": "Chute de météorite… ou test de nouveaux missiles."
+      },
+      "research_open": {
+        "description": "—",
+        "name": "Accélérateur",
+        "quote": "—"
+      },
+      "research_orbital": {
+        "description": "—",
+        "name": "Station expérimentale",
+        "quote": "Pour les uns, fierté de l'humanité. Pour les autres, sa déchéance."
+      },
+      "shipyard_1_orbital": {
+        "description": "—",
+        "name": "Lignes de montage S-01",
+        "quote": "—"
+      },
+      "shipyard_2_orbital": {
+        "description": "—",
+        "name": "Lignes de montage S-02",
+        "quote": "—"
+      },
+      "shipyard_3_orbital": {
+        "description": "—",
+        "name": "Chantier Spatial",
+        "quote": "—"
+      },
+      "shipyard_4_orbital": {
+        "description": "—",
+        "name": "Superstructure d'assemblage",
+        "quote": "—"
+      },
+      "spatioport_dome": {
+        "description": "—",
+        "name": "Spatioport industriel",
+        "quote": "—"
+      },
+      "spatioport_orbital": {
+        "description": "—",
+        "name": "Terminus orbital",
+        "quote": "—"
+      },
+      "university_open": {
+        "description": "—",
+        "name": "Delta POLYTEC",
+        "quote": "Confluence des savoirs, convergence des intelligences, afflux d'innovation."
+      }
+    },
+    "calendar": {
+      "tetrarch": {
+        "months_name": [
+          "Tétrane",
+          "Quartos",
+          "Chatur",
+          "Quadrinople"
+        ],
+        "months_prefix": [
+          "α-",
+          "β-",
+          "γ-",
+          "δ-",
+          "ε-",
+          "ζ-"
+        ]
+      }
+    },
+    "character": {
+      "admiral": {
+        "name": "Navarque | Navarques",
+        "skills": [
+          {
+            "description": "Augmente la réparation de l'armée.",
+            "name": "Commandement"
+          },
+          {
+            "description": "Augmente le bombardement de l'armée.",
+            "name": "Frappe"
+          },
+          {
+            "description": "Augmente l'invasion de l'armée.",
+            "name": "Conquête"
+          },
+          {
+            "description": "Augmente la production du système stellaire.",
+            "name": "Production"
+          },
+          {
+            "description": "Augmente la défense du système stellaire.",
+            "name": "Défense"
+          },
+          {
+            "description": "Augmente l'expérience des vaisseaux sur le système stellaire.",
+            "name": "Formation"
+          }
+        ],
+        "specializations": {
+          "butcher": "Boucher",
+          "conqueror": "Conquérant",
+          "defender": "Sentinelle",
+          "instructor": "Instructeur",
+          "null": "░░░░░░░░░░░░",
+          "shipowner": "Armateur",
+          "strategist": "Stratège"
+        }
+      },
+      "speaker": {
+        "name": "Siderian | Siderians",
+        "skills": [
+          {
+            "description": "Augmente les chances de prendre le contrôle d'un dominion.",
+            "name": "Propagande"
+          },
+          {
+            "description": "Augmente l'impact sur la stabilité du système visé.",
+            "name": "Déstabilisation"
+          },
+          {
+            "description": "Augmente les chances de retourner un agent ennemi.",
+            "name": "Séduction"
+          },
+          {
+            "description": "Augmente la stabilité du système stellaire.",
+            "name": "Cohésion"
+          },
+          {
+            "description": "Augmente la génération de technologie du système stellaire.",
+            "name": "Savoir"
+          },
+          {
+            "description": "Augmente la génération d'idéologie du système stellaire.",
+            "name": "Connaissance"
+          }
+        ],
+        "specializations": {
+          "agitator": "Agitateur",
+          "leader": "Guide",
+          "null": "░░░░░░░░░░░░",
+          "philosopher": "Idéologue",
+          "proselyte": "Émissaire",
+          "scholar": "Scientifique",
+          "seducer": "Séducteur"
+        }
+      },
+      "spy": {
+        "name": "Effacé | Effacés",
+        "skills": [
+          {
+            "description": "Augmente les chances d'infiltration (gain de niveau de visibilité).",
+            "name": "Infiltration"
+          },
+          {
+            "description": "Augmente les chances de réussite d'un assassinat.",
+            "name": "Suppression"
+          },
+          {
+            "description": "Augmente les chances de réussite d'un sabotage.",
+            "name": "Sabotage"
+          },
+          {
+            "description": "Augmente le renseignement dans le système stellaire.",
+            "name": "Renseignement"
+          },
+          {
+            "description": "Augmente la cybersécurité du système stellaire.",
+            "name": "Cybersécurité"
+          },
+          {
+            "description": "Augmente la génération de crédits du système stellaire.",
+            "name": "Finance"
+          }
+        ],
+        "specializations": {
+          "assassin": "Chasseur de prime",
+          "cleaner": "Analyste",
+          "counter_spy": "Cerbère",
+          "informer": "Hacker",
+          "mafioso": "Courtier",
+          "null": "░░░░░░░░░░░░",
+          "saboteur": "Saboteur"
+        }
+      }
+    },
+    "character_action_status": {
+      "action": {
+        "name": "En mission"
+      },
+      "colonization": {
+        "name": "Colonisation en cours"
+      },
+      "conquest": {
+        "name": "Conquête en cours"
+      },
+      "conversion": {
+        "name": "Séduction en cours"
+      },
+      "docking": {
+        "name": "Bloqué à quai"
+      },
+      "encourage_hate": {
+        "name": "Déstabilisation en cours"
+      },
+      "idle": {
+        "name": "En attente d'ordres"
+      },
+      "infiltration": {
+        "name": "Infiltration en cours"
+      },
+      "loot": {
+        "name": "Pillage en cours"
+      },
+      "make_dominion": {
+        "name": "Prise de contrôle en cours"
+      },
+      "moving": {
+        "name": "En déplacement"
+      },
+      "null": {
+        "name": "░░ ░░░░░░░"
+      },
+      "raid": {
+        "name": "Bombardement en cours"
+      }
+    },
+    "character_rank": {
+      "common": {
+        "name": "Communs",
+        "star": "★"
+      },
+      "exceptional": {
+        "name": "Exceptionnels",
+        "star": "★★★"
+      },
+      "remarkable": {
+        "name": "Remarquables",
+        "star": "★★"
+      }
+    },
+    "culture": {
+      "cardanic": {
+        "kind": "Cardanien",
+        "name": "Cardanienne"
+      },
+      "myrmeziriannic": {
+        "kind": "Myrmézirien",
+        "name": "Myrmézirienne"
+      },
+      "null": {
+        "kind": "░░░░░░░░░░░",
+        "name": "░░░░░░░░░░░"
+      },
+      "stelloliberalism": {
+        "kind": "Stellolibéral",
+        "name": "Stellolibéraliste"
+      },
+      "syn": {
+        "kind": "Syn",
+        "name": "Syn"
+      },
+      "tetrarchic": {
+        "kind": "Tétrarquien",
+        "name": "Tétrarchique"
+      }
+    },
+    "doctrine": {
+      "admiral_1": {
+        "description": "+2 Navarques",
+        "name": "Force de projection",
+        "quote": "Qui veut la paix prépare la guerre."
+      },
+      "admiral_2": {
+        "description": "+4 Navarques",
+        "name": "Doctrine Galtacon",
+        "quote": "La guerre est inévitable !"
+      },
+      "admiral_3": {
+        "description": "+5 Navarques et +2 Effacés",
+        "name": "Académies militaires",
+        "quote": "Attaquer ou défendre, mais se battre à tout prix !"
+      },
+      "admiral_4": {
+        "description": "+5 Navarques et +2 Sidérians",
+        "name": "Propagande de guerre",
+        "quote": "Répandre la terreur et convertir les insoumis."
+      },
+      "agent": {
+        "description": "—",
+        "name": "Âge de l'exploration",
+        "quote": "Il faut voir du pays !"
+      },
+      "assassinate": {
+        "description": "—",
+        "name": "Pratiques classifiées",
+        "quote": "—"
+      },
+      "conversion": {
+        "description": "—",
+        "name": "Héritage de Sidérian",
+        "quote": "—"
+      },
+      "cover": {
+        "description": "—",
+        "name": "Réseau de nettoyeurs",
+        "quote": "—"
+      },
+      "credit_1": {
+        "description": "—",
+        "name": "Labyrinthe stellolibéral",
+        "quote": "Planter la graine et regarder grandir."
+      },
+      "credit_2": {
+        "description": "—",
+        "name": "Politique confiscatoire",
+        "quote": "Faites tourner la planche à billet !"
+      },
+      "credit_3": {
+        "description": "—",
+        "name": "Détournement de fonds",
+        "quote": "Lorsque les moyens traditionnels ne suffisent plus."
+      },
+      "credit_perc_1": {
+        "description": "—",
+        "name": "Cryptomonnaies décentralisées",
+        "quote": "—"
+      },
+      "credit_pola_1": {
+        "description": "—",
+        "name": "Société financiarisée",
+        "quote": "Faites-moi confiance !"
+      },
+      "credit_pop": {
+        "description": "—",
+        "name": "Centralisation du pouvoir",
+        "quote": "—"
+      },
+      "defense_1": {
+        "description": "—",
+        "name": "Conseil de Défense",
+        "quote": "—"
+      },
+      "dominion_1": {
+        "description": "Augmente le nombre de dominion que vous pouvez soumettre de 3.",
+        "name": "Zone commerciale exclusive",
+        "quote": "Mettez sous votre joug les systèmes non-revendiqués."
+      },
+      "dominion_2": {
+        "description": "Augmente le nombre de dominion que vous pouvez soumettre de 4.",
+        "name": "Protectorat",
+        "quote": "Votre domination s'étend."
+      },
+      "dominion_3": {
+        "description": "Augmente le nombre de dominion que vous pouvez soumettre de 7.",
+        "name": "Fédération de protectorats",
+        "quote": "Les grands empires exigent de grandes recettes."
+      },
+      "dominion_rate_1": {
+        "description": "—",
+        "name": "Intégration commerciale",
+        "quote": "—"
+      },
+      "dominion_rate_2": {
+        "description": "—",
+        "name": "Assimilation des protectorats",
+        "quote": "—"
+      },
+      "ideo_1": {
+        "description": "—",
+        "name": "Unification linguistique",
+        "quote": "Il n'y a qu'une seule langue noble."
+      },
+      "ideo_2": {
+        "description": "—",
+        "name": "Mass média",
+        "quote": "Une propagande juste et bienveillante."
+      },
+      "ideo_3": {
+        "description": "—",
+        "name": "Stellolibéralisme du divertissement",
+        "quote": "A force de le répéter ils finiront par y croire !"
+      },
+      "ideo_pola": {
+        "description": "—",
+        "name": "Fake news",
+        "quote": "Transformez les faits à votre avantage."
+      },
+      "infiltration": {
+        "description": "—",
+        "name": "Surveillance des systèmes d'informations",
+        "quote": "—"
+      },
+      "mobility_1": {
+        "description": "—",
+        "name": "Libre circulation",
+        "quote": "—"
+      },
+      "mobility_2": {
+        "description": "—",
+        "name": "Secret des affaires",
+        "quote": "—"
+      },
+      "prod_1": {
+        "description": "—",
+        "name": "Assouplissement des normes de productions",
+        "quote": "Suppression des pauses."
+      },
+      "prod_2": {
+        "description": "—",
+        "name": "Cadence de guerre",
+        "quote": "Votre prospérité en dépend !"
+      },
+      "reduce_maintenance_1": {
+        "description": "—",
+        "name": "Chaîne de commandement simplifiée",
+        "quote": "—"
+      },
+      "reduce_maintenance_2": {
+        "description": "—",
+        "name": "Standardisation des composants",
+        "quote": "—"
+      },
+      "sabotage": {
+        "description": "—",
+        "name": "Espionnage industriel",
+        "quote": "—"
+      },
+      "speaker_1": {
+        "description": "—",
+        "name": "Premiers contacts",
+        "quote": "Répandez votre culture !"
+      },
+      "speaker_2": {
+        "description": "—",
+        "name": "Relations publiques",
+        "quote": "Invitez les peuples à rejoindre votre culture."
+      },
+      "speaker_3": {
+        "description": "—",
+        "name": "Soft power",
+        "quote": "Influencer les peuples et les contrôler."
+      },
+      "speaker_4": {
+        "description": "—",
+        "name": "Arsenal des ambassades",
+        "quote": "—"
+      },
+      "speaker_dominion": {
+        "description": "—",
+        "name": "Impérialisme culturel",
+        "quote": "—"
+      },
+      "spy_1": {
+        "description": "—",
+        "name": "Réseaux souterrains",
+        "quote": "Besoin de supprimer quelqu'un de gênant ?"
+      },
+      "spy_2": {
+        "description": "—",
+        "name": "Fondation secrète",
+        "quote": "L'ennemi ne se doute de rien."
+      },
+      "spy_3": {
+        "description": "—",
+        "name": "Camouflage ARN",
+        "quote": "—"
+      },
+      "spy_4": {
+        "description": "—",
+        "name": "Stratégie militaire parallèle",
+        "quote": "Maitriser l'information avant de se battre."
+      },
+      "spy_bonus": {
+        "description": "—",
+        "name": "Deep state",
+        "quote": "—"
+      },
+      "spy_def_1": {
+        "description": "—",
+        "name": "Numérisation des interactions",
+        "quote": "—"
+      },
+      "spy_def_2": {
+        "description": "—",
+        "name": "Surveillance totale",
+        "quote": "—"
+      },
+      "stab_1": {
+        "description": "—",
+        "name": "Drogues de synthèses",
+        "quote": "Le peuple a besoin de se détendre."
+      },
+      "stab_2": {
+        "description": "—",
+        "name": "Propagande",
+        "quote": "La sécurité passe par la perte de liberté."
+      },
+      "sys_dom_1": {
+        "description": "Augmente le nombre de système que vous pouvez administrer de 1 et le nombre de dominion sous votre joug de 2.",
+        "name": "Colonies extérieures",
+        "quote": "Etablissez votre présence au quatre coin de la galaxie."
+      },
+      "sys_dom_2": {
+        "description": "Augmente le nombre de système que vous pouvez administrer de 2 et le nombre de dominion sous votre joug de 4.",
+        "name": "Bordure de l'Empire",
+        "quote": "Dominer pour vaincre."
+      },
+      "system_1": {
+        "description": "Augmente le nombre de système que vous pouvez administrer de 1.",
+        "name": "Proto-empire",
+        "quote": "Votre empire s'étend !"
+      },
+      "system_2": {
+        "description": "Augmente le nombre de système que vous pouvez administrer de 1.",
+        "name": "Administration étendue",
+        "quote": "Votre empire se consolide !"
+      },
+      "system_3": {
+        "description": "Augmente le nombre de système que vous pouvez administrer de 2.",
+        "name": "Administration décentralisée",
+        "quote": "Plus de systèmes sous votre égide pour plus de puissance."
+      },
+      "system_4": {
+        "description": "Augmente le nombre de système que vous pouvez administrer de 3.",
+        "name": "Second cœur",
+        "quote": "Agrandissez votre empire et soumettez les peuples faibles."
+      },
+      "tech_1": {
+        "description": "—",
+        "name": "Promotion des sciences",
+        "quote": "L'A.R.K soutien votre recherche."
+      },
+      "tech_2": {
+        "description": "—",
+        "name": "Chaires sponsorisées",
+        "quote": "Le rayonnement scientifique passe par une éducation exemplaire."
+      },
+      "tech_3": {
+        "description": "—",
+        "name": "Sciences prédictives",
+        "quote": "En espérant que cela ne vous pète pas à la gueule."
+      },
+      "tech_pola": {
+        "description": "—",
+        "name": "Technocratie",
+        "quote": "L'âme n'existe pas !"
+      },
+      "upgrade_fleet": {
+        "description": "—",
+        "name": "Automatisation des armées",
+        "quote": "—"
+      },
+      "upgrade_invasion": {
+        "description": "—",
+        "name": "Drogues de combat",
+        "quote": "—"
+      },
+      "upgrade_raid": {
+        "description": "—",
+        "name": "Repérage tactique",
+        "quote": "—"
+      },
+      "upgrade_repair": {
+        "description": "—",
+        "name": "Construction modulaire",
+        "quote": "—"
+      },
+      "upgrade_xp": {
+        "description": "—",
+        "name": "Tradition navarque",
+        "quote": "—"
+      }
+    },
+    "doctrine_class": {
+      "admiral": {
+        "name": "Navarques"
+      },
+      "character": {
+        "name": "Agents"
+      },
+      "expansion": {
+        "name": "Expansion"
+      },
+      "root": {
+        "name": "Origine"
+      },
+      "speaker": {
+        "name": "Sidérians"
+      },
+      "spy": {
+        "name": "Effacés"
+      }
+    },
+    "faction": {
+      "ark": {
+        "description": "Azkos Technologies, Ravecroft, Kovaka. Telle est la triade des plus puissante firmes de la galaxie. Respectivement impliquées dans l’aérospatial, le divertissement et la terraformation, ces entreprises tentaculaires se sont réunies pour former une superstructure qui négocie à la même table que les plus puissants Etats de la galaxie. Capable d’armer une véritable flotte de guerre, l’ARK ne cache plus son ambition d’exister hors de la Tétrarchie dans un monde où ses milliards de salariés feront office de citoyens arkiens. Commercialement connecté à une énorme quantité de systèmes, son aspiration à l’indépendance est un problème majeur pour toutes les factions.",
+        "name": "A.R.K."
+      },
+      "cardan": {
+        "description": "Cardan est une nation puissante qui existe depuis l’aube des temps. C’est une société traditionnelle très hiérarchique où chaque geste est codifié par les préceptes de l’Ordre des Siderians. Ces lois, qui structurent la vie cardanienne de manière religieuse, insistent sur la supériorité de l’homme face à la machine. L’abolitionnisme myrmézirien est de ce fait perçu comme une abomination qui doit être combattue à tout prix pour éviter l’apocalypse. Cette aversion pour les robots ne fait pas de Cardan une faction technophobe pour autant et leurs croiseurs de combat sont tout à fait opérationnels. Leur armée fanatique a d’ailleurs bien l’intention d’imposer sa vision du monde à la galaxie toute entière.",
+        "name": "Cardan"
+      },
+      "myrmezir": {
+        "description": "Le Tétrarcat de Tétrane est désormais communément appelé « Myrmézir », planète d’origine d’un Tétrarque populaire et révolutionnaire. Ce nouveau nom vient de la volonté émancipatrice des Myrméziriens à l’égard de la Tétrarchie. Ce séparatisme fut d’abord le symptôme d’une forte aspiration à la démocratie mais s’étend aujourd’hui à l’envie d’en finir avec l’esclavage des machines afin qu’elles soient des citoyennes à part entière. Pour sa rupture avec l’autocratie et le dynamisme de ses idées, Myrmézir apparait comme un espoir pour les opprimés dans toute la galaxie et dispose généralement d’une très bonne réputation dans les sphères populaires. Ses dignitaires sont écoutés et adulés mais souvent la cible des Effacés, mandatés pour les supprimer.",
+        "name": "Myrmézir"
+      },
+      "neutral": {
+        "description": "",
+        "name": "Faction neutre"
+      },
+      "synelle": {
+        "description": "Les Syns vivent dans des secteurs reculés de la Galaxie qu’on appelle souvent les Confins. Ils constituent une fédération de nations généralement pacifistes qui a toujours su régler ses problèmes grâce à des consensus. Les nombreuses traditions qui régissent les rapports entre Syns donne à cette faction une unité qui leur a toujours permis de rester forts et fiers face aux menaces extérieures. En opposition totale avec la vision du monde de A.R.K. qui gagne toujours plus d’influence dans leurs territoires, les Syns ont élu quelques hommes forts, des héros providentiels, qui rétabliront l’équilibre et permettront au sage peuple de garder son intégrité et de poursuivre son existence paisible.",
+        "name": "Fédération Synélectique"
+      },
+      "tetrarchy": {
+        "description": "Une superpuissance en perte de vitesse reste une superpuissance et il faudrait être fou pour sous-estimer la Tétrarchie, faction dont l’hégémonie n’est pour l’heure que contestée. Historiquement composée de quatre planètes capitales et dirigée par quatre Tétrarques, la Tétrarchie doit faire face non seulement à la sédition de Myrmézir mais aussi à l’opportunisme d’autres factions. Pour ce faire, elle peut compter sur des Navarques très expérimentés, notamment Arledge Galtacon ainsi que sur une flotte puissante qui n’a pas vraiment d’égal dans la galaxie. La Tétrarchie est sans aucun doute elle-même son pire ennemi. Ce vaste ensemble hétérogène est en proie au séparatisme et seul une propagande forte et de solides traditions permettent de préserver l’unité de cette supernation.",
+        "name": "Tétrarchie"
+      }
+    },
+    "patent": {
+      "capital_1": {
+        "description": "—",
+        "name": "Blindage",
+        "quote": "—"
+      },
+      "capital_2": {
+        "description": "—",
+        "name": "Blindage amélioré",
+        "quote": "—"
+      },
+      "capital_3": {
+        "description": "—",
+        "name": "Noeuds multifonctions",
+        "quote": "—"
+      },
+      "citadel": {
+        "description": "—",
+        "name": "Système de stockage holographique",
+        "quote": "—"
+      },
+      "corvette_1": {
+        "description": "—",
+        "name": "Fuselage nodal léger",
+        "quote": "—"
+      },
+      "corvette_2": {
+        "description": "—",
+        "name": "Fuselage nodal",
+        "quote": "—"
+      },
+      "corvette_3": {
+        "description": "—",
+        "name": "Visée automatique",
+        "quote": "—"
+      },
+      "dome_academy": {
+        "description": "—",
+        "name": "Dérivations neurales",
+        "quote": "—"
+      },
+      "dome_defense_1": {
+        "description": "—",
+        "name": "Foreuses autonomes",
+        "quote": "—"
+      },
+      "dome_defense_2": {
+        "description": "—",
+        "name": "Cryptographie quantique",
+        "quote": "—"
+      },
+      "dome_happiness": {
+        "description": "—",
+        "name": "Hologrammes",
+        "quote": "—"
+      },
+      "dome_ideo": {
+        "description": "—",
+        "name": "Architecture monumentale",
+        "quote": "—"
+      },
+      "dome_industries": {
+        "description": "—",
+        "name": "Catalyse avancée",
+        "quote": "—"
+      },
+      "dome_mobility": {
+        "description": "—",
+        "name": "Grues magnétiques",
+        "quote": "—"
+      },
+      "dome_pop": {
+        "description": "—",
+        "name": "Cités pressurisées",
+        "quote": "—"
+      },
+      "fighter_1": {
+        "description": "—",
+        "name": "Propulseurs améliorés",
+        "quote": "—"
+      },
+      "fighter_2": {
+        "description": "—",
+        "name": "Fuselage léger",
+        "quote": "—"
+      },
+      "fighter_3": {
+        "description": "—",
+        "name": "Fuselage renforcé",
+        "quote": "—"
+      },
+      "fighter_4": {
+        "description": "—",
+        "name": "Tourelles compactes",
+        "quote": "—"
+      },
+      "frigate_1": {
+        "description": "—",
+        "name": "Fuselage modulaire",
+        "quote": "—"
+      },
+      "frigate_2": {
+        "description": "—",
+        "name": "Lance-charges hypersonic",
+        "quote": "—"
+      },
+      "frigate_3": {
+        "description": "—",
+        "name": "Drones militaires",
+        "quote": "—"
+      },
+      "frigate_4": {
+        "description": "—",
+        "name": "Baie de réparation",
+        "quote": "—"
+      },
+      "infra_dome_1": {
+        "description": "—",
+        "name": "Environnement contrôlé",
+        "quote": "—"
+      },
+      "infra_dome_2": {
+        "description": "—",
+        "name": "Environnement contrôlé II",
+        "quote": "—"
+      },
+      "infra_dome_3": {
+        "description": "—",
+        "name": "Environnement contrôlé III",
+        "quote": "—"
+      },
+      "infra_dome_4": {
+        "description": "—",
+        "name": "Environnement contrôlé IV",
+        "quote": "—"
+      },
+      "infra_dome_5": {
+        "description": "—",
+        "name": "Environnement contrôlé V",
+        "quote": "—"
+      },
+      "infra_open_1": {
+        "description": "—",
+        "name": "Urbanisation",
+        "quote": "—"
+      },
+      "infra_open_2": {
+        "description": "—",
+        "name": "Urbanisation II",
+        "quote": "—"
+      },
+      "infra_open_3": {
+        "description": "—",
+        "name": "Urbanisation III",
+        "quote": "—"
+      },
+      "infra_open_4": {
+        "description": "—",
+        "name": "Urbanisation IV",
+        "quote": "—"
+      },
+      "infra_open_5": {
+        "description": "—",
+        "name": "Urbanisation V",
+        "quote": "—"
+      },
+      "infra_orbital_1": {
+        "description": "—",
+        "name": "Environnement pressurisé",
+        "quote": "—"
+      },
+      "infra_orbital_2": {
+        "description": "—",
+        "name": "Environnement pressurisé II",
+        "quote": "—"
+      },
+      "infra_orbital_3": {
+        "description": "—",
+        "name": "Environnement pressurisé III",
+        "quote": "—"
+      },
+      "infra_orbital_4": {
+        "description": "—",
+        "name": "Environnement pressurisé IV",
+        "quote": "—"
+      },
+      "infra_orbital_5": {
+        "description": "—",
+        "name": "Environnement pressurisé V",
+        "quote": "—"
+      },
+      "merge_corvette_1": {
+        "description": "—",
+        "name": "Coordination des corvettes I",
+        "quote": "—"
+      },
+      "merge_corvette_2": {
+        "description": "—",
+        "name": "Coordination des corvettes II",
+        "quote": "—"
+      },
+      "merge_fighter_1": {
+        "description": "—",
+        "name": "Coordination des chasseurs I",
+        "quote": "—"
+      },
+      "merge_fighter_2": {
+        "description": "—",
+        "name": "Coordination des chasseurs II",
+        "quote": "—"
+      },
+      "merge_fighter_3": {
+        "description": "—",
+        "name": "Coordination des chasseurs III",
+        "quote": "—"
+      },
+      "merge_fighter_corvette": {
+        "description": "—",
+        "name": "Coordination Générale I",
+        "quote": "—"
+      },
+      "merge_frigate_1": {
+        "description": "—",
+        "name": "Coordination des frégates I",
+        "quote": "—"
+      },
+      "open_credit": {
+        "description": "—",
+        "name": "Terminaux publicitaires",
+        "quote": "—"
+      },
+      "open_defense": {
+        "description": "—",
+        "name": "Générateurs magnétiques étendus",
+        "quote": "—"
+      },
+      "open_happiness": {
+        "description": "—",
+        "name": "Contrôle climatique",
+        "quote": "—"
+      },
+      "open_ideo": {
+        "description": "—",
+        "name": "Architecture maglev",
+        "quote": "—"
+      },
+      "open_industries": {
+        "description": "—",
+        "name": "Cités standardisées",
+        "quote": "—"
+      },
+      "open_intel": {
+        "description": "—",
+        "name": "Essaim de drones",
+        "quote": "—"
+      },
+      "open_island": {
+        "description": "—",
+        "name": "Villes flottantes",
+        "quote": "—"
+      },
+      "open_lift": {
+        "description": "—",
+        "name": "Nanotubules",
+        "quote": "—"
+      },
+      "open_mobility": {
+        "description": "—",
+        "name": "Architecture luxueuse",
+        "quote": "—"
+      },
+      "open_research": {
+        "description": "—",
+        "name": "Bobines en z-poly",
+        "quote": "—"
+      },
+      "orbital_credit": {
+        "description": "—",
+        "name": "Pipelines magnétiques",
+        "quote": "—"
+      },
+      "orbital_defense": {
+        "description": "—",
+        "name": "Réduction de signature",
+        "quote": "—"
+      },
+      "orbital_happiness": {
+        "description": "—",
+        "name": "Générateur de gravité",
+        "quote": "—"
+      },
+      "orbital_hypergate": {
+        "description": "—",
+        "name": "Électrodynamique quantique",
+        "quote": "—"
+      },
+      "orbital_mobility": {
+        "description": "—",
+        "name": "Habitats sécurisés",
+        "quote": "—"
+      },
+      "orbital_prod": {
+        "description": "—",
+        "name": "Coiffe en cristal",
+        "quote": "—"
+      },
+      "orbital_radar": {
+        "description": "—",
+        "name": "Capteurs D.S.S.L.",
+        "quote": "—"
+      },
+      "orbital_research": {
+        "description": "—",
+        "name": "Exobiologie",
+        "quote": "—"
+      },
+      "shipyard_1": {
+        "description": "—",
+        "name": "Chaînes de montage",
+        "quote": "—"
+      },
+      "shipyard_2": {
+        "description": "—",
+        "name": "Grues de précision",
+        "quote": "—"
+      },
+      "shipyard_3": {
+        "description": "—",
+        "name": "Cales orbitales",
+        "quote": "—"
+      },
+      "shipyard_4": {
+        "description": "—",
+        "name": "Hyperstructures spatiales",
+        "quote": "—"
+      },
+      "transport_1": {
+        "description": "—",
+        "name": "Caissons d'hypersommeil",
+        "quote": "—"
+      },
+      "transport_2": {
+        "description": "—",
+        "name": "Espaces de vie compacts",
+        "quote": "—"
+      }
+    },
+    "patent_class": {
+      "dome": {
+        "name": "Planètes stériles"
+      },
+      "economic": {
+        "name": "Économique"
+      },
+      "military": {
+        "name": "Militaire"
+      },
+      "open": {
+        "name": "Planètes habitables"
+      },
+      "orbital": {
+        "name": "Lunes & astéroïdes"
+      },
+      "root": {
+        "name": "Origine"
+      },
+      "ship": {
+        "name": "Chantiers & vaisseaux"
+      }
+    },
+    "patent_info": {
+      "infra_dome_2": "Permet d'améliorer les bâtiments des planètes stériles au niveau 2",
+      "infra_dome_3": "Permet d'améliorer les bâtiments des planètes stériles au niveau 3",
+      "infra_dome_4": "Permet d'améliorer les bâtiments des planètes stériles au niveau 4",
+      "infra_dome_5": "Permet d'améliorer les bâtiments des planètes stériles au niveau 5",
+      "infra_open_2": "Permet d'améliorer les bâtiments des planètes habitables au niveau 2",
+      "infra_open_3": "Permet d'améliorer les bâtiments des planètes habitables au niveau 3",
+      "infra_open_4": "Permet d'améliorer les bâtiments des planètes habitables au niveau 4",
+      "infra_open_5": "Permet d'améliorer les bâtiments des planètes habitables au niveau 5",
+      "infra_orbital_2": "Permet d'améliorer les bâtiments orbitaux au niveau 2",
+      "infra_orbital_3": "Permet d'améliorer les bâtiments orbitaux au niveau 3",
+      "infra_orbital_4": "Permet d'améliorer les bâtiments orbitaux au niveau 4",
+      "infra_orbital_5": "Permet d'améliorer les bâtiments orbitaux au niveau 5",
+      "merge_corvette_1": "Permet de construire ou de fusionner des unités de 4 corvettes",
+      "merge_corvette_2": "Permet de construire ou de fusionner des unités de 8 corvettes",
+      "merge_fighter_1": "Permet de construire ou de fusionner des unités de 4 chasseurs",
+      "merge_fighter_2": "Permet de construire ou de fusionner des unités de 8 chasseurs",
+      "merge_fighter_3": "Permet de construire ou de fusionner des unités de 16 chasseurs",
+      "merge_fighter_corvette": "Permet de construire ou de fusionner des unités de 8 chasseurs. Permet de construire ou de fusionner des unités de 4 corvettes",
+      "merge_frigate_1": "Permet de construire ou de fusionner des unités de 4 frégates"
+    },
+    "population_class": {
+      "big": "Système mineur",
+      "enormous": "Système influent",
+      "huge": "Système majeur",
+      "large": "Colonie",
+      "major": "Colonie majeure",
+      "medium": "Colonie mineure",
+      "minor": "Avant-poste",
+      "prodigious": "Centre névralgique"
+    },
+    "population_status": {
+      "demonstration": {
+        "desc": "De grandes manifestations ont lieu devant les symboles du pouvoir.",
+        "name": "Manifestations"
+      },
+      "discontent": {
+        "desc": "La population est mécontente.",
+        "name": "Mécontentement"
+      },
+      "general_uprising": {
+        "desc": "Le système est en état de révolte généralisée.",
+        "name": "Révolte générale"
+      },
+      "normal": {
+        "desc": "La population se sent bien.",
+        "name": "Normal"
+      },
+      "null": {
+        "desc": "État de la population inconnu.",
+        "name": "Inconnu"
+      },
+      "uprising": {
+        "desc": "Des révoltes localisées éclatent dans les centres de production.",
+        "name": "Révoltes localisées"
+      }
+    },
+    "ship": {
+      "capital_1": {
+        "description": "—",
+        "name": "Destroyer",
+        "trade_name": "—"
+      },
+      "capital_2": {
+        "description": "—",
+        "name": "Croiseur",
+        "trade_name": "—"
+      },
+      "capital_3": {
+        "description": "—",
+        "name": "Coordinateur",
+        "trade_name": "—"
+      },
+      "corvette_1": {
+        "description": "—",
+        "name": "2 Corvettes légère",
+        "trade_name": "—"
+      },
+      "corvette_1v2": {
+        "description": "—",
+        "name": "4 Corvettes légère",
+        "trade_name": "—"
+      },
+      "corvette_1v3": {
+        "description": "—",
+        "name": "8 Corvettes légère",
+        "trade_name": "—"
+      },
+      "corvette_2": {
+        "description": "—",
+        "name": "2 Corvettes lourde",
+        "trade_name": "—"
+      },
+      "corvette_2v2": {
+        "description": "—",
+        "name": "4 Corvettes lourde",
+        "trade_name": "—"
+      },
+      "corvette_2v3": {
+        "description": "—",
+        "name": "8 Corvettes lourde",
+        "trade_name": "—"
+      },
+      "corvette_3": {
+        "description": "—",
+        "name": "2 Corvettes multi-tourelles",
+        "trade_name": "—"
+      },
+      "corvette_3v2": {
+        "description": "—",
+        "name": "4 Corvettes multi-tourelles",
+        "trade_name": "—"
+      },
+      "corvette_3v3": {
+        "description": "—",
+        "name": "8 Corvettes multi-tourelles",
+        "trade_name": "—"
+      },
+      "fighter_1": {
+        "description": "—",
+        "name": "2 Éclaireurs",
+        "trade_name": "—"
+      },
+      "fighter_1v2": {
+        "description": "—",
+        "name": "4 Éclaireurs",
+        "trade_name": "—"
+      },
+      "fighter_1v3": {
+        "description": "—",
+        "name": "8 Éclaireurs",
+        "trade_name": "—"
+      },
+      "fighter_1v4": {
+        "description": "—",
+        "name": "16 Éclaireurs",
+        "trade_name": "—"
+      },
+      "fighter_2": {
+        "description": "—",
+        "name": "2 Chasseurs léger",
+        "trade_name": "—"
+      },
+      "fighter_2v2": {
+        "description": "—",
+        "name": "4 Chasseurs léger",
+        "trade_name": "—"
+      },
+      "fighter_2v3": {
+        "description": "—",
+        "name": "8 Chasseurs léger",
+        "trade_name": "—"
+      },
+      "fighter_2v4": {
+        "description": "Très véloce, il évite la plupart des tirs si bien qu'il faut souvent s'y reprendre pour l'abattre.",
+        "name": "16 Chasseurs léger",
+        "trade_name": "—"
+      },
+      "fighter_3": {
+        "description": "—",
+        "name": "2 Chasseurs-bombardier",
+        "trade_name": "—"
+      },
+      "fighter_3v2": {
+        "description": "—",
+        "name": "4 Chasseurs-bombardier",
+        "trade_name": "—"
+      },
+      "fighter_3v3": {
+        "description": "—",
+        "name": "8 Chasseurs-bombardier",
+        "trade_name": "—"
+      },
+      "fighter_3v4": {
+        "description": "—",
+        "name": "16 Chasseurs-bombardier",
+        "trade_name": "—"
+      },
+      "fighter_4": {
+        "description": "—",
+        "name": "2 Intercepteurs",
+        "trade_name": "—"
+      },
+      "fighter_4v2": {
+        "description": "—",
+        "name": "4 Intercepteurs",
+        "trade_name": "—"
+      },
+      "fighter_4v3": {
+        "description": "—",
+        "name": "8 Intercepteurs",
+        "trade_name": "—"
+      },
+      "fighter_4v4": {
+        "description": "—",
+        "name": "16 Intercepteurs",
+        "trade_name": "—"
+      },
+      "frigate_1": {
+        "description": "—",
+        "name": "2 Frégates d'assaut",
+        "trade_name": "—"
+      },
+      "frigate_1v2": {
+        "description": "—",
+        "name": "4 Frégates d'assaut",
+        "trade_name": "—"
+      },
+      "frigate_2": {
+        "description": "—",
+        "name": "2 Artilleurs",
+        "trade_name": "—"
+      },
+      "frigate_2v2": {
+        "description": "—",
+        "name": "4 Artilleurs",
+        "trade_name": "—"
+      },
+      "frigate_3": {
+        "description": "—",
+        "name": "2 Lance-drones",
+        "trade_name": "—"
+      },
+      "frigate_3v2": {
+        "description": "—",
+        "name": "4 Lance-drones",
+        "trade_name": "—"
+      },
+      "frigate_4": {
+        "description": "—",
+        "name": "2 Plateformes de réparation",
+        "trade_name": "—"
+      },
+      "frigate_4v2": {
+        "description": "—",
+        "name": "4 Plateformes de réparation",
+        "trade_name": "—"
+      },
+      "transport_1": {
+        "description": "—",
+        "name": "Vaisseau de colonisation",
+        "trade_name": "—"
+      },
+      "transport_2": {
+        "description": "—",
+        "name": "Transporteur",
+        "trade_name": "—"
+      }
+    },
+    "speed": {
+      "fast": {
+        "description": "1-2 heures",
+        "name": "Flash"
+      },
+      "medium": {
+        "description": "4-5 jours",
+        "name": "Tactic"
+      },
+      "slow": {
+        "description": "1 mois",
+        "name": "Legacy"
+      }
+    },
+    "stellar_body": {
+      "asteroid": {
+        "name": "Astéroïde"
+      },
+      "asteroid_belt": {
+        "name": "Ceinture d'astéroïdes"
+      },
+      "gaseous_giant": {
+        "name": "Géante gazeuse"
+      },
+      "habitable_planet": {
+        "name": "Planète habitable"
+      },
+      "moon": {
+        "name": "Lune"
+      },
+      "sterile_planet": {
+        "name": "Planète stérile"
+      }
+    },
+    "stellar_system": {
+      "blue_giant": {
+        "name": "Géante bleue"
+      },
+      "orange_dwarf": {
+        "name": "Naine orange"
+      },
+      "red_dwarf": {
+        "name": "Naine rouge"
+      },
+      "red_giant": {
+        "name": "Géante rouge"
+      },
+      "white_dwarf": {
+        "name": "Naine blanche"
+      },
+      "yellow_dwarf": {
+        "name": "Naine jaune"
+      }
+    },
+    "tradition": {
+      "ark_early": {
+        "bonus": "Crédit : +50",
+        "description": "A.R.K., en tant que gigantesque consortium, a accès à des fonds pratiquement illimités.",
+        "name": "Consortium multisidéral"
+      },
+      "ark_late": {
+        "bonus": "Mobilité : +15%",
+        "description": "Quand il s'agit de faire des affaires, avoir accès aux meilleurs vaisseaux de luxe est un impératif.",
+        "name": "Magnat de l'aéronautique"
+      },
+      "ark_malus": {
+        "bonus": "Maintenance des armées : +5%",
+        "description": "A.R.K. fait appel à de nombreux mercenaires, et ils coûtent cher.",
+        "name": "Mercenariat"
+      },
+      "ark_mid": {
+        "bonus": "Stabilité : +10",
+        "description": "Les caméras sont partout.",
+        "name": "Société de surveillance"
+      },
+      "cardan_early": {
+        "bonus": "Renseignement : +20",
+        "description": "La fondation de Nekesh, trouble et mystérieuse, est néanmoins connue pour l'excellence de ses Effacés.",
+        "name": "Cercle de Nekesh"
+      },
+      "cardan_late": {
+        "bonus": "Infiltration des Effacés : +15%",
+        "description": "La doctrine de Sidérian s'est répandue dans toute la galaxie, et beaucoup soutiennent les idées de Cardan sans pour autant l'afficher publiquement.",
+        "name": "Réseau de croyants"
+      },
+      "cardan_malus": {
+        "bonus": "Technologie : -5%",
+        "description": "Sidérian enseigne de manipuler la technologie avec prudence.",
+        "name": "Prudence technologique"
+      },
+      "cardan_mid": {
+        "bonus": "Suppression des Effacés : +15%",
+        "description": "Cardan pratique depuis la nuit des temps la sélection ARN des aptitudes de l'Ombre.",
+        "name": "Sélection ARN"
+      },
+      "myrmezir_early": {
+        "bonus": "Idéologie : +2",
+        "description": "Les discours révolutionnaires des émissaires Myrméziriens ont eu un écho dans toute la galaxie, nombreux sont les systèmes alliés.",
+        "name": "Inspiration révolutionnaire"
+      },
+      "myrmezir_late": {
+        "bonus": "Taux d'imposition des dominions : +10%",
+        "description": "La Charte d'Ariance régit la gestion des protectorats.",
+        "name": "Charte d'Ariance"
+      },
+      "myrmezir_malus": {
+        "bonus": "Stabilité : -5",
+        "description": "La diversité culturelle apporte de nombreux avantages, mais les tensions sont toujours présentes.",
+        "name": "Diversité culturelle"
+      },
+      "myrmezir_mid": {
+        "bonus": "Propagande des Sidérians : +20%",
+        "description": "Les textes fondateurs de la doctrine des Sidérians sont toujours très étudiés.",
+        "name": "Enseignements de Sidérians"
+      },
+      "synelle_early": {
+        "bonus": "Production : +30",
+        "description": "Les Syns sont les colons des confins; ils ont l'habitude des territoires vierges, où tout reste à faire.",
+        "name": "Sel de la terre"
+      },
+      "synelle_late": {
+        "bonus": "Réparation des armées : +20%",
+        "description": "Les soldats-mécaniciens des milices grises Syns se targuent de pouvoir faire voler n'importe quel appareil.",
+        "name": "Milices grises"
+      },
+      "synelle_malus": {
+        "bonus": "Crédit : -5%",
+        "description": "L'importante décentralisation des fiefs Syns entraîne une perte nette pour le fisc.",
+        "name": "Décentralisation"
+      },
+      "synelle_mid": {
+        "bonus": "Défense : +10%",
+        "description": "Les Syns vivent au plus près de la terre, et la défendront à tout prix.",
+        "name": "Force Syns"
+      },
+      "tetrarchy_early": {
+        "bonus": "Technologie : +3",
+        "description": "Les fameux centres de recherche Aphéra établis sur Quadrinople ont toujours été à la pointe de la technologie.",
+        "name": "Centres de recherche Aphéra"
+      },
+      "tetrarchy_late": {
+        "bonus": "Maintenance des armées : -10%",
+        "description": "L'Arsenal de Chatur, place forte de la Tétrarchie, est un formidable réservoir d'armes et de pièces de rechange.",
+        "name": "Arsenal de Chatur"
+      },
+      "tetrarchy_malus": {
+        "bonus": "Idéologie : -5%",
+        "description": "Les grandes maisons impériales refusent toutes avancées sociales, même les plus petites.",
+        "name": "Vieilles Maisons"
+      },
+      "tetrarchy_mid": {
+        "bonus": "XP initiale des frégates : +25%",
+        "description": "Akhéna a conquis la galaxie grâce à ses frégates, versatiles et bien entraînées.",
+        "name": "Coeur de la flotte"
+      }
+    },
+    "victory": {
+      "conquest": {
+        "description": "La Voie de la Conquête demande de revendiquer un grand nombre de secteurs. Chaque secteurs vaut un certain nombre de points (visible sur la vue d'ensemble de la carte). Pour posséder un secteur il faut avoir la majorité des points de systèmes.",
+        "name": "Voie de la **Conquête**",
+        "points": "Points de secteurs requis"
+      },
+      "population": {
+        "description": "La Voie de l'Influence demande de posséder un empire très peuplé. Pour progresser sur cette voie, il faudra que la somme des tous les points de systèmes et de dominions de la faction atteigne un certain seuil.",
+        "name": "Voie de **l'Influence**",
+        "points": "Points de systèmes requis"
+      },
+      "visibility": {
+        "description": "La Voie des Ombres demande d'avoir une grande visibilité sur vos adversaires. Pour progresser sur cette voie, il faudra infiltrer le réseau de la plupart des systèmes de vos adversaires. Cette voie est cachée. Vous ne voyez pas l'avancement de vos adversaire (et eux ne voient pas le votre); surprenez-les !",
+        "name": "Voie des **Ombres**",
+        "points": "Points de visibilité requis"
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+<div class="content medium">
+  <div class="header-box">
+    <div class="tools">
+      <%= live_redirect to: Routes.live_path(@socket, Portal.ArticlesLive) do %>
+        <i class="fa fa-chevron-left"></i> Retour</a>
+      <% end %>
+    </div>
+  </div>
+
+  <%= f = form_for :post, "#", phx_submit: :update, class: "content medium form" %>
+    <header>
+      <h1>Editer un article</h1>
+    </header>
+
+    <section>
+      <fieldset>
+        <%= hidden_input f, :id, value: @post.id %>
+
+        <label class="large" for="title">
+          Titre
+          <%= text_input f, :title, class: "large", id: "title", value: @post.title %>
+        </label>
+
+        <label for="type">
+          Catégorie
+          <%= select f, :category_id, @categories, prompt: "Catégorie", value: @post.category_id %>
+        </label>
+
+        <label class="large" for="summary_raw">
+          Chapeau
+          <%= textarea f, :summary_raw, class: "large", id: "summary_raw", value: @post.summary_raw %>
+        </label>
+        <label class="large" for="content_raw">
+          Contenu
+          <%= textarea f, :content_raw, class: "large", id: "content_raw", value: @post.content_raw %>
+        </label>
+      </fieldset>
+    </section>
+
+    <footer>
+      <%= submit do %>
+        <i class="fa fa-save"></i>
+          Modifier
+      <% end %>
+    </footer>
+  </form>
+</div>

@@ -1,0 +1,73 @@
+<div class="content medium">
+  <div class="header-box">
+    <h2>
+      <strong><%= @total_entries %></strong>
+      actions
+    </h2>
+
+    <div class="pagination">
+      <%= if @page_number == 1 do %>
+        <span class="disabled">
+          <i class="fa fa-angle-left"></i>
+        </span>
+      <% else %>
+        <%= live_redirect to: Routes.live_path(@socket, Portal.LogsLive, page: @page_number - 1) do %>
+          <i class="fas fa-angle-left"></i>
+        <% end %>
+      <% end %>
+      <span class="active">
+        <%= @page_number %>
+      </span>
+      <%= if @page_number == @total_pages do %>
+        <span class="disabled">
+          <i class="fas fa-angle-right"></i>
+        </span>
+      <% else %>
+        <%= live_redirect to: Routes.live_path(@socket, Portal.LogsLive, page: @page_number + 1) do %>
+          <i class="fas fa-angle-right"></i>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th class="square"></th>
+        <th>Type</th>
+        <th></th>
+        <th>Compte</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= for log <- @logs do %>
+        <tr>
+          <td class="square">
+            <%= log.id %>
+          </td>
+          <td>
+            <strong><%= RC.Logs.Log.action_name(log.action) %></strong>
+          </td>
+          <td>
+            <%= live_redirect to: Routes.live_path(@socket, Portal.AccountLive, log.account_id) do %>
+              <i class="fas fa-user"></i>
+              #<%= log.account_id %>
+            <% end %>
+            <%= if not is_nil(log.account.steam_id) do %>
+            (steam)
+            <% end %>
+          </td>
+          <td>
+            <%= live_redirect to: Routes.live_path(@socket, Portal.AccountLive, log.account_id) do %>
+              <%= log.account.name %>
+            <% end %>
+          </td>
+          <td>
+            <%= Portal.Date.format(log.inserted_at, :datetime) %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

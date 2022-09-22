@@ -1,0 +1,2305 @@
+<div class="landing">
+  <section class="section-1">
+    <%= if @show_login do %>
+      <div
+        class="home-bloc colored is-left"
+        id="landing-login"
+        phx-hook="login"
+        data-validated="<%= @validated %>"
+        data-email="<%= @email %>"
+        data-password="<%= @password %>">
+        <div class="header">
+          <h1>Log in</h1>
+          <a class="home-link" href="#" phx-click="show_signup">Sign up</a>
+        </div>
+
+        <%= f = form_for :account, "#", phx_submit: "login" %>
+          <div class="body">
+            <div class="input-text">
+              <%= label f, :email %>
+              <%= email_input f, :email, autofocus: true, required: true, "phx-debounce": "500" %>
+              <%= error_tag f, :email %>
+            </div>
+
+            <div class="input-text">
+              <%= label f, :password %>
+              <%= password_input f, :password, required: true %>
+              <%= error_tag f, :password %>
+            </div>
+          </div>
+
+          <div class="footer">
+            <%= submit "Log in", class: "button" %>
+          </div>
+        </form>
+      </div>
+    <% else %>
+      <div class="home-bloc colored is-left">
+        <div class="header">
+          <h1>Create an account for free</h1>
+          <a class="home-link" href="#" phx-click="show_login">Log in</a>
+        </div>
+
+        <form
+          id="signup-form"
+          method="post"
+          phx-hook="signup">
+          <div class="body">
+            <div class="input-text">
+              <label for="email">Your email address</label>
+              <input id="email" type="text" name="email">
+            </div>
+
+            <div class="input-text">
+              <label for="name">Your pseudo</label>
+              <input id="name" type="text" name="name">
+            </div>
+
+            <div class="input-text">
+              <label for="password1">Choose a password</label>
+              <input id="password1" type="password" name="password1">
+            </div>
+
+            <div class="input-text">
+              <label for="password2">Confirm the password</label>
+              <input id="password2" type="password" name="password2">
+            </div>
+          </div>
+
+          <div class="footer">
+            <%= link "I accept the terms and conditions",
+              to: Routes.live_path(@socket, Portal.CGULive),
+              class: "home-link",
+              target: "_blank",
+              "phx-click": "show_signup" %>
+
+            <button
+              type="submit"
+              class="button"
+              id="button">
+              Create an account
+            </button>
+          </div>
+        </form>
+      </div>
+    <% end %>
+
+    <div
+      id="info-container"
+      class="home-bloc is-left"
+      style="display: none;">
+      <div class="body" id="info"></div>
+    </div>
+
+    <img class="landing-image" src="<%= Routes.static_path(@socket, "/img/landing-ships.png") %>">
+    <img class="landing-image" src="<%= Routes.static_path(@socket, "/img/landing-ships.gif") %>">
+    <img class="landing-image" src="<%= Routes.static_path(@socket, "/img/landing-characters.png") %>">
+  </section>
+
+  <section class="section-2">
+    <div class="landing-card-container">
+      <div class="landing-card-line is-right">
+        <h2 class="landing-card-header">
+          <strong>Develop</strong> a huge space empire, <strong>colonize</strong> many star systems
+        </h2>
+        <div class="card-container">
+          <div class="card-header">
+            <div class="card-header-icon">
+              <svg version="1.1" viewBox="0 0 32 32" class="svg-icon svg-fill">
+                <path pid="0"
+                  d="M9 7h8v6H9zM18 15h6l-4-3 4-3h-6zM9 14h1v10H9zM8.5 32H0v-8.5h1V31h7.5zM14.269 31h3.461v1h-3.461zM32 32h-8.5v-1H31v-7.5h1zM31 14.27h1v3.461h-1zM32 8.5h-1V1h-7.5V0H32zM14.27 0h3.461v1H14.27zM1 8.5H0V0h8.5v1H1zM0 14.269h1v3.461H0z">
+                </path>
+              </svg>
+              <span class="level">1</span>
+            </div>
+            <div class="card-header-content">
+              <div class="title-large nowrap"> Central Hub </div>
+              <div class="title-small">
+                2
+                <svg version="1.1" viewBox="0 0 20 20" class="text-icon svg-icon svg-fill">
+                  <path pid="0"
+                    d="M10 0C4.477 0 0 4.477 0 10s4.477 10 10 10 10-4.477 10-10S15.523 0 10 0zm-.141 18c-1.958 0-3.743-.779-5.118-1.982l.023-2.685c0-2.328 1.097-3.917 2.542-4.334a2.536 2.536 0 01-1.907-2.453A2.543 2.543 0 017.938 4a2.524 2.524 0 012.539 2.521c0 1.174-.805 2.12-1.886 2.408 1.384.373 2.325 1.841 2.39 3.954.32-.816.888-1.235 1.563-1.431a1.844 1.844 0 11.935-.003c1.04.28 1.741 1.462 1.741 3.087l.024 1.49c-1.146.999-2.64 1.674-4.218 1.89L9.859 18zm1.121-5.116">
+                  </path>
+                </svg>
+                Mobilized
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-illustration">
+              <img src="<%= Routes.static_path(@socket, "/img/buildings/infra_dome.jpg") %>">
+              <div class="toast"> Limited </div>
+            </div>
+            <div class="card-information">
+              <div class="card-panel-window">
+                <div class="card-panel-container" style="left: 0px;">
+                  <div class="card-panel">
+                    <div class="blockquote"> Humanity's beating heart in a barren environment. </div>
+                    <div>
+                      <div class="complex-bonus">
+                        <div> Housing </div>
+                        <div>
+                          <strong>+8</strong>
+                          <svg version="1.1" viewBox="0 0 20 20" class="svg-icon svg-fill">
+                            <path pid="0"
+                              d="M10 0C4.478 0 0 4.477 0 10s4.478 10 10 10 10-4.477 10-10S15.522 0 10 0zm5 16H5V9.789l5-5.031 5 5.031V16zm2-5.234a.744.744 0 01-.53-.22L10 4.076l-6.47 6.47a.75.75 0 11-1.061-1.061l7-7a.75.75 0 011.061 0l7 7a.75.75 0 01-.53 1.281z">
+                            </path>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="complex-bonus">
+                        <div> Stability </div>
+                        <div>
+                          <strong>+12</strong>
+                          <svg version="1.1" viewBox="0 0 20 20" class="svg-icon svg-fill">
+                            <path pid="0"
+                              d="M10 0C4.477 0 0 4.478 0 10s4.477 10 10 10 10-4.478 10-10S15.523 0 10 0zm0 16c-3.789 0-5-3-5-3h10s-1.211 3-5 3zm5-4H5L3 8l7-4 7 4-2 4z">
+                            </path>
+                            <circle pid="1" cx="10" cy="9" r="1"></circle>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-container">
+          <div class="card-header">
+            <div class="card-header-icon">
+              <svg version="1.1" viewBox="0 0 32 32" class="svg-icon svg-fill">
+                <path pid="0"
+                  d="M10 15h3v13h-3zM11.5 13s1.5 0 1.5 1h-3c0-1 1.5-1 1.5-1zM6 21h3v7H6zM7.5 19c.75 0 1.5 0 1.5 1H6c0-1 .75-1 1.5-1zM14 19c1-1 2-1 4.5-1s3.5 0 4.5 1v1h-9v-1zM13 23h1v1h-1zM9 23h1v1H9zM25 23h-2v1h2v4h1v-4.286S26 23 25 23zM13 12h-1v-2c.01-.124.091-.798.646-1.354s1.229-.637 1.305-.644L16 8c.293 0 .766-.473 1.146-.854l.08-.08C17.606 6.688 18 6.295 18 6V4h1v2c0 .711-.543 1.252-1.068 1.775l-.079.078C17.29 8.417 16.707 9 16 9h-1.996c.012.002-.358.062-.65.354a1.32 1.32 0 00-.356.701L13 12z">
+                </path>
+                <path pid="1"
+                  d="M11 12h-1V9c0-.708.561-1.269 1.104-1.811C11.71 6.583 12.293 6 13 6h1.997c-.012-.002.352-.056.65-.354.31-.31.355-.686.355-.689L16 4h1v1c-.008.117-.081.788-.646 1.354s-1.236.638-1.311.645L13 7c-.293 0-.766.473-1.146.854C11.431 8.276 11 8.707 11 9v3zM16 23h1v1h-1zM16 21h1v1h-1zM16 25h1v1h-1zM14 21h1v7h-1zM18 21h5v7h-5zM16 27h1v1h-1zM8.5 32H0v-8.5h1V31h7.5zM14.269 31h3.461v1h-3.461zM32 32h-8.5v-1H31v-7.5h1zM31 14.27h1v3.461h-1zM32 8.5h-1V1h-7.5V0H32zM14.27 0h3.461v1H14.27zM1 8.5H0V0h8.5v1H1zM0 14.269h1v3.461H0z">
+                </path>
+              </svg>
+              <span class="level">1</span>
+            </div>
+            <div class="card-header-content">
+              <div class="title-large nowrap"> Metamaterials Factory </div>
+              <div class="title-small">
+                5
+                <svg version="1.1" viewBox="0 0 20 20" class="text-icon svg-icon svg-fill">
+                  <path pid="0"
+                    d="M10 0C4.477 0 0 4.477 0 10s4.477 10 10 10 10-4.477 10-10S15.523 0 10 0zm-.141 18c-1.958 0-3.743-.779-5.118-1.982l.023-2.685c0-2.328 1.097-3.917 2.542-4.334a2.536 2.536 0 01-1.907-2.453A2.543 2.543 0 017.938 4a2.524 2.524 0 012.539 2.521c0 1.174-.805 2.12-1.886 2.408 1.384.373 2.325 1.841 2.39 3.954.32-.816.888-1.235 1.563-1.431a1.844 1.844 0 11.935-.003c1.04.28 1.741 1.462 1.741 3.087l.024 1.49c-1.146.999-2.64 1.674-4.218 1.89L9.859 18zm1.121-5.116">
+                  </path>
+                </svg>
+                Mobilized
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-illustration">
+              <img src="<%= Routes.static_path(@socket, "/img/buildings/high_factory_dome.jpg") %>">
+              <div class="toast"> Limited </div>
+            </div>
+            <div class="card-information">
+              <div class="card-panel-window">
+                <div class="card-panel-container" style="left: 0px;">
+                  <div class="card-panel">
+                    <div class="blockquote">Where first-rate scientists design artificial composite materials for the high-tech
+                      industry.</div>
+                    <div>
+                      <div class="complex-bonus">
+                        <div>
+                          Production (
+                          <strong>
+                            1
+                            <svg version="1.1" viewBox="0 0 20 20" class="svg-icon svg-fill">
+                              <path pid="0"
+                                d="M17 9h-1.596a5.452 5.452 0 00-.876-2.113l1.13-1.13c.707-.707-.707-2.121-1.414-1.414l-1.129 1.13A5.444 5.444 0 0011 4.596V3c0-1-2-1-2 0v1.596a5.463 5.463 0 00-2.113.875L5.758 4.343c-.707-.707-2.121.708-1.414 1.415l1.128 1.128A5.447 5.447 0 004.596 9H3c-1 0-1 2 0 2h1.596c.143.773.445 1.49.876 2.114l-1.128 1.128c-.707.707.707 2.121 1.414 1.414l1.128-1.128A5.447 5.447 0 009 15.404V17c0 1 2 1 2 0v-1.596a5.462 5.462 0 002.114-.876l1.129 1.128c.707.707 2.122-.707 1.415-1.414l-1.129-1.129c.43-.624.732-1.341.875-2.113H17c1 0 1-2 0-2zM6.5 10c0-1.93 1.57-3.5 3.5-3.5s3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5-3.5-1.57-3.5-3.5z">
+                              </path>
+                            </svg>
+                            × 30
+                          </strong>
+                          )
+                        </div>
+                        <div>
+                          <strong>+30</strong>
+                          <svg version="1.1" viewBox="0 0 20 20" class="svg-icon svg-fill">
+                            <path pid="0"
+                              d="M10 0C4.478 0 0 4.478 0 10s4.478 10 10 10 10-4.478 10-10S15.522 0 10 0zm3.646 15.702l-1.578 1.592-.711-.704 1.229-1.239L11.247 14H8.768l-1.351 1.351 1.238 1.237-.707.707-1.592-1.591a.503.503 0 010-.707L8 13.354 8.354 13H9v-1.9c.5.188 1.391.268 2 .08V13h.664l.336.338 1.646 1.66a.502.502 0 010 .704zm-1.212-5.893c-.586.586-1.354.879-2.121.879s-1.535-.293-2.121-.879a2.998 2.998 0 010-4.242l3.405-3.406a8.02 8.02 0 015.065 3.419l-4.228 4.229z">
+                            </path>
+                            <circle pid="1" cx="10" cy="8" r="1"></circle>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="complex-bonus">
+                        <div>
+                          Technology (
+                          <strong>
+                            3
+                            <svg version="1.1" viewBox="0 0 20 20" class="svg-icon svg-fill">
+                              <path pid="0"
+                                d="M14 9.906c-.437 0-.837.145-1.166.381l-1.802-1.496c.333-.482.53-1.066.53-1.697 0-1.654-1.346-3-3-3s-3 1.346-3 3c0 1.094.595 2.043 1.471 2.566l-.835 2.266c-.066-.006-.131-.02-.198-.02a2 2 0 102 2c0-.681-.342-1.28-.862-1.642l.823-2.231a2.976 2.976 0 002.368-.526l1.867 1.551a1.963 1.963 0 00-.196.848 2 2 0 102-2zm-5.437-.812c-1.103 0-2-.896-2-2s.897-2 2-2 2 .896 2 2-.898 2-2 2z">
+                              </path>
+                            </svg>
+                            × 20
+                          </strong>
+                          )
+                        </div>
+                        <div>
+                          <strong>+60</strong>
+                          <svg version="1.1" viewBox="0 0 20 20" class="svg-icon svg-fill">
+                            <path pid="0"
+                              d="M10 0C4.477 0 0 4.477 0 10s4.477 10 10 10 10-4.477 10-10S15.523 0 10 0zm8 11v1h-3v3h-3v3h-1v-3H9v3H8v-3H5v-3H2v-1h3V9H2V8h3V5h3V2h1v3h2V2h1v3h3v3h3v1h-3v2h3z">
+                            </path>
+                            <path pid="1" d="M13 13H7V7h6v6zm-5-1h4V8H8v4z"></path>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-container">
+          <div class="card-header">
+            <div class="card-header-icon">
+              <svg version="1.1" viewBox="0 0 32 32" class="svg-icon svg-fill">
+                <path pid="0"
+                  d="M16.177 29.53L2.47 15.823 15.823 2.47l.707.707L3.884 15.823l12.293 12.293L28.823 15.47l.707.707z"></path>
+                <path pid="1"
+                  d="M6.677 26.323a.999.999 0 01-.707-1.707l2.5-2.5a.999.999 0 111.414 1.414l-2.5 2.5a.995.995 0 01-.707.293zM9.177 9.823a.997.997 0 01-.707-.293l-2.5-2.5a.999.999 0 111.414-1.414l2.5 2.5a.999.999 0 01-.707 1.707zM25.677 26.323a.997.997 0 01-.707-.293l-2.5-2.5a.999.999 0 111.414-1.414l2.5 2.5a.999.999 0 01-.707 1.707zM8.177 20.823v-2l-1 1z">
+                </path>
+                <path pid="2"
+                  d="M8.677 21.323l2.5 2.5v-8l-2.5 2.5zM11.677 24.323l2.5 2.5v-9.5l-2.5-2.5zM14.677 27.323l1.5 1.5 1-1v-8l-2.5-2.5zM17.677 27.323l2.5-2.5v-8l-2.5 2.5z">
+                </path>
+                <path pid="3"
+                  d="M17.177 20.53l-5-5-4.647 4.647a.5.5 0 01-.707-.707l5.354-5.354 5 5 5.646-5.646a.5.5 0 01.707.707l-6.353 6.353z">
+                </path>
+                <path pid="4"
+                  d="M23.177 21.823l-2.5 2.5v-8l2.5-2.5zM4.5 32H0v-4.5h1V31h3.5zM32 32h-4.5v-1H31v-3.5h1zM32 4.5h-1V1h-3.5V0H32zM1 4.5H0V0h4.5v1H1z">
+                </path>
+              </svg>
+              <span class="level">1</span>
+            </div>
+            <div class="card-header-content">
+              <div class="title-large nowrap"> Reflect District </div>
+              <div class="title-small">
+                5
+                <svg version="1.1" viewBox="0 0 20 20" class="text-icon svg-icon svg-fill">
+                  <path pid="0"
+                    d="M10 0C4.477 0 0 4.477 0 10s4.477 10 10 10 10-4.477 10-10S15.523 0 10 0zm-.141 18c-1.958 0-3.743-.779-5.118-1.982l.023-2.685c0-2.328 1.097-3.917 2.542-4.334a2.536 2.536 0 01-1.907-2.453A2.543 2.543 0 017.938 4a2.524 2.524 0 012.539 2.521c0 1.174-.805 2.12-1.886 2.408 1.384.373 2.325 1.841 2.39 3.954.32-.816.888-1.235 1.563-1.431a1.844 1.844 0 11.935-.003c1.04.28 1.741 1.462 1.741 3.087l.024 1.49c-1.146.999-2.64 1.674-4.218 1.89L9.859 18zm1.121-5.116">
+                  </path>
+                </svg>
+                Mobilized
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-illustration">
+              <img src="<%= Routes.static_path(@socket, "/img/buildings/finance_open.jpg") %>">
+              <div class="toast"> Limited </div>
+            </div>
+            <div class="card-information">
+              <div class="card-panel-window">
+                <div class="card-panel-container" style="left: 0px;">
+                  <div class="card-panel">
+                    <div class="blockquote"> A financial hub, the lungs of stelloliberalism. </div>
+                    <div>
+                      <div class="complex-bonus">
+                        <div>
+                          Credit (
+                          <strong>
+                            +0
+                            <svg version="1.1" viewBox="0 0 20 20" class="svg-icon svg-fill">
+                              <path pid="0"
+                                d="M10 0C4.478 0 0 4.477 0 10s4.478 10 10 10 10-4.477 10-10S15.522 0 10 0zM5.657 15.194l-1.051 1.071a.497.497 0 01-.707.007.501.501 0 01-.006-.707l1.051-1.071a.5.5 0 01.713.7zM9.06 11.72l-2.04 2.09a.523.523 0 01-.71 0 .494.494 0 010-.71l2.04-2.08c.19-.19.521-.19.71 0 .09.09.15.21.15.35 0 .13-.05.26-.15.35zm3.722 2.157l-6.659-6.66s7.697-4.775 9.567-2.906c1.868 1.867-2.908 9.566-2.908 9.566z">
+                              </path>
+                              <circle pid="1" cx="12" cy="8" r="1.768"></circle>
+                            </svg>
+                            × 25
+                          </strong>
+                          )
+                        </div>
+                        <div>
+                          <strong>+0</strong>
+                          <svg version="1.1" viewBox="0 0 20 20" class="svg-icon svg-fill">
+                            <path pid="0"
+                              d="M10 0C4.477 0 0 4.477 0 10s4.477 10 10 10 10-4.477 10-10S15.523 0 10 0zm6.707 10.707L14.414 13l1.543 1.543a.999.999 0 11-1.414 1.414L13 14.414l-2.293 2.293a.997.997 0 01-1.414 0L7 14.414l-1.543 1.543a.997.997 0 01-1.414 0 .999.999 0 010-1.414L5.586 13l-2.293-2.293a.999.999 0 010-1.414L5.586 7 4.043 5.457a.999.999 0 111.414-1.414L7 5.586l2.293-2.293a.999.999 0 011.414 0L13 5.586l1.544-1.543a.999.999 0 111.414 1.414L14.414 7l2.293 2.293a.999.999 0 010 1.414z">
+                            </path>
+                            <path pid="1" d="M10 14.586l-4.586-4.585L10 5.415l4.586 4.586z"></path>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="complex-bonus">
+                        <div> Stability </div>
+                        <div>
+                          <strong>−32</strong>
+                          <svg version="1.1" viewBox="0 0 20 20" class="svg-icon svg-fill">
+                            <path pid="0"
+                              d="M10 0C4.477 0 0 4.478 0 10s4.477 10 10 10 10-4.478 10-10S15.523 0 10 0zm0 16c-3.789 0-5-3-5-3h10s-1.211 3-5 3zm5-4H5L3 8l7-4 7 4-2 4z">
+                            </path>
+                            <circle pid="1" cx="10" cy="9" r="1"></circle>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-container">
+          <div class="card-header">
+            <div class="card-header-icon">
+              <svg version="1.1" viewBox="0 0 32 32" class="svg-icon svg-fill">
+                <path pid="0"
+                  d="M12.125 17c2 2 3 1 3 3s0 2-1 3v1h4v-1c-1-1-1-1-1-3s1-1 3-3c3-3-2-6 0-9h-8c2 3-3 6 0 9zM11.125 7h10l1-2h-12zM12.125 25h8v1h-8z">
+                </path>
+                <path pid="1"
+                  d="M13.844 9l-1.49 5.96c-1.294-.12-3.394-.538-4.522-1.667-1.046-1.046-1.04-3.047-.874-4.293h6.886m1.281-1h-9s-1 4 1 6 6 2 6 2l2-8zM25.031 9c.155 1.106.252 3.17-.911 4.274-1.3 1.232-3.665 1.585-4.876 1.686L17.673 9H25.031m.83-1h-9.486l2.109 8s4.215 0 6.324-2c2.107-2 1.053-6 1.053-6zM15 32H0V17h1v14h14zM32 32H17v-1h14V17h1z">
+                </path>
+                <path pid="2" d="M32 15h-1V1H17V0h15zM1 15H0V0h15v1H1z"></path>
+              </svg>
+              <span class="level">1</span>
+            </div>
+            <div class="card-header-content">
+              <div class="title-large nowrap"> Zero-G Arena </div>
+              <div class="title-small">
+                2
+                <svg version="1.1" viewBox="0 0 20 20" class="text-icon svg-icon svg-fill">
+                  <path pid="0"
+                    d="M10 0C4.477 0 0 4.477 0 10s4.477 10 10 10 10-4.477 10-10S15.523 0 10 0zm-.141 18c-1.958 0-3.743-.779-5.118-1.982l.023-2.685c0-2.328 1.097-3.917 2.542-4.334a2.536 2.536 0 01-1.907-2.453A2.543 2.543 0 017.938 4a2.524 2.524 0 012.539 2.521c0 1.174-.805 2.12-1.886 2.408 1.384.373 2.325 1.841 2.39 3.954.32-.816.888-1.235 1.563-1.431a1.844 1.844 0 11.935-.003c1.04.28 1.741 1.462 1.741 3.087l.024 1.49c-1.146.999-2.64 1.674-4.218 1.89L9.859 18zm1.121-5.116">
+                  </path>
+                </svg>
+                Mobilized
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-illustration">
+              <img src="<%= Routes.static_path(@socket, "/img/buildings/happy_pot_orbital.jpg") %>">
+              <div class="toast"> Limited </div>
+            </div>
+            <div class="card-information">
+              <div class="card-panel-window">
+                <div class="card-panel-container" style="left: 0px;">
+                  <div class="card-panel">
+                    <div class="blockquote"> Brawling is even more fun in zero gravity. </div>
+                    <div>
+                      <div class="complex-bonus">
+                        <div>
+                          Stability (
+                          <strong>
+                            4
+                            <svg version="1.1" viewBox="0 0 20 20" class="svg-icon svg-fill">
+                              <path pid="0"
+                                d="M16.681 11s-2.145-4.127-2.447-4.127c-.26 0-2.399 4.127-2.399 4.127h4.846zm.418 1H2.864L1 15h18zm-5.761-1S7.661 4.121 7.355 4.121c-.288 0-4.03 6.879-4.03 6.879h8.013z">
+                              </path>
+                            </svg>
+                            × 8
+                          </strong>
+                          )
+                        </div>
+                        <div>
+                          <strong>+32</strong>
+                          <svg version="1.1" viewBox="0 0 20 20" class="svg-icon svg-fill">
+                            <path pid="0"
+                              d="M10 0C4.477 0 0 4.478 0 10s4.477 10 10 10 10-4.478 10-10S15.523 0 10 0zm0 16c-3.789 0-5-3-5-3h10s-1.211 3-5 3zm5-4H5L3 8l7-4 7 4-2 4z">
+                            </path>
+                            <circle pid="1" cx="10" cy="9" r="1"></circle>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="complex-bonus">
+                        <div>
+                          Credit (
+                          <strong>
+                            4
+                            <svg version="1.1" viewBox="0 0 20 20" class="svg-icon svg-fill">
+                              <path pid="0"
+                                d="M16.681 11s-2.145-4.127-2.447-4.127c-.26 0-2.399 4.127-2.399 4.127h4.846zm.418 1H2.864L1 15h18zm-5.761-1S7.661 4.121 7.355 4.121c-.288 0-4.03 6.879-4.03 6.879h8.013z">
+                              </path>
+                            </svg>
+                            × 5
+                          </strong>
+                          )
+                        </div>
+                        <div>
+                          <strong>+20</strong>
+                          <svg version="1.1" viewBox="0 0 20 20" class="svg-icon svg-fill">
+                            <path pid="0"
+                              d="M10 0C4.477 0 0 4.477 0 10s4.477 10 10 10 10-4.477 10-10S15.523 0 10 0zm6.707 10.707L14.414 13l1.543 1.543a.999.999 0 11-1.414 1.414L13 14.414l-2.293 2.293a.997.997 0 01-1.414 0L7 14.414l-1.543 1.543a.997.997 0 01-1.414 0 .999.999 0 010-1.414L5.586 13l-2.293-2.293a.999.999 0 010-1.414L5.586 7 4.043 5.457a.999.999 0 111.414-1.414L7 5.586l2.293-2.293a.999.999 0 011.414 0L13 5.586l1.544-1.543a.999.999 0 111.414 1.414L14.414 7l2.293 2.293a.999.999 0 010 1.414z">
+                            </path>
+                            <path pid="1" d="M10 14.586l-4.586-4.585L10 5.415l4.586 4.586z"></path>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-container">
+          <div class="card-header">
+            <div class="card-header-icon">
+              <svg version="1.1" viewBox="0 0 32 32" class="svg-icon svg-fill">
+                <path pid="0"
+                  d="M16.698 17.219C18.115 16.867 19 14.479 19 13c0-1.718-1.083-3-3-3-1.706.058-3 1.282-3 3 0 1.479.852 3.867 2.221 4.219-1.808.521-3.182 2.51-3.182 5.426L12 28h8v-5.355c0-2.916-1.433-4.906-3.302-5.426zM14 13a2 2 0 114 0 2 2 0 01-4 0z">
+                </path>
+                <path pid="1"
+                  d="M16 19.5c-3.584 0-6.5-2.916-6.5-6.5s2.916-6.5 6.5-6.5 6.5 2.916 6.5 6.5-2.916 6.5-6.5 6.5zm0-12c-3.033 0-5.5 2.467-5.5 5.5s2.467 5.5 5.5 5.5 5.5-2.467 5.5-5.5-2.467-5.5-5.5-5.5z">
+                </path>
+                <path pid="2"
+                  d="M9.5 14H7a1 1 0 010-2h2.5a1 1 0 010 2zM25 14h-2.5a1 1 0 010-2H25a1 1 0 010 2zM16 7.5a1 1 0 01-1-1V4a1 1 0 012 0v2.5a1 1 0 01-1 1zM4.5 32H0v-4.5h1V31h3.5zM32 32h-4.5v-1H31v-3.5h1zM32 4.5h-1V1h-3.5V0H32zM1 4.5H0V0h4.5v1H1z">
+                </path>
+              </svg>
+              <span class="level">1</span>
+            </div>
+            <div class="card-header-content">
+              <div class="title-large nowrap"> Citadel </div>
+              <div class="title-small">
+                2
+                <svg version="1.1" viewBox="0 0 20 20" class="text-icon svg-icon svg-fill">
+                  <path pid="0"
+                    d="M10 0C4.477 0 0 4.477 0 10s4.477 10 10 10 10-4.477 10-10S15.523 0 10 0zm-.141 18c-1.958 0-3.743-.779-5.118-1.982l.023-2.685c0-2.328 1.097-3.917 2.542-4.334a2.536 2.536 0 01-1.907-2.453A2.543 2.543 0 017.938 4a2.524 2.524 0 012.539 2.521c0 1.174-.805 2.12-1.886 2.408 1.384.373 2.325 1.841 2.39 3.954.32-.816.888-1.235 1.563-1.431a1.844 1.844 0 11.935-.003c1.04.28 1.741 1.462 1.741 3.087l.024 1.49c-1.146.999-2.64 1.674-4.218 1.89L9.859 18zm1.121-5.116">
+                  </path>
+                </svg>
+                Mobilized
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-illustration">
+              <img src="<%= Routes.static_path(@socket, "/img/buildings/ideo_open.jpg") %>">
+              <div class="toast"> Limited </div>
+            </div>
+            <div class="card-information">
+              <div class="card-panel-window">
+                <div class="card-panel-container" style="left: 0px;">
+                  <div class="card-panel">
+                    <div class="blockquote"> Symbol of might and resolute authority, its mere presence is enough to convince us
+                      that we
+                      are on the right side. </div>
+                    <div>
+                      <div class="complex-bonus">
+                        <div> Ideology </div>
+                        <div>
+                          <strong>+4</strong>
+                          <svg version="1.1" viewBox="0 0 20 20" class="svg-icon svg-fill">
+                            <circle pid="0" cx="10" cy="5" r="1.001"></circle>
+                            <circle pid="1" cx="10" cy="15" r="1.001"></circle>
+                            <path pid="2"
+                              d="M10 0C4.478 0 0 4.478 0 10s4.478 10 10 10c5.523 0 10-4.478 10-10S15.523 0 10 0zm0 1.999c1.654 0 3 1.347 3 3.001s-1.346 3.001-3 3.001S7 6.655 7 5s1.346-3.001 3-3.001zm-4.27 5.65a.5.5 0 01.702.092C7.291 8.859 8.592 9.5 10 9.5s2.709-.641 3.568-1.759a.501.501 0 01.793.609c-1.05 1.366-2.64 2.15-4.361 2.15s-3.311-.784-4.361-2.15a.5.5 0 01.091-.701zm11.162 5.271a10.482 10.482 0 01-3.896 2.13 3.002 3.002 0 01-2.995 2.952 3 3 0 01-2.995-2.956 10.461 10.461 0 01-3.897-2.127.5.5 0 01.656-.754 9.499 9.499 0 003.403 1.892 2.994 2.994 0 012.833-2.058c1.324 0 2.438.869 2.835 2.062a9.488 9.488 0 003.4-1.895.5.5 0 11.656.754z">
+                            </path>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="complex-bonus">
+                        <div>
+                          Ideology (
+                          <strong>
+                            8
+                            <svg version="1.1" viewBox="0 0 20 20" class="svg-icon svg-fill">
+                              <path pid="0"
+                                d="M10.52 8.389c1.051-.262 1.807-1.182 1.807-2.279 0-1.277-.977-2.357-2.398-2.357a2.356 2.356 0 00-2.281 2.356c0 1.098.756 2.018 1.773 2.279-1.344.387-2.363 1.865-2.363 4.029l-.029 3.254a7.943 7.943 0 005.94-.002l.002-3.252c0-2.163-1.065-3.642-2.451-4.028z">
+                              </path>
+                            </svg>
+                            × 0,6
+                          </strong>
+                          )
+                        </div>
+                        <div>
+                          <strong>+4,8</strong>
+                          <svg version="1.1" viewBox="0 0 20 20" class="svg-icon svg-fill">
+                            <circle pid="0" cx="10" cy="5" r="1.001"></circle>
+                            <circle pid="1" cx="10" cy="15" r="1.001"></circle>
+                            <path pid="2"
+                              d="M10 0C4.478 0 0 4.478 0 10s4.478 10 10 10c5.523 0 10-4.478 10-10S15.523 0 10 0zm0 1.999c1.654 0 3 1.347 3 3.001s-1.346 3.001-3 3.001S7 6.655 7 5s1.346-3.001 3-3.001zm-4.27 5.65a.5.5 0 01.702.092C7.291 8.859 8.592 9.5 10 9.5s2.709-.641 3.568-1.759a.501.501 0 01.793.609c-1.05 1.366-2.64 2.15-4.361 2.15s-3.311-.784-4.361-2.15a.5.5 0 01.091-.701zm11.162 5.271a10.482 10.482 0 01-3.896 2.13 3.002 3.002 0 01-2.995 2.952 3 3 0 01-2.995-2.956 10.461 10.461 0 01-3.897-2.127.5.5 0 01.656-.754 9.499 9.499 0 003.403 1.892 2.994 2.994 0 012.833-2.058c1.324 0 2.438.869 2.835 2.062a9.488 9.488 0 003.4-1.895.5.5 0 11.656.754z">
+                            </path>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-container">
+          <div class="card-header">
+            <div class="card-header-icon">
+              <svg version="1.1" viewBox="0 0 32 32" class="svg-icon svg-fill">
+                <path pid="0"
+                  d="M6 10h2v12H6zM9 10h.5v12H9zM11 10h1v12h-1zM13 10h3v12h-3zM17 10h1v12h-1zM20 10h1v12h-1zM22 10h.5v12H22zM24 10h2v12h-2zM4.5 32H0v-4.5h1V31h3.5zM32 32h-4.5v-1H31v-3.5h1zM32 4.5h-1V1h-3.5V0H32zM1 4.5H0V0h4.5v1H1z">
+                </path>
+              </svg>
+              <span class="level">1</span>
+            </div>
+            <div class="card-header-content">
+              <div class="title-large nowrap"> Commercial Artery </div>
+              <div class="title-small">
+                2
+                <svg version="1.1" viewBox="0 0 20 20" class="text-icon svg-icon svg-fill">
+                  <path pid="0"
+                    d="M10 0C4.477 0 0 4.477 0 10s4.477 10 10 10 10-4.477 10-10S15.523 0 10 0zm-.141 18c-1.958 0-3.743-.779-5.118-1.982l.023-2.685c0-2.328 1.097-3.917 2.542-4.334a2.536 2.536 0 01-1.907-2.453A2.543 2.543 0 017.938 4a2.524 2.524 0 012.539 2.521c0 1.174-.805 2.12-1.886 2.408 1.384.373 2.325 1.841 2.39 3.954.32-.816.888-1.235 1.563-1.431a1.844 1.844 0 11.935-.003c1.04.28 1.741 1.462 1.741 3.087l.024 1.49c-1.146.999-2.64 1.674-4.218 1.89L9.859 18zm1.121-5.116">
+                  </path>
+                </svg>
+                Mobilized
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-illustration">
+              <img src="<%= Routes.static_path(@socket, "/img/buildings/market_open.jpg") %>">
+            </div>
+            <div class="card-information">
+              <div class="card-panel-window">
+                <div class="card-panel-container" style="left: 0px;">
+                  <div class="card-panel">
+                    <div class="blockquote"> A veritable river of goods and capital. </div>
+                    <div>
+                      <div class="complex-bonus">
+                        <div>
+                          Credit (
+                          <strong>
+                            8
+                            <svg version="1.1" viewBox="0 0 20 20" class="svg-icon svg-fill">
+                              <path pid="0"
+                                d="M10.52 8.389c1.051-.262 1.807-1.182 1.807-2.279 0-1.277-.977-2.357-2.398-2.357a2.356 2.356 0 00-2.281 2.356c0 1.098.756 2.018 1.773 2.279-1.344.387-2.363 1.865-2.363 4.029l-.029 3.254a7.943 7.943 0 005.94-.002l.002-3.252c0-2.163-1.065-3.642-2.451-4.028z">
+                              </path>
+                            </svg>
+                            × 8
+                          </strong>
+                          )
+                        </div>
+                        <div>
+                          <strong>+64</strong>
+                          <svg version="1.1" viewBox="0 0 20 20" class="svg-icon svg-fill">
+                            <path pid="0"
+                              d="M10 0C4.477 0 0 4.477 0 10s4.477 10 10 10 10-4.477 10-10S15.523 0 10 0zm6.707 10.707L14.414 13l1.543 1.543a.999.999 0 11-1.414 1.414L13 14.414l-2.293 2.293a.997.997 0 01-1.414 0L7 14.414l-1.543 1.543a.997.997 0 01-1.414 0 .999.999 0 010-1.414L5.586 13l-2.293-2.293a.999.999 0 010-1.414L5.586 7 4.043 5.457a.999.999 0 111.414-1.414L7 5.586l2.293-2.293a.999.999 0 011.414 0L13 5.586l1.544-1.543a.999.999 0 111.414 1.414L14.414 7l2.293 2.293a.999.999 0 010 1.414z">
+                            </path>
+                            <path pid="1" d="M10 14.586l-4.586-4.585L10 5.415l4.586 4.586z"></path>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-container">
+          <div class="card-header">
+            <div class="card-header-icon">
+              <svg version="1.1" viewBox="0 0 32 32" class="svg-icon svg-fill">
+                <path pid="0"
+                  d="M7 20h16v.5H7zM8 9h4v6H8zM8 16h4v1H8zM9 17.5h2V19H9zM9 4h2v4.5H9zM19 18h4v1h-4zM20 24a2 2 0 012-2c.366 0 .705.105 1 .277V21h-4v4h1.277A1.974 1.974 0 0120 24z">
+                </path>
+                <path pid="1"
+                  d="M19 6c-3.663 0-6 3.554-6 6v3h2v-3c0-1.41 1.519-4 4-4s4 2.59 4 4v10.277c.596.347 1 .985 1 1.723s-.404 1.376-1 1.722V27h2V12c0-2.446-2.337-6-6-6z">
+                </path>
+                <path pid="2" d="M22 26a1.993 1.993 0 01-1.723-1H11l-2 2h14v-1.277A1.977 1.977 0 0122 26z"></path>
+                <circle pid="3" cx="22" cy="24" r="1"></circle>
+                <path pid="4" d="M4.5 32H0v-4.5h1V31h3.5zM32 32h-4.5v-1H31v-3.5h1zM32 4.5h-1V1h-3.5V0H32zM1 4.5H0V0h4.5v1H1z">
+                </path>
+              </svg>
+              <span class="level">1</span>
+            </div>
+            <div class="card-header-content">
+              <div class="title-large nowrap"> Accelerator </div>
+              <div class="title-small">
+                5
+                <svg version="1.1" viewBox="0 0 20 20" class="text-icon svg-icon svg-fill">
+                  <path pid="0"
+                    d="M10 0C4.477 0 0 4.477 0 10s4.477 10 10 10 10-4.477 10-10S15.523 0 10 0zm-.141 18c-1.958 0-3.743-.779-5.118-1.982l.023-2.685c0-2.328 1.097-3.917 2.542-4.334a2.536 2.536 0 01-1.907-2.453A2.543 2.543 0 017.938 4a2.524 2.524 0 012.539 2.521c0 1.174-.805 2.12-1.886 2.408 1.384.373 2.325 1.841 2.39 3.954.32-.816.888-1.235 1.563-1.431a1.844 1.844 0 11.935-.003c1.04.28 1.741 1.462 1.741 3.087l.024 1.49c-1.146.999-2.64 1.674-4.218 1.89L9.859 18zm1.121-5.116">
+                  </path>
+                </svg>
+                Mobilized
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-illustration">
+              <img src="<%= Routes.static_path(@socket, "/img/buildings/research_open.jpg") %>">
+              <div class="toast"> Limited </div>
+            </div>
+            <div class="card-information">
+              <div class="card-panel-window">
+                <div class="card-panel-container" style="left: 0px;">
+                  <div class="card-panel">
+                    <div class="blockquote"> — </div>
+                    <div>
+                      <div class="complex-bonus">
+                        <div>
+                          Technology (
+                          <strong>
+                            3
+                            <svg version="1.1" viewBox="0 0 20 20" class="svg-icon svg-fill">
+                              <path pid="0"
+                                d="M14 9.906c-.437 0-.837.145-1.166.381l-1.802-1.496c.333-.482.53-1.066.53-1.697 0-1.654-1.346-3-3-3s-3 1.346-3 3c0 1.094.595 2.043 1.471 2.566l-.835 2.266c-.066-.006-.131-.02-.198-.02a2 2 0 102 2c0-.681-.342-1.28-.862-1.642l.823-2.231a2.976 2.976 0 002.368-.526l1.867 1.551a1.963 1.963 0 00-.196.848 2 2 0 102-2zm-5.437-.812c-1.103 0-2-.896-2-2s.897-2 2-2 2 .896 2 2-.898 2-2 2z">
+                              </path>
+                            </svg>
+                            × 22
+                          </strong>
+                          )
+                        </div>
+                        <div>
+                          <strong>+66</strong>
+                          <svg version="1.1" viewBox="0 0 20 20" class="svg-icon svg-fill">
+                            <path pid="0"
+                              d="M10 0C4.477 0 0 4.477 0 10s4.477 10 10 10 10-4.477 10-10S15.523 0 10 0zm8 11v1h-3v3h-3v3h-1v-3H9v3H8v-3H5v-3H2v-1h3V9H2V8h3V5h3V2h1v3h2V2h1v3h3v3h3v1h-3v2h3z">
+                            </path>
+                            <path pid="1" d="M13 13H7V7h6v6zm-5-1h4V8H8v4z"></path>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="landing-card-container">
+      <div class="landing-card-line is-left">
+        <div class="card-container">
+          <div class="card-header">
+            <div class="card-header-icon">
+              <svg version="1.1" viewBox="0 0 32 32" class="svg-icon svg-fill">
+                <path pid="0"
+                  d="M27.75 12.336V4.25h-8.086L16 .586 12.336 4.25H4.25v8.086L.586 16l3.664 3.664v8.086h8.086L16 31.414l3.664-3.664h8.086v-8.086L31.414 16l-3.664-3.664zm-23 14.914v-7.086l7.086 7.086H4.75zm5.144-5.686l1.051-1.071a.5.5 0 01.713.7l-1.051 1.07a.493.493 0 01-.356.15.498.498 0 01-.357-.849zM4.75 11.836V4.75h7.086L4.75 11.836zm10.31 5.885l-2.04 2.09a.523.523 0 01-.71 0 .51.51 0 01-.149-.351c0-.14.05-.26.149-.36l2.04-2.08a.515.515 0 01.71 0c.09.09.15.211.15.351 0 .129-.05.259-.15.35zm3.722 2.156l-6.659-6.66s7.697-4.775 9.566-2.906c1.87 1.867-2.907 9.566-2.907 9.566zm8.468 7.373h-7.086l7.086-7.086v7.086zm0-15.414L20.164 4.75h7.086v7.086z">
+                </path>
+                <circle pid="1" cx="18" cy="14" r="1.768"></circle>
+              </svg>
+            </div>
+            <div class="card-header-content">
+              <div class="title-large"> Luxury Architecture </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-illustration"><img src="<%= Routes.static_path(@socket, "/img/patents/open_mobility.jpg") %>">
+            </div>
+            <div class="card-information">
+              <div class="card-panel-window">
+                <div class="card-panel-container" style="left: 0px;">
+                  <div class="card-panel">
+                    <div class="complex-bonus">
+                      <div>
+                        <span>Unlocks <strong>Reflect District</strong></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-container">
+          <div class="card-header">
+            <div class="card-header-icon">
+              <svg version="1.1" viewBox="0 0 32 32" class="svg-icon svg-fill">
+                <path pid="0"
+                  d="M27.75 12.336V4.25h-8.086L16 .586 12.336 4.25H4.25v8.086L.586 16l3.664 3.664v8.086h8.086L16 31.414l3.664-3.664h8.086v-8.086L31.414 16l-3.664-3.664zm-.5-7.586v7.086L20.164 4.75h7.086zm-22.5 0h7.086L4.75 11.836V4.75zm0 22.5v-7.086l7.086 7.086H4.75zm22.5 0h-7.086l7.086-7.086v7.086zM16 28.586L3.414 16 16 3.414 28.586 16 16 28.586z">
+                </path>
+                <path pid="1"
+                  d="M20.2 19.1V10h-8.4v11.2h2.1V24l1.05-1.4L16 24v-2.8h4.2v-.7H16v-.7h-2.1v.7h-1.4v-1.4h7.7zm-7-7.7h6.3v1.4h-6.3v-1.4zm0 2.1h6.3v.7h-6.3v-.7z">
+                </path>
+              </svg>
+            </div>
+            <div class="card-header-content">
+              <div class="title-large"> Neural Derivations </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-illustration"><img src="<%= Routes.static_path(@socket, "/img/patents/dome_academy.jpg") %>">
+            </div>
+            <div class="card-information">
+              <div class="card-panel-window">
+                <div class="card-panel-container" style="left: 0px;">
+                  <div class="card-panel">
+                    <div class="complex-bonus">
+                      <div>
+                        <span>Unlocks <strong>Aerospace Military Academy</strong></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-container">
+          <div class="card-header">
+            <div class="card-header-icon">
+              <svg version="1.1" viewBox="0 0 32 32" class="svg-icon svg-fill">
+                <path pid="0"
+                  d="M27.75 12.336V4.25h-8.086L16 .586 12.336 4.25H4.25v8.086L.586 16l3.664 3.664v8.086h8.086L16 31.414l3.664-3.664h8.086v-8.086L31.414 16l-3.664-3.664zm-.5-7.586v7.086L20.164 4.75h7.086zm-22.5 0h7.086L4.75 11.836V4.75zm0 22.5v-7.086l7.086 7.086H4.75zm22.5 0h-7.086l7.086-7.086v7.086zM16 28.586L3.414 16 16 3.414 28.586 16 16 28.586z">
+                </path>
+                <path pid="1"
+                  d="M22.326 15.826A6.333 6.333 0 0016 9.5a6.333 6.333 0 00-6.326 6.326c0 3.361 2.639 6.113 5.954 6.307V25.5h.744v-3.368c3.316-.194 5.954-2.944 5.954-6.306zm-5.954 5.563v-4.127a1.483 1.483 0 001.116-1.436 1.489 1.489 0 00-2.976 0c0 .691.476 1.27 1.116 1.436v4.127c-2.904-.193-5.209-2.611-5.209-5.563 0-3.078 2.504-5.582 5.582-5.582s5.582 2.504 5.582 5.582c-.001 2.951-2.308 5.369-5.211 5.563z">
+                </path>
+              </svg>
+            </div>
+            <div class="card-header-content">
+              <div class="title-large"> Extended Magnetic Generators </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-illustration"><img src="<%= Routes.static_path(@socket, "/img/patents/open_defense.jpg") %>">
+            </div>
+            <div class="card-information">
+              <div class="card-panel-window">
+                <div class="card-panel-container" style="left: 0px;">
+                  <div class="card-panel">
+                    <div class="complex-bonus">
+                      <div>
+                        <span>Unlocks <strong>Planetary Shield</strong></span>
+                      </div>
+                    </div>
+                    <div class="complex-bonus">
+                      <div>
+                        <span>Unlocks <strong>Interception Tunnels</strong></span>
+                      </div>
+                    </div>
+                    <div class="complex-bonus">
+                      <div>
+                        <span>Unlocks <strong>S.L.S.D. Network</strong></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-container">
+          <div class="card-header">
+            <div class="card-header-icon">
+              <svg version="1.1" viewBox="0 0 32 32" class="svg-icon svg-fill">
+                <path pid="0"
+                  d="M27.75 12.336V4.25h-8.086L16 .586 12.336 4.25H4.25v8.086L.586 16l3.664 3.664v8.086h8.086L16 31.414l3.664-3.664h8.086v-8.086L31.414 16l-3.664-3.664zm-.5-7.586v7.086L20.164 4.75h7.086zm-22.5 0h7.086L4.75 11.836V4.75zm0 22.5v-7.086l7.086 7.086H4.75zM13.414 26h5.172L16 28.586 13.414 26zm5.563-1.391a1.387 1.387 0 01-.193-.695c0-.77.623-1.393 1.392-1.393.255 0 .49.074.695.193.208.121.382.292.504.498l-.537.537a.685.685 0 00-.663-.532.695.695 0 00-.695.696c0 .326.229.587.533.663l-.537.537a1.393 1.393 0 01-.499-.504zm8.273 2.641h-7.086l7.086-7.086v7.086zm-4.988-4.925v-6.76c0-1.702-1.627-4.174-4.175-4.174s-4.174 2.472-4.174 4.174v2.087h1.392v-2.087c0-.981 1.056-2.783 2.782-2.783s2.782 1.802 2.782 2.783v4.174h-2.782v.694h2.782v.696H9.739v.349h11.13v.348h-2.782v2.783h-5.565l-.249.25L3.414 16 16 3.414 28.586 16l-6.324 6.325z">
+                </path>
+                <path pid="1"
+                  d="M10.435 13.478h2.783v4.174h-2.783zM10.435 18.348h2.783v.696h-2.783zM11.131 19.391h1.391v1.043h-1.391zM11.131 10h1.391v3.13h-1.391z">
+                </path>
+              </svg>
+            </div>
+            <div class="card-header-content">
+              <div class="title-large"> Z-poly Coils </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-illustration"><img src="<%= Routes.static_path(@socket, "/img/patents/open_research.jpg") %>">
+            </div>
+            <div class="card-information">
+              <div class="card-panel-window">
+                <div class="card-panel-container" style="left: 0px;">
+                  <div class="card-panel">
+                    <div class="complex-bonus">
+                      <div>
+                        <span>Unlocks <strong>Accelerator</strong></span>
+                      </div>
+                    </div>
+                    <div class="complex-bonus">
+                      <div>
+                        <span>Unlocks <strong>Zero-G Arena</strong></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-container">
+          <div class="card-header">
+            <div class="card-header-icon">
+              <svg version="1.1" viewBox="0 0 32 32" class="svg-icon svg-fill">
+                <path pid="0"
+                  d="M27.75 12.336V4.25h-8.086L16 .586 12.336 4.25H4.25v8.086L.586 16l3.664 3.664v8.086h8.086L16 31.414l3.664-3.664h8.086v-8.086L31.414 16l-3.664-3.664zm-.5-7.586v7.086L20.164 4.75h7.086zm-22.5 0h7.086L4.75 11.836V4.75zm0 22.5v-7.086l7.086 7.086H4.75zM13.414 26h5.172L16 28.586 13.414 26zm5.563-1.391a1.387 1.387 0 01-.193-.695c0-.77.623-1.393 1.392-1.393.255 0 .49.074.695.192.208.121.382.292.504.498l-.537.537a.685.685 0 00-.663-.533.688.688 0 00-.164 1.359l-.537.536a1.372 1.372 0 01-.497-.501zm8.273 2.641h-7.086l7.086-7.086v7.086zm-4.988-4.925v-6.76c0-1.702-1.627-4.175-4.175-4.175s-4.174 2.473-4.174 4.175v2.087h1.392v-2.087c0-.981 1.056-2.782 2.782-2.782s2.782 1.801 2.782 2.782v4.174h-2.782v.694h2.782v.696H9.739v.349h11.13v.348h-2.782v2.783h-5.565l-.249.248L3.414 16 16 3.414 28.586 16l-6.324 6.325z">
+                </path>
+                <path pid="1"
+                  d="M10.435 13.479h2.783v4.173h-2.783zM10.435 18.348h2.783v.695h-2.783zM11.131 19.391h1.391v1.045h-1.391zM11.131 10h1.391v3.131h-1.391z">
+                </path>
+              </svg>
+            </div>
+            <div class="card-header-content">
+              <div class="title-large"> Exobiology </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-illustration"><img src="<%= Routes.static_path(@socket, "/img/patents/orbital_research.jpg") %>">
+            </div>
+            <div class="card-information">
+              <div class="card-panel-window">
+                <div class="card-panel-container" style="left: 0px;">
+                  <div class="card-panel">
+                    <div class="complex-bonus">
+                      <div>
+                        <span>Unlocks <strong>Experiment Station</strong></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-container">
+          <div class="card-header">
+            <div class="card-header-icon">
+              <svg version="1.1" viewBox="0 0 32 32" class="svg-icon svg-fill">
+                <g>
+                  <path pid="0"
+                    d="M10.824 12h6.588v4.941h-6.588zM18.234 18.588h4.942l-3.294-2.47 3.294-2.471h-4.942zM10.824 17.766h.823V26h-.823z">
+                  </path>
+                  <g>
+                    <path pid="1"
+                      d="M27.75 12.336V4.25h-8.086L16 .586 12.336 4.25H4.25v8.086L.586 16l3.664 3.664v8.086H12V30h2.586L16 31.414 17.414 30H20v-2.25h7.75v-8.086L31.414 16l-3.664-3.664zm-.5-7.586v7.086L20.164 4.75h7.086zm-22.5 0h7.086L4.75 11.836V4.75zm0 22.5v-7.086l7.086 7.086H4.75zM16.3 28h-.6v-4h.6v4zm10.95-.75h-7.086l7.086-7.086v7.086zM20 24.586V22h-8v2.586L3.414 16 16 3.414 28.586 16 20 24.586z">
+                    </path>
+                  </g>
+                </g>
+              </svg>
+            </div>
+            <div class="card-header-content">
+              <div class="title-large"> Urbanization </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-illustration"><img src="<%= Routes.static_path(@socket, "/img/patents/infra_open_1.jpg") %>">
+            </div>
+            <div class="card-information">
+              <div class="card-panel-window">
+                <div class="card-panel-container" style="left: 0px;">
+                  <div class="card-panel">
+                    <div class="complex-bonus">
+                      <div>
+                        <span>Unlocks <strong>Megapolis</strong></span>
+                      </div>
+                    </div>
+                    <div class="complex-bonus">
+                      <div>
+                        <span>Unlocks <strong>Central Hub</strong></span>
+                      </div>
+                    </div>
+                    <div class="complex-bonus">
+                      <div>
+                        <span>Unlocks <strong>Array of Excavators</strong></span>
+                      </div>
+                    </div>
+                    <div class="complex-bonus">
+                      <div>
+                        <span>Unlocks <strong>Refining Ducts</strong></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-container">
+          <div class="card-header">
+            <div class="card-header-icon">
+              <svg version="1.1" viewBox="0 0 32 32" class="svg-icon svg-fill">
+                <path pid="0"
+                  d="M10.824 12h6.589v4.941h-6.589zM18.236 18.588h4.94l-3.294-2.47 3.294-2.471h-4.94zM10.824 17.766h.823V26h-.823z">
+                </path>
+                <g>
+                  <path pid="1"
+                    d="M27.75 12.336V4.25h-8.086L16 .586 12.336 4.25H4.25v8.086L.586 16l3.664 3.664v8.086H12V30h2.586L16 31.414 17.414 30H20v-2.25h7.75v-8.086L31.414 16l-3.664-3.664zm-.5-7.586v7.086L20.164 4.75h7.086zm-22.5 0h7.086L4.75 11.836V4.75zm0 22.5v-7.086l7.086 7.086H4.75zM16.3 28h-.6v-4h.6v4zm10.95-.75h-7.086l7.086-7.086v7.086zM20 24.586V22h-8v2.586L3.414 16 16 3.414 28.586 16 20 24.586z">
+                  </path>
+                </g>
+              </svg>
+            </div>
+            <div class="card-header-content">
+              <div class="title-large"> Controlled Environment </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-illustration"><img src="<%= Routes.static_path(@socket, "/img/patents/infra_dome_1.jpg") %>">
+            </div>
+            <div class="card-information">
+              <div class="card-panel-window">
+                <div class="card-panel-container" style="left: 0px;">
+                  <div class="card-panel">
+                    <div class="complex-bonus">
+                      <div>
+                        <span>Unlocks <strong>Capsule Cities</strong></span>
+                      </div>
+                    </div>
+                    <div class="complex-bonus">
+                      <div>
+                        <span>Unlocks <strong>Residential Archipelago</strong></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h2 class="landing-card-header">
+          Buy many <strong>patents</strong> and move up the tech tree
+        </h2>
+      </div>
+    </div>
+
+    <div class="landing-card-container">
+      <div class="landing-card-line is-right">
+        <h2 class="landing-card-header">
+          Buy <strong>lex</strong> and form a unique <strong>political system</strong>
+        </h2>
+        <div class="card-container">
+          <div class="card-header">
+            <div class="card-header-icon">
+              <svg version="1.1" viewBox="0 0 32 32" class="svg-icon svg-fill">
+                <path pid="0"
+                  d="M28 19.354L31.354 16 28 12.646V4h-8.646L16 .646 12.647 4H4v8.646L.646 16 4 19.354V28h8.646L16 31.354 19.354 28H28v-8.646zM30.646 16L28 18.646v-5.293L30.646 16zM16 1.354L18.646 4h-5.292L16 1.354zM1.354 16L4 13.354v5.292L1.354 16zM16 30.646L13.354 28h5.292L16 30.646zM26 26H6V6h20v20z">
+                </path>
+                <path pid="1"
+                  d="M16 23.352a7.36 7.36 0 01-7.353-7.353c0-4.054 3.298-7.353 7.353-7.353s7.354 3.299 7.354 7.353c0 4.056-3.299 7.353-7.354 7.353zm0-13.84c-3.578 0-6.488 2.91-6.488 6.487s2.91 6.487 6.488 6.487 6.488-2.91 6.488-6.487S19.578 9.512 16 9.512z">
+                </path>
+                <path pid="2"
+                  d="M18.033 9.351L19.293 8l-.061 1.848zM12.736 9.861l-.063-1.847 1.263 1.35zM9.352 13.967L8 12.705l1.848.064zM9.862 19.264l-1.847.062 1.352-1.262zM13.967 22.648L12.706 24l.064-1.848zM19.264 22.139l.063 1.847-1.261-1.35zM22.65 18.033L24 19.295l-1.848-.065zM22.141 12.736l1.845-.064-1.349 1.263z">
+                </path>
+                <circle pid="3" cx="16" cy="15.999" r="1"></circle>
+              </svg>
+            </div>
+            <div class="card-header-content">
+              <div class="title-large">Proto-Empire </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-illustration"><img src="<%= Routes.static_path(@socket, "/img/doctrines/system_1.jpg") %>"></div>
+            <div class="card-information">
+              <div class="card-panel-window">
+                <div class="card-panel-container" style="left: 0px;">
+                  <div class="card-panel">
+                    <div class="blockquote"> Your empire is expanding! </div>
+                    <div>
+                      <div class="complex-bonus">
+                        <div> System Limit </div>
+                        <div>
+                          <strong>+1</strong>
+                          <svg version="1.1" viewBox="0 0 20 20" class="svg-icon svg-fill">
+                            <circle pid="0" cx="10" cy="10" r="10"></circle>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-container">
+          <div class="card-header">
+            <div class="card-header-icon">
+              <svg version="1.1" viewBox="0 0 32 32" class="svg-icon svg-fill">
+                <path pid="0"
+                  d="M28 19.354L31.354 16 28 12.646V4h-8.646L16 .646 12.646 4H4v8.646L.646 16 4 19.354V28h8.646L16 31.354 19.354 28H28v-8.646zM30.646 16L28 18.646v-5.293L30.646 16zM16 1.354L18.646 4h-5.293L16 1.354zM1.354 16L4 13.354v5.292L1.354 16zM16 30.646L13.354 28h5.292L16 30.646zM26 26H6V6h20v20z">
+                </path>
+                <path pid="1"
+                  d="M16 23.352a7.36 7.36 0 01-7.353-7.353c0-4.054 3.298-7.353 7.353-7.353s7.354 3.299 7.354 7.353c0 4.056-3.299 7.353-7.354 7.353zm0-13.84c-3.577 0-6.488 2.91-6.488 6.487s2.911 6.487 6.488 6.487 6.488-2.91 6.488-6.487S19.577 9.512 16 9.512z">
+                </path>
+                <path pid="2"
+                  d="M18.032 9.351L19.293 8l-.061 1.848zM12.735 9.861l-.062-1.847 1.263 1.35zM9.352 13.967L8 12.705l1.849.064zM9.862 19.264l-1.846.062 1.351-1.262zM13.968 22.648L12.705 24l.065-1.848zM19.266 22.139l.061 1.847-1.261-1.35zM22.65 18.033L24 19.295l-1.848-.065zM22.141 12.736l1.845-.064-1.349 1.263z">
+                </path>
+                <circle pid="3" cx="16" cy="15.999" r="1.298"></circle>
+                <path pid="4"
+                  d="M16 19.5c-1.93 0-3.5-1.57-3.5-3.501a3.504 3.504 0 013.5-3.501c1.93 0 3.5 1.57 3.5 3.501A3.504 3.504 0 0116 19.5zm0-5.834a2.334 2.334 0 100 4.669 2.334 2.334 0 000-4.669z">
+                </path>
+                <path pid="5"
+                  d="M16 21.999c-3.31 0-6-2.69-6-6 0-3.309 2.69-6 6-6 3.311 0 6 2.691 6 6 0 3.31-2.689 6-6 6zm0-9.817a3.823 3.823 0 00-3.818 3.817A3.823 3.823 0 0016 19.816a3.823 3.823 0 003.818-3.817A3.823 3.823 0 0016 12.182z">
+                </path>
+              </svg>
+            </div>
+            <div class="card-header-content">
+              <div class="title-large">Empire's Edge </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-illustration"><img src="<%= Routes.static_path(@socket, "/img/doctrines/sys_dom_2.jpg") %>"></div>
+            <div class="card-information">
+              <div class="card-panel-window">
+                <div class="card-panel-container" style="left: 0px;">
+                  <div class="card-panel">
+                    <div class="blockquote"> Win by dominating. </div>
+                    <div>
+                      <div class="complex-bonus">
+                        <div> System Limit </div>
+                        <div>
+                          <strong>+2</strong>
+                          <svg version="1.1" viewBox="0 0 20 20" class="svg-icon svg-fill">
+                            <circle pid="0" cx="10" cy="10" r="10"></circle>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="complex-bonus">
+                        <div> Dominion Limit </div>
+                        <div>
+                          <strong>+4</strong>
+                          <svg version="1.1" viewBox="0 0 20 20" class="svg-icon svg-fill">
+                            <circle pid="0" cx="10" cy="10" r="10"></circle>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="complex-bonus">
+                        <div><strong> −6% </strong> Credit </div>
+                        <div>
+                          <strong>−4,2</strong>
+                          <svg version="1.1" viewBox="0 0 20 20" class="svg-icon svg-fill">
+                            <path pid="0"
+                              d="M10 0C4.477 0 0 4.477 0 10s4.477 10 10 10 10-4.477 10-10S15.523 0 10 0zm6.707 10.707L14.414 13l1.543 1.543a.999.999 0 11-1.414 1.414L13 14.414l-2.293 2.293a.997.997 0 01-1.414 0L7 14.414l-1.543 1.543a.997.997 0 01-1.414 0 .999.999 0 010-1.414L5.586 13l-2.293-2.293a.999.999 0 010-1.414L5.586 7 4.043 5.457a.999.999 0 111.414-1.414L7 5.586l2.293-2.293a.999.999 0 011.414 0L13 5.586l1.544-1.543a.999.999 0 111.414 1.414L14.414 7l2.293 2.293a.999.999 0 010 1.414z">
+                            </path>
+                            <path pid="1" d="M10 14.586l-4.586-4.585L10 5.415l4.586 4.586z"></path>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="complex-bonus">
+                        <div> Stability </div>
+                        <div>
+                          <strong>−8</strong>
+                          <svg version="1.1" viewBox="0 0 20 20" class="svg-icon svg-fill">
+                            <path pid="0"
+                              d="M10 0C4.477 0 0 4.478 0 10s4.477 10 10 10 10-4.478 10-10S15.523 0 10 0zm0 16c-3.789 0-5-3-5-3h10s-1.211 3-5 3zm5-4H5L3 8l7-4 7 4-2 4z">
+                            </path>
+                            <circle pid="1" cx="10" cy="9" r="1"></circle>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-container">
+          <div class="card-header">
+            <div class="card-header-icon">
+              <svg version="1.1" viewBox="0 0 32 32" class="svg-icon svg-fill">
+                <path pid="0"
+                  d="M28 19.354L31.354 16 28 12.646V4h-8.646L16 .646 12.646 4H4v8.646L.646 16 4 19.354V28h8.646L16 31.354 19.354 28H28v-8.646zM30.646 16L28 18.646v-5.293L30.646 16zM16 1.354L18.646 4h-5.293L16 1.354zM1.354 16L4 13.354v5.292L1.354 16zM16 30.646L13.354 28h5.292L16 30.646zM26 26H6V6h20v20z">
+                </path>
+                <path pid="1"
+                  d="M16 23.352a7.36 7.36 0 01-7.353-7.353c0-4.054 3.298-7.353 7.353-7.353s7.354 3.298 7.354 7.353c0 4.056-3.299 7.353-7.354 7.353zm0-13.841c-3.577 0-6.488 2.91-6.488 6.488s2.911 6.487 6.488 6.487 6.488-2.909 6.488-6.487S19.577 9.511 16 9.511z">
+                </path>
+                <path pid="2"
+                  d="M18.032 9.351L19.293 8l-.061 1.848zM12.735 9.861l-.062-1.847 1.263 1.35zM9.352 13.967L8 12.706l1.849.063zM9.862 19.264l-1.846.063 1.351-1.263zM13.968 22.648L12.705 24l.065-1.848zM19.266 22.139l.061 1.847-1.261-1.35zM22.65 18.033L24 19.294l-1.848-.064zM22.141 12.736l1.845-.065-1.349 1.264zM16 18.594a2.598 2.598 0 01-2.595-2.595A2.598 2.598 0 0116 13.404a2.598 2.598 0 012.596 2.595A2.598 2.598 0 0116 18.594zm0-4.325a1.73 1.73 0 100 3.457 1.73 1.73 0 000-3.457z">
+                </path>
+                <path pid="3"
+                  d="M16 20.757c-2.624 0-4.758-2.134-4.758-4.758s2.134-4.758 4.758-4.758 4.758 2.134 4.758 4.758-2.134 4.758-4.758 4.758zm0-7.785c-1.669 0-3.027 1.358-3.027 3.027s1.358 3.028 3.027 3.028 3.027-1.358 3.027-3.028A3.03 3.03 0 0016 12.972z">
+                </path>
+              </svg>
+            </div>
+            <div class="card-header-content">
+              <div class="title-large">Protectorate </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-illustration"><img src="<%= Routes.static_path(@socket, "/img/doctrines/dominion_2.jpg") %>">
+            </div>
+            <div class="card-information">
+              <div class="card-panel-window">
+                <div class="card-panel-container" style="left: 0px;">
+                  <div class="card-panel">
+                    <div class="blockquote"> Extend your domination. </div>
+                    <div>
+                      <div class="complex-bonus">
+                        <div> Dominion Limit </div>
+                        <div>
+                          <strong>+4</strong>
+                          <svg version="1.1" viewBox="0 0 20 20" class="svg-icon svg-fill">
+                            <circle pid="0" cx="10" cy="10" r="10"></circle>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="complex-bonus">
+                        <div> Stability </div>
+                        <div>
+                          <strong>−8</strong>
+                          <svg version="1.1" viewBox="0 0 20 20" class="svg-icon svg-fill">
+                            <path pid="0"
+                              d="M10 0C4.477 0 0 4.478 0 10s4.477 10 10 10 10-4.478 10-10S15.523 0 10 0zm0 16c-3.789 0-5-3-5-3h10s-1.211 3-5 3zm5-4H5L3 8l7-4 7 4-2 4z">
+                            </path>
+                            <circle pid="1" cx="10" cy="9" r="1"></circle>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="complex-bonus">
+                        <div> Dominion Tax Rate </div>
+                        <div>
+                          <strong>+0,1</strong>
+                          <svg version="1.1" viewBox="0 0 20 20" class="svg-icon svg-fill">
+                            <circle pid="0" cx="10" cy="10" r="10"></circle>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-container">
+          <div class="card-header">
+            <div class="card-header-icon">
+              <svg version="1.1" viewBox="0 0 32 32" class="svg-icon svg-fill">
+                <path pid="0"
+                  d="M28 19.354L31.354 16 28 12.646V4h-8.646L16 .646 12.646 4H4v8.646L.646 16 4 19.354V28h8.646L16 31.354 19.354 28H28v-8.646zM30.646 16L28 18.646v-5.293L30.646 16zM16 1.354L18.646 4h-5.293L16 1.354zM1.354 16L4 13.354v5.292L1.354 16zM16 30.646L13.354 28h5.292L16 30.646zM26 26H6V6h20v20z">
+                </path>
+                <path pid="1"
+                  d="M16 23.352a7.36 7.36 0 01-7.353-7.353c0-4.054 3.298-7.353 7.353-7.353s7.354 3.298 7.354 7.353c0 4.056-3.299 7.353-7.354 7.353zm0-13.841c-3.577 0-6.488 2.91-6.488 6.488s2.911 6.487 6.488 6.487 6.488-2.909 6.488-6.487S19.577 9.511 16 9.511z">
+                </path>
+                <path pid="2"
+                  d="M18.032 9.351L19.293 8l-.061 1.848zM12.735 9.861l-.062-1.847 1.263 1.35zM9.352 13.967L8 12.706l1.849.063zM9.862 19.264l-1.846.063 1.351-1.263zM13.968 22.648L12.705 24l.065-1.848zM19.266 22.139l.061 1.847-1.261-1.35zM22.65 18.033L24 19.294l-1.848-.064zM22.141 12.736l1.845-.065-1.349 1.264zM16 18.594a2.598 2.598 0 01-2.595-2.595A2.598 2.598 0 0116 13.404a2.598 2.598 0 012.596 2.595A2.598 2.598 0 0116 18.594zm0-4.325a1.73 1.73 0 100 3.457 1.73 1.73 0 000-3.457z">
+                </path>
+                <path pid="3"
+                  d="M16 20.757c-2.624 0-4.758-2.134-4.758-4.758s2.134-4.758 4.758-4.758 4.758 2.134 4.758 4.758-2.134 4.758-4.758 4.758zm0-7.785c-1.669 0-3.027 1.358-3.027 3.027s1.358 3.028 3.027 3.028 3.027-1.358 3.027-3.028A3.03 3.03 0 0016 12.972z">
+                </path>
+                <path pid="4"
+                  d="M16 22.055c-3.339 0-6.056-2.717-6.056-6.056S12.661 9.944 16 9.944s6.057 2.716 6.057 6.055-2.718 6.056-6.057 6.056zm0-11.246a5.196 5.196 0 00-5.19 5.19 5.196 5.196 0 005.19 5.19 5.195 5.195 0 005.189-5.19A5.195 5.195 0 0016 10.809z">
+                </path>
+              </svg>
+            </div>
+            <div class="card-header-content">
+              <div class="title-large">Federation of Protectorates </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-illustration"><img src="<%= Routes.static_path(@socket, "/img/doctrines/dominion_3.jpg") %>">
+            </div>
+            <div class="card-information">
+              <div class="card-panel-window">
+                <div class="card-panel-container" style="left: 0px;">
+                  <div class="card-panel">
+                    <div class="blockquote"> Large empires require large revenues. </div>
+                    <div>
+                      <div class="complex-bonus">
+                        <div> Dominion Limit </div>
+                        <div>
+                          <strong>+7</strong>
+                          <svg version="1.1" viewBox="0 0 20 20" class="svg-icon svg-fill">
+                            <circle pid="0" cx="10" cy="10" r="10"></circle>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="complex-bonus">
+                        <div> Stability </div>
+                        <div>
+                          <strong>−12</strong>
+                          <svg version="1.1" viewBox="0 0 20 20" class="svg-icon svg-fill">
+                            <path pid="0"
+                              d="M10 0C4.477 0 0 4.478 0 10s4.477 10 10 10 10-4.478 10-10S15.523 0 10 0zm0 16c-3.789 0-5-3-5-3h10s-1.211 3-5 3zm5-4H5L3 8l7-4 7 4-2 4z">
+                            </path>
+                            <circle pid="1" cx="10" cy="9" r="1"></circle>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="complex-bonus">
+                        <div> Dominion Tax Rate </div>
+                        <div>
+                          <strong>+0,1</strong>
+                          <svg version="1.1" viewBox="0 0 20 20" class="svg-icon svg-fill">
+                            <circle pid="0" cx="10" cy="10" r="10"></circle>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-container">
+          <div class="card-header">
+            <div class="card-header-icon">
+              <svg version="1.1" viewBox="0 0 32 32" class="svg-icon svg-fill">
+                <path pid="0"
+                  d="M28 19.354L31.354 16 28 12.646V4h-8.646L16 .646 12.646 4H4v8.646L.646 16 4 19.354V28h8.646L16 31.354 19.354 28H28v-8.646zM30.646 16L28 18.646v-5.293L30.646 16zM16 1.354L18.646 4h-5.293L16 1.354zM1.354 16L4 13.354v5.292L1.354 16zM16 30.646L13.354 28h5.292L16 30.646zM26 26H6V6h20v20z">
+                </path>
+                <circle pid="1" cx="16" cy="9.684" r="1.263"></circle>
+                <circle pid="2" cx="16" cy="15.579" r="1.263"></circle>
+                <circle pid="3" cx="9.263" cy="15.579" r="1.263"></circle>
+                <circle pid="4" cx="13.895" cy="13.474" r="1.263"></circle>
+                <circle pid="5" cx="13.895" cy="17.684" r="1.263"></circle>
+                <circle pid="6" cx="18.105" cy="17.684" r="1.263"></circle>
+                <circle pid="7" cx="22.736" cy="15.579" r="1.263"></circle>
+                <circle pid="8" cx="18.105" cy="13.474" r="1.263"></circle>
+                <circle pid="9" cx="16" cy="22.316" r="1.263"></circle>
+              </svg>
+            </div>
+            <div class="card-header-content">
+              <div class="title-large">Combat Drugs </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-illustration"><img src="<%= Routes.static_path(@socket, "/img/doctrines/frame_lex_admiral.jpg")
+                %>"></div>
+            <div class="card-information">
+              <div class="card-panel-window">
+                <div class="card-panel-container" style="left: 0px;">
+                  <div class="card-panel">
+                    <div class="blockquote"> — </div>
+                    <div>
+                      <div class="complex-bonus">
+                        <div> Armed Forces Invasion </div>
+                        <div>
+                          <strong> +22% </strong>
+                          <svg version="1.1" viewBox="0 0 20 20" class="svg-icon svg-fill">
+                            <circle pid="0" cx="10" cy="2.5" r="1.5"></circle>
+                            <circle pid="1" cx="10" cy="9.5" r="1.5"></circle>
+                            <circle pid="2" cx="2" cy="9.5" r="1.5"></circle>
+                            <circle pid="3" cx="7.5" cy="7" r="1.5"></circle>
+                            <circle pid="4" cx="7.5" cy="12" r="1.5"></circle>
+                            <circle pid="5" cx="12.5" cy="12" r="1.5"></circle>
+                            <circle pid="6" cx="18" cy="9.5" r="1.5"></circle>
+                            <circle pid="7" cx="12.5" cy="7" r="1.5"></circle>
+                            <circle pid="8" cx="10" cy="17.5" r="1.5"></circle>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-container">
+          <div class="card-header">
+            <div class="card-header-icon">
+              <svg version="1.1" viewBox="0 0 32 32" class="svg-icon svg-fill">
+                <path pid="0"
+                  d="M28 19.354L31.354 16 28 12.646V4h-8.646L16 .646 12.646 4H4v8.646L.646 16 4 19.354V28h8.646L16 31.354 19.354 28H28v-8.646zM30.646 16L28 18.646v-5.293L30.646 16zM16 1.354L18.646 4h-5.293L16 1.354zM1.354 16L4 13.354v5.292L1.354 16zM16 30.646L13.354 28h5.292L16 30.646zM26 26H6V6h20v20z">
+                </path>
+                <path pid="1"
+                  d="M25.074 15.951l-.109-.211c-.025-.048-2.568-4.784-8.965-4.784s-8.939 4.736-8.965 4.784l-.109.211.168.168c.056.058.588.574 1.44 1.214l-.847.845a.5.5 0 00.708.708l.918-.915c.018-.018.024-.039.039-.06a14.58 14.58 0 003.309 1.637l-.302.824a.502.502 0 00.94.344l.324-.886c.755.186 1.55.304 2.378.304a9.84 9.84 0 002.34-.294l.418.898a.5.5 0 10.906-.422l-.354-.76a14.684 14.684 0 003.34-1.646c.015.019.021.041.039.058l.916.917c.098.099.226.146.354.146s.256-.05.354-.146a.5.5 0 000-.706l-.844-.847a14.136 14.136 0 001.438-1.214l.166-.167zM16 17.5a1.5 1.5 0 11-.001-2.999A1.5 1.5 0 0116 17.5zm4.77-4.025c-1.428-.635-3.08-1.15-4.799-1.15-1.807 0-3.508.555-4.953 1.221-.891.313-1.649.671-2.251 1.003 1.244-1.288 3.559-2.941 7.234-2.941s5.99 1.653 7.234 2.941a14.86 14.86 0 00-2.465-1.074z">
+                </path>
+              </svg>
+            </div>
+            <div class="card-header-content">
+              <div class="title-large">Deep State </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-illustration"><img src="<%= Routes.static_path(@socket, "/img/doctrines/frame_lex_spy.jpg") %>">
+            </div>
+            <div class="card-information">
+              <div class="card-panel-window">
+                <div class="card-panel-container" style="left: 0px;">
+                  <div class="card-panel">
+                    <div class="blockquote"> — </div>
+                    <div>
+                      <div class="complex-bonus">
+                        <div> Erased Infiltration </div>
+                        <div>
+                          <strong> +25% </strong>
+                          <svg version="1.1" viewBox="0 0 32 32" class="svg-icon svg-fill">
+                            <path pid="0"
+                              d="M6.5 16c0-5.238 4.262-9.5 9.5-9.5s9.5 4.262 9.5 9.5a9.428 9.428 0 01-.986 4.223l-.896-.445a8.411 8.411 0 00.883-3.776c0-4.688-3.813-8.5-8.5-8.5-4.687 0-8.5 3.812-8.5 8.499 0 1.326.297 2.598.884 3.777l-.896.445A9.397 9.397 0 016.5 16zm11.342 7.475l-.342-.116v-2.566l.146-.146c.031-.032.854-.899.854-2.646 0-2.235-.116-3.5-2.5-3.5s-2.5 1.265-2.5 3.5c0 1.746.821 2.613.856 2.649l.141.146.003 2.563-.342.115c-.757.252-2.796 1.028-3.658 1.746v1.28l-1-.6v-1.107l.146-.146c.87-.871 3.014-1.698 3.854-2.002v-1.459c-.311-.393-1-1.457-1-3.186 0-2.005 0-4.5 3.5-4.5s3.5 2.495 3.5 4.5c0 1.729-.689 2.793-1 3.186v1.459c.84.304 2.982 1.131 3.854 2.002l.146.146V25.9l-1 .6v-1.279c-.863-.717-2.9-1.494-3.658-1.746z">
+                            </path>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="complex-bonus">
+                        <div> Erased Sabotage </div>
+                        <div>
+                          <strong> +15% </strong>
+                          <svg version="1.1" viewBox="0 0 32 32" class="svg-icon svg-fill">
+                            <path pid="0"
+                              d="M22.207 13.5h-3L13.5 19.207v3l-2.146 2.146-.707-.707 1.854-1.854V19.5h-2.293l-1.854 1.854-.707-.707L9.793 18.5h3l5.707-5.707v-3l2.146-2.146.707.707-1.853 1.853V12.5h2.293l1.854-1.854.707.707-2.147 2.147z">
+                            </path>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="complex-bonus">
+                        <div> Erased Removal </div>
+                        <div>
+                          <strong> +15% </strong>
+                          <svg version="1.1" viewBox="0 0 32 32" class="svg-icon svg-fill">
+                            <path pid="0"
+                              d="M17 16a1 1 0 11-2 0 1 1 0 112 0zm-.5-11.9V11h-1V4.1h1zM11 16.5H4.1v-1H11v1zm4.5 11.4V21h1v6.9h-1zM21 16.5v-1h6.9v1H21z">
+                            </path>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-container">
+          <div class="card-header">
+            <div class="card-header-icon">
+              <svg version="1.1" viewBox="0 0 32 32" class="svg-icon svg-fill">
+                <path pid="0" d="M19 13h-6v6h6v-6zm-1 5h-4v-4h4v4z"></path>
+                <path pid="1"
+                  d="M4 4v24h24V4H4zm10 4h1v3h2V8h1v3h3v3h3v1h-3v2h3v1h-3v3h-3v3h-1v-3h-2v3h-1v-3h-3v-3H8v-1h3v-2H8v-1h3v-3h3V8z">
+                </path>
+                <path pid="2"
+                  d="M29 13.646V3H18.354L16 .646 13.646 3H3v10.646L.646 16 3 18.354V29h10.646L16 31.354 18.354 29H29V18.354L31.354 16 29 13.646zm-.5-.5V28.5h-25v-25h25v9.646z">
+                </path>
+              </svg>
+            </div>
+            <div class="card-header-content">
+              <div class="title-large">Technocracy </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-illustration"><img src="<%= Routes.static_path(@socket, "/img/doctrines/frame_lex_speaker.jpg")
+                %>"></div>
+            <div class="card-information">
+              <div class="card-panel-window">
+                <div class="card-panel-container" style="left: 0px;">
+                  <div class="card-panel">
+                    <div class="blockquote"> The soul doesn't exist! </div>
+                    <div>
+                      <div class="complex-bonus">
+                        <div><strong> +30% </strong> Technology </div>
+                        <div>
+                          <strong>+0</strong>
+                          <svg version="1.1" viewBox="0 0 20 20" class="svg-icon svg-fill">
+                            <path pid="0"
+                              d="M10 0C4.477 0 0 4.477 0 10s4.477 10 10 10 10-4.477 10-10S15.523 0 10 0zm8 11v1h-3v3h-3v3h-1v-3H9v3H8v-3H5v-3H2v-1h3V9H2V8h3V5h3V2h1v3h2V2h1v3h3v3h3v1h-3v2h3z">
+                            </path>
+                            <path pid="1" d="M13 13H7V7h6v6zm-5-1h4V8H8v4z"></path>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="complex-bonus">
+                        <div><strong> −6% </strong> Ideology </div>
+                        <div>
+                          <strong>−0</strong>
+                          <svg version="1.1" viewBox="0 0 20 20" class="svg-icon svg-fill">
+                            <circle pid="0" cx="10" cy="5" r="1.001"></circle>
+                            <circle pid="1" cx="10" cy="15" r="1.001"></circle>
+                            <path pid="2"
+                              d="M10 0C4.478 0 0 4.478 0 10s4.478 10 10 10c5.523 0 10-4.478 10-10S15.523 0 10 0zm0 1.999c1.654 0 3 1.347 3 3.001s-1.346 3.001-3 3.001S7 6.655 7 5s1.346-3.001 3-3.001zm-4.27 5.65a.5.5 0 01.702.092C7.291 8.859 8.592 9.5 10 9.5s2.709-.641 3.568-1.759a.501.501 0 01.793.609c-1.05 1.366-2.64 2.15-4.361 2.15s-3.311-.784-4.361-2.15a.5.5 0 01.091-.701zm11.162 5.271a10.482 10.482 0 01-3.896 2.13 3.002 3.002 0 01-2.995 2.952 3 3 0 01-2.995-2.956 10.461 10.461 0 01-3.897-2.127.5.5 0 01.656-.754 9.499 9.499 0 003.403 1.892 2.994 2.994 0 012.833-2.058c1.324 0 2.438.869 2.835 2.062a9.488 9.488 0 003.4-1.895.5.5 0 11.656.754z">
+                            </path>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="complex-bonus">
+                        <div>
+                          Production (
+                          <strong>
+                            ?
+                            <svg version="1.1" viewBox="0 0 20 20" class="svg-icon svg-fill">
+                              <path pid="0"
+                                d="M10 0C4.478 0 0 4.478 0 10s4.478 10 10 10 10-4.478 10-10S15.522 0 10 0zm3.646 15.702l-1.578 1.592-.711-.704 1.229-1.239L11.247 14H8.768l-1.351 1.351 1.238 1.237-.707.707-1.592-1.591a.503.503 0 010-.707L8 13.354 8.354 13H9v-1.9c.5.188 1.391.268 2 .08V13h.664l.336.338 1.646 1.66a.502.502 0 010 .704zm-1.212-5.893c-.586.586-1.354.879-2.121.879s-1.535-.293-2.121-.879a2.998 2.998 0 010-4.242l3.405-3.406a8.02 8.02 0 015.065 3.419l-4.228 4.229z">
+                              </path>
+                              <circle pid="1" cx="10" cy="8" r="1"></circle>
+                            </svg>
+                            × −0,0
+                          </strong>
+                          )
+                        </div>
+                        <div>
+                          <strong>?</strong>
+                          <svg version="1.1" viewBox="0 0 20 20" class="svg-icon svg-fill">
+                            <path pid="0"
+                              d="M10 0C4.478 0 0 4.478 0 10s4.478 10 10 10 10-4.478 10-10S15.522 0 10 0zm3.646 15.702l-1.578 1.592-.711-.704 1.229-1.239L11.247 14H8.768l-1.351 1.351 1.238 1.237-.707.707-1.592-1.591a.503.503 0 010-.707L8 13.354 8.354 13H9v-1.9c.5.188 1.391.268 2 .08V13h.664l.336.338 1.646 1.66a.502.502 0 010 .704zm-1.212-5.893c-.586.586-1.354.879-2.121.879s-1.535-.293-2.121-.879a2.998 2.998 0 010-4.242l3.405-3.406a8.02 8.02 0 015.065 3.419l-4.228 4.229z">
+                            </path>
+                            <circle pid="1" cx="10" cy="8" r="1"></circle>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="landing-card-container">
+      <div class="landing-card-line is-left">
+        <div class="card-container">
+          <div class="card-header">
+            <div class="card-header-icon">
+              <svg version="1.1" viewBox="0 0 20 20" class="svg-icon svg-fill">
+                <path pid="0"
+                  d="M15.727 13.064l-.029-.029V9.364l-.436.289V12.6L10.09 7.428l-5.256 5.257V9.714l-.436-.286v5.824L10.049 19l5.648-3.749v-.419l.029-.029-.029-.03v-1.677l.03-.032zm-5.678 5.413l-5.02-3.329 5.061-5.061 5.029 5.027-5.07 3.363zm5.213-4.14L10.09 9.166l-5.256 5.257v-.876l.029.029L10.09 8.35l5.172 5.171v.816z">
+                </path>
+                <path pid="1" d="M10.066 6.663l3.612 3.55 5.092-3.334h-6.956L9.992 1 8.334 6.879H1.23l5.176 3.38z"></path>
+                <path pid="2" d="M4.834 4.706h3.668l.121-.434H4.398v2.173h.436zm10.428 0v1.739h.435V4.272h-4.252l.143.434z">
+                </path>
+              </svg>
+              <span class="level"> 11 </span><span class="group" style="display: none;"> </span>
+            </div>
+            <div class="card-header-content">
+              <div class="title-large nowrap">
+                Ridmon Olgorod
+              </div>
+              <div class="title-small nowrap">
+                Sentinel
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-illustration"><img src="<%= Routes.static_path(@socket, "/img/agents/admiralM_007.jpg") %>"></div>
+            <div class="card-information">
+              <div class="card-panel-window">
+                <div class="card-panel-container" style="left: 0px;">
+                  <div class="card-panel">
+                    <div class="is-sparse-y">
+                      <div>
+                        <span> 184 </span> / 208 <strong>XP</strong>
+                      </div>
+                      <div> Stelloliberal </div>
+                    </div>
+                    <div class="is-sparse-y">
+                      <div>
+                        <div class="simple-bonus">
+                          100
+                          <svg version="1.1" viewBox="0 0 20 20" class="svg-icon svg-fill">
+                            <path pid="0"
+                              d="M12 7c0-1-1-2-2-2S8 6 8 7s.582 1.738 1.6 2C9 9 8 10 8 12v3h4v-3c0-2-1-3-1.6-3 1.051-.262 1.6-1 1.6-2z">
+                            </path>
+                            <path pid="1"
+                              d="M15.995 6.9a5.996 5.996 0 00-11.99 0H4v11.2h12V6.9h-.005zM15 17.1H5V7.205l.005-.288C5.049 4.206 7.29 2 10 2s4.951 2.206 4.995 4.917l.005.221V17.1z">
+                            </path>
+                          </svg>
+                        </div>
+                        <div class="simple-bonus">
+                          100
+                          <svg version="1.1" viewBox="0 0 20 20" class="svg-icon svg-fill">
+                            <path pid="0"
+                              d="M10 6a4 4 0 100 8 4 4 0 000-8zm0 7.5v-7c1.93 0 3.5 1.57 3.5 3.5s-1.57 3.5-3.5 3.5z"></path>
+                            <path pid="1"
+                              d="M10 2c-4.417 0-8 3.583-8 8s3.583 8 8 8 8-3.583 8-8-3.583-8-8-8zm0 15c-3.86 0-7-3.141-7-7 0-3.86 3.14-7 7-7 3.859 0 7 3.14 7 7 0 3.859-3.141 7-7 7z">
+                            </path>
+                          </svg>
+                        </div>
+                      </div>
+                      <div>
+                        <div class="simple-bonus">
+                          88
+                          <svg version="1.1" viewBox="0 0 20 20" class="svg-icon svg-fill">
+                            <path pid="0"
+                              d="M10 0C4.477 0 0 4.477 0 10s4.477 10 10 10 10-4.477 10-10S15.523 0 10 0zm6.707 10.707L14.414 13l1.543 1.543a.999.999 0 11-1.414 1.414L13 14.414l-2.293 2.293a.997.997 0 01-1.414 0L7 14.414l-1.543 1.543a.997.997 0 01-1.414 0 .999.999 0 010-1.414L5.586 13l-2.293-2.293a.999.999 0 010-1.414L5.586 7 4.043 5.457a.999.999 0 111.414-1.414L7 5.586l2.293-2.293a.999.999 0 011.414 0L13 5.586l1.544-1.543a.999.999 0 111.414 1.414L14.414 7l2.293 2.293a.999.999 0 010 1.414z">
+                            </path>
+                            <path pid="1" d="M10 14.586l-4.586-4.585L10 5.415l4.586 4.586z"></path>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <hr>
+                    <div>
+                      <h2>Agent</h2>
+                      <div class="is-sparse-y">
+                        <div>Leadership</div>
+                        <div class="character-skill-points"><span class="active strong"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span></div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="is-sparse-y">
+                        <div>Strike</div>
+                        <div class="character-skill-points"><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span></div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="is-sparse-y">
+                        <div>Conquest</div>
+                        <div class="character-skill-points"><span class="active"></span><span class="active"></span><span
+                            class="active strong"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span></div>
+                      </div>
+                    </div>
+                    <div>
+                      <h2>Governor</h2>
+                      <div class="is-sparse-y">
+                        <div>Production</div>
+                        <div class="character-skill-points"><span class="active strong"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span></div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="is-sparse-y character-skill-active">
+                        <div>Defense</div>
+                        <div class="character-skill-points"><span class="active"></span><span class="active"></span><span
+                            class="active"></span><span class="active"></span><span class="active"></span><span
+                            class="active"></span><span class="active"></span><span class="active"></span><span
+                            class="active"></span><span class="active strong"></span><span class="inactive"></span><span
+                            class="inactive"></span></div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="is-sparse-y">
+                        <div>Training</div>
+                        <div class="character-skill-points"><span class="active"></span><span class="active strong"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-container">
+          <div class="card-header">
+            <div class="card-header-icon">
+              <svg version="1.1" viewBox="0 0 20 20" class="svg-icon svg-fill">
+                <path pid="0"
+                  d="M15.727 13.064l-.029-.029V9.364l-.436.289V12.6L10.09 7.428l-5.256 5.257V9.714l-.436-.286v5.824L10.049 19l5.648-3.749v-.419l.029-.029-.029-.03v-1.677l.03-.032zm-5.678 5.413l-5.02-3.329 5.061-5.061 5.029 5.027-5.07 3.363zm5.213-4.14L10.09 9.166l-5.256 5.257v-.876l.029.029L10.09 8.35l5.172 5.171v.816z">
+                </path>
+                <path pid="1" d="M10.066 6.663l3.612 3.55 5.092-3.334h-6.956L9.992 1 8.334 6.879H1.23l5.176 3.38z"></path>
+                <path pid="2" d="M4.834 4.706h3.668l.121-.434H4.398v2.173h.436zm10.428 0v1.739h.435V4.272h-4.252l.143.434z">
+                </path>
+              </svg>
+              <span class="level"> 11 </span><span class="group" style="display: none;"> </span>
+            </div>
+            <div class="card-header-content">
+              <div class="title-large nowrap">
+                Noriko Ariance
+              </div>
+              <div class="title-small nowrap">
+                Conqueror
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-illustration"><img src="<%= Routes.static_path(@socket, "/img/agents/admiralM_003.jpg") %>"></div>
+            <div class="card-information">
+              <div class="card-panel-window">
+                <div class="card-panel-container" style="left: 0px;">
+                  <div class="card-panel">
+                    <div class="is-sparse-y">
+                      <div>
+                        <span> 193 </span> / 208 <strong>XP</strong>
+                      </div>
+                      <div> Myrmezirian </div>
+                    </div>
+                    <div class="is-sparse-y">
+                      <div>
+                        <div class="simple-bonus">
+                          100
+                          <svg version="1.1" viewBox="0 0 20 20" class="svg-icon svg-fill">
+                            <path pid="0"
+                              d="M12 7c0-1-1-2-2-2S8 6 8 7s.582 1.738 1.6 2C9 9 8 10 8 12v3h4v-3c0-2-1-3-1.6-3 1.051-.262 1.6-1 1.6-2z">
+                            </path>
+                            <path pid="1"
+                              d="M15.995 6.9a5.996 5.996 0 00-11.99 0H4v11.2h12V6.9h-.005zM15 17.1H5V7.205l.005-.288C5.049 4.206 7.29 2 10 2s4.951 2.206 4.995 4.917l.005.221V17.1z">
+                            </path>
+                          </svg>
+                        </div>
+                        <div class="simple-bonus">
+                          102
+                          <svg version="1.1" viewBox="0 0 20 20" class="svg-icon svg-fill">
+                            <path pid="0"
+                              d="M10 6a4 4 0 100 8 4 4 0 000-8zm0 7.5v-7c1.93 0 3.5 1.57 3.5 3.5s-1.57 3.5-3.5 3.5z"></path>
+                            <path pid="1"
+                              d="M10 2c-4.417 0-8 3.583-8 8s3.583 8 8 8 8-3.583 8-8-3.583-8-8-8zm0 15c-3.86 0-7-3.141-7-7 0-3.86 3.14-7 7-7 3.859 0 7 3.14 7 7 0 3.859-3.141 7-7 7z">
+                            </path>
+                          </svg>
+                        </div>
+                      </div>
+                      <div>
+                        <div class="simple-bonus">
+                          88
+                          <svg version="1.1" viewBox="0 0 20 20" class="svg-icon svg-fill">
+                            <path pid="0"
+                              d="M10 0C4.477 0 0 4.477 0 10s4.477 10 10 10 10-4.477 10-10S15.523 0 10 0zm6.707 10.707L14.414 13l1.543 1.543a.999.999 0 11-1.414 1.414L13 14.414l-2.293 2.293a.997.997 0 01-1.414 0L7 14.414l-1.543 1.543a.997.997 0 01-1.414 0 .999.999 0 010-1.414L5.586 13l-2.293-2.293a.999.999 0 010-1.414L5.586 7 4.043 5.457a.999.999 0 111.414-1.414L7 5.586l2.293-2.293a.999.999 0 011.414 0L13 5.586l1.544-1.543a.999.999 0 111.414 1.414L14.414 7l2.293 2.293a.999.999 0 010 1.414z">
+                            </path>
+                            <path pid="1" d="M10 14.586l-4.586-4.585L10 5.415l4.586 4.586z"></path>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <hr>
+                    <div>
+                      <h2>Agent</h2>
+                      <div class="is-sparse-y">
+                        <div>Leadership</div>
+                        <div class="character-skill-points"><span class="active"></span><span class="active strong"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span></div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="is-sparse-y">
+                        <div>Strike</div>
+                        <div class="character-skill-points"><span class="active"></span><span class="active strong"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span></div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="is-sparse-y character-skill-active">
+                        <div>Conquest</div>
+                        <div class="character-skill-points"><span class="active"></span><span class="active"></span><span
+                            class="active"></span><span class="active"></span><span class="active"></span><span
+                            class="active"></span><span class="active"></span><span class="active strong"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span></div>
+                      </div>
+                    </div>
+                    <div>
+                      <h2>Governor</h2>
+                      <div class="is-sparse-y">
+                        <div>Production</div>
+                        <div class="character-skill-points"><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span></div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="is-sparse-y">
+                        <div>Defense</div>
+                        <div class="character-skill-points"><span class="active"></span><span class="active strong"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span></div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="is-sparse-y">
+                        <div>Training</div>
+                        <div class="character-skill-points"><span class="active strong"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-container">
+          <div class="card-header">
+            <div class="card-header-icon">
+              <svg version="1.1" viewBox="0 0 20 20" class="svg-icon svg-fill">
+                <path pid="0"
+                  d="M4.586 2.885h10.769v1.641l.383.251V2.5H4.201v2.259l.385-.236zm10.769 10.641l-5.384 3.453-5.385-3.453V12.3l-.385-.257v1.716l5.77 3.741 5.767-3.741v-1.716l-.383.257zM10 6.7a2.5 2.5 0 100 5 2.5 2.5 0 000-5zm0 3.5a1 1 0 110-2 1 1 0 010 2z">
+                </path>
+                <path pid="1"
+                  d="M19.074 8.877l-.109-.211c-.026-.047-2.569-4.784-8.965-4.784S1.061 8.619 1.035 8.666l-.109.211.168.168c.056.058.588.575 1.44 1.214l-.847.845a.5.5 0 00.708.708l.918-.916c.018-.017.024-.04.039-.059a14.593 14.593 0 003.308 1.637l-.302.824a.502.502 0 00.94.344l.324-.886c.755.186 1.55.304 2.378.304.813 0 1.595-.113 2.34-.293l.418.898a.5.5 0 10.906-.422l-.354-.759a14.593 14.593 0 003.339-1.646c.015.019.021.041.039.058l.916.917a.498.498 0 00.708 0 .5.5 0 000-.707l-.845-.846a14.287 14.287 0 001.439-1.213l.168-.17zM10 4.532c3.676 0 5.99 1.654 7.234 2.941A15.067 15.067 0 0014.77 6.4c-1.428-.634-3.081-1.15-4.8-1.15-1.807 0-3.508.555-4.953 1.221-.891.313-1.65.671-2.251 1.003C4.01 6.186 6.324 4.532 10 4.532zm0 7.877c-3.468 0-6.486-2.152-7.776-3.226l.314-.194C3.875 8.153 6.217 6.69 8.82 6.332c.385-.033.772-.064 1.18-.064.344 0 .665.031.992.054 2.626.33 5.069 1.816 6.454 2.663l.329.199c-1.292 1.074-4.308 3.225-7.775 3.225z">
+                </path>
+              </svg>
+              <span class="level"> 13 </span><span class="group" style="display: none;"> </span>
+            </div>
+            <div class="card-header-content">
+              <div class="title-large nowrap">
+                Ehima Olgorod
+              </div>
+              <div class="title-small nowrap">
+                Saboteur
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-illustration"><img src="<%= Routes.static_path(@socket, "/img/agents/spyF_003.jpg") %>"></div>
+            <div class="card-information">
+              <div class="card-panel-window">
+                <div class="card-panel-container" style="left: 0px;">
+                  <div class="card-panel">
+                    <div class="is-sparse-y">
+                      <div>
+                        <span> 239 </span> / 270 <strong>XP</strong>
+                      </div>
+                      <div> Stelloliberal </div>
+                    </div>
+                    <div class="is-sparse-y">
+                      <div>
+                        <div class="simple-bonus">
+                          18
+                          <svg version="1.1" viewBox="0 0 20 20" class="svg-icon svg-fill">
+                            <path pid="0"
+                              d="M12 7c0-1-1-2-2-2S8 6 8 7s.582 1.738 1.6 2C9 9 8 10 8 12v3h4v-3c0-2-1-3-1.6-3 1.051-.262 1.6-1 1.6-2z">
+                            </path>
+                            <path pid="1"
+                              d="M15.995 6.9a5.996 5.996 0 00-11.99 0H4v11.2h12V6.9h-.005zM15 17.1H5V7.205l.005-.288C5.049 4.206 7.29 2 10 2s4.951 2.206 4.995 4.917l.005.221V17.1z">
+                            </path>
+                          </svg>
+                        </div>
+                        <div class="simple-bonus">
+                          21
+                          <svg version="1.1" viewBox="0 0 20 20" class="svg-icon svg-fill">
+                            <path pid="0"
+                              d="M10 6a4 4 0 100 8 4 4 0 000-8zm0 7.5v-7c1.93 0 3.5 1.57 3.5 3.5s-1.57 3.5-3.5 3.5z"></path>
+                            <path pid="1"
+                              d="M10 2c-4.417 0-8 3.583-8 8s3.583 8 8 8 8-3.583 8-8-3.583-8-8-8zm0 15c-3.86 0-7-3.141-7-7 0-3.86 3.14-7 7-7 3.859 0 7 3.14 7 7 0 3.859-3.141 7-7 7z">
+                            </path>
+                          </svg>
+                        </div>
+                      </div>
+                      <div>
+                        <div class="simple-bonus">
+                          104
+                          <svg version="1.1" viewBox="0 0 20 20" class="svg-icon svg-fill">
+                            <path pid="0"
+                              d="M10 0C4.477 0 0 4.477 0 10s4.477 10 10 10 10-4.477 10-10S15.523 0 10 0zm6.707 10.707L14.414 13l1.543 1.543a.999.999 0 11-1.414 1.414L13 14.414l-2.293 2.293a.997.997 0 01-1.414 0L7 14.414l-1.543 1.543a.997.997 0 01-1.414 0 .999.999 0 010-1.414L5.586 13l-2.293-2.293a.999.999 0 010-1.414L5.586 7 4.043 5.457a.999.999 0 111.414-1.414L7 5.586l2.293-2.293a.999.999 0 011.414 0L13 5.586l1.544-1.543a.999.999 0 111.414 1.414L14.414 7l2.293 2.293a.999.999 0 010 1.414z">
+                            </path>
+                            <path pid="1" d="M10 14.586l-4.586-4.585L10 5.415l4.586 4.586z"></path>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <hr>
+                    <div>
+                      <h2>Agent</h2>
+                      <div class="is-sparse-y">
+                        <div>Infiltration</div>
+                        <div class="character-skill-points"><span class="active strong"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span></div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="is-sparse-y">
+                        <div>Removal</div>
+                        <div class="character-skill-points"><span class="active"></span><span class="active strong"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span></div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="is-sparse-y character-skill-active">
+                        <div>Sabotage</div>
+                        <div class="character-skill-points"><span class="active"></span><span class="active"></span><span
+                            class="active"></span><span class="active"></span><span class="active"></span><span
+                            class="active"></span><span class="active"></span><span class="active"></span><span
+                            class="active"></span><span class="active"></span><span class="active strong"></span><span
+                            class="inactive"></span></div>
+                      </div>
+                    </div>
+                    <div>
+                      <h2>Governor</h2>
+                      <div class="is-sparse-y">
+                        <div>Intelligence</div>
+                        <div class="character-skill-points"><span class="active"></span><span class="active"></span><span
+                            class="active strong"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span></div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="is-sparse-y">
+                        <div>Cybersecurity</div>
+                        <div class="character-skill-points"><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span></div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="is-sparse-y">
+                        <div>Finance</div>
+                        <div class="character-skill-points"><span class="active"></span><span class="active strong"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-container">
+          <div class="card-header">
+            <div class="card-header-icon">
+              <svg version="1.1" viewBox="0 0 20 20" class="svg-icon svg-fill">
+                <path pid="0"
+                  d="M4.586 2.885h10.769v1.641l.383.251V2.5H4.201v2.259l.385-.236zm10.769 10.641l-5.384 3.453-5.385-3.453V12.3l-.385-.257v1.716l5.77 3.741 5.767-3.741v-1.716l-.383.257zM10 6.7a2.5 2.5 0 100 5 2.5 2.5 0 000-5zm0 3.5a1 1 0 110-2 1 1 0 010 2z">
+                </path>
+                <path pid="1"
+                  d="M19.074 8.877l-.109-.211c-.026-.047-2.569-4.784-8.965-4.784S1.061 8.619 1.035 8.666l-.109.211.168.168c.056.058.588.575 1.44 1.214l-.847.845a.5.5 0 00.708.708l.918-.916c.018-.017.024-.04.039-.059a14.593 14.593 0 003.308 1.637l-.302.824a.502.502 0 00.94.344l.324-.886c.755.186 1.55.304 2.378.304.813 0 1.595-.113 2.34-.293l.418.898a.5.5 0 10.906-.422l-.354-.759a14.593 14.593 0 003.339-1.646c.015.019.021.041.039.058l.916.917a.498.498 0 00.708 0 .5.5 0 000-.707l-.845-.846a14.287 14.287 0 001.439-1.213l.168-.17zM10 4.532c3.676 0 5.99 1.654 7.234 2.941A15.067 15.067 0 0014.77 6.4c-1.428-.634-3.081-1.15-4.8-1.15-1.807 0-3.508.555-4.953 1.221-.891.313-1.65.671-2.251 1.003C4.01 6.186 6.324 4.532 10 4.532zm0 7.877c-3.468 0-6.486-2.152-7.776-3.226l.314-.194C3.875 8.153 6.217 6.69 8.82 6.332c.385-.033.772-.064 1.18-.064.344 0 .665.031.992.054 2.626.33 5.069 1.816 6.454 2.663l.329.199c-1.292 1.074-4.308 3.225-7.775 3.225z">
+                </path>
+              </svg>
+              <span class="level"> 12 </span><span class="group" style="display: none;"> </span>
+            </div>
+            <div class="card-header-content">
+              <div class="title-large nowrap">
+                Faldor Ngaroth
+              </div>
+              <div class="title-small nowrap">
+                Broker
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-illustration"><img src="<%= Routes.static_path(@socket, "/img/agents/spyM_002.jpg") %>"></div>
+            <div class="card-information">
+              <div class="card-panel-window">
+                <div class="card-panel-container" style="left: 0px;">
+                  <div class="card-panel">
+                    <div class="is-sparse-y">
+                      <div>
+                        <span> 236 </span> / 238 <strong>XP</strong>
+                      </div>
+                      <div> Cardanian </div>
+                    </div>
+                    <div class="is-sparse-y">
+                      <div>
+                        <div class="simple-bonus">
+                          16
+                          <svg version="1.1" viewBox="0 0 20 20" class="svg-icon svg-fill">
+                            <path pid="0"
+                              d="M12 7c0-1-1-2-2-2S8 6 8 7s.582 1.738 1.6 2C9 9 8 10 8 12v3h4v-3c0-2-1-3-1.6-3 1.051-.262 1.6-1 1.6-2z">
+                            </path>
+                            <path pid="1"
+                              d="M15.995 6.9a5.996 5.996 0 00-11.99 0H4v11.2h12V6.9h-.005zM15 17.1H5V7.205l.005-.288C5.049 4.206 7.29 2 10 2s4.951 2.206 4.995 4.917l.005.221V17.1z">
+                            </path>
+                          </svg>
+                        </div>
+                        <div class="simple-bonus">
+                          21
+                          <svg version="1.1" viewBox="0 0 20 20" class="svg-icon svg-fill">
+                            <path pid="0"
+                              d="M10 6a4 4 0 100 8 4 4 0 000-8zm0 7.5v-7c1.93 0 3.5 1.57 3.5 3.5s-1.57 3.5-3.5 3.5z"></path>
+                            <path pid="1"
+                              d="M10 2c-4.417 0-8 3.583-8 8s3.583 8 8 8 8-3.583 8-8-3.583-8-8-8zm0 15c-3.86 0-7-3.141-7-7 0-3.86 3.14-7 7-7 3.859 0 7 3.14 7 7 0 3.859-3.141 7-7 7z">
+                            </path>
+                          </svg>
+                        </div>
+                      </div>
+                      <div>
+                        <div class="simple-bonus">
+                          96
+                          <svg version="1.1" viewBox="0 0 20 20" class="svg-icon svg-fill">
+                            <path pid="0"
+                              d="M10 0C4.477 0 0 4.477 0 10s4.477 10 10 10 10-4.477 10-10S15.523 0 10 0zm6.707 10.707L14.414 13l1.543 1.543a.999.999 0 11-1.414 1.414L13 14.414l-2.293 2.293a.997.997 0 01-1.414 0L7 14.414l-1.543 1.543a.997.997 0 01-1.414 0 .999.999 0 010-1.414L5.586 13l-2.293-2.293a.999.999 0 010-1.414L5.586 7 4.043 5.457a.999.999 0 111.414-1.414L7 5.586l2.293-2.293a.999.999 0 011.414 0L13 5.586l1.544-1.543a.999.999 0 111.414 1.414L14.414 7l2.293 2.293a.999.999 0 010 1.414z">
+                            </path>
+                            <path pid="1" d="M10 14.586l-4.586-4.585L10 5.415l4.586 4.586z"></path>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <hr>
+                    <div>
+                      <h2>Agent</h2>
+                      <div class="is-sparse-y">
+                        <div>Infiltration</div>
+                        <div class="character-skill-points"><span class="active"></span><span class="active"></span><span
+                            class="active strong"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span></div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="is-sparse-y">
+                        <div>Removal</div>
+                        <div class="character-skill-points"><span class="active"></span><span class="active"></span><span
+                            class="active"></span><span class="active"></span><span class="active"></span><span
+                            class="active strong"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span></div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="is-sparse-y">
+                        <div>Sabotage</div>
+                        <div class="character-skill-points"><span class="active"></span><span class="active strong"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span></div>
+                      </div>
+                    </div>
+                    <div>
+                      <h2>Governor</h2>
+                      <div class="is-sparse-y">
+                        <div>Intelligence</div>
+                        <div class="character-skill-points"><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span></div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="is-sparse-y">
+                        <div>Cybersecurity</div>
+                        <div class="character-skill-points"><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span></div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="is-sparse-y character-skill-active">
+                        <div>Finance</div>
+                        <div class="character-skill-points"><span class="active"></span><span class="active"></span><span
+                            class="active"></span><span class="active"></span><span class="active"></span><span
+                            class="active strong"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-container">
+          <div class="card-header">
+            <div class="card-header-icon">
+              <svg version="1.1" viewBox="0 0 20 20" class="svg-icon svg-fill">
+                <path pid="0"
+                  d="M15.074 10.097c-.277 0-.539.07-.766.19l-1.32-1.76c1.045-.701 1.832-1.768 2.227-3.039v4.141h.434V3.368h-4.047A1.622 1.622 0 0010.004 2a1.62 1.62 0 00-1.597 1.368H4.425v6.261h.431V5.691a5.648 5.648 0 002.203 2.844l-1.362 1.756a1.62 1.62 0 00-2.388 1.424 1.62 1.62 0 001.617 1.617 1.62 1.62 0 001.619-1.617c0-.461-.191-.875-.502-1.17l1.39-1.785c.06.033.124.057.185.088a4.84 4.84 0 002.202.642v2.576a1.62 1.62 0 00-1.332 1.592 1.62 1.62 0 003.239 0c0-.845-.554-1.539-1.378-1.613V9.479a4.794 4.794 0 001.593-.409 5.79 5.79 0 00.675-.316l1.342 1.789c-.31.295-.504.711-.504 1.172a1.62 1.62 0 001.619 1.617 1.62 1.62 0 001.617-1.617 1.62 1.62 0 00-1.617-1.618zM4.926 12.686a.97.97 0 11.004-1.942.97.97 0 01-.004 1.942zm5.078-10.038a.971.971 0 110 1.942.971.971 0 010-1.942zM8.395 3.801c.092.806.777 1.438 1.609 1.438s1.519-.631 1.609-1.438h2.027c0 2-1.711 3.7-3.641 3.7s-3.641-1.7-3.641-3.7h2.037zm2.685 9.857a.974.974 0 01-.973.971.975.975 0 01-.971-.971c0-.537.438-.973.971-.973a.973.973 0 01.973.973zm3.994-.972c-.537 0-.973-.435-.973-.971s.436-.971.973-.971a.97.97 0 010 1.942z">
+                </path>
+                <path pid="1" d="M15.215 14.044l-5.18 3.437-5.18-3.437v-.314h-.43v.547L10.035 18l5.613-3.723v-.547h-.433z">
+                </path>
+              </svg>
+              <span class="level"> 10 </span><span class="group" style="display: none;"> </span>
+            </div>
+            <div class="card-header-content">
+              <div class="title-large nowrap">
+                Okin Kigano
+              </div>
+              <div class="title-small nowrap">
+                Seducer
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-illustration"><img src="<%= Routes.static_path(@socket, "/img/agents/speakerF_002.jpg") %>"></div>
+            <div class="card-information">
+              <div class="card-panel-window">
+                <div class="card-panel-container" style="left: 0px;">
+                  <div class="card-panel">
+                    <div class="is-sparse-y">
+                      <div>
+                        <span> 174 </span> / 181 <strong>XP</strong>
+                      </div>
+                      <div> Syn </div>
+                    </div>
+                    <div class="is-sparse-y">
+                      <div>
+                        <div class="simple-bonus">
+                          69
+                          <svg version="1.1" viewBox="0 0 20 20" class="svg-icon svg-fill">
+                            <path pid="0"
+                              d="M12 7c0-1-1-2-2-2S8 6 8 7s.582 1.738 1.6 2C9 9 8 10 8 12v3h4v-3c0-2-1-3-1.6-3 1.051-.262 1.6-1 1.6-2z">
+                            </path>
+                            <path pid="1"
+                              d="M15.995 6.9a5.996 5.996 0 00-11.99 0H4v11.2h12V6.9h-.005zM15 17.1H5V7.205l.005-.288C5.049 4.206 7.29 2 10 2s4.951 2.206 4.995 4.917l.005.221V17.1z">
+                            </path>
+                          </svg>
+                        </div>
+                        <div class="simple-bonus">
+                          77
+                          <svg version="1.1" viewBox="0 0 20 20" class="svg-icon svg-fill">
+                            <path pid="0"
+                              d="M10 6a4 4 0 100 8 4 4 0 000-8zm0 7.5v-7c1.93 0 3.5 1.57 3.5 3.5s-1.57 3.5-3.5 3.5z"></path>
+                            <path pid="1"
+                              d="M10 2c-4.417 0-8 3.583-8 8s3.583 8 8 8 8-3.583 8-8-3.583-8-8-8zm0 15c-3.86 0-7-3.141-7-7 0-3.86 3.14-7 7-7 3.859 0 7 3.14 7 7 0 3.859-3.141 7-7 7z">
+                            </path>
+                          </svg>
+                        </div>
+                      </div>
+                      <div>
+                        <div class="simple-bonus">
+                          80
+                          <svg version="1.1" viewBox="0 0 20 20" class="svg-icon svg-fill">
+                            <path pid="0"
+                              d="M10 0C4.477 0 0 4.477 0 10s4.477 10 10 10 10-4.477 10-10S15.523 0 10 0zm6.707 10.707L14.414 13l1.543 1.543a.999.999 0 11-1.414 1.414L13 14.414l-2.293 2.293a.997.997 0 01-1.414 0L7 14.414l-1.543 1.543a.997.997 0 01-1.414 0 .999.999 0 010-1.414L5.586 13l-2.293-2.293a.999.999 0 010-1.414L5.586 7 4.043 5.457a.999.999 0 111.414-1.414L7 5.586l2.293-2.293a.999.999 0 011.414 0L13 5.586l1.544-1.543a.999.999 0 111.414 1.414L14.414 7l2.293 2.293a.999.999 0 010 1.414z">
+                            </path>
+                            <path pid="1" d="M10 14.586l-4.586-4.585L10 5.415l4.586 4.586z"></path>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <hr>
+                    <div>
+                      <h2>Agent</h2>
+                      <div class="is-sparse-y">
+                        <div>Propaganda</div>
+                        <div class="character-skill-points"><span class="active"></span><span class="active"></span><span
+                            class="active strong"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span></div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="is-sparse-y">
+                        <div>Destabilization</div>
+                        <div class="character-skill-points"><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span></div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="is-sparse-y character-skill-active">
+                        <div>Seduction</div>
+                        <div class="character-skill-points"><span class="active"></span><span class="active"></span><span
+                            class="active"></span><span class="active strong"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span></div>
+                      </div>
+                    </div>
+                    <div>
+                      <h2>Governor</h2>
+                      <div class="is-sparse-y">
+                        <div>Cohesion</div>
+                        <div class="character-skill-points"><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span></div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="is-sparse-y">
+                        <div>Knowledge</div>
+                        <div class="character-skill-points"><span class="active"></span><span class="active"></span><span
+                            class="active"></span><span class="active strong"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span></div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="is-sparse-y">
+                        <div>Wisdom</div>
+                        <div class="character-skill-points"><span class="active strong"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-container">
+          <div class="card-header">
+            <div class="card-header-icon">
+              <svg version="1.1" viewBox="0 0 20 20" class="svg-icon svg-fill">
+                <path pid="0"
+                  d="M15.074 10.097c-.277 0-.539.07-.766.19l-1.32-1.76c1.045-.701 1.832-1.768 2.227-3.039v4.141h.434V3.368h-4.047A1.622 1.622 0 0010.004 2a1.62 1.62 0 00-1.597 1.368H4.425v6.261h.431V5.691a5.648 5.648 0 002.203 2.844l-1.362 1.756a1.62 1.62 0 00-2.388 1.424 1.62 1.62 0 001.617 1.617 1.62 1.62 0 001.619-1.617c0-.461-.191-.875-.502-1.17l1.39-1.785c.06.033.124.057.185.088a4.84 4.84 0 002.202.642v2.576a1.62 1.62 0 00-1.332 1.592 1.62 1.62 0 003.239 0c0-.845-.554-1.539-1.378-1.613V9.479a4.794 4.794 0 001.593-.409 5.79 5.79 0 00.675-.316l1.342 1.789c-.31.295-.504.711-.504 1.172a1.62 1.62 0 001.619 1.617 1.62 1.62 0 001.617-1.617 1.62 1.62 0 00-1.617-1.618zM4.926 12.686a.97.97 0 11.004-1.942.97.97 0 01-.004 1.942zm5.078-10.038a.971.971 0 110 1.942.971.971 0 010-1.942zM8.395 3.801c.092.806.777 1.438 1.609 1.438s1.519-.631 1.609-1.438h2.027c0 2-1.711 3.7-3.641 3.7s-3.641-1.7-3.641-3.7h2.037zm2.685 9.857a.974.974 0 01-.973.971.975.975 0 01-.971-.971c0-.537.438-.973.971-.973a.973.973 0 01.973.973zm3.994-.972c-.537 0-.973-.435-.973-.971s.436-.971.973-.971a.97.97 0 010 1.942z">
+                </path>
+                <path pid="1" d="M15.215 14.044l-5.18 3.437-5.18-3.437v-.314h-.43v.547L10.035 18l5.613-3.723v-.547h-.433z">
+                </path>
+              </svg>
+              <span class="level"> 11 </span><span class="group" style="display: none;"> </span>
+            </div>
+            <div class="card-header-content">
+              <div class="title-large nowrap">
+                Sehira Plector
+              </div>
+              <div class="title-small nowrap">
+                Seducer
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-illustration"><img src="<%= Routes.static_path(@socket, "/img/agents/speakerF_003.jpg") %>"></div>
+            <div class="card-information">
+              <div class="card-panel-window">
+                <div class="card-panel-container" style="left: 0px;">
+                  <div class="card-panel">
+                    <div class="is-sparse-y">
+                      <div>
+                        <span> 189 </span> / 208 <strong>XP</strong>
+                      </div>
+                      <div> Tetrarchian </div>
+                    </div>
+                    <div class="is-sparse-y">
+                      <div>
+                        <div class="simple-bonus">
+                          72
+                          <svg version="1.1" viewBox="0 0 20 20" class="svg-icon svg-fill">
+                            <path pid="0"
+                              d="M12 7c0-1-1-2-2-2S8 6 8 7s.582 1.738 1.6 2C9 9 8 10 8 12v3h4v-3c0-2-1-3-1.6-3 1.051-.262 1.6-1 1.6-2z">
+                            </path>
+                            <path pid="1"
+                              d="M15.995 6.9a5.996 5.996 0 00-11.99 0H4v11.2h12V6.9h-.005zM15 17.1H5V7.205l.005-.288C5.049 4.206 7.29 2 10 2s4.951 2.206 4.995 4.917l.005.221V17.1z">
+                            </path>
+                          </svg>
+                        </div>
+                        <div class="simple-bonus">
+                          82
+                          <svg version="1.1" viewBox="0 0 20 20" class="svg-icon svg-fill">
+                            <path pid="0"
+                              d="M10 6a4 4 0 100 8 4 4 0 000-8zm0 7.5v-7c1.93 0 3.5 1.57 3.5 3.5s-1.57 3.5-3.5 3.5z"></path>
+                            <path pid="1"
+                              d="M10 2c-4.417 0-8 3.583-8 8s3.583 8 8 8 8-3.583 8-8-3.583-8-8-8zm0 15c-3.86 0-7-3.141-7-7 0-3.86 3.14-7 7-7 3.859 0 7 3.14 7 7 0 3.859-3.141 7-7 7z">
+                            </path>
+                          </svg>
+                        </div>
+                      </div>
+                      <div>
+                        <div class="simple-bonus">
+                          88
+                          <svg version="1.1" viewBox="0 0 20 20" class="svg-icon svg-fill">
+                            <path pid="0"
+                              d="M10 0C4.477 0 0 4.477 0 10s4.477 10 10 10 10-4.477 10-10S15.523 0 10 0zm6.707 10.707L14.414 13l1.543 1.543a.999.999 0 11-1.414 1.414L13 14.414l-2.293 2.293a.997.997 0 01-1.414 0L7 14.414l-1.543 1.543a.997.997 0 01-1.414 0 .999.999 0 010-1.414L5.586 13l-2.293-2.293a.999.999 0 010-1.414L5.586 7 4.043 5.457a.999.999 0 111.414-1.414L7 5.586l2.293-2.293a.999.999 0 011.414 0L13 5.586l1.544-1.543a.999.999 0 111.414 1.414L14.414 7l2.293 2.293a.999.999 0 010 1.414z">
+                            </path>
+                            <path pid="1" d="M10 14.586l-4.586-4.585L10 5.415l4.586 4.586z"></path>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <hr>
+                    <div>
+                      <h2>Agent</h2>
+                      <div class="is-sparse-y">
+                        <div>Propaganda</div>
+                        <div class="character-skill-points"><span class="active"></span><span class="active strong"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span></div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="is-sparse-y">
+                        <div>Destabilization</div>
+                        <div class="character-skill-points"><span class="active strong"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span></div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="is-sparse-y character-skill-active">
+                        <div>Seduction</div>
+                        <div class="character-skill-points"><span class="active"></span><span class="active"></span><span
+                            class="active"></span><span class="active"></span><span class="active"></span><span
+                            class="active strong"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span></div>
+                      </div>
+                    </div>
+                    <div>
+                      <h2>Governor</h2>
+                      <div class="is-sparse-y">
+                        <div>Cohesion</div>
+                        <div class="character-skill-points"><span class="active"></span><span class="active"></span><span
+                            class="active strong"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span></div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="is-sparse-y">
+                        <div>Knowledge</div>
+                        <div class="character-skill-points"><span class="active strong"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span></div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="is-sparse-y">
+                        <div>Wisdom</div>
+                        <div class="character-skill-points"><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span><span class="inactive"></span><span class="inactive"></span><span
+                            class="inactive"></span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h2 class="landing-card-header">
+          <strong>Spy</strong>, <strong>bomb</strong> and <strong>seduce</strong> your enemies with the help of many unique agents
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-3">
+    <div class="landing-bloc-illustration">
+      <iframe
+        width="780"
+        height="438"
+        src="https://www.youtube.com/embed/5jCLs4pBJcw?&color=white&rel=0"
+        frameborder="0"
+        allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+    <div class="landing-bloc-illustration">
+      <img src="<%= Routes.static_path(@socket, "/img/screenshots/screenshot-1.png") %>">
+    </div>
+    <div class="landing-bloc-illustration">
+      <img src="<%= Routes.static_path(@socket, "/img/screenshots/screenshot-2.png") %>">
+    </div>
+    <div class="landing-bloc-illustration">
+      <img src="<%= Routes.static_path(@socket, "/img/screenshots/screenshot-3.png") %>">
+    </div>
+    <div class="landing-bloc-illustration">
+      <iframe
+        width="780"
+        height="438"
+        src="https://www.youtube.com/embed/ZxFnf3YZsig?&color=white&rel=0"
+        frameborder="0"
+        allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </section>
+</div>

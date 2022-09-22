@@ -1,0 +1,152 @@
+.header-box, .footer-box {
+  position: relative;
+  margin: 0 0 20px 0; padding: 0;
+  border-bottom: solid 1px #EFEFEF;
+
+  h2 {
+    padding: 0;
+    margin: 0 0 20px 0;
+
+    strong {
+      font-weight: 700;
+    }
+  }
+
+  .tools, .pagination {
+    margin-bottom: 20px;
+  }
+}
+
+.footer-box {
+  margin: 20px 0; padding: 20px 0 0 0;
+  border-top: solid 1px #EFEFEF;
+  border-bottom: none;
+  text-align: right;
+
+  .pagination {
+    position: static;
+  }
+}
+
+.tools, .pagination {
+  // display: inline-block;
+  display: inline-flex;
+  padding: 0;
+  margin-right: 20px;
+  vertical-align: top;
+
+  h3 {
+    margin: 0; padding-bottom: 10px;
+    line-height: 20px;
+    border: none;
+    font-weight: normal;
+  }
+
+  button, a, span {
+    display: inline-block;
+    line-height: 38px;
+    padding: 0 15px;
+    margin: 0;
+    font-size: 16px;
+    border: solid 1px #CCC;
+    border-right: none;
+    text-decoration: none;
+    color: #202020;
+    background: #F7F7F7;
+    vertical-align: top;
+
+    &:last-child {
+      border-right: solid 1px #CCC;
+    }
+
+    &.is-borderless {
+      border: none;
+    }
+
+    &.square {
+      padding: 0;
+      text-align: center;
+      width: 40px;
+
+      i {
+        margin: 0;
+      }
+    }
+
+    &.active {
+      font-weight: bold;
+      background: #EFEFEF;
+      color: $red-2;
+    }
+
+    &.green {
+      font-weight: bold;
+      background: $green-2;
+      color: white;
+
+      border-bottom-color: $green-3;
+      box-shadow: 0 1px 0 0 $green-3;
+    }
+
+    &.disable, &.disabled {
+      background: white;
+      color: #CCC;
+    }
+
+    &.title {
+      background: #262626;
+      border-color: black;
+      color: white;
+    }
+  }
+
+  span {
+    background: white;
+  }
+
+  button, a {
+    &:not(.green) {
+      &:hover, &:focus {
+        background: #E8E8E8;
+        color: black;
+        border-bottom-color: $red-1;
+        box-shadow: 0 1px 0 0 $red-1;
+      }
+    }
+  }
+
+  button {
+    height: 40px;
+  }
+
+  input {
+    height: 40px;
+    border: solid 1px #CCC;
+    border-right: none;
+    padding: 0 15px;
+    margin: 0;
+  }
+}
+
+.tools {
+  a i {
+    display: inline-block;
+    margin: 0 5px 0 0;
+  }
+  
+}
+
+.to-right, .pagination {
+  position: absolute;
+  right: 0; bottom: 0;
+  margin-right: 0;
+  margin-left: 20px;
+}
+
+.pagination {
+  button, a, span {
+    width: 38px;
+    text-align: center;
+    padding: 0;
+  }
+}

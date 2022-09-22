@@ -1,0 +1,239 @@
+<div class="content large">
+  <div class="header-box">
+    <h2>
+      <strong><%= @instance.name %></strong>
+    </h2>
+
+    <div class="tools">
+      <span class="active">
+        <%= RC.Instances.Instance.state_name(@instance.state) %>
+      </span>
+    </div>
+
+    <div class="tools">
+      <%= if @instance.supervisor_status != :not_instantiated do %>
+        <%= link to: "#", "phx-click": "stop_supervisor" do %>
+          Détruire le superviseur
+        <% end %>
+      <% end %>
+      <%= link to: "#", "phx-click": "fix_agents" do %>
+        Correction des agents
+      <% end %>
+    </div>
+  </div>
+
+  <div class="label-box">
+    <i class="fa fa-database"></i>
+    <span class="label">ID</span>
+    <span class="value"><%= @instance.id %></span>
+  </div><!--
+  --><div class="label-box">
+    <i class="fa fa-user"></i>
+    <span class="label">Créateur</span>
+    <span class="value"><%= @account.name %></span>
+  </div><!--
+  --><div class="label-box">
+    <i class="fa fa-project-diagram"></i>
+    <span class="label">Node</span>
+    <span class="value"><%= @instance.node %></span>
+  </div><!--
+  --><div class="label-box">
+    <i class="fa fa-envelope"></i>
+    <span class="label">Public</span>
+    <span class="value"><%= @instance.public %></span>
+  </div><!--
+  --><div class="label-box">
+    <i class="fa fa-clock"></i>
+    <span class="label">Etat de l'inscription</span>
+    <span class="value"><%= @instance.registration_status %></span>
+  </div><!--
+  --><div class="label-box">
+    <i class="fa fa-clock"></i>
+    <span class="label">Type d'inscription</span>
+    <span class="value"><%= @instance.registration_type %></span>
+  </div><!--
+  --><div class="label-box">
+    <i class="fa fa-clock"></i>
+    <span class="label">Création</span>
+    <span class="value"><%= Portal.Date.format(@instance.inserted_at, :datetime) %></span>
+  </div><!--
+  --><div class="label-box">
+    <i class="fa fa-clock"></i>
+    <span class="label">Dernière modification</span>
+    <span class="value"><%= Portal.Date.format(@instance.updated_at, :datetime) %></span>
+  </div><!--
+  --><div class="label-box">
+    <i class="fa fa-clock"></i>
+    <span class="label">Replay</span>
+    <span class="value">
+      <%= live_patch "Show replay", to: Routes.live_path(@socket, Portal.ReplayLive, @instance.id) %>
+    </span>
+  </div><!--
+  --><div class="label-box">
+    <i class="fa fa-clock"></i>
+    <span class="label">Charts</span>
+    <span class="value">
+      <%= live_patch "Show charts", to: Routes.live_path(@socket, Portal.ChartsLive, @instance.id) %>
+    </span>
+  </div>
+
+  <h3>Factions & Profils</h3>
+
+  <div class="tools">
+    <%= for faction <- @instance.factions do %>
+      <%= link to: "#", "phx-click": "get_profiles", "phx-value-fid": faction.id do %>
+        <%= faction.faction_ref %>
+      <% end %>
+    <% end %>
+  </div>
+
+  <%= if assigns[:profiles] do %>
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Nom</th>
+          <th>Elo</th>
+          <th class="square"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= for profile <- @profiles do %>
+          <tr>
+            <td>
+              <strong><%= profile.id %></strong>
+            </td>
+            <td>
+              <strong><%= profile.name %></strong>
+            </td>
+            <td>
+            <%= round(profile.elo) %>
+          </td>
+            <td class="square action">
+              <%= live_redirect to: Routes.live_path(@socket, Portal.ProfileLive, profile.id) do %>
+                <i class="fa fa-pencil-alt"></i>
+              <% end %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  <% end %>
+
+  <h3>Snapshots</h3>
+
+  <%= if Manager.created?(@instance.id) and Enum.member?(["paused", "running"], @instance.state) do %>
+    <div class="tools">
+      <%= link to: "#", "phx-click": "create_snapshot" do %>
+        Créer un snapshot
+      <% end %>
+    </div>
+  <% end %>
+
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Nom</th>
+        <th>Ajouté le</th>
+        <th class="square"></th>
+        <th class="square"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= for snapshot <- @snapshots do %>
+        <tr>
+          <td>
+            <strong><%= snapshot.id %></strong>
+          </td>
+          <td>
+            <strong><%= snapshot.name %></strong>
+          </td>
+          <td>
+            <%= Portal.Date.format(snapshot.inserted_at, :datetime) %>
+          </td>
+          <td class="square action green">
+            <%= link to: "#", "phx-click": "restore_snapshot", "phx-value-sid": snapshot.id do %>
+              <i class="fa fa-sync"></i>
+            <% end %>
+          </td>
+          <td class="square action red">
+            <%= link to: "#", "phx-click": "delete_snapshot", "phx-value-sid": snapshot.id do %>
+              <i class="fa fa-times"></i>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <h3>Groupes</h3>
+
+  <div class="tools" style="margin-bottom: 10px;">
+    <%= f = form_for :group, "#", phx_submit: "bind_group", class: "form one-input-form" %>
+      <%= text_input f, :id, placeholder: "Group ID" %><!--
+      --><%= submit do %>
+        Lier le groupe
+      <% end %>
+    </form>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Nom</th>
+        <th>Ajouté le</th>
+        <th class="square"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= for group <- @instance.groups do %>
+        <tr>
+          <td>
+            <strong><%= group.name %></strong>
+          </td>
+          <td>
+            <%= Portal.Date.format(group.inserted_at, :date) %>
+          </td>
+          <td class="square action red">
+            <%= link to: "#", "phx-click": "unbind_group", "phx-value-gid": group.id do %>
+              <i class="fa fa-times"></i>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <h3>Historique des états</h3>
+
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>État</th>
+        <th>Date</th>
+        <th>Compte</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= for state <- @states do %>
+        <tr>
+          <td><%= state.id %></td>
+          <td>
+            <strong><%= state.state %></strong>
+          </td>
+          <td>
+            <%= Portal.Date.format(state.inserted_at, :datetime) %>
+          </td>
+          <td>
+            <%= live_redirect to: Routes.live_path(@socket, Portal.AccountLive, state.account_id) do %>
+              <%= state.account.name %>
+              (<%= state.account.email %>)
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

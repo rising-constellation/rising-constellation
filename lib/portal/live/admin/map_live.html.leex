@@ -1,0 +1,42 @@
+<div class="content large">
+  <div class="header-box">
+    <h2>
+      <strong><%= @map.game_metadata["name"] %></strong>
+    </h2>
+
+  <div class="label-box">
+    <i class="fa fa-database"></i>
+    <span class="label">ID</span>
+    <span class="value"><%= @map.id %></span>
+  </div><!--
+  --><div class="label-box">
+    <i class="fa fa-database"></i>
+    <span class="label">Name</span>
+    <span class="value"><%= @map.game_metadata["name"] %></span>
+  </div><!--
+  --><div class="label-box">
+    <i class="fa fa-database"></i>
+    <span class="label">Officiel</span>
+    <span class="value"><%= @map.is_official %></span>
+  </div><!--
+  --><div class="label-box">
+    <i class="fa fa-database"></i>
+    <span class="label">Description</span>
+    <span class="value"><%= @map.game_metadata["description"] %></span>
+  </div><!--
+  --><div class="label-box">
+    <i class="fa fa-database"></i>
+    <span class="label">Taille</span>
+    <span class="value"><%= @map.game_metadata["size"] %></span>
+  </div><!--
+  --><div class="label-box">
+    <i class="fa fa-database"></i>
+    <span class="label">Nombre de secteurs</span>
+    <span class="value"><%= @map.game_metadata["sector_number"] %></span>
+  </div><!--
+  --><div class="label-box">
+    <i class="fa fa-database"></i>
+    <span class="label">Nombre de systèmes</span>
+    <span class="value"><%= @map.game_metadata["system_number"] %></span>
+  </div>
+</div>

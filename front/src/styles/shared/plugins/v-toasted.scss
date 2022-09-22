@@ -1,0 +1,38 @@
+/*
+ * Notice:
+ *
+ * `important` are here to fix a priority problem
+ * happening with CSS during build process.
+ *
+ * webpack seems to load native CSS plugin rules before
+ * our CSS rules in development, and after in production.
+ * In order to TEMPORARY fix the problem, adding
+ * !important forces the browser to apply our style in
+ * every situation.
+ */
+
+.toasted-container {
+  &.bottom-right {
+    bottom: 70px !important;
+    right: 10px !important;
+  }
+  .toasted {
+    &:first-child {
+      margin-top: 0 !important;
+    }
+  }
+
+  .toasted-primary {
+    padding: 0 15px !important;
+    border-radius: 0 !important;
+
+    font-size: 1.4rem !important;
+  }
+
+  .error {
+    background: $theme-red !important;
+    color: $black;
+    font-weight: bold;
+    color: darken($theme-red, 40%);
+  }
+}

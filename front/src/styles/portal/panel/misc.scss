@@ -1,0 +1,135 @@
+.default-help {
+  margin-bottom: 20px;
+  padding: 20px;
+
+  border: solid 1px transparentize($primary, 0.3);
+  background: transparentize($primary, 0.7);
+  border-radius: 3px;
+
+  h2 {
+    margin: 0 0 5px 0; padding: 0;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+  }
+
+  p {
+    margin: 0 0 5px 0; padding: 0;
+
+    a {
+      color: white;
+      text-decoration: underline;
+    }
+
+    img {
+      display: block;
+      margin-top: 10px;
+      width: 100%;
+      border-radius: 5px;
+    }
+  }
+
+  & > *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.steam-upgrade-product {
+  position: relative;
+  background: $black;
+  margin-bottom: 20px;
+  height: 120px;
+  border-radius: 3px;
+  overflow: hidden;
+
+  img {
+    float: left;
+    width: 120px;
+    padding: 10px;
+    background: rgba(255, 255, 255, .1);
+  }
+
+  h2 {
+    padding: 20px 20px 10px 140px;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+  }
+
+  .sup-value {
+    padding: 0 20px 0 140px;
+
+    .label {
+      display: inline-block;
+      width: 100px;
+      opacity: .75;
+    }
+  }
+
+  .sup-price {
+    position: absolute;
+    bottom: 20px; right: 20px;
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+}
+
+.conversation-message {
+  position: relative;
+  left: -25px;
+  padding: 10px 25px;
+  border-bottom: solid 1px rgba(0, 0, 0, .1);
+  width: calc(100% + 50px);
+
+  &:first-child {
+    border-top: solid 1px rgba(0, 0, 0, .1);
+  }
+
+  .conversation-message-header {
+    margin-bottom: 10px;
+    opacity: .5;
+
+    strong {
+      display: inline-block;
+      margin-right: 10px;
+    }
+  }
+
+  &.is-own {
+    background: rgba(0, 0, 0, .05);
+
+    .conversation-message-header strong {
+      color: $primary;
+    }
+  }
+}
+
+.tutorial-box {
+  position: absolute;
+  top: 50px; left: 50px;
+  width: 400px;
+
+  background: rgba(255, 255, 255, .05);
+  border: solid 1px rgba(255, 255, 255, .1);
+  backdrop-filter: blur(3px);
+
+  & > * { padding: 25px; }
+  & > *:not(:last-child) {
+    border-bottom: solid 1px rgba(255, 255, 255, .1);
+  }
+
+  h2 {
+    text-transform: uppercase;
+    font-weight: normal;
+  }
+
+  .button {
+    background: rgba(255, 255, 255, .05);
+
+    .default-button {
+      line-height: 50px;
+    }
+  }
+
+  .info p:not(:last-child) {
+    margin-bottom: 25px;
+  }
+}

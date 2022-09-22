@@ -1,0 +1,145 @@
+.default-table {
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, .2);
+  background: rgba(0, 0, 0, .05);
+
+  td {
+    padding: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+    vertical-align: middle;
+
+    em {
+      font-style: normal;
+      opacity: .5;
+      transition: opacity linear 250ms;
+    }
+
+    .toast {
+      display: inline-block;
+      background: $grey-default;
+      padding: 0 6px;
+      border-radius: 3px;
+      margin-left: 10px;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      font-weight: bold;
+      text-transform: uppercase;
+
+      .toast {
+        font-size: 1.4rem;
+        font-weight: normal;
+      }
+    }
+  }
+
+  tr {
+    transition: background linear 250ms;
+  }
+
+  tr:hover {
+    background: rgba(0, 0, 0, .1);
+
+    em {
+      opacity: 1;
+    }
+  }
+
+  .actions {
+    text-align: right;
+
+    .default-button {
+      margin-left: 10px;
+    }
+  }
+}
+
+.instances-table {
+  td:first-child {
+    position: relative;
+    width: 65px;
+    text-align: center;
+
+    .svg-icon {
+      width: 32px;
+      height: 32px;
+
+      &.created { color: $grey-dark; }
+      &.open { color: $theme-light-blue; }
+      &.running { color: $theme-yellow; }
+      &.paused { color: $grey-dark; }
+      &.not_running { color: $grey-dark; }
+      &.ended { color: $grey-dark; }
+    }
+
+    .star {
+      position: absolute;
+      bottom: 0; right: 22px;
+      font-size: 2rem;
+      text-shadow: 0 0 5px black;
+    }
+
+  }
+
+  .header {
+    display: flex;
+
+    h2 {
+      margin-right: 10px;
+    }
+
+    .toast {
+      opacity: .5;
+    }
+  }
+
+  .bull {
+    display: inline-block;
+    width: 10px; height: 10px;
+    background: red;
+    border-radius: 2px;
+
+    @each $class, $color in $themes-list {
+      &.theme-#{$class} {
+        background: $color;
+      }
+    }
+  }
+}
+
+.profiles-table {
+  margin: 20px;
+  width: calc(100% - 40px);
+}
+
+.standings-table {
+  tr td {
+    &:nth-child(1) {
+      width: 43px;
+      text-align: center;
+      opacity: .25;
+    }
+
+    &:nth-child(2) {
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    &:nth-child(3) {
+      font-weight: bold;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, .5);
+      text-align: right;
+    }
+  }
+
+  tr.is-active {
+    background: $primary;
+
+    td {
+      &:nth-child(1) { opacity: 1; }
+      &:nth-child(3) { color: $white; }
+    }
+  }
+}

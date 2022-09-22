@@ -1,0 +1,47 @@
+.alert {
+  position: fixed;
+  top: 5px; right: -1000px;
+  height: 60px;
+
+  color: white;
+  overflow: hidden;
+
+  z-index: 1050;
+
+  h2 {
+    display: none;
+  }
+
+  p {
+    line-height: 60px;
+    margin: 0 25px;
+    padding: 0;
+    font-size: 18px;
+
+    i {
+      display: inline-block;
+      margin: 0 12px 0 0;
+      font-size: 18px;
+    }
+  }
+}
+
+.phx-alert {
+  display: none;
+  color: white;
+  min-height: 20px;
+  margin-left: -10px;
+  margin-right: -10px;
+  padding: 20px;
+
+  &:not(:empty) {
+    display: block;
+  }
+
+  &.phx-alert-info {
+    background-color: $green-2;
+  }
+  &.phx-alert-danger {
+    background-color: $red-2;
+  }
+}

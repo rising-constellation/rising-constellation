@@ -1,0 +1,61 @@
+<div class="content large">
+  <div class="header-box">
+    <h2>
+      <strong><%= @scenario.game_metadata["name"] %></strong>
+    </h2>
+
+  <div class="label-box">
+    <i class="fa fa-database"></i>
+    <span class="label">ID</span>
+    <span class="value"><%= @scenario.id %></span>
+  </div><!--
+  --><div class="label-box">
+    <i class="fa fa-database"></i>
+    <span class="label">Name</span>
+    <span class="value"><%= @scenario.game_metadata["name"] %></span>
+  </div><!--
+  --><div class="label-box">
+    <i class="fa fa-database"></i>
+    <span class="label">Officiel</span>
+    <span class="value"><%= @scenario.is_official %></span>
+  </div><!--
+  --><div class="label-box">
+    <i class="fa fa-database"></i>
+    <span class="label">Description</span>
+    <span class="value"><%= @scenario.game_metadata["description"] %></span>
+  </div><!--
+  --><div class="label-box">
+    <i class="fa fa-database"></i>
+    <span class="label">Taille</span>
+    <span class="value"><%= @scenario.game_metadata["size"] %></span>
+  </div><!--
+  --><div class="label-box">
+    <i class="fa fa-database"></i>
+    <span class="label">Nombre de secteurs</span>
+    <span class="value"><%= @scenario.game_metadata["sector_number"] %></span>
+  </div><!--
+  --><div class="label-box">
+    <i class="fa fa-database"></i>
+    <span class="label">Nombre de systèmes</span>
+    <span class="value"><%= @scenario.game_metadata["system_number"] %></span>
+  </div><!--
+  --><div class="label-box">
+    <i class="fa fa-database"></i>
+    <span class="label">Mode</span>
+    <span class="value"><%= @scenario.game_metadata["mode"] %></span>
+  </div><!--
+  --><div class="label-box">
+    <i class="fa fa-database"></i>
+    <span class="label">Vitesse</span>
+    <span class="value"><%= @scenario.game_metadata["speed"] %></span>
+  </div><!--
+  --><div class="label-box">
+    <i class="fa fa-database"></i>
+    <span class="label">Factions</span>
+      <div class="tools">
+        <%= for faction <- @scenario.game_metadata["factions"] do %>
+              <span class="active"><%= faction["key"] %></span>
+        <% end %>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,155 @@
+body, button, input, textarea {
+  font-family: 'Raleway', 'Trebuchet MS', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+a, button, input, select, textarea {
+  transition: all 100ms linear;
+}
+
+.container {
+  margin-top: 65px;
+  padding: 25px;
+
+  .content {
+    &.small {
+      width: 600px;
+      margin: auto;
+    }
+
+    &.medium {
+      width: 800px;
+      margin: auto;
+    }
+
+    &.large {
+      width: 1000px;
+      margin: auto;
+    }
+  }
+}
+
+h2 {
+  font-size: 44px;
+  padding: 20px 0 0 0;
+}
+
+h3 {
+  font-size: 22px;
+  line-height: 60px;
+  margin: 20px 0;
+  padding: 0;
+
+  border: solid 1px #efefef;
+  border-right: none;
+  border-left: none;
+  font-weight: bold;
+
+  &.soft-separation {
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+
+  .subtitle {
+    font-size: 16px;
+    font-weight: normal;
+  }
+
+  .right {
+    float: right;
+  }
+}
+
+h4 {
+  font-size: 16px;
+  margin: 0 0 10px 0;
+  padding: 0;
+  font-weight: bold;
+}
+
+.no-implemented {
+  text-decoration: line-through !important;
+}
+
+hr {
+  margin: 20px 0;
+  border: none;
+  background: none;
+  border-top: solid 1px #EFEFEF;
+
+  &.hidden {
+    border-color: transparent;
+  }
+}
+
+strong {
+  font-weight: 700;
+}
+
+a {
+  color: $red-1;
+
+  &:hover, &:focus {
+    color: $red-3;
+  }
+}
+
+.toast {
+  display: inline-block;
+  padding: 0 6px;
+  border-radius: 3px;
+  line-height: 20px;
+  
+  font-size: 70%;
+  font-weight: 900;
+  text-transform: uppercase;
+  border: solid 1px black;
+  background: white;
+
+  &.is-grey { color: white; background: #4f4f4f; border-color: #202020; }
+  &.is-blue-1 { color: white; background: $blue-1; border-color: $blue-2; }
+  &.is-blue-2 { color: white; background: $blue-3; border-color: $blue-2; }
+  &.is-green-1 { color: white; background: $green-1; border-color: $green-2; }
+  &.is-green-2 { color: white; background: $green-2; border-color: $green-2; }
+  &.is-red-1 { color: white; background: $red-1; border-color: $red-2; }
+  &.is-red-2 { color: white; background: $red-3; border-color: $red-2; }
+}
+
+.title-box {
+  background: #f7f7f7;
+  border: solid 1px #efefef;
+
+  margin: 25px 0;
+  padding: 0 25px 25px 25px;
+
+  h3 {
+    margin-top: 0;
+    border-top: none;
+  }
+
+  table {
+    background: white;
+    border: solid 1px #efefef;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .container {
+    padding: 10px;
+  }
+
+  hr {
+    margin: 10px 0;
+  }
+
+  .mq-large {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 1101px) {
+  .mq-small {
+    display: none !important;
+  }
+}

@@ -1,0 +1,1144 @@
+{
+  "data": {
+    "bonus_pipeline_in": {
+      "army_invasion": {
+        "name": "Invasionskraft der Flotte"
+      },
+      "army_maintenance": {
+        "name": "Instandhaltung der Flotte"
+      },
+      "army_raid": {
+        "name": "Bombardierungsmacht der Flotte"
+      },
+      "army_repair": {
+        "name": "Reparaturstärke der Flotte"
+      },
+      "body_act": {
+        "name": "Anziehung"
+      },
+      "body_ind": {
+        "name": "Industrielles Potenzial"
+      },
+      "body_pop": {
+        "name": "Lokale Population"
+      },
+      "body_tec": {
+        "name": "Wissenschaftliches Potenzial"
+      },
+      "direct": {
+        "name": "Direkt"
+      },
+      "player_credit": {
+        "name": "Credit"
+      },
+      "player_ideology": {
+        "name": "Ideologie"
+      },
+      "player_technology": {
+        "name": "Technologie"
+      },
+      "speaker_conversion": {
+        "name": "Siderianische Konversation"
+      },
+      "speaker_encourage_hate": {
+        "name": "Siderianische Propaganda"
+      },
+      "speaker_make_dominion": {
+        "name": "Siderianischer Proselytismus"
+      },
+      "spy_assassination": {
+        "name": "Erased Entschlossenheit"
+      },
+      "spy_cover": {
+        "name": "Wiederherstellung der Tarnung"
+      },
+      "spy_infiltrate": {
+        "name": "Erased Geheimhaltung"
+      },
+      "spy_sabotage": {
+        "name": "Erased Sabotage"
+      },
+      "sys_credit": {
+        "name": "Credit"
+      },
+      "sys_defense": {
+        "name": "Verteidigung"
+      },
+      "sys_happiness": {
+        "name": "Stabilität"
+      },
+      "sys_ideology": {
+        "name": "Ideologie"
+      },
+      "sys_mobility": {
+        "name": "Mobilität"
+      },
+      "sys_pop": {
+        "name": "Bevölkerung"
+      },
+      "sys_production": {
+        "name": "Produktion"
+      },
+      "sys_remove_contact": {
+        "name": "Gegenspionage"
+      },
+      "sys_technology": {
+        "name": "Technologie"
+      },
+      "sys_visibility": {
+        "name": "Sichtbarkeit"
+      }
+    },
+    "bonus_pipeline_out": {
+      "army_invasion": {
+        "name": "Invasionskraft der Flotte"
+      },
+      "army_maintenance": {
+        "name": "Wartung der Flotte"
+      },
+      "army_raid": {
+        "name": "Bombardierungsmacht der Flotte"
+      },
+      "army_repair": {
+        "name": "Reparaturkraft der Flotte"
+      },
+      "character_experience": {
+        "name": "Erfahrungsgewinn des Agenten"
+      },
+      "player_admiral": {
+        "name": "Navarch Limit"
+      },
+      "player_credit": {
+        "name": "Credit"
+      },
+      "player_dominion": {
+        "name": "Dominion Limit"
+      },
+      "player_ideology": {
+        "name": "Ideologie"
+      },
+      "player_speaker": {
+        "name": "Siderian Limit"
+      },
+      "player_spy": {
+        "name": "Erased Limit"
+      },
+      "player_system": {
+        "name": "System Limit"
+      },
+      "player_technology": {
+        "name": "Technologie"
+      },
+      "speaker_conversion": {
+        "name": "Siderianische Konversation"
+      },
+      "speaker_encourage_hate": {
+        "name": "Siderianische Propaganda"
+      },
+      "speaker_make_dominion": {
+        "name": "Siderianischer Proselytismus"
+      },
+      "spy_assassination": {
+        "name": "Erased Entschlossenheit"
+      },
+      "spy_cover": {
+        "name": "Wiederherstellung der Tarnung"
+      },
+      "spy_infiltrate": {
+        "name": "Erased Geheimhhaltung"
+      },
+      "spy_sabotage": {
+        "name": "Erased Sabotage"
+      },
+      "sys_capital_lvl": {
+        "name": "Anfängliche XP von Großkampfschiffen"
+      },
+      "sys_ci": {
+        "name": "Spionage"
+      },
+      "sys_corvette_lvl": {
+        "name": "Anfängliche XP von Korvetten"
+      },
+      "sys_credit": {
+        "name": "Credit"
+      },
+      "sys_defense": {
+        "name": "Verteidigung"
+      },
+      "sys_fighter_lvl": {
+        "name": "Anfängliche XP von Jägern"
+      },
+      "sys_frigate_lvl": {
+        "name": "Anfängliche XP von Fregatten"
+      },
+      "sys_habitation": {
+        "name": "Unterkunft"
+      },
+      "sys_happiness": {
+        "name": "Stabilität"
+      },
+      "sys_ideology": {
+        "name": "Ideologie"
+      },
+      "sys_mobility": {
+        "name": "Mobilität"
+      },
+      "sys_production": {
+        "name": "Produktion"
+      },
+      "sys_radar": {
+        "name": "S.L.S.D. Level"
+      },
+      "sys_remove_contact": {
+        "name": "Gegenspionage"
+      },
+      "sys_technology": {
+        "name": "Technologie"
+      }
+    },
+    "building": {
+      "counterintelligence_open": {
+        "description": "—",
+        "name": "TODO",
+        "quote": "—"
+      },
+      "defense_global_dome": {
+        "description": "—",
+        "name": "Z.N.V.",
+        "quote": "—"
+      },
+      "defense_local_dome": {
+        "description": "—",
+        "name": "Abfangtunnel",
+        "quote": "—"
+      },
+      "defense_local_open": {
+        "description": "—",
+        "name": "Planetenschild",
+        "quote": "—"
+      },
+      "defense_local_orbital": {
+        "description": "—",
+        "name": "Konstellation von Ködern",
+        "quote": "—"
+      },
+      "factory_open": {
+        "description": "—",
+        "name": "Industriezentrum",
+        "quote": "In diesem Zentrum gruppieren sich unermesslich viele Firmen aller Art."
+      },
+      "factory_orbital": {
+        "description": "—",
+        "name": "Raffinerie",
+        "quote": "Gräben, die Ressourcen vom Extraktions- zum Verarbeitungsstandort transportieren."
+      },
+      "finance_open": {
+        "description": "—",
+        "name": "TODO",
+        "quote": "Ein Finanzzentrum, die Lunge der Marktwirtschaft."
+      },
+      "finance_orbital": {
+        "description": "—",
+        "name": "Geschäftsbereich",
+        "quote": "—"
+      },
+      "hab_dome": {
+        "description": "—",
+        "name": "Kapselstädte",
+        "quote": "Ein Mosaik aus Pavillons, die durch Glaswege miteinander verbunden sind."
+      },
+      "hab_open": {
+        "description": "—",
+        "name": "Wohnbezirk",
+        "quote": "Ein ruhiger Wohnkomplex für Megapolis-Arbeiter."
+      },
+      "hab_open_poor": {
+        "description": "—",
+        "name": "Bienenstockstädte",
+        "quote": "Chaotische Masse hoffnungsloser Proletarier."
+      },
+      "hab_open_rich": {
+        "description": "—",
+        "name": "Wohnarchipel",
+        "quote": "Eine friedliche Oase für wenige Privilegierte."
+      },
+      "happy_open": {
+        "description": "—",
+        "name": "Verwaltungszentrum",
+        "quote": "—"
+      },
+      "happy_orbital": {
+        "description": "—",
+        "name": "Orbitaler Gefängniskomplex",
+        "quote": "Im Vakuum des Weltraums sind die Fluchtchancen nahezu null."
+      },
+      "happy_pot_dome": {
+        "description": "—",
+        "name": "Hyperantrieb-Rennstrecke",
+        "quote": "—"
+      },
+      "happy_pot_open": {
+        "description": "—",
+        "name": "Erhaltenes Ökosystem",
+        "quote": "Eine Oase der Hoffnung, dass nicht alles dazu bestimmt ist, Stahl und Beton zu werden."
+      },
+      "happy_pot_orbital": {
+        "description": "—",
+        "name": "Zero-G Arena",
+        "quote": "Kämpfen macht in der Schwerelosigkeit viel mehr Spaß."
+      },
+      "high_factory_dome": {
+        "description": "—",
+        "name": "Metamaterialfabrik",
+        "quote": "Die besten Wissenschaftler entwerfen künstliche Verbundwerkstoffe für die Hightech-Industrie."
+      },
+      "hypergate": {
+        "description": "—",
+        "name": "Singularitätsring",
+        "quote": "—"
+      },
+      "ideo_credit_open": {
+        "description": "—",
+        "name": "Ein Netzwerk aus künstlichen Inseln",
+        "quote": "Ein schöner Ort, um sich zu entspannen und ein paar lukrative Geschäfte zu machen."
+      },
+      "ideo_dome": {
+        "description": "—",
+        "name": "Holokuppel",
+        "quote": "—"
+      },
+      "ideo_open": {
+        "description": "—",
+        "name": "Zitadelle",
+        "quote": "Als Symbol für Macht und entschlossene Autorität genügt seine bloße Präsenz, um uns davon zu überzeugen, dass man auf der richtigen Seite ist."
+      },
+      "infra_dome": {
+        "description": "—",
+        "name": "Zentraler Hub",
+        "quote": "Das schlagende Herz der Menschheit in einer kargen Umgebung."
+      },
+      "infra_open": {
+        "description": "—",
+        "name": "Megastädte",
+        "quote": "Eine Stadtwelt, die Brücke zwischen Himmel und Erde."
+      },
+      "lift_dome": {
+        "description": "—",
+        "name": "Weltraumaufzug",
+        "quote": "—"
+      },
+      "lift_open": {
+        "description": "—",
+        "name": "Orbitale Verbindung",
+        "quote": "—"
+      },
+      "market_dome": {
+        "description": "—",
+        "quote": "Hier gibt es von Hyperantriebsmotoren bis hin zu dekorativen Hologrammen einfach alles."
+      },
+      "market_open": {
+        "description": "—",
+        "name": "Kommerzielle Schlagader",
+        "quote": "Ein wahrer Fluss von Gütern und Kapital."
+      },
+      "military_school_dome": {
+        "description": "—",
+        "name": "Luft- und Raumfahrt-Militärakademie",
+        "quote": "—"
+      },
+      "mine_dome": {
+        "description": "—"
+      },
+      "mine_orbital": {
+        "description": "—"
+      },
+      "monument_dome": {
+        "description": "—"
+      },
+      "monument_open": {
+        "description": "—"
+      },
+      "radar_orbital": {
+        "description": "—",
+        "quote": "—"
+      },
+      "removecontact_dome": {
+        "description": "—",
+        "quote": "—"
+      },
+      "removecontact_open": {
+        "description": "—",
+        "quote": "—"
+      },
+      "research_dome": {
+        "description": "—"
+      },
+      "research_open": {
+        "description": "—",
+        "quote": "—"
+      },
+      "research_orbital": {
+        "description": "—",
+        "quote": "Für einige ist es der Stolz der Menschheit. Für Andere ist es der Untergang."
+      },
+      "shipyard_1_orbital": {
+        "description": "—",
+        "quote": "—"
+      },
+      "shipyard_2_orbital": {
+        "description": "—",
+        "quote": "—"
+      },
+      "shipyard_3_orbital": {
+        "description": "—",
+        "quote": "—"
+      },
+      "shipyard_4_orbital": {
+        "description": "—",
+        "quote": "—"
+      },
+      "spatioport_dome": {
+        "description": "—",
+        "quote": "—"
+      },
+      "spatioport_orbital": {
+        "description": "—",
+        "quote": "—"
+      },
+      "university_open": {
+        "description": "—"
+      }
+    },
+    "calendar": {
+      "tetrarch": {
+        "months_name": [
+          "Tetran",
+          "Quartos",
+          "Chatur",
+          "Quadrinople"
+        ],
+        "months_prefix": [
+          "α-",
+          "β-",
+          "γ-",
+          "δ-",
+          "ε-",
+          "ζ-"
+        ]
+      }
+    },
+    "character": {
+      "admiral": {
+        "name": "",
+        "skills": [
+          {
+            "description": "",
+            "name": ""
+          },
+          {
+            "description": "",
+            "name": ""
+          },
+          {
+            "description": "",
+            "name": ""
+          },
+          {
+            "description": "",
+            "name": "Produktion"
+          },
+          {
+            "description": "",
+            "name": "Verteidigung"
+          },
+          {
+            "description": "",
+            "name": ""
+          }
+        ]
+      },
+      "speaker": {
+        "name": "",
+        "skills": [
+          {
+            "description": "",
+            "name": ""
+          },
+          {
+            "description": "",
+            "name": ""
+          },
+          {
+            "description": "",
+            "name": ""
+          },
+          {
+            "description": "",
+            "name": ""
+          },
+          {
+            "description": "",
+            "name": ""
+          },
+          {
+            "description": "",
+            "name": ""
+          }
+        ]
+      },
+      "spy": {
+        "name": "",
+        "skills": [
+          {
+            "description": "",
+            "name": ""
+          },
+          {
+            "description": "",
+            "name": "Entschlossenheit"
+          },
+          {
+            "description": "",
+            "name": ""
+          },
+          {
+            "description": "",
+            "name": ""
+          },
+          {
+            "description": "",
+            "name": "Spionageabwehr"
+          },
+          {
+            "description": "",
+            "name": ""
+          }
+        ]
+      }
+    },
+    "doctrine": {
+      "admiral_4": {
+        "description": "+5 Navarchs and +2 Siderians"
+      },
+      "agent": {
+        "description": "—"
+      },
+      "assassinate": {
+        "description": "—",
+        "quote": "—"
+      },
+      "conversion": {
+        "description": "—",
+        "quote": "—"
+      },
+      "cover": {
+        "description": "—",
+        "quote": "—"
+      },
+      "credit_1": {
+        "description": "—"
+      },
+      "credit_2": {
+        "description": "—",
+        "quote": "Die Gelddruckermaschinen laufen heiß!"
+      },
+      "credit_3": {
+        "description": "—"
+      },
+      "credit_perc_1": {
+        "description": "—",
+        "quote": "—"
+      },
+      "credit_pola_1": {
+        "description": "—"
+      },
+      "credit_pop": {
+        "description": "—",
+        "quote": "—"
+      },
+      "defense_1": {
+        "description": "—",
+        "quote": "—"
+      },
+      "dominion_rate_1": {
+        "description": "—",
+        "quote": "—"
+      },
+      "dominion_rate_2": {
+        "description": "—",
+        "quote": "—"
+      },
+      "ideo_1": {
+        "description": "—"
+      },
+      "ideo_2": {
+        "description": "—"
+      },
+      "ideo_3": {
+        "description": "—"
+      },
+      "ideo_pola": {
+        "description": "—"
+      },
+      "infiltration": {
+        "description": "—",
+        "quote": "—"
+      },
+      "mobility_1": {
+        "description": "—",
+        "quote": "—"
+      },
+      "mobility_2": {
+        "description": "—",
+        "quote": "—"
+      },
+      "prod_1": {
+        "description": "—"
+      },
+      "prod_2": {
+        "description": "—"
+      },
+      "reduce_maintenance_1": {
+        "description": "—",
+        "quote": "—"
+      },
+      "reduce_maintenance_2": {
+        "description": "—",
+        "quote": "—"
+      },
+      "sabotage": {
+        "description": "—",
+        "quote": "—"
+      },
+      "speaker_1": {
+        "description": "—"
+      },
+      "speaker_2": {
+        "description": "—"
+      },
+      "speaker_3": {
+        "description": "—",
+        "name": "Leichte Kraft"
+      },
+      "speaker_4": {
+        "description": "—",
+        "quote": "—"
+      },
+      "speaker_dominion": {
+        "description": "—",
+        "quote": "—"
+      },
+      "spy_1": {
+        "description": "—"
+      },
+      "spy_2": {
+        "description": "—"
+      },
+      "spy_3": {
+        "description": "—",
+        "quote": "—"
+      },
+      "spy_4": {
+        "description": "—"
+      },
+      "spy_bonus": {
+        "description": "—",
+        "quote": "—"
+      },
+      "spy_def_1": {
+        "description": "—",
+        "quote": "—"
+      },
+      "spy_def_2": {
+        "description": "—",
+        "quote": "—"
+      },
+      "stab_1": {
+        "description": "—"
+      },
+      "stab_2": {
+        "description": "—"
+      },
+      "tech_1": {
+        "description": "—"
+      },
+      "tech_2": {
+        "description": "—"
+      },
+      "tech_3": {
+        "description": "—"
+      },
+      "tech_pola": {
+        "description": "—"
+      },
+      "upgrade_fleet": {
+        "description": "—",
+        "quote": "—"
+      },
+      "upgrade_invasion": {
+        "description": "—",
+        "quote": "—"
+      },
+      "upgrade_raid": {
+        "description": "—",
+        "name": "Taktisches Scouting",
+        "quote": "—"
+      },
+      "upgrade_repair": {
+        "description": "—",
+        "quote": "—"
+      },
+      "upgrade_xp": {
+        "description": "—",
+        "quote": "—"
+      }
+    },
+    "doctrine_class": {
+      "expansion": {
+        "name": "Expansion"
+      }
+    },
+    "patent": {
+      "capital_1": {
+        "description": "—",
+        "quote": "—"
+      },
+      "capital_2": {
+        "description": "—",
+        "quote": "—"
+      },
+      "capital_3": {
+        "description": "—",
+        "quote": "—"
+      },
+      "citadel": {
+        "description": "—",
+        "quote": "—"
+      },
+      "corvette_1": {
+        "description": "—",
+        "quote": "—"
+      },
+      "corvette_2": {
+        "description": "—",
+        "quote": "—"
+      },
+      "corvette_3": {
+        "description": "—",
+        "quote": "—"
+      },
+      "dome_academy": {
+        "description": "—",
+        "quote": "—"
+      },
+      "dome_defense_1": {
+        "description": "—",
+        "quote": "—"
+      },
+      "dome_defense_2": {
+        "description": "—",
+        "quote": "—"
+      },
+      "dome_happiness": {
+        "description": "—",
+        "quote": "—"
+      },
+      "dome_ideo": {
+        "description": "—",
+        "quote": "—"
+      },
+      "dome_industries": {
+        "description": "—",
+        "quote": "—"
+      },
+      "dome_mobility": {
+        "description": "—",
+        "quote": "—"
+      },
+      "dome_pop": {
+        "description": "—",
+        "quote": "—"
+      },
+      "fighter_1": {
+        "description": "—",
+        "quote": "—"
+      },
+      "fighter_2": {
+        "description": "—",
+        "quote": "—"
+      },
+      "fighter_3": {
+        "description": "—",
+        "quote": "—"
+      },
+      "fighter_4": {
+        "description": "—",
+        "quote": "—"
+      },
+      "frigate_1": {
+        "description": "—",
+        "quote": "—"
+      },
+      "frigate_2": {
+        "description": "—",
+        "quote": "—"
+      },
+      "frigate_3": {
+        "description": "—",
+        "quote": "—"
+      },
+      "frigate_4": {
+        "description": "—",
+        "quote": "—"
+      },
+      "infra_dome_1": {
+        "description": "—",
+        "quote": "—"
+      },
+      "infra_dome_2": {
+        "description": "—",
+        "quote": "—"
+      },
+      "infra_dome_3": {
+        "description": "—",
+        "quote": "—"
+      },
+      "infra_dome_4": {
+        "description": "—",
+        "quote": "—"
+      },
+      "infra_dome_5": {
+        "description": "—",
+        "quote": "—"
+      },
+      "infra_open_1": {
+        "description": "—",
+        "name": "Riesige Megastädte I",
+        "quote": "—"
+      },
+      "infra_open_2": {
+        "description": "—",
+        "quote": "—"
+      },
+      "infra_open_3": {
+        "description": "—",
+        "quote": "—"
+      },
+      "infra_open_4": {
+        "description": "—",
+        "quote": "—"
+      },
+      "infra_open_5": {
+        "description": "—",
+        "quote": "—"
+      },
+      "infra_orbital_1": {
+        "description": "—",
+        "name": "Autonomes Lebenssystem II",
+        "quote": "—"
+      },
+      "infra_orbital_2": {
+        "description": "—",
+        "quote": "—"
+      },
+      "infra_orbital_3": {
+        "description": "—",
+        "quote": "—"
+      },
+      "infra_orbital_4": {
+        "description": "—",
+        "quote": "—"
+      },
+      "infra_orbital_5": {
+        "description": "—",
+        "name": "Autonomes Lebenssystem V",
+        "quote": "—"
+      },
+      "merge_corvette_1": {
+        "description": "—",
+        "quote": "—"
+      },
+      "merge_corvette_2": {
+        "description": "—",
+        "quote": "—"
+      },
+      "merge_fighter_1": {
+        "description": "—",
+        "quote": "—"
+      },
+      "merge_fighter_2": {
+        "description": "—",
+        "quote": "—"
+      },
+      "merge_fighter_3": {
+        "description": "—",
+        "quote": "—"
+      },
+      "merge_fighter_corvette": {
+        "description": "—",
+        "quote": "—"
+      },
+      "merge_frigate_1": {
+        "description": "—",
+        "quote": "—"
+      },
+      "open_credit": {
+        "description": "—",
+        "quote": "—"
+      },
+      "open_defense": {
+        "description": "—",
+        "quote": "—"
+      },
+      "open_happiness": {
+        "description": "—",
+        "quote": "—"
+      },
+      "open_ideo": {
+        "description": "—",
+        "quote": "—"
+      },
+      "open_industries": {
+        "description": "—",
+        "quote": "—"
+      },
+      "open_intel": {
+        "description": "—",
+        "quote": "—"
+      },
+      "open_island": {
+        "description": "—",
+        "quote": "—"
+      },
+      "open_lift": {
+        "description": "—",
+        "quote": "—"
+      },
+      "open_mobility": {
+        "description": "—",
+        "quote": "—"
+      },
+      "open_research": {
+        "description": "—",
+        "quote": "—"
+      },
+      "orbital_credit": {
+        "description": "—",
+        "quote": "—"
+      },
+      "orbital_defense": {
+        "description": "—",
+        "quote": "—"
+      },
+      "orbital_happiness": {
+        "description": "—",
+        "quote": "—"
+      },
+      "orbital_hypergate": {
+        "description": "—",
+        "quote": "—"
+      },
+      "orbital_mobility": {
+        "description": "—",
+        "quote": "—"
+      },
+      "orbital_prod": {
+        "description": "—",
+        "quote": "—"
+      },
+      "orbital_radar": {
+        "description": "—",
+        "quote": "—"
+      },
+      "orbital_research": {
+        "description": "—",
+        "quote": "—"
+      },
+      "shipyard_1": {
+        "description": "—",
+        "name": "Jäger Werft",
+        "quote": "—"
+      },
+      "shipyard_2": {
+        "description": "—",
+        "quote": "—"
+      },
+      "shipyard_3": {
+        "description": "—",
+        "quote": "—"
+      },
+      "shipyard_4": {
+        "description": "—",
+        "quote": "—"
+      },
+      "transport_1": {
+        "description": "—",
+        "quote": "—"
+      },
+      "transport_2": {
+        "description": "—",
+        "quote": "—"
+      }
+    },
+    "patent_info": {
+      "infra_orbital_2": "Ermöglicht das Upgrade von Orbitalgebäuden auf Stufe 2",
+      "merge_fighter_1": "Ermöglicht den Bau von Einheiten mit 4 Jäger"
+    },
+    "ship": {
+      "capital_1": {
+        "description": "—",
+        "trade_name": "—"
+      },
+      "capital_2": {
+        "description": "—",
+        "trade_name": "—"
+      },
+      "capital_3": {
+        "description": "—",
+        "trade_name": "—"
+      },
+      "corvette_1": {
+        "description": "—",
+        "name": "Leichte Korvetten",
+        "trade_name": "—"
+      },
+      "corvette_1v2": {
+        "description": "—",
+        "trade_name": "—"
+      },
+      "corvette_1v3": {
+        "description": "—",
+        "trade_name": "—"
+      },
+      "corvette_2": {
+        "description": "—",
+        "trade_name": "—"
+      },
+      "corvette_2v2": {
+        "description": "—",
+        "trade_name": "—"
+      },
+      "corvette_2v3": {
+        "description": "—",
+        "trade_name": "—"
+      },
+      "corvette_3": {
+        "description": "—",
+        "name": "2 Korvetten diversen Türmen",
+        "trade_name": "—"
+      },
+      "corvette_3v2": {
+        "description": "—",
+        "name": "4 Korvetten mit diversen Türmen",
+        "trade_name": "—"
+      },
+      "corvette_3v3": {
+        "description": "—",
+        "trade_name": "—"
+      },
+      "fighter_1": {
+        "description": "—",
+        "trade_name": "—"
+      },
+      "fighter_1v2": {
+        "description": "—",
+        "trade_name": "—"
+      },
+      "fighter_1v3": {
+        "description": "—",
+        "trade_name": "—"
+      },
+      "fighter_1v4": {
+        "description": "—",
+        "trade_name": "—"
+      },
+      "fighter_2": {
+        "description": "—",
+        "trade_name": "—"
+      },
+      "fighter_2v2": {
+        "description": "—",
+        "trade_name": "—"
+      },
+      "fighter_2v3": {
+        "description": "—",
+        "trade_name": "—"
+      },
+      "fighter_2v4": {
+        "trade_name": "—"
+      },
+      "fighter_3": {
+        "description": "—",
+        "trade_name": "—"
+      },
+      "fighter_3v2": {
+        "description": "—",
+        "trade_name": "—"
+      },
+      "fighter_3v3": {
+        "description": "—",
+        "trade_name": "—"
+      },
+      "fighter_3v4": {
+        "description": "—",
+        "trade_name": "—"
+      },
+      "fighter_4": {
+        "description": "—",
+        "trade_name": "—"
+      },
+      "fighter_4v2": {
+        "description": "—",
+        "trade_name": "—"
+      },
+      "fighter_4v3": {
+        "description": "—",
+        "trade_name": "—"
+      },
+      "fighter_4v4": {
+        "description": "—",
+        "trade_name": "—"
+      },
+      "frigate_1": {
+        "description": "—",
+        "trade_name": "—"
+      },
+      "frigate_1v2": {
+        "description": "—",
+        "trade_name": "—"
+      },
+      "frigate_2": {
+        "description": "—",
+        "trade_name": "—"
+      },
+      "frigate_2v2": {
+        "description": "—",
+        "trade_name": "—"
+      },
+      "frigate_3": {
+        "description": "—",
+        "trade_name": "—"
+      },
+      "frigate_3v2": {
+        "description": "—",
+        "trade_name": "—"
+      },
+      "frigate_4": {
+        "description": "—",
+        "trade_name": "—"
+      },
+      "frigate_4v2": {
+        "description": "—",
+        "trade_name": "—"
+      },
+      "transport_1": {
+        "description": "—",
+        "trade_name": "—"
+      },
+      "transport_2": {
+        "description": "—",
+        "trade_name": "—"
+      }
+    }
+  }
+}

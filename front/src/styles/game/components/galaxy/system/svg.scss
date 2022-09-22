@@ -1,0 +1,176 @@
+.system-svg {
+  position: relative;
+  top: calc(-#{$stellar-system-view-overflow} / 2);
+  height: calc(#{$content-height} + #{$stellar-system-view-overflow});
+  width: calc(#{$content-height} + #{$stellar-system-view-overflow});
+
+  overflow: hidden;
+
+  .svg-background {
+    position: absolute;
+    top: 50%; bottom: 50%;
+    left: 50%; right: 50%;
+
+    opacity: 0;
+    border-radius: 100%;
+    background: radial-gradient(
+      rgba(18 ,20, 23, 1) 50%, 
+      rgba(18 ,20, 23, 0) 70%, 
+      rgba(18 ,20, 23, 0) 100%
+    );
+
+    // TODO: don't know why it's working
+    z-index: $z-map-system - 1000;
+
+    &:before {
+      content: '';
+      border-radius: 100%;
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: $white-noise;
+    }
+  }
+
+  .invisible {
+    fill: none;
+    stroke: 0;
+  }
+
+  .aesthetic-circle {
+    fill: none;
+    stroke-width: 1px;
+    stroke-dasharray: 4 4;
+    stroke: white;
+    opacity: .2;
+  }
+
+  .aesthetic-circle-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    fill: white;
+    opacity: 1;
+  }
+
+  .star-white-halo {
+    fill: white;
+  }
+
+  .star-halo {
+    opacity: 0.5;
+  }
+  
+  .star-main {
+    opacity: 1.0;
+  }
+
+  .star-main-darker {
+    opacity: 0.6;
+  }
+
+  .hover-circle {
+    fill: none;
+    stroke: white;
+    stroke-width: 40px;
+    opacity: 0;
+
+    transition: all linear 150ms;
+
+    &.hovered {
+      opacity: .1;
+      stroke-width: 50px;
+    }
+  }
+
+  .primary-orbit {
+    fill: none;
+    stroke: white;
+    opacity: .5;
+
+    &.short {
+      stroke-width: 2px;
+      stroke-dasharray: 200 5 10 10000;
+    }
+
+    &.medium {
+      stroke-width: 1px;
+      stroke-dasharray: 500 5 10 10000;
+    }
+
+    &.long {
+      stroke-width: .5px;
+      stroke-dasharray: 1000 5 10 10000;
+    }
+  }
+
+  .primary-body-halo {
+    fill: black;
+  }
+
+  .primary-body {
+    // ...
+  }
+
+  .primary-body-darker {
+    // ...
+  }
+
+  .primary-body-mask {
+    fill: black;
+    opacity: .5;
+  }
+
+  .asteroid-belt {
+    fill: none;
+    opacity: .08;
+  }
+
+  .asteroid {
+    // ...
+  }
+
+  .secondary-body {
+    // ...
+  }
+
+  .secondary-orbit {
+    fill: none;
+    stroke: white;
+    opacity: .3;
+  }
+
+  .event-circle {
+    fill: none;
+    stroke: transparent;
+    stroke-width: 40px;
+    cursor: $cursor-active;
+  }
+
+  .no-data-circle {
+    fill: transparent;
+    stroke: $white;
+    stroke-width: 24px;
+    opacity: .1;
+  }
+
+  .no-data-text {
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    fill: $white;
+  }
+}
+
+@each $class, $color in $themes-list {
+  .f-#{$class} {
+    .system-svg {
+      .no-data-circle {
+        stroke: $color;
+        opacity: .6;
+      }
+
+      .no-data-text {
+        fill: $black;
+      }
+    }
+  }
+}

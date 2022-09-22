@@ -1,0 +1,127 @@
+.conversation-item {
+  position: relative;
+  padding: 15px;
+  margin-bottom: 5px;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  background: rgba($white, 0.05);
+  border: 1px solid rgba($white, 0.1);
+
+  &:hover {
+    background: rgba($white, 0.08);
+    border: 1px solid rgba($white, 0.2);
+  }
+}
+
+.conversation-item-date {
+  display: block;
+  font-weight: normal;
+  opacity: .5;
+}
+
+.conversation-item-unread {
+  position: absolute;
+  top: 20px; right: 20px;
+  height: 30px; width: 30px;
+  line-height: 30px;
+
+  border-radius: 100%;
+  background: $white;
+  color: $black;
+  display: inline-block;
+  text-align: center;
+}
+
+.message-item {
+  margin: 10px 0;
+  padding: 0 10px;
+  border-bottom: solid 1px rgba($white, 0.1);
+}
+
+.message-item-metadata {
+  color: rgba($white, 0.5);
+  margin: 10px 0;
+}
+
+.message-item-content {
+  p, h1, h2, h3, h4, h5, h6 { margin: 10px 0; }
+
+  hr {
+    border: none;
+    border-top: solid 1px $white;
+  }
+}
+
+.message-item-loading {
+  text-align: center;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 10px;
+  color: rgba($white, 0.5);
+}
+
+.conversation-form-input input {
+  width: 100%;
+  height: 44px;
+  margin: 5px 0; padding: 0 10px;
+  color: $white;
+  background: $black;
+  border: solid 1px $grey-light;
+}
+
+.conversation-form-select {
+  margin: 5px 0;
+  height: 44px; line-height: 44px;
+  color: $white;
+  text-transform: uppercase;
+}
+
+.conversation-form-textarea textarea {
+  width: 100%;
+  min-width: 100%; max-width: 100%;
+  padding: 10px; margin: 5px 0;
+  height: 88px;
+  color: $white;
+  background: $black;
+  border: solid 1px $grey-light;
+}
+
+.conversation-form-checkbox {
+  display: block;
+  width: 100%;
+  height: 44px; line-height: 44px;
+  margin: 5px 0; padding: 0 10px;
+  color: $white;
+  background: $black;
+  border: solid 1px $grey-light;
+}
+
+.conversation-form-button {
+  margin: 5px 0 20px 0;
+
+  button {
+    @include default-button;
+    margin: 4px 0 0 4px;
+  }
+}
+
+@each $class, $color in $themes-list {
+  .theme-#{$class} {
+    .conversation-item.is-active {
+      background: transparentize($color, 0.9);
+      border-color: transparentize($color, 0.8);
+
+      &:hover {
+        background: transparentize(lighten($color, 10%), 0.85);
+        border-color: transparentize(lighten($color, 10%), 0.7);
+      }
+    }
+
+    .conversation-item-unread {
+      background: $color;
+      color: $black;
+    }
+  }
+}

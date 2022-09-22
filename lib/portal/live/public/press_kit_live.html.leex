@@ -1,0 +1,376 @@
+<div class="fluid-container">
+  <section class="pk-content pk-group-button">
+    <button
+      class="default-button"
+      phx-click="set_en">
+      English
+    </button>
+    <button
+      class="default-button"
+      phx-click="set_fr">
+      Français
+    </button>
+  </section>
+
+  <%= if @language == :en do %>
+    <section class="pk-content">
+      <h1>Downloads</h1>
+
+      <a class="pk-dl-link" download href="<%= Routes.static_path(@socket, "/docs/Press Kit.en.pdf") %>">
+        <i class="fa fa-file-pdf"></i>
+        <span class="pk-dl-link-title">Press Kit.pdf</span>
+        <span class="pk-dl-link-size">6.7 MB</span>
+      </a>
+
+      <a class="pk-dl-link" download href="<%= Routes.static_path(@socket, "/docs/Press Kit Assets.zip") %>">
+        <i class="fa fa-file-archive"></i>
+        <span class="pk-dl-link-title">Press Kit Asset.zip (screenshots, infographics, artworks, musics, logo)</span>
+        <span class="pk-dl-link-size">74.0 MB</span>
+      </a>
+
+      <a class="pk-dl-link" download href="<%= Routes.static_path(@socket, "/docs/Press Kit Images.zip") %>">
+        <i class="fa fa-file-archive"></i>
+        <span class="pk-dl-link-title">Press Kit Images.zip (screenshots)</span>
+        <span class="pk-dl-link-size">24.4 MB</span>
+      </a>
+    </section>
+
+    <section class="pk-content">
+      <h1>Cooperative MMORTS management game</h1>
+
+      <p>Rising Constellation is a 4X MMO management game, set in a futuristic universe in which multiple factions fight for galactic domination. Immerse yourself in a cooperative gaming experience by choosing your faction according to its political regime, culture and history. Rise through the ranks to become your faction’s charismatic leader and define its military, diplomatic and economic strategies. Lead your faction in its conquest of star systems and towards victory!</p>
+      <p>Rising Constellation transports you into a sci-fi setting in which accomplished Navarchs (space fleet commanders) pit their destroyers and cruisers against each other, cunning Erased (spies and assassins) conduct undercover operations, and seductive Siderians (orators of great influence) turn their enemies’ populations against them.</p>
+      <p>Rising Constellation offers several game modes, ranging from highly tactical, small-team RTS games to large role-playing campaigns involving several hundred players.</p>
+      <p>The game’s large-scale, role-playing elements are further emphasized in Prestige matches, which introduce the possibility for players to collectively write the history of the Rising Constellation universe.</p>
+    </section>
+
+    <section class="pk-content">
+      <h1>Info</h1>
+
+      <div class="pk-label-value">
+        <div class="label-value">
+          <h2>Game</h2>
+          <div class="label-value-content">
+            <p>Rising Constellation</p>
+            <p>4X, MMO, Persistent universe</p>
+            <p>PVP Only</p>
+          </div>
+        </div>
+
+        <div class="label-value">
+          <h2>Developer</h2>
+          <div class="label-value-content">
+            <p>Blackflag Games Studio</p>
+            <p>Based in Switzerland</p>
+            <p>Founded in 2019</p>
+          </div>
+        </div>
+
+        <div class="label-value">
+          <h2>Release Date</h2>
+          <div class="label-value-content">
+            <p>Early-access in November 2020</p>
+            <p>Full release (planned) in October 2021</p>
+          </div>
+        </div>
+
+        <div class="label-value">
+          <h2>Platforms</h2>
+          <div class="label-value-content">
+            <p>Linux</p>
+            <p>PC (Microsoft Windows)</p>
+            <p>Mac</p>
+          </div>
+        </div>
+
+        <div class="label-value">
+          <h2>Price</h2>
+          <div class="label-value-content">
+            <p>Early-access USD 19.99</p>
+            <p>Full release USD 24.99</p>
+          </div>
+        </div>
+
+        <div class="label-value">
+          <h2>Website</h2>
+          <div class="label-value-content">
+            <p><a href="https://rising-constellation.com">
+              rising-constellation.com
+            </a></p>
+          </div>
+        </div>
+
+        <div class="label-value">
+          <h2>Availability</h2>
+          <div class="label-value-content">
+            <p>Digital download on Steam</p>
+            <p><a target="_blank" href="https://store.steampowered.com/app/1393660/Rising_Constellation">
+              store.steampowered.com/app/1393660/Rising_Constellation
+            </a></p>
+          </div>
+        </div>
+
+        <div class="label-value">
+          <h2>Languages</h2>
+          <div class="label-value-content">
+            <p>English</p>
+            <p>French</p>
+          </div>
+        </div>
+
+        <div class="label-value">
+          <h2>Press Contact</h2>
+          <div class="label-value-content">
+            <p><a href="mailto:contact@rising-constellation.com">
+              contact@rising-constellation.com
+            </a></p>
+          </div>
+        </div>
+
+        <div class="label-value">
+          <h2>Social</h2>
+          <div class="label-value-content">
+            <p><a target="_blank" href="https://www.facebook.com/risingconstellation">
+              facebook.com/risingconstellation
+            </a></p>
+            <p><a target="_blank" href="https://twitter.com/rising_const">
+              twitter.com/rising_const
+            </a></p>
+            <p><a target="_blank" href="https://instagram.com/rising_constellation_">
+              instagram.com/rising_constellation_
+            </a></p>
+          </div>
+        </div>
+
+        <div class="label-value">
+          <h2>Community</h2>
+          <div class="label-value-content">
+            <p><a target="_blank" href="https://discord.com/invite/Y2p6Pem">
+              discord.com/invite/Y2p6Pem
+            </a></p>
+            <p><a target="_blank" href="https://risingconstellation.wordpress.com">
+              risingconstellation.wordpress.com
+            </a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pk-content">
+      <h1>Video</h1>
+
+      <h2>Gameplay</h2>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/5jCLs4pBJcw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+      <h2>Trailer</h2>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/ZxFnf3YZsig" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/rMVEHVyujXk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/en_ALrX_1sI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/Efov-nMeC4A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </section>
+
+    <section class="pk-content">
+      <h1>Key Features</h1>
+
+      <ul>
+        <li>3 game modes (Flash, Tactic and Legacy) that offer a wide variety of gaming experiences.</li>
+        <li>A multiplayer game with simple mechanics and tons of replayability thanks to the numerous synergies possible between players.</li>
+        <li>Breathtaking music that will immerse you in the immensity of space.</li>
+        <li>Intense and diversified empire development.</li>
+        <li>3 agents types (Navarchs, Erased and Siderians) which will level up as you progress and encourage varying playstyles.</li>
+        <li>A rich universe, illustrious characters and a story to be written collectively.</li>
+        <li>Space elevators, planetary shields, interstellar gates… basically the best of science fiction.</li>
+        <li>Innovative team objectives and multiple paths to victory.</li>
+        <li>Future-proof and uncluttered visuals for a complex and engaging strategy game.</li>
+      </ul>
+    </section>
+
+    <section class="pk-content">
+      <h1>About Blackflag Games</h1>
+
+      <p>Blackflag Games is a young video game studio from Lausanne (Switzerland), founded in June 2019 by two brothers with a passion for video and board games.</p>
+      <p>Founded to serve as the cradle for the creation of Rising Constellation, the studio was able, in two years, to gather a team of a dozen collaborators and develop its project on a tight schedule.</p>
+    </section>
+  <% end %>
+
+  <%= if @language == :fr do %>
+    <section class="pk-content">
+      <h1>Téléchargement</h1>
+
+      <a class="pk-dl-link" download href="<%= Routes.static_path(@socket, "/docs/Press Kit.fr.pdf") %>">
+        <i class="fa fa-file-pdf"></i>
+        <span class="pk-dl-link-title">Press Kit.pdf</span>
+        <span class="pk-dl-link-size">6.7 MB</span>
+      </a>
+
+      <a class="pk-dl-link" download href="<%= Routes.static_path(@socket, "/docs/Press Kit Assets.zip") %>">
+        <i class="fa fa-file-archive"></i>
+        <span class="pk-dl-link-title">Press Kit Asset.zip (screenshots, infographies, artworks, musiques, logo)</span>
+        <span class="pk-dl-link-size">74.0 MB</span>
+      </a>
+
+      <a class="pk-dl-link" download href="<%= Routes.static_path(@socket, "/docs/Press Kit Images.zip") %>">
+        <i class="fa fa-file-archive"></i>
+        <span class="pk-dl-link-title">Press Kit Images.zip (screenshots)</span>
+        <span class="pk-dl-link-size">24.4 MB</span>
+      </a>
+    </section>
+
+    <section class="pk-content">
+      <h1>MMO de grande stratégie en coopération</h1>
+
+      <p>Rising Constellation est un jeu de gestion 4X MMO, se déroulant dans un univers futuriste et dans lequel s'affrontent plusieurs factions. Plongez-vous dans une expérience de jeu coopérative en choisissant votre faction selon son régime politique et son histoire. Prenez le pouvoir au sein de votre faction, devenez-en le leader charismatique et définissez les grandes lignes d’une stratégie militaire, diplomatique et économique. Menez votre faction à la conquête de la galaxie et à la victoire !</p>
+      <p>Rising Constellation vous emmène dans un univers de science fiction où les meilleurs Navarques (commandants de flottes spatiales) feront s'affronter leur destroyers et croiseurs. Mais attention aux Effacés (espions et assassins) qui viendront mener des opérations sous couvertures et aux Sidérians (personnages d'influence hors-pairs) prêt à retourner votre population contre vous !</p>
+      <p>Rising Constellation propose plusieurs modes de jeu qui vont du RTS nerveux en petites équipes aux grandes campagnes orientées roleplay, engageant plusieurs centaines de joueurs.</p>
+      <p>Les parties Prestiges, développent une composante roleplay à grande échelle dans un univers riche et cohérent que vous serez libres de vous approprier, écrivant collectivement son Histoire.</p>
+    </section>
+
+    <section class="pk-content">
+      <h1>Info</h1>
+
+      <div class="pk-label-value">
+        <div class="label-value">
+          <h2>Genre</h2>
+          <div class="label-value-content">
+            <p>Rising Constellation</p>
+            <p>4X, MMO, Univers persistant</p>
+            <p>Uniquement du PVP</p>
+          </div>
+        </div>
+
+        <div class="label-value">
+          <h2>Développeur</h2>
+          <div class="label-value-content">
+            <p>Blackflag Games Studio</p>
+            <p>Basé en Suisse</p>
+            <p>Fondé end 2019</p>
+          </div>
+        </div>
+
+        <div class="label-value">
+          <h2>Calendrier</h2>
+          <div class="label-value-content">
+            <p>Early-access depuis novembre 2020</p>
+            <p>Sortie complète plannifiée en octobre 2021</p>
+          </div>
+        </div>
+
+        <div class="label-value">
+          <h2>Platformes</h2>
+          <div class="label-value-content">
+            <p>Linux</p>
+            <p>PC (Microsoft Windows)</p>
+            <p>Mac</p>
+          </div>
+        </div>
+
+        <div class="label-value">
+          <h2>Prix</h2>
+          <div class="label-value-content">
+            <p>Early-access EUR 19.99</p>
+            <p>Jeu complet EUR 24.99</p>
+          </div>
+        </div>
+
+        <div class="label-value">
+          <h2>Website</h2>
+          <div class="label-value-content">
+            <p><a href="https://rising-constellation.com">
+              rising-constellation.com
+            </a></p>
+          </div>
+        </div>
+
+        <div class="label-value">
+          <h2>Disponibilité</h2>
+          <div class="label-value-content">
+            <p>Disponible numériquement sur Steam</p>
+            <p><a target="_blank" href="https://store.steampowered.com/app/1393660/Rising_Constellation">
+              store.steampowered.com/app/1393660/Rising_Constellation
+            </a></p>
+          </div>
+        </div>
+
+        <div class="label-value">
+          <h2>Langues</h2>
+          <div class="label-value-content">
+            <p>Anglais</p>
+            <p>Français</p>
+          </div>
+        </div>
+
+        <div class="label-value">
+          <h2>Contact presse</h2>
+          <div class="label-value-content">
+            <p><a href="mailto:contact@rising-constellation.com">
+              contact@rising-constellation.com
+            </a></p>
+          </div>
+        </div>
+
+        <div class="label-value">
+          <h2>Réseaux sociaux</h2>
+          <div class="label-value-content">
+            <p><a target="_blank" href="https://www.facebook.com/risingconstellation">
+              facebook.com/risingconstellation
+            </a></p>
+            <p><a target="_blank" href="https://twitter.com/rising_const">
+              twitter.com/rising_const
+            </a></p>
+            <p><a target="_blank" href="https://instagram.com/rising_constellation_">
+              instagram.com/rising_constellation_
+            </a></p>
+          </div>
+        </div>
+
+        <div class="label-value">
+          <h2>Communauté</h2>
+          <div class="label-value-content">
+            <p><a target="_blank" href="https://discord.com/invite/Y2p6Pem">
+              discord.com/invite/Y2p6Pem
+            </a></p>
+            <p><a target="_blank" href="https://risingconstellation.wordpress.com">
+              risingconstellation.wordpress.com
+            </a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pk-content">
+      <h1>Vidéo</h1>
+
+      <h2>Gameplay</h2>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/5jCLs4pBJcw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+      <h2>Trailer</h2>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/ZxFnf3YZsig" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/rMVEHVyujXk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/en_ALrX_1sI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/Efov-nMeC4A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </section>
+
+    <section class="pk-content">
+      <h1>Points-clés</h1>
+
+      <ul>
+        <li>3 modes de jeux (Flash, Tactic et Legacy) qui offrent une grande variété d'expérience de jeu.</li>
+        <li>Un multijoueur stable, aux mécaniques simples, mais avec une grande rejouabilité, grâce notamment aux nombreuses stratégies possibles et aux synergies entre joueurs au style de jeu différents.</li>
+        <li>Une musique à couper le souffle qui vous plongera dans l'immensité de l'espace.</li>
+        <li>Un développement d'empire intense et diversifié.</li>
+        <li>3 types d'agents disponibles (Navarque, Effacés et Sidérian), au gameplay varié, qui monteront de niveau au fil de votre avancée.</li>
+        <li>Un univers riche, des personnages illustres et une histoire à écrire ensemble.</li>
+        <li>Des ascenseurs spatiaux, des boucliers planétaires, des portes interstellaires, bref, le meilleur de la science-fiction.</li>
+        <li>Des objectifs d'équipe novateurs dans un jeu de grande stratégie.</li>
+        <li>Un visuel futursite et épuré au service d'un jeu de statégie complexe et prenant.</li>
+      </ul>
+    </section>
+
+    <section class="pk-content">
+      <h1>A propos de Blackflag Games</h1>
+
+      <p>Blackflag Games est un jeune studio de jeu vidéo lausannois (Suisse), fondé en juin 2019 par deux frères passionnés d'expériences vidéo-ludiques et de jeux de plateau.</p>
+      <p>Fondé pour servir de support à la création de Rising Constellation, le studio a su, en deux ans, rassembler une équipe d'une dizaine de collaborateurs et développer son projet en respectant un calendrier serré.</p>
+    </section>
+  <% end %>
+</div>

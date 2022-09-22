@@ -1,0 +1,141 @@
+<div class="content">
+  <div class="header-box">
+    <h2>
+      <strong><%= @total_entries %></strong>
+      instances
+    </h2>
+
+    <div class="tools">
+      <%= link to: "#", "phx-click": "toggle_filters" do %>
+        <%= if @show_filters do %>
+          Cacher les filtres
+        <% else %>
+          Montrer les filtres
+        <% end %>
+      <% end %>
+    </div>
+
+    <%= if Enum.count(@instances_to_fix) > 0 do %>
+      <div class="tools">
+        <%= link to: "#", "phx-click": "fix_instances", class: "active" do %>
+          Fix <strong><%= Enum.count(@instances_to_fix) %></strong> instances actuellement bloquées
+        <% end %>
+      </div>
+    <% end %>
+
+    <div class="pagination">
+      <%= if @page_number == 1 do %>
+        <span class="disabled">
+          <i class="fa fa-angle-left"></i>
+        </span>
+      <% else %>
+        <%= live_redirect to: Routes.live_path(@socket, Portal.InstancesLive, page: @page_number - 1) do %>
+          <i class="fas fa-angle-left"></i>
+        <% end %>
+      <% end %>
+      <span class="active">
+        <%= @page_number %>
+      </span>
+      <%= if @page_number == @total_pages do %>
+        <span class="disabled">
+          <i class="fas fa-angle-right"></i>
+        </span>
+      <% else %>
+        <%= live_redirect to: Routes.live_path(@socket, Portal.InstancesLive, page: @page_number + 1) do %>
+          <i class="fas fa-angle-right"></i>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+
+  <%= if @show_filters do %>
+    <div class="header-box">
+      <%= f = form_for @filters, "#", phx_submit: :filter, class: "form", style: "width: 500px; margin-bottom: 20px;" %>
+        <section>
+          <fieldset>
+            <label>
+              ID
+              <%= number_input f, :id %>
+            </label>
+          </fieldset>
+
+          <fieldset>
+            <label>
+              Nom exact
+              <%= text_input f, :name %>
+            </label>
+          </fieldset>
+
+          <fieldset>
+            <label>
+              État de l'instance
+              <%= select f, :state, ["", "created", "open", "running", "not_running", "maintenance", "paused", "ended"] %>
+            </label>
+          </fieldset>
+        </section>
+
+        <footer>
+          <%= submit "Filtrer" %>
+        </footer>
+      </form>
+    </div>
+  <% end %>
+
+  <table>
+    <thead>
+      <tr>
+        <th class="square"></th>
+        <th>Nom</th>
+        <th>Node</th>
+        <th>Etat Superviseur</th>
+        <th>Etat Instance</th>
+        <th># systèmes</th>
+        <th>Création</th>
+        <th class="square"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= for instance <- @instances do %>
+        <tr>
+          <td class="square">
+            <%= instance.id %>
+          </td>
+          <td>
+            <%= live_redirect to: Routes.live_path(@socket, Portal.InstanceLive, instance.id) do %>
+              <strong><%= instance.name %></strong>
+            <% end %>
+          </td>
+          <td>
+            <code><%= instance.node %></code>
+          </td>
+          <td>
+            <span class="toast">
+              <%= instance.supervisor_status %>
+            </span>
+          </td>
+          <td>
+            <span class="toast <%= RC.Instances.Instance.state_color(instance.state) %>">
+              <%= instance.state %>
+            </span>
+            <%= if Enum.member?(@instances_to_fix, instance.id) do %>
+              <span class="toast is-red-2">
+                STATE MISMATCH
+              </span>
+            <% end %>
+          </td>
+          <td>
+            <%= instance.game_metadata["system_number"] %>
+          </td>
+          <td>
+            <%= Portal.Date.format(instance.inserted_at, :datetime) %>
+          </td>
+          <td class="square action">
+            <%= live_redirect to: Routes.live_path(@socket, Portal.InstanceLive, instance.id) do %>
+              <i class="fa fa-pencil-alt"></i>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

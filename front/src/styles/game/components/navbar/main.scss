@@ -1,0 +1,593 @@
+$navbar-w10: rgba(255, 255, 255, .1);
+$navbar-b10: rgba(0, 0, 0, .1);
+
+@keyframes navbar-pulse {
+  from { box-shadow: 0 0 0 25px rgba(255, 255, 255, .5); }
+  to   { box-shadow: 0 0 0 100px rgba(255, 255, 255, 0); }
+}
+
+.navbar {
+  position: absolute;
+  left: 0; right: 0;
+  height: $navbar-height;
+
+  background: $navbar-b10;
+  backdrop-filter: blur(5px);
+  will-change: transform;
+
+  z-index: $z-navbar;
+
+  &.top {
+    top: 0;
+    border-bottom: solid 1px $navbar-w10;
+  }
+
+  &.bottom {
+    bottom: 0;
+    border-top: solid 1px $navbar-w10;
+  }
+
+  .navbar-left {
+    position: absolute;
+    left: 0; top: 0;
+    display: flex;
+  }
+
+  .navbar-center {
+    position: absolute;
+    left: 50%;
+  }
+
+  .navbar-right {
+    position: absolute;
+    right: 0; top: 0;
+    display: flex;
+  }
+
+  .tutorial-pointer.is-patent {
+    left: -124px;
+    top: -68px;
+  }
+
+  .tutorial-pointer.is-doctrine {
+    left: 109px;
+    top: -68px;
+  }
+}
+
+.navbar-panel {
+  position: absolute;
+  width: 300px;
+  bottom: $navbar-height;
+  right: 0;
+  z-index: $z-side-panel;
+}
+
+.mini-panel-button {
+  position: absolute;
+  width: 50px; height: 45px;
+  bottom: 0;
+
+  background: $navbar-w10;
+  transition: all ease-out 500ms;
+
+  .svg-icon {
+    position: absolute;
+    width: 26px; height: 26px;
+    top: 10px;
+    color: $white;
+    opacity: .75;
+
+    transition: all linear 200ms;
+  }
+
+  &:before {
+    position: absolute;
+    content: '';
+    width: 0; height: 0; top: 0;
+    bottom: -10px;
+    border-style: solid;
+    border-width: 22.5px 5px;
+    border-color: transparent;
+  }
+
+  &.left {
+    left: -80px;
+
+    .svg-icon { left: 8px; }
+    &.visible { left: -140px; }
+    &:before {
+      left: -10px;
+      border-color: transparent $navbar-w10 $navbar-w10 transparent;
+    }
+  }
+
+  &.right {
+    right: -80px;
+
+    .svg-icon { right: 8px; }
+    &.visible { right: -140px; }
+    &:before {
+      right: -10px;
+      border-color: transparent transparent $navbar-w10 $navbar-w10;
+    }
+  }
+
+  &:hover, &.active {
+    .svg-icon {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+  }
+}
+
+.mini-panel-switcher {
+  position: absolute;
+  width: 30px; height: 30px;
+  bottom: 8px;
+  padding: 2px;
+
+  opacity: .8;
+  transition: all linear 200ms;
+
+  .svg-icon {
+    width: 26px;
+    height: 26px;
+  }
+
+  &.left { left: -180px; }
+  &.right { right: -180px; }
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.navbar-group-buttons {
+  position: relative;
+  display: flex;
+  height: 45px;
+  margin-top: 8px;
+
+  border: none;
+  background: rgba(0, 0, 0, .3);
+
+  &:before {
+    position: absolute;
+    content: '';
+    width: 0; height: 0; top: 0;
+    bottom: -10px;
+    border-style: solid;
+    border-width: 22.5px 5px;
+    border-color: transparent;
+  }
+
+  &.left {
+    padding-left: 10px;
+
+    &:before {
+      right: -9px;
+      border-color: transparent transparent rgba(0, 0, 0, .3) rgba(0, 0, 0, .3);
+    }
+  }
+
+  &.right {
+    padding-right: 10px;
+
+    &:before {
+      left: -9px;
+      border-color: transparent rgba(0, 0, 0, .3) rgba(0, 0, 0, .3) transparent;
+    }
+  }
+
+  .tutorial-pointer.is-technology {
+    left: 350px;
+    top: -22px;
+  }
+
+  .tutorial-pointer.is-ideology {
+    left: 460px;
+    top: -22px;
+  }
+}
+
+.navbar-main-button {
+  position: relative;
+  height: $navbar-height + 12px;
+  width: $navbar-height + 38px;
+
+  box-shadow: 0 0 15px $navbar-w10;
+  background: $grey-dark;
+  transition: all linear 200ms;
+  z-index: $z-navbar;
+
+  .navbar-main-button-icon {
+    position: relative;
+    padding:
+      (($navbar-height + 12px - 60px) / 2)
+      (($navbar-height + 38px - 60px) / 2);
+
+    .icon {
+      width: 60px; height: 60px;
+      opacity: .75;
+      transition: all linear 200ms;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      opacity: 0;
+      transition: opacity linear 200ms;
+    }
+
+    &:hover {
+      &:before {
+        opacity: .4;
+      }
+    }
+  }
+
+  .navbar-main-button-toolbox {
+    display: flex;
+    position: absolute;
+    left: 0; right: 0;
+    justify-content: space-evenly;
+    opacity: 0;
+
+    z-index: 1;
+    transition: opacity linear 200ms;
+
+    .button {
+      width: 20px;
+      height: 20px;
+      padding: 5px;
+
+      border-radius: 3px;
+      background: $black;
+      box-shadow: 0 0 2px $grey-darker;
+      transition: all linear 200ms;
+
+      .icon {
+        display: block;
+        width: 10px;
+        height: 10px;
+      }
+
+      &.active {
+        background: $black;
+      }
+
+      &:hover {
+        box-shadow:
+          inset 0 0 5px rgba(0, 0, 0, .5),
+          0 0 6px $grey-darker;
+      }
+    }
+  }
+
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    background: $grey-dark;
+
+    transition: all linear 200ms;
+  }
+
+  &:hover {
+    background: $grey-default;
+    box-shadow: 0 0 15px rgba(255, 255, 255, .2);
+
+    .navbar-main-button-toolbox { opacity: 1; }
+    .icon { opacity: 1; }
+
+    &:before, &:after {
+      background: $grey-default;
+    }
+  }
+}
+
+.navbar.bottom {
+  .navbar-main-button { top: -12px; }
+  .navbar-main-button-toolbox { top: -15px; }
+
+  .navbar-left {
+    .navbar-main-button {
+      .navbar-main-button-icon:before {
+        bottom: 0; left: 0;
+        background: radial-gradient(
+          at bottom left,
+          $white 0%,
+          transparent 75%,
+          transparent
+        );
+      }
+
+      &:before {
+        top: -3px;
+        left: -2px; right: 0;
+        height: 8px;
+        transform: rotate(5deg);
+      }
+
+      &:after {
+        right: -4px;
+        bottom: -2px; top: 0;
+        width: 8px;
+        transform: rotate(-5deg);
+      }
+
+      .navbar-main-button-toolbox {
+        transform: rotate(5deg);
+      }
+    }
+  }
+
+  .navbar-right {
+    .navbar-main-button {
+      .navbar-main-button-icon:before {
+        bottom: 0; right: 0;
+        background: radial-gradient(
+          at bottom right,
+          $white 0%,
+          transparent 75%,
+          transparent
+        );
+      }
+
+      &:before {
+        top: -3px;
+        left: -2px; right: 0;
+        height: 8px;
+        transform: rotate(-5deg);
+      }
+
+      &:after {
+        left: -4px;
+        bottom: -2px; top: 0;
+        width: 8px;
+        transform: rotate(5deg);
+      }
+
+      .navbar-main-button-toolbox {
+        transform: rotate(-5deg);
+      }
+    }
+  }
+}
+
+.navbar.top {
+  .navbar-main-button-toolbox { bottom: -15px; }
+
+  .navbar-left {
+    .navbar-main-button {
+      .navbar-main-button-icon:before {
+        top: 0; left: 0;
+        background: radial-gradient(
+          at top left,
+          $white 0%,
+          transparent 75%,
+          transparent
+        );
+      }
+
+      &:before {
+        bottom: -3px;
+        left: -2px; right: 0;
+        height: 8px;
+        transform: rotate(-5deg);
+      }
+
+      &:after {
+        right: -4px;
+        top: -2px; bottom: 0;
+        width: 8px;
+        transform: rotate(5deg);
+      }
+
+      .navbar-main-button-toolbox {
+        transform: rotate(-5deg);
+      }
+    }
+  }
+
+  .navbar-right {
+    .navbar-main-button {
+      .navbar-main-button-icon:before {
+        top: 0; right: 0;
+        background: radial-gradient(
+          at top right,
+          $white 0%,
+          transparent 75%,
+          transparent
+        );
+      }
+
+      &:before {
+        bottom: -3px;
+        left: -2px; right: 0;
+        height: 8px;
+        transform: rotate(5deg);
+      }
+
+      &:after {
+        left: -4px;
+        top: -2px; bottom: 0;
+        width: 8px;
+        transform: rotate(-5deg);
+      }
+
+      .navbar-main-button-toolbox {
+        transform: rotate(5deg);
+      }
+    }
+  }
+}
+
+.navbar-button-title {
+  display: inline-block;
+  padding: 0 15px;
+  height: $navbar-height;
+  line-height: $navbar-height;
+
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: bold;
+
+  cursor: $cursor-active;
+  transition: background linear 200ms;
+
+  &.disabled { opacity: .4; }
+  &:hover, &:focus { background: rgba(255, 255, 255, .05); }
+}
+
+.navbar-deploy-button {
+  padding: 6px 8px;
+  text-align: right;
+
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1rem;
+
+  color: darken($white, 20%);
+  transition: color linear 200ms;
+
+  strong {
+    display: block;
+    font-size: 1.2rem;
+  }
+
+  &:hover {
+    color: $white;
+  }
+}
+
+.navbar-central-box {
+  position: absolute;
+  width: 180px;
+  left: -90px;
+  height: $navbar-height + 5px;
+  text-align: center;
+
+  z-index: 1;
+
+  background: $grey-dark;
+
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    height: $navbar-height + 10px;
+    width: 10px;
+    background: $grey-dark;
+  }
+}
+
+.navbar-left {
+  .navbar-button-title {
+    border-right: solid 1px rgba(255, 255, 255, .05);
+  }
+}
+
+.navbar-right {
+  .navbar-button-title {
+    border-left: solid 1px rgba(255, 255, 255, .05);
+  }
+}
+
+.navbar.top {
+  .navbar-center {
+    top: 0;
+  }
+
+  .navbar-central-box {
+    box-shadow: 0 0 10px $navbar-w10;
+    top: 0;
+
+    &:before {
+      transform: rotate(-10deg);
+      bottom: 0px; left: -6px;
+    }
+
+    &:after {
+      transform: rotate(10deg);
+      bottom: 0px; right: -6px;
+    }
+  }
+
+  .headband {
+    position: absolute;
+    top: 65px; width: 260px;
+    left: -130px;
+
+    padding: 2px 10px 0 10px;
+    line-height: 30px;
+
+    background: $black;
+    border: solid 1px transparent;
+    color: $white;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+}
+
+.navbar.bottom {
+  .navbar-center {
+    bottom: 0;
+  }
+
+  .navbar-central-box {
+    box-shadow: 0 0 10px $navbar-w10;
+    bottom: 0;
+
+    &:before {
+      transform: rotate(10deg);
+      top: 0px; left: -6px;
+    }
+
+    &:after {
+      transform: rotate(-10deg);
+      top: 0px; right: -6px;
+    }
+  }
+}
+
+@each $class, $color in $themes-list {
+  .theme-#{$class} {
+    .navbar {
+      background: transparentize(lighten($color, 20%), 0.9);
+    }
+
+    .navbar-main-button .navbar-main-button-toolbox .button {
+      background: darken($color, $color-variant-4);
+      &.active {
+        background: $color;
+      }
+    }
+
+    .navbar.bottom {
+      .navbar-left .navbar-main-button .navbar-main-button-icon:before {
+        background: radial-gradient(at bottom left, $color 0%, transparent 75%, transparent);
+      }
+      .navbar-right .navbar-main-button .navbar-main-button-icon:before {
+        background: radial-gradient(at bottom right, $color 0%, transparent 75%, transparent);
+      }
+    }
+
+    .navbar.top {
+      .navbar-left .navbar-main-button .navbar-main-button-icon:before {
+        background: radial-gradient(at top left, $color 0%, transparent 75%, transparent);
+      }
+      .navbar-right .navbar-main-button .navbar-main-button-icon:before {
+        background: radial-gradient(at top right, $color 0%, transparent 75%, transparent);
+      }
+    }
+
+    .navbar.top .headband {
+      color: $color;
+      border-color: darken($color, $color-variant-4);
+    }
+  }
+}

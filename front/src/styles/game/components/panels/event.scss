@@ -1,0 +1,106 @@
+.event-title {
+  font-size: 1.8rem;
+  line-height: 40px;
+}
+
+.event-item {
+  position: relative;
+  display: flex;
+
+  opacity: .6;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  .event-day {
+    position: relative;
+    width: 36px;
+  
+    .event-day-number {
+      width: 28px; height: 28px;
+      line-height: 28px;
+      margin: 4px 0;
+      border-radius: 100%;
+      text-align: center;
+      font-size: 1.4rem;
+      font-weight: bold;
+      background: $black;
+      border: solid 1px transparentize($white, 0.6);
+      color: $white;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: -5px; bottom: 5px; left: 14px;
+      border-left: solid 1px transparentize($white, 0.8);
+      z-index: -1;
+    }
+  }
+
+  .event-text {
+    line-height: 24px;
+    padding: 5px 0;
+    
+    p {
+      display: inline;
+    }
+
+    .svg-icon {
+      position: relative;
+      top: -1px;
+      width: 24px; height: 24px;
+      margin-right: 5px;
+    }
+  }
+
+  .event-date {
+    display: none;
+    position: absolute;
+    top: 0; right: 0;
+    padding-left: 20px;
+    line-height: 36px;
+    background: $black;
+    box-shadow: -10px 0 20px 5px $black;
+    color: transparentize($white, 0.25);
+  }
+
+  .event-text-outcome {
+    display: inline-block;
+    padding: 0 6px;
+    line-height: 22px;
+    margin-left: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: $black;
+    border-radius: 3px;
+  }
+
+  .box-notification-item {
+    display: none;
+    position: absolute;
+    width: 364px;
+    top: 36px; right: 0;
+    background: $black;
+    box-shadow: 0 0 20px 5px $black;
+  }
+
+  &:hover {
+    .box-notification-item {
+      display: block;
+      z-index: 1;
+    }
+
+    .event-date {
+      display: block;
+    }
+  }
+}
+
+@each $class, $color in $themes-list {
+  .theme-#{$class} .event-item .event-text-outcome {
+    background: darken($color, $color-variant-2);
+  }
+}

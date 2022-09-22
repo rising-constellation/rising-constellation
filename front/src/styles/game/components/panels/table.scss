@@ -1,0 +1,97 @@
+.panel-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 5px;
+
+  font-size: 1.4rem;
+  text-transform: uppercase;
+
+  em {
+    font-style: normal;
+    text-transform: none;
+    opacity: .75;
+  }
+
+  td, th {
+    vertical-align: middle;
+    text-align: left;
+  }
+
+  th {
+    padding: 5px 10px;
+  }
+
+  td {
+    padding: 5px 10px;
+    border-top: 1px solid rgba($white, .1);
+    border-bottom: 1px solid rgba($white, .1);
+    border-left: 1px solid rgba($white, .05);
+    background: rgba($white, .1);
+
+    &:first-child {
+      border-left: 1px solid rgba($white, .1);
+    }
+
+    &:last-child {
+      border-right: 1px solid rgba($white, .1);
+    }
+  }
+}
+
+.ranking-table {
+  position: relative;
+  top: -5px;
+
+  th, td {
+    padding: 10px;
+    font-size: 1.6rem;
+
+    &:nth-child(1) {
+      width: 40px;
+      color: darken($white, 40%);
+    }
+
+    &:nth-child(3), &:nth-child(4), &:nth-child(5), &:nth-child(6) {
+      width: 160px;
+    }
+
+    &.highlighted {
+      background: rgba($white, .2);
+      font-weight: bold;
+
+      .svg-icon {
+        position: relative;
+        margin-left: 5px;
+        top: -2px;
+      }
+    }
+
+    &.align-right {
+      text-align: right;
+    }
+
+    &.name {
+      font-weight: bold;
+
+      @each $class, $color in $themes-list {
+        &.theme-#{$class} {
+          color: $color;
+        }
+      }
+    }
+
+    .small {
+      font-size: 1.2rem;
+      color: darken($white, 40%);
+    }
+  }
+
+  th {
+    padding: 0 10px;
+
+    .svg-icon {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
