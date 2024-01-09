@@ -14,23 +14,22 @@ data =
   case Application.get_env(:rc, :environment) do
     :dev ->
       [
-        {"admin@abc", "admin", "Admin", :admin, :active, :paid},
-        {"user1@abc", "user1", "User1", :user, :active, :paid},
-        {"user2@abc", "user2", "User2", :user, :active, :paid},
-        {"user3@abc", "user3", "User3", :user, :active, :paid},
-        {"user4@abc", "user4", "User4", :admin, :active, :paid},
-        {"user5@abc", "user5", "User5", :user, :active, :paid},
-        {"user6@abc", "user6", "User6", :user, :active, :paid},
-        {"user7@abc", "user7", "User7", :user, :active, :paid},
-        {"user8@abc", "user8", "User registered", :user, :registered, :paid},
-        {"user9@abc", "user9", "User inactive", :user, :inactive, :paid}
+        {"admin@abc", "admin", "Admin", :admin, :active},
+        {"user1@abc", "user1", "User1", :user, :active},
+        {"user2@abc", "user2", "User2", :user, :active},
+        {"user3@abc", "user3", "User3", :user, :active},
+        {"user4@abc", "user4", "User4", :admin, :active},
+        {"user5@abc", "user5", "User5", :user, :active},
+        {"user6@abc", "user6", "User6", :user, :active},
+        {"user7@abc", "user7", "User7", :user, :active},
+        {"user8@abc", "user8", "User registered", :user, :registered},
+        {"user9@abc", "user9", "User inactive", :user, :inactive}
       ]
 
     :prod ->
       [
-        {"gil.clavien@gmail.com", "change-that", "Abdelaz3r", :admin, :active},
-        {"victor@draft.li", "change-that", "vhf", :admin, :active},
-        {"cabrini.vincent@gmail.com", "change-that", "Dan-Djuna", :admin, :active}
+        # Put initial user here as follow
+        {"email@email.com", "password", "Username", :admin, :active}
       ]
   end
 
